@@ -2,6 +2,7 @@ import {
     DISEASE_NAME,
     INTERVENTIONS,
     DEFAULT_COVERAGE,
+    NULL_COVERAGE_CHANGES,
     CR1_COVERAGE_CHANGES,
     CR3_COVERAGE_CHANGES
 } from './constants.js'
@@ -47,7 +48,9 @@ function populateCoverageOptions() {
 function handleInterventionChange() {
     const interventionSelection = document.querySelector('input[name="interventionOptions"]:checked').value;
     resetCoverages();
-    if (interventionSelection === 'CR1') {
+    if (interventionSelection == "NULL") {
+        applyCoverageChanges(NULL_COVERAGE_CHANGES);
+    } else if (interventionSelection === 'CR1') {
         applyCoverageChanges(CR1_COVERAGE_CHANGES);
     } else if (interventionSelection === 'CR3') {
         applyCoverageChanges(CR3_COVERAGE_CHANGES);
