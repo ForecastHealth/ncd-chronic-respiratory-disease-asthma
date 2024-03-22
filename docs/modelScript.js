@@ -134,14 +134,24 @@ function changeCountry(modelData, newCountryISO3) {
 function updateCoverages(botech) {
     INTERVENTIONS.forEach(
         function(element) {
+
+            const sourceLabel = `${element}-starting`;
+            let sourceValue = document.getElementById(sourceLabel).value
+            sourceValue = parseInt(sourceValue, 10)
+            const sourceNodeLabel = `${element}_StartingCoverage`
+
             const targetLabel = `${element}-target`;
-            const targetValue = document.getElementById(targetLabel).value
-            const nodeLabel = `${element}_Coverage`
+            let targetValue = document.getElementById(targetLabel).value
+            targetValue = parseInt(targetValue, 10)
+            const targetNodeLabel = `${element}_Coverage`
+
             botech.nodes.forEach(
                 function(node) {
-                    if (node.label == nodeLabel) {
+                    if (node.label == sourceNodeLabel) {
+                        node.generate_array.parameters.value = sourceValue;
+                    } else if (node.label == targetNodeLabel) {
                         node.generate_array.parameters.value = targetValue;
-                    };
+                    }
                 }
             )
         }
