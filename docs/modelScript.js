@@ -157,7 +157,7 @@ function generateFileID() {
 
 function postBotech(botech) {
   const file_id = generateFileID()
-  const url = "https://api.forecasthealth.org/run/standard/"
+  const url = "https://api.forecasthealth.org/run/appendix_3"
   const requestBody = {
     data: botech,
     store: false,
