@@ -41,14 +41,14 @@ export const CR3_COVERAGE_CHANGES = {
 };
 
 export const RESULTS_QUERY = `
-SELECT strftime('%Y', timestamp) AS year,
-       element_label,
-       AVG(value) AS "AVG(value)"
+SELECT strftime("%Y", timestamp) AS year,
+  element_label,
+  AVG(value) AS "AVG(value)"
 FROM results
-WHERE event_type IN ('BALANCE_SET')
-AND element_label IN ('DsFreeSus', 'DsFreeSus -> AsthmaEpsd', 'AsthmaEpsd',
-                      'AsthmaEpsd -> AsthmaEpsd Mortality', 'Deceased',
-                      'DsFreeSus -> DsFreeSus HYL', 'AsthmaEpsd -> AsthmaEpsd HYL')
-GROUP BY strftime('%Y', timestamp), element_label
+WHERE event_type IN ("BALANCE_SET")
+AND element_label IN ("DsFreeSus", "DsFreeSus -> AsthmaEpsd", "AsthmaEpsd",
+                    "AsthmaEpsd -> AsthmaEpsd Mortality", "Deceased",
+                    "DsFreeSus -> DsFreeSus HYL", "AsthmaEpsd -> AsthmaEpsd HYL")
+GROUP BY year, element_label
 ORDER BY "AVG(value)" DESC
-`
+`;

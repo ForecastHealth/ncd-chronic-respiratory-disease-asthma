@@ -98,7 +98,6 @@ window.runModel = function() {
             updateTimeHorizon(botech)
             changeCountry(botech, iso3)
             updateCoverages(botech)
-            console.log(botech)
             postBotech(botech)
         })
 }
@@ -169,6 +168,7 @@ function generateFileID() {
     return fileID
 };
 
+
 function postBotech(botech) {
   const file_id = generateFileID();
   const run_url = "https://api.forecasthealth.org/run/appendix_3";
@@ -188,20 +188,17 @@ function postBotech(botech) {
   })
   .then(response => {
     if (response.ok) {
-      return response.text();
+      return response.text(); // Get the response as text directly
     }
     throw new Error('Network response was not ok.');
   })
   .then(csvText => {
-    console.log(csvText.split("\n").slice(0, 5).join("\n")); // Display first 5 lines of the CSV text for verification
     
-    // Prepare the request body for the query API
     const queryRequestBody = {
       results: csvText,
       query: RESULTS_QUERY
     };
-    
-    // Send the csvText to the query API
+
     return fetch(query_url, {
       method: "POST",
       headers: {
@@ -212,17 +209,19 @@ function postBotech(botech) {
   })
   .then(response => {
     if (response.ok) {
-      return response.json();
+      return response.text(); // Change here to handle CSV response correctly
     }
     throw new Error('Query API response was not ok.');
   })
-  .then(queryResponseData => {
-    console.log('Query API response:', queryResponseData.text);
+  .then(queryResponseCsv => {
+    console.log('Query API CSV response:', queryResponseCsv);
+    // Here you would process the CSV data as needed
   })
   .catch(error => {
     console.error('There has been a problem with your fetch operation:', error);
   });
 }
+
 
 
 fetch('metadata.json')
