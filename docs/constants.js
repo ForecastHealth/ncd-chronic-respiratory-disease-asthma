@@ -23,6 +23,12 @@ export const STARTING_COVERAGES = {
 
 export const DEFAULT_COVERAGE = 0.05;
 
+export const NULL_COVERAGE_CHANGES = {
+    'AsthmaOralPrednisolone': 0.00,
+    'LowDoseBeclom': 0.00,
+    'HighDoseBeclom': 0.00,
+    'InhaledShortActingBeta': 0.00,
+}
 
 export const CR1_COVERAGE_CHANGES = {
     'AsthmaOralPrednisolone': 0.95,

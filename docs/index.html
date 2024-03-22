@@ -31,7 +31,11 @@
                 <label>Select Intervention</label>
                 <div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="interventionOptions" id="nullOption" value="Null" checked>
+                        <input class="form-check-input" type="radio" name="interventionOptions" id="nullOption" value="Baseline" checked>
+                        <label class="form-check-label" for="baselineOption">Baseline</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="interventionOptions" id="nullOption" value="NULL" >
                         <label class="form-check-label" for="nullOption">Null</label>
                     </div>
                     <div class="form-check">
@@ -53,10 +57,7 @@
                 <!-- Dynamically populated with JavaScript -->
             </div>
 
-
-            <div id="modelDescription">Model description here...</div>
-
-            <button class="btn btn-primary" onclick="runModel()">Update Model</button>
+            <button class="btn btn-primary" onclick="runModel()">Run Model</button>
         </div>
 
         <div class="col-lg-8">
