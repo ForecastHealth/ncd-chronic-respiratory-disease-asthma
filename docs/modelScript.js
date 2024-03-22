@@ -4,7 +4,8 @@ import {
     DEFAULT_COVERAGE,
     NULL_COVERAGE_CHANGES,
     CR1_COVERAGE_CHANGES,
-    CR3_COVERAGE_CHANGES
+    CR3_COVERAGE_CHANGES,
+    RESULTS_QUERY
 } from './constants.js'
 
 
@@ -169,15 +170,16 @@ function generateFileID() {
 };
 
 function postBotech(botech) {
-  const file_id = generateFileID()
-  const url = "https://api.forecasthealth.org/run/appendix_3"
+  const file_id = generateFileID();
+  const run_url = "https://api.forecasthealth.org/run/appendix_3";
+  const query_url = "https://api.forecasthealth.org/query";
   const requestBody = {
     data: botech,
     store: false,
     file_id: file_id
   };
 
-  fetch(url, {
+  fetch(run_url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -191,7 +193,31 @@ function postBotech(botech) {
     throw new Error('Network response was not ok.');
   })
   .then(csvText => {
-    console.log(csvText.split("\n").slice(0, 5).join("\n"))
+    console.log(csvText.split("\n").slice(0, 5).join("\n")); // Display first 5 lines of the CSV text for verification
+    
+    // Prepare the request body for the query API
+    const queryRequestBody = {
+      results: csvText,
+      query: RESULTS_QUERY
+    };
+    
+    // Send the csvText to the query API
+    return fetch(query_url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(queryRequestBody)
+    });
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Query API response was not ok.');
+  })
+  .then(queryResponseData => {
+    console.log('Query API response:', queryResponseData.text);
   })
   .catch(error => {
     console.error('There has been a problem with your fetch operation:', error);

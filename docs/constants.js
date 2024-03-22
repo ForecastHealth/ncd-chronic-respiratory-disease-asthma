@@ -39,3 +39,16 @@ export const CR3_COVERAGE_CHANGES = {
     'HighDoseBeclom': 0.95,
     'InhaledShortActingBeta': 0.95,
 };
+
+export const RESULTS_QUERY = `
+SELECT strftime('%Y', timestamp) AS year,
+       element_label,
+       AVG(value) AS "AVG(value)"
+FROM results
+WHERE event_type IN ('BALANCE_SET')
+AND element_label IN ('DsFreeSus', 'DsFreeSus -> AsthmaEpsd', 'AsthmaEpsd',
+                      'AsthmaEpsd -> AsthmaEpsd Mortality', 'Deceased',
+                      'DsFreeSus -> DsFreeSus HYL', 'AsthmaEpsd -> AsthmaEpsd HYL')
+GROUP BY strftime('%Y', timestamp), element_label
+ORDER BY "AVG(value)" DESC
+`
