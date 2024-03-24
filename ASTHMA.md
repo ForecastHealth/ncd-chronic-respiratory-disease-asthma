@@ -7,7 +7,7 @@ You can scenarios using the asthma model [by using this interactive tool](./tool
 
 
 ## Link to Model
-- Baseline (as reference): [Link to Botech Online Model](https://botech.forecasthealth.org/?userId=appendix_3&modelId=asthma_baseline)
+- Baseline (as reference): [Link to Botech Online Model](https://botech.forecasthealth.org/?userId=appendix_3&modelId=asthma_baseline&readOnly=1)
 
 
 ##  The Asthma Model and its design
