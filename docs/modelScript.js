@@ -169,15 +169,30 @@ function generateFileID() {
 };
 
 
+
 function postBotech(botech) {
   const file_id = generateFileID();
   const run_url = "https://api.forecasthealth.org/run/appendix_3";
   const query_url = "https://api.forecasthealth.org/query";
+  const runModelButton = document.querySelector('button[onclick="runModel()"]');
   const requestBody = {
     data: botech,
     store: false,
     file_id: file_id
   };
+
+  const spinner = document.createElement('div');
+  spinner.className = 'spinner-border text-secondary';
+  spinner.setAttribute('role', 'status');
+  const spinnerText = document.createElement('span');
+  spinnerText.className = 'sr-only';
+  spinnerText.textContent = 'Loading...';
+  spinner.appendChild(spinnerText);
+  if (runModelButton) {
+    runModelButton.insertAdjacentElement('afterend', spinner); // Insert right after the "Run Model" button
+  } else {
+    console.error('Run Model button not found');
+  }
 
   fetch(run_url, {
     method: "POST",
@@ -188,12 +203,11 @@ function postBotech(botech) {
   })
   .then(response => {
     if (response.ok) {
-      return response.text(); // Get the response as text directly
+      return response.text();
     }
     throw new Error('Network response was not ok.');
   })
   .then(csvText => {
-    
     const queryRequestBody = {
       results: csvText,
       query: RESULTS_QUERY
@@ -209,7 +223,7 @@ function postBotech(botech) {
   })
   .then(response => {
     if (response.ok) {
-      return response.text(); // Change here to handle CSV response correctly
+      return response.text();
     }
     throw new Error('Query API response was not ok.');
   })
@@ -230,18 +244,21 @@ function postBotech(botech) {
   button.appendChild(a);
   button.addEventListener('click', () => a.click());
 
-  // Select the "Run Model" button by its class, ID, or action
-  const runModelButton = document.querySelector('button[onclick="runModel()"]');
   if (runModelButton) {
     runModelButton.insertAdjacentElement('afterend', button); // Insert right after the "Run Model" button
   } else {
     console.error('Run Model button not found');
   }
+  
+  // Remove spinner
+  spinner.remove();
 })
-    .catch(error => {
-      console.error('There has been a problem with your fetch operation:', error);
-    });
+.catch(error => {
+  console.error('There has been a problem with your fetch operation:', error);
+  spinner.remove(); // Ensure spinner is removed even if an error occurs
+});
 }
+
 
 
 
