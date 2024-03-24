@@ -232,34 +232,36 @@ function postBotech(botech) {
   const blob = new Blob([queryResponseCsv], { type: 'text/csv' });
   const url = URL.createObjectURL(blob);
   
-  const button = document.createElement('button');
-  button.className = 'btn btn-primary ml-2'; // Add margin-left for spacing
-  button.textContent = 'Download Results';
-  
-  const a = document.createElement('a');
+  let button = document.getElementById('downloadResultsButton'); // Check if button exists
+  if (!button) {
+    button = document.createElement('button');
+    button.id = 'downloadResultsButton'; // Assign an ID to the button
+    button.className = 'btn btn-primary ml-2'; // Add margin-left for spacing
+    button.textContent = 'Download Results';
+
+    const a = document.createElement('a');
+    a.id = 'downloadResultsLink'; // Assign an ID to the link
+    a.style.display = 'none';
+
+    button.appendChild(a);
+    button.addEventListener('click', () => a.click());
+
+    if (runModelButton) {
+      runModelButton.insertAdjacentElement('afterend', button); // Insert right after the "Run Model" button
+    } else {
+      console.error('Run Model button not found');
+    }
+  }
+
+  // Update the link's href attribute
+  const a = document.getElementById('downloadResultsLink');
   a.href = url;
   a.download = "Results.csv";
-  a.style.display = 'none';
-  
-  button.appendChild(a);
-  button.addEventListener('click', () => a.click());
 
-  if (runModelButton) {
-    runModelButton.insertAdjacentElement('afterend', button); // Insert right after the "Run Model" button
-  } else {
-    console.error('Run Model button not found');
-  }
-  
   // Remove spinner
   spinner.remove();
 })
-.catch(error => {
-  console.error('There has been a problem with your fetch operation:', error);
-  spinner.remove(); // Ensure spinner is removed even if an error occurs
-});
 }
-
-
 
 
 fetch('metadata.json')
