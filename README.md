@@ -1,4 +1,4 @@
-# World Health Organization - Asthma Model
+# NCD Module - Asthma Model
 The repository for the WHO NCD Asthma Model.
 
 **Warning** - These models are still being refined, and there may be changes to the methods, the interpretation of the methods, and the results.
