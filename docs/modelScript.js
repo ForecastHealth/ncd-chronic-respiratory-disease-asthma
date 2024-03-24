@@ -213,13 +213,34 @@ function postBotech(botech) {
     }
     throw new Error('Query API response was not ok.');
   })
-  .then(queryResponseCsv => {
-    console.log('Query API CSV response:', queryResponseCsv);
-    // Here you would process the CSV data as needed
-  })
-  .catch(error => {
-    console.error('There has been a problem with your fetch operation:', error);
-  });
+.then(queryResponseCsv => {
+  console.log('Query API CSV response:', queryResponseCsv);
+  const blob = new Blob([queryResponseCsv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  
+  const button = document.createElement('button');
+  button.className = 'btn btn-primary ml-2'; // Add margin-left for spacing
+  button.textContent = 'Download Results';
+  
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = "Results.csv";
+  a.style.display = 'none';
+  
+  button.appendChild(a);
+  button.addEventListener('click', () => a.click());
+
+  // Select the "Run Model" button by its class, ID, or action
+  const runModelButton = document.querySelector('button[onclick="runModel()"]');
+  if (runModelButton) {
+    runModelButton.insertAdjacentElement('afterend', button); // Insert right after the "Run Model" button
+  } else {
+    console.error('Run Model button not found');
+  }
+})
+    .catch(error => {
+      console.error('There has been a problem with your fetch operation:', error);
+    });
 }
 
 
