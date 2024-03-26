@@ -130,7 +130,7 @@ def main():
     with requests.Session() as session:
         for country in countries:
             change_country(botech, country.alpha3)
-            change_time_horizon(botech, 2020, 2022)
+            change_time_horizon(botech, 2020, 2120)
             country_results = {
                 "country": country.alpha3,
                 "timestamp": datetime.now().strftime("%Y%m%dT%H%M%S"),
