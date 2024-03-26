@@ -7,16 +7,31 @@ append that table to the bottom of the README.md
 """
 import json
 
+def load_avenir_results(filename):
+    with open(filename, 'r') as file:
+        avenir_data = json.load(file)
+    avenir_results = {(d['ISO3'], d['scenario']): d['HYL'] for d in avenir_data}
+    return avenir_results
+
+def format_hyl(value):
+    return "{:,}".format(int(value))
+
 def main():
+    avenir_results = load_avenir_results('data/asthma_avenir_results_formatted.json')
+
     with open('results.json', 'r') as file:
         data = json.load(file)
 
-    markdown_table = "# Test Results\n\n| Country | Scenario  | STATUS_CODE | HYL          |\n|---------|-----------|-------------|--------------|\n"
+    markdown_table = "# Test Results\n\n| Country | Scenario  | STATUS_CODE | HYL          | Avenir HYL    | Ratio         |\n|---------|-----------|-------------|--------------|---------------|---------------|\n"
     for result in data:
         country = result["country"]
         for scenario, details in result["scenarios"].items():
-            hyl_formatted = "{:,}".format(int(details['HYL']))
-            markdown_table += f"| {country} | {scenario} | {details['STATUS_CODE']} | {hyl_formatted} |\n"
+            key = (country, scenario)
+            if key in avenir_results:
+                hyl_formatted = format_hyl(details['HYL'])
+                avenir_hyl_formatted = format_hyl(avenir_results[key])
+                ratio = "{:.2f}".format(details['HYL'] / avenir_results[key])
+                markdown_table += f"| {country} | {scenario} | {details['STATUS_CODE']} | {hyl_formatted} | {avenir_hyl_formatted} | {ratio} |\n"
 
     with open('README.md', 'r') as file:
         readme_content = file.read()
