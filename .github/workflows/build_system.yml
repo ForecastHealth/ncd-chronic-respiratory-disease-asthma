@@ -25,7 +25,7 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install requests
+        pip install requests pandas
         pip install git+https://github.com/ForecastHealth/country-metadata.git
 
     - name: Run models
