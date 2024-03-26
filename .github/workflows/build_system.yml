@@ -31,9 +31,6 @@ jobs:
     - name: Run models
       run: python -m scripts.run_models.py
 
-    - name: Compare models
-      run: python -m scripts.compare_models.py
-
     - name: Update README
       run: python -m scripts.update_readme.py
 
