@@ -5,7 +5,26 @@ Runs a list of models for a list of scenarios.
 """
 import requests
 import json
+from io import StringIO
 from country_metadata import get_countries_by_tags
+from datetime import datetime
+import pandas as pd
+
+RUN_ENDPOINT = "https://api.forecasthealth.org/run/appendix_3"
+QUERY_ENDPOINT = "https://api.forecasthealth.org/query"
+MODEL_FILEPATH = "asthma_baseline.json"
+SCENARIOS = ["baseline", "null", "cr1", "cr3"]
+RESULTS_FILEPATH = "results.json"
+QUERY = """
+SELECT strftime("%Y", timestamp) AS year,
+  element_label,
+  AVG(value) AS "AVG(value)"
+FROM results
+WHERE event_type IN ("BALANCE_SET")
+AND element_label IN ("Healthy Years Lived")
+GROUP BY year, element_label
+ORDER BY "AVG(value)" DESC
+"""
 
 
 def change_country(botech: dict, iso3: str):
@@ -78,36 +97,58 @@ def change_time_horizon(botech: dict, start_year: int, end_year: int):
     botech["runtime"]["endYear"] = end_year
 
 
-def make_api_request(session, botech: dict, scenario: str, iso3: str):
-    URL = "https://api.forecasthealth.org/run/appendix_3"
+def run_request(session, botech: dict, scenario: str, iso3: str):
     request = {
         "data": botech,
         "store": False,
         "file_id": f"test_{scenario}_{iso3}"
     }
-    response = session.post(url=URL, json=request)
+    response = session.post(url=RUN_ENDPOINT, json=request)
     return response
+
+
+def make_query_request(session, results: str):
+    request = {
+        "results": results,
+        "query": QUERY
+    }
+    response = session.post(url=QUERY_ENDPOINT, json=request)
+    return response
+
+
+def calculate_hyl(results: str):
+    df = pd.read_csv(StringIO(results))
+    return df["AVG(value)"].sum()
 
 
 def main():
     results = []
     countries = get_countries_by_tags("appendix_3")["1"]
-    with open("asthma_baseline.json", "r") as f:
+    with open(MODEL_FILEPATH, "r") as f:
         botech = json.load(f)
 
     with requests.Session() as session:
         for country in countries:
             change_country(botech, country.alpha3)
-            change_time_horizon(botech, 2020, 2021)
-            country_results = []
-            country_results.append(country.alpha3)
-            for scenario in ["baseline", "null", "cr1", "cr3"]:
+            change_time_horizon(botech, 2020, 2022)
+            country_results = {
+                "country": country.alpha3,
+                "timestamp": datetime.now().strftime("%Y%m%dT%H%M%S"),
+                "scenarios": {}
+            }
+            for scenario in SCENARIOS:
                 print(f"Working on {country.alpha3} - {scenario}")
+                country_results["scenarios"][scenario] = {}
                 convert_scenario(botech, scenario)
-                response = make_api_request(session, botech, scenario, country.alpha3)
-                country_results.append(response.status_code)
-            results.append(tuple(country_results))
-            with open("results.json", "w") as file:
+                run_response = run_request(session, botech, scenario, country.alpha3)
+                country_results["scenarios"][scenario]["STATUS_CODE"] = run_response.status_code
+                if run_response.status_code == 200:
+                    query_response = make_query_request(session, run_response.text)
+                    country_results["scenarios"][scenario]["STATUS_CODE"] = query_response.status_code
+                    if query_response.status_code == 200:
+                        country_results["scenarios"][scenario]["HYL"] = calculate_hyl(query_response.text)
+            results.append(country_results)
+            with open(RESULTS_FILEPATH, "w") as file:
                 json.dump(results, file, indent=4)
 
 
