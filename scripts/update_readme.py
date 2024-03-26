@@ -15,7 +15,8 @@ def main():
     for result in data:
         country = result["country"]
         for scenario, details in result["scenarios"].items():
-            markdown_table += f"| {country} | {scenario} | {details['STATUS_CODE']} | {details['HYL']:.2f} |\n"
+            hyl_formatted = "{:,}".format(int(details['HYL']))
+            markdown_table += f"| {country} | {scenario} | {details['STATUS_CODE']} | {hyl_formatted} |\n"
 
     with open('README.md', 'r') as file:
         readme_content = file.read()
@@ -27,7 +28,6 @@ def main():
 
     with open('README.md', 'w') as file:
         file.write(readme_content)
-
 
 if __name__ == "__main__":
     main()
