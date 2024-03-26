@@ -2,6 +2,11 @@ import pandas as pd
 
 INPUT_FILEPATH = "./data/asthma_avenir_results.csv"
 OUTPUT_FILEPATH = "./data/asthma_avenir_results_formatted.json"
+SCENARIO_NAME_MAP = {
+    "CRNullAsthma": "null",
+    "CR1": "cr1",
+    "CR3": "cr3"
+}
 
 
 def main():
@@ -16,7 +21,7 @@ def main():
             for index, scenario in enumerate(scenarios, start=1):
                 records.append({
                     'ISO3': row[2],
-                    'scenario': scenario,
+                    'scenario': SCENARIO_NAME_MAP[scenario],
                     'HYL': row[required_columns[index]],
                 } 
             )
