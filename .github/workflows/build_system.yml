@@ -29,7 +29,7 @@ jobs:
         pip install git+https://github.com/ForecastHealth/country-metadata.git
 
     - name: Run models
-      run: python -m scripts.run_models
+      run: python -u -m scripts.run_models
 
     - name: Update README
       run: python -m scripts.update_readme
