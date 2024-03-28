@@ -45,7 +45,7 @@ SELECT strftime("%Y", timestamp) AS year,
   element_label,
   AVG(value) AS "AVG(value)"
 FROM results
-WHERE event_type IN ("BALANCE_SET")
+WHERE event_type IN ("BALANCE_SET", "EDGE_VALUES_CALCULATED")
 AND element_label IN ("DsFreeSus", "DsFreeSus -> AsthmaEpsd", "AsthmaEpsd",
                     "AsthmaEpsd -> AsthmaEpsd Mortality", "Deceased",
                     "DsFreeSus -> DsFreeSus HYL", "AsthmaEpsd -> AsthmaEpsd HYL")
