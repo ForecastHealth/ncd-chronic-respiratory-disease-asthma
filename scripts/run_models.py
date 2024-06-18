@@ -20,7 +20,7 @@ SELECT strftime("%Y", timestamp) AS year,
   element_label,
   AVG(value) AS "AVG(value)"
 FROM results
-WHERE event_type IN ("BALANCE_SET")
+WHERE event_type IN ("EDGE_VALUES_CALCULATED")
 AND element_label IN ("Healthy Years Lived")
 GROUP BY year, element_label
 ORDER BY "AVG(value)" DESC
@@ -28,22 +28,12 @@ ORDER BY "AVG(value)" DESC
 
 
 def change_country(botech: dict, iso3: str):
-    for node in botech["nodes"]:
-        generate_array = node.get("generate_array")
-        if generate_array:
-            parameters = generate_array.get("parameters", {})
-            if "country" in parameters.keys():
-                parameters["country"] = iso3
-
-    for edge in botech["links"]:
-        generate_array = edge.get("generate_array")
-        if generate_array:
-            parameters = generate_array.get("parameters", {})
-            if "country" in parameters.keys():
-                parameters["country"] = iso3
+    for entrypoint in botech["entrypoints"]:
+        if entrypoint["id"] == "COUNTRY":
+            entrypoint["value"] = iso3
 
 
-def convert_scenario(botech: dict, scenario: str):
+def change_scenario(botech: dict, scenario: str):
     if scenario == "baseline":
         for node in botech["nodes"]:
             if node["id"] == "LowDoseBeclom_Coverage":
@@ -139,7 +129,7 @@ def main():
             for scenario in SCENARIOS:
                 print(f"Working on {country.alpha3} - {scenario}")
                 country_results["scenarios"][scenario] = {}
-                convert_scenario(botech, scenario)
+                change_scenario(botech, scenario)
                 run_response = run_request(session, botech, scenario, country.alpha3)
                 country_results["scenarios"][scenario]["STATUS_CODE"] = run_response.status_code
                 if run_response.status_code == 200:
