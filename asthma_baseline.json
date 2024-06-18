@@ -3,9 +3,17 @@
     "user": "appendix_3",
     "intervention": "asthma",
     "scenario": "baseline",
-    "country": "AFG",
+    "country": "COUNTRY",
     "version": "1.0"
   },
+  "entrypoints": [
+      {
+          "id": "COUNTRY",
+          "description": "Replace Country Specific Params",
+          "position": ["generate_array", "parameters"],
+          "value": "AFG"
+      }
+  ],
   "runtime": {
     "startYear": 2020,
     "endYear": 2120
@@ -36,7 +44,7 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "AFG",
+          "country": "COUNTRY",
           "disease": "Asthma",
           "measure": "deaths"
         }
@@ -132,8 +140,7 @@
       "y": -55.85,
       "label": "AsthmaEpsd",
       "ageing": true,
-      "color": "#E5EF73",
-      "order": 1
+      "color": "#E5EF73"
     },
     {
       "id": "Healthy_Disability",
@@ -146,7 +153,7 @@
         "data_fetcher_label": "fhdb",
         "method": "healthy_disability",
         "parameters": {
-          "country": "AFG"
+          "country": "COUNTRY"
         }
       }
     },
@@ -161,7 +168,7 @@
         "data_fetcher_label": "asthma",
         "method": "get_observation",
         "parameters": {
-          "country": "AFG",
+          "country": "COUNTRY",
           "observation": "AsthmaEpsd -> Disability"
         }
       }
@@ -173,7 +180,6 @@
       "label": "Births",
       "description": "Store of the number of births in the population",
       "balance_type": "array",
-      "order": 2,
       "flush": true,
       "color": "#EB7FEF"
     },
@@ -185,13 +191,12 @@
       "description": "State holding the balance of the healthy population",
       "node_type": "state",
       "balance_type": "array",
-      "order": 0,
       "ageing": true,
       "generate_array": {
         "data_fetcher_label": "fhdb",
         "method": "population",
         "parameters": {
-          "country": "AFG"
+          "country": "COUNTRY"
         },
         "fetch_once": true
       },
@@ -646,17 +651,15 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "AFG"
+          "country": "COUNTRY"
         }
       },
-      "order": 0,
       "label": "DsFreeSus -> DsFreeSus"
     },
     {
       "id": "MCWFcR4e",
       "source": "DsFreeSus",
       "target": "Births",
-      "order": 1,
       "description": "Project the number of births using the population and ASFR",
       "edge_type": "projection",
       "requires_source_balance": true,
@@ -666,7 +669,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "AFG"
+          "country": "COUNTRY"
         }
       },
       "label": "DsFreeSus -> Births"
@@ -684,7 +687,7 @@
         "data_fetcher_label": "fhdb",
         "method": "sex_ratio",
         "parameters": {
-          "country": "AFG",
+          "country": "COUNTRY",
           "sex": "m"
         }
       },
@@ -694,7 +697,6 @@
           0
         ]
       },
-      "order": 0,
       "label": "Births -> DsFreeSus"
     },
     {
@@ -710,7 +712,7 @@
         "data_fetcher_label": "fhdb",
         "method": "sex_ratio",
         "parameters": {
-          "country": "AFG",
+          "country": "COUNTRY",
           "sex": "f"
         }
       },
@@ -720,14 +722,12 @@
           0
         ]
       },
-      "order": 0,
       "label": "Births -> DsFreeSus"
     },
     {
       "id": "09Q1rhSn",
       "source": "DsFreeSus",
       "target": "Deceased",
-      "order": 2,
       "description": "Transition people into the mortality state",
       "edge_type": "transition",
       "requires_source_balance": true,
@@ -737,7 +737,7 @@
         "data_fetcher_label": "fhdb",
         "method": "mortality",
         "parameters": {
-          "country": "AFG"
+          "country": "COUNTRY"
         }
       },
       "label": "DsFreeSus -> Deceased"
@@ -755,12 +755,11 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "AFG",
+          "country": "COUNTRY",
           "disease": "Asthma",
           "measure": "incidence"
         }
       },
-      "order": 4,
       "label": "DsFreeSus -> AsthmaEpsd"
     },
     {
@@ -776,18 +775,16 @@
         "data_fetcher_label": "asthma",
         "method": "get_observation",
         "parameters": {
-          "country": "AFG",
+          "country": "COUNTRY",
           "observation": "AsthmaEpsd -> DsFreeSus"
         }
       },
-      "order": 3,
       "label": "AsthmaEpsd -> DsFreeSus"
     },
     {
       "id": "tGFmOvlz",
       "source": "AsthmaEpsd",
       "target": "Births",
-      "order": 1,
       "description": "Project the number of births using the population and ASFR",
       "edge_type": "projection",
       "requires_source_balance": true,
@@ -797,7 +794,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "AFG"
+          "country": "COUNTRY"
         }
       },
       "label": "AsthmaEpsd -> Births"
@@ -815,10 +812,9 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "AFG"
+          "country": "COUNTRY"
         }
       },
-      "order": 0,
       "label": "AsthmaEpsd -> AsthmaEpsd"
     },
     {
@@ -835,12 +831,11 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "AFG",
+          "country": "COUNTRY",
           "disease": "Asthma",
           "measure": "prevalence"
         }
       },
-      "order": 3,
       "label": "Prevalence DsFreeSus -> AsthmaEpsd"
     },
     {
@@ -1675,7 +1670,6 @@
     },
     {
       "method": "push_balance_to_edges",
-      "only_include_ordered_nodes": false,
       "narration": "Calculated Combined HYL",
       "included_edges": [
         "NWhCzdIp",
