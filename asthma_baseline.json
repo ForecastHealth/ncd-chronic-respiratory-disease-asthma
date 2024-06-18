@@ -1762,12 +1762,15 @@
       ]
     },
     {
-      "method": "push_balance_to_edges",
+      "method": "synchronous_transfer",
       "narration": "Main Routine",
       "included_edges": [
         "5G4k8iuN",
-        "Z6UVoLxv"
-      ]
+        "Z6UVoLxv",
+        "09Q1rhSn",
+        "dgLZdA4x"
+      ],
+      "batch": true
     },
     {
       "method": "push_balance_to_edges",
@@ -1791,14 +1794,6 @@
       "included_source_nodes": [
         "DsFreeSus",
         "AsthmaEpsd"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
-      "narration": "People die",
-      "included_edges": [
-        "09Q1rhSn",
-        "dgLZdA4x"
       ]
     },
     {
