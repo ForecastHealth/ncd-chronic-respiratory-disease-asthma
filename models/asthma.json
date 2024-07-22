@@ -8,12 +8,87 @@
     "file_id": "asthma_baseline"
   },
   "entrypoints": [
-      {
-          "id": "COUNTRY",
-          "description": "Replace Country Specific Params",
-          "position": ["generate_array", "parameters"],
-          "value": "AFG"
-      }
+    {
+      "id": "COUNTRY",
+      "description": "Replace Country Specific Params",
+      "position": [
+        "generate_array",
+        "parameters"
+      ],
+      "value": "AFG"
+    },
+    {
+      "id": "LowDoseBeclom_Coverage",
+      "description": "Target coverage for Low Dose Beclometasone",
+      "position": [
+        "generate_array",
+        "parameters"
+      ],
+      "value": 0.05
+    },
+    {
+      "id": "LowDoseBeclom_StartingCoverage",
+      "description": "Starting coverage for Low Dose Beclometasone",
+      "position": [
+        "generate_array",
+        "parameters"
+      ],
+      "value": 0.05
+    },
+    {
+      "id": "HighDoseBeclom_Coverage",
+      "description": "Target coverage for High Dose Beclometasone",
+      "position": [
+        "generate_array",
+        "parameters"
+      ],
+      "value": 0.05
+    },
+    {
+      "id": "HighDoseBeclom_StartingCoverage",
+      "description": "Starting coverage for High Dose Beclometasone",
+      "position": [
+        "generate_array",
+        "parameters"
+      ],
+      "value": 0.05
+    },
+    {
+      "id": "AsthmaOralPrednisolone_Coverage",
+      "description": "Target coverage for Oral Prednisolone",
+      "position": [
+        "generate_array",
+        "parameters"
+      ],
+      "value": 0.05
+    },
+    {
+      "id": "AsthmaOralPrednisolone_StartingCoverage",
+      "description": "Starting coverage for Oral Prednisolone",
+      "position": [
+        "generate_array",
+        "parameters"
+      ],
+      "value": 0.05
+    },
+    {
+      "id": "InhaledShortActingBeta_Coverage",
+      "description": "Target coverage for Inhaled Short Acting Beta Agonist",
+      "position": [
+        "generate_array",
+        "parameters"
+      ],
+      "value": 0.05
+    },
+    {
+      "id": "InhaledShortActingBeta_StartingCoverage",
+      "description": "Starting coverage for Inhaled Short Acting Beta Agonist",
+      "position": [
+        "generate_array",
+        "parameters"
+      ],
+      "value": 0.05
+    }
   ],
   "runtime": {
     "startYear": 2020,
