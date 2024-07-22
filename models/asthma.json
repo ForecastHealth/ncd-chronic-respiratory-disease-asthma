@@ -4,7 +4,8 @@
     "intervention": "asthma",
     "scenario": "baseline",
     "country": "COUNTRY",
-    "version": "1.0"
+    "version": "1.0",
+    "file_id": "asthma_baseline"
   },
   "entrypoints": [
       {
@@ -16,7 +17,7 @@
   ],
   "runtime": {
     "startYear": 2020,
-    "endYear": 2120
+    "endYear": 2041
   },
   "nodes": [
     {
