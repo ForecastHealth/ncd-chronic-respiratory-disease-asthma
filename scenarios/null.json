@@ -1,0 +1,45 @@
+{
+  "models": [
+    "asthma.json"
+  ],
+  "name": "Null Scenario",
+  "description": "Where all interventions are turned to 0",
+  "defaults": [
+    {
+      "id": "COUNTRY",
+      "value": "AFG"
+    },
+    {
+      "id": "LowDoseBeclom_Coverage",
+      "value": 0.0
+    },
+    {
+      "id": "LowDoseBeclom_StartingCoverage",
+      "value": 0.05
+    },
+    {
+      "id": "HighDoseBeclom_Coverage",
+      "value": 0.0
+    },
+    {
+      "id": "HighDoseBeclom_StartingCoverage",
+      "value": 0.05
+    },
+    {
+      "id": "AsthmaOralPrednisolone_Coverage",
+      "value": 0.0
+    },
+    {
+      "id": "AsthmaOralPrednisolone_StartingCoverage",
+      "value": 0.05
+    },
+    {
+      "id": "InhaledShortActingBeta_Coverage",
+      "value": 0.0
+    },
+    {
+      "id": "InhaledShortActingBeta_StartingCoverage",
+      "value": 0.05
+    }
+  ]
+}

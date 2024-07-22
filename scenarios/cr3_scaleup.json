@@ -1,0 +1,45 @@
+{
+  "models": [
+    "asthma.json"
+  ],
+  "name": "CR3 Scaleup",
+  "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+  "defaults": [
+    {
+      "id": "COUNTRY",
+      "value": "AFG"
+    },
+    {
+      "id": "LowDoseBeclom_Coverage",
+      "value": 0.95
+    },
+    {
+      "id": "LowDoseBeclom_StartingCoverage",
+      "value": 0.05
+    },
+    {
+      "id": "HighDoseBeclom_Coverage",
+      "value": 0.95
+    },
+    {
+      "id": "HighDoseBeclom_StartingCoverage",
+      "value": 0.05
+    },
+    {
+      "id": "AsthmaOralPrednisolone_Coverage",
+      "value": 0.05
+    },
+    {
+      "id": "AsthmaOralPrednisolone_StartingCoverage",
+      "value": 0.05
+    },
+    {
+      "id": "InhaledShortActingBeta_Coverage",
+      "value": 0.95
+    },
+    {
+      "id": "InhaledShortActingBeta_StartingCoverage",
+      "value": 0.05
+    }
+  ]
+}
