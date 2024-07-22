@@ -1,7 +1,7 @@
 {
   "models": [
     {
-      "name": "Asthma Disease Model",
+      "name": "asthma_baseline",
       "path": "./models/asthma.json"
     }
   ]
