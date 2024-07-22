@@ -1,0 +1,24 @@
+{
+  "asthma.json": [
+    {
+      "name": "Baseline",
+      "path": "./scenarios/baseline.json"
+    },
+    {
+      "name": "CR1 Null",
+      "path": "./scenarios/cr1_null.json"
+    },
+    {
+      "name": "CR3 Null",
+      "path": "./scenarios/cr3_null.json"
+    },
+    {
+      "name": "CR1 Scale-Up",
+      "path": "./scenarios/cr1_scaleup.json"
+    },
+    {
+      "name": "CR3 Scale-Up",
+      "path": "./scenarios/cr3_scaleup.json"
+    }
+  ]
+}
