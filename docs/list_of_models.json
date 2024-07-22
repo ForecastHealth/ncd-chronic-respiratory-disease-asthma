@@ -1,0 +1,8 @@
+{
+  "models": [
+    {
+      "name": "asthma_baseline",
+      "path": "./models/asthma.json"
+    }
+  ]
+}
