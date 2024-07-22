@@ -5,7 +5,8 @@
     "scenario": "baseline",
     "country": "COUNTRY",
     "version": "1.0",
-    "file_id": "asthma_baseline"
+    "file_id": "Asthma Model",
+    "description": "The rebuild of the Spectrum Asthma Disease Model"
   },
   "entrypoints": [
     {
