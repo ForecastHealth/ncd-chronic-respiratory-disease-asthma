@@ -69,7 +69,7 @@ class RunList {
             buttons += `<a href="${run.downloadUrl}" download class="action-btn download-btn">Download</a>`;
             if (run.fileId) {
                 buttons += `
-                    <a href="https://api.forecasthealth.org/summary/standard/${run.fileId}" target="_blank" class="action-btn download-btn">Summary</a>
+                    <a href="https://api.forecasthealth.org/summary/appendix_3/${run.fileId}" target="_blank" class="action-btn download-btn">Summary</a>
                 `;
             }
         } else if (run.status === 'Pending' || run.status === 'In Progress') {
@@ -79,7 +79,7 @@ class RunList {
     }
 
     extractFileIdFromUrl(url) {
-        const match = url.match(/\/users\/standard\/results\/([^\/]+)\/pipeline_results\.zip/);
+        const match = url.match(/\/users\/appendix_3\/results\/([^\/]+)\/pipeline_results\.zip/);
         return match ? match[1] : null;
     }
 
