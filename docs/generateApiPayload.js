@@ -1,6 +1,8 @@
 function generateApiPayload() {
     const modelSelect = document.getElementById('model');
+    const scenarioSelect = document.getElementById('scenario');  // Define scenarioSelect
     const countrySelect = document.getElementById('country');
+    const allCountriesCheckbox = document.getElementById('allCountries');
     const startYearInput = document.getElementById('startYear');
     const endYearInput = document.getElementById('endYear');
     const entrypointsTable = document.getElementById('entrypointsTable');
@@ -10,49 +12,85 @@ function generateApiPayload() {
     return fetch(modelSelect.value)
         .then(response => response.json())
         .then(modelData => {
-            // Update country
+            // Determine if we're running for all countries or a single country
+            const runAllCountries = allCountriesCheckbox.checked;
             const selectedCountry = countrySelect.value;
-            const countryEntrypoint = modelData.entrypoints.find(entry => entry.id === "COUNTRY");
-            if (countryEntrypoint) {
-                countryEntrypoint.value = selectedCountry;
-            }
 
-            // Update start and end years
-            modelData.runtime.startYear = parseInt(startYearInput.value);
-            modelData.runtime.endYear = parseInt(endYearInput.value);
+            // Fetch the selected scenario
+            return fetch(scenarioSelect.value)
+                .then(response => response.json())
+                .then(scenarioData => {
+                    // Function to generate payload for a single country
+                    function generateCountryPayload(country) {
+                        const payload = JSON.parse(JSON.stringify(modelData)); // Deep clone the model data
+                        const appliedScenario = getAppliedScenario(scenarioData, country);
 
-            // Update entrypoints
-            const entrypointRows = entrypointsTable.querySelectorAll('tbody tr');
-            entrypointRows.forEach(row => {
-                const id = row.cells[0].textContent;
-                const valueInput = row.cells[2].querySelector('input');
-                const entrypoint = modelData.entrypoints.find(entry => entry.id === id);
-                if (entrypoint && valueInput) {
-                    // Convert to number if it's a valid number, otherwise keep as string
-                    const numValue = parseFloat(valueInput.value);
-                    entrypoint.value = isNaN(numValue) ? valueInput.value : numValue;
-                }
-            });
+                        // Update country
+                        const countryEntrypoint = payload.entrypoints.find(entry => entry.id === "COUNTRY");
+                        if (countryEntrypoint) {
+                            countryEntrypoint.value = country;
+                        }
 
-            // Collect selected results
-            const selectedResults = Array.from(resultsList.querySelectorAll('input[type="checkbox"]:checked'))
-                .map(checkbox => {
-                    const resultData = JSON.parse(checkbox.dataset.result);
-                    return {
-                        label: resultData.label,
-                        query: resultData.query
-                    };
+                        // Update start and end years
+                        payload.runtime.startYear = parseInt(startYearInput.value);
+                        payload.runtime.endYear = parseInt(endYearInput.value);
+
+                        // Update entrypoints
+                        payload.entrypoints.forEach(entrypoint => {
+                            if (appliedScenario.hasOwnProperty(entrypoint.id)) {
+                                entrypoint.value = appliedScenario[entrypoint.id];
+                            }
+                        });
+
+                        // Collect selected results
+                        const selectedResults = Array.from(resultsList.querySelectorAll('input[type="checkbox"]:checked'))
+                            .map(checkbox => {
+                                const resultData = JSON.parse(checkbox.dataset.result);
+                                return {
+                                    label: resultData.label,
+                                    query: resultData.query
+                                };
+                            });
+
+                        // Construct the final payload
+                        return {
+                            botech: payload,
+                            queries: selectedResults,
+                            environment: "appendix_3"
+                        };
+                    }
+
+                    if (runAllCountries) {
+                        // Fetch the list of all countries
+                        return fetch('./list_of_countries.json')
+                            .then(response => response.json())
+                            .then(data => {
+                                const countries = data.countries.map(country => country.iso3);
+                                return countries.map(country => generateCountryPayload(country));
+                            });
+                    } else {
+                        // Generate payload for the selected country
+                        return [generateCountryPayload(selectedCountry)];
+                    }
                 });
-
-            // Construct the final payload
-            const payload = {
-                botech: modelData,
-                queries: selectedResults,
-                environment: "appendix_3"
-            };
-
-            return payload;
         });
+}
+
+function getAppliedScenario(scenarioData, country) {
+    // Check country_overrides
+    if (scenarioData.country_overrides && scenarioData.country_overrides[country]) {
+        return { ...scenarioData.defaults, ...scenarioData.country_overrides[country] };
+    }
+    
+    // Check scenario_groups
+    for (const group in scenarioData.scenario_groups) {
+        if (scenarioData.scenario_groups[group].countries.includes(country)) {
+            return { ...scenarioData.defaults, ...scenarioData.scenario_groups[group].parameters };
+        }
+    }
+    
+    // Use defaults
+    return scenarioData.defaults;
 }
 
 function showMessage(message, statusUrl) {
@@ -115,30 +153,41 @@ const generateButton = document.getElementById('generate');
 if (generateButton) {
     generateButton.addEventListener('click', function() {
         generateApiPayload()
-            .then(payload => {
-                console.log('API Payload:', payload);
+            .then(payloads => {
+                console.log('API Payloads:', payloads);
                 
-                // Send the POST request to the API
-                return fetch('https://api.forecasthealth.org/pipeline', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(payload),
-                });
+                // Send the POST request to the API for each payload
+                return Promise.all(payloads.map(payload => 
+                    fetch('https://api.forecasthealth.org/pipeline', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(payload),
+                    })
+                    .then(response => response.json())
+                    .then(data => ({
+                        response: data,
+                        payload: payload
+                    }))
+                ));
             })
-            .then(response => response.json())
-            .then(data => {
-                console.log('API Response:', data);
+            .then(results => {
+                console.log('API Responses:', results);
                 
-                // Extract the task_id from the response
-                const taskId = data.task_id;
-                
-                // Add the run to the RunList
-                const modelName = document.getElementById('model').options[document.getElementById('model').selectedIndex].text;
-                const countryName = document.getElementById('country').options[document.getElementById('country').selectedIndex].text;
-                const scenarioName = document.getElementById('scenario').options[document.getElementById('scenario').selectedIndex].text;
-                runList.addRun(taskId, modelName, countryName, scenarioName);
+                // Process each response
+                results.forEach(({ response, payload }) => {
+                    // Extract the task_id from the response
+                    const taskId = response.task_id;
+                    
+                    // Add the run to the RunList
+                    const modelName = document.getElementById('model').options[document.getElementById('model').selectedIndex].text;
+                    const countryName = payload.botech.entrypoints.find(entry => entry.id === "COUNTRY").value;
+                    const scenarioName = document.getElementById('scenario').options[document.getElementById('scenario').selectedIndex].text;
+                    runList.addRun(taskId, modelName, countryName, scenarioName);
+                });
+
+                console.log(`Started ${results.length} run(s). Check the Run List for status updates.`);
             })
             .catch(error => {
                 console.error('Error:', error);
