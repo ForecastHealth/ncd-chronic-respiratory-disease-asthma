@@ -1,12 +1,20 @@
 {
   "scenarios": [
     {
-      "name": "Null Scenario",
+      "name": "null_scenario.json",
       "filename": "null_scenario.json"
     },
     {
-      "name": "Scale Up Scenario",
-      "filename": "scale_up_scenario.json"
+      "name": "cr1_scenario.json",
+      "filename": "cr1_scenario.json"
+    },
+    {
+      "name": "cr3_scenario.json",
+      "filename": "cr3_scenario.json"
+    },
+    {
+      "name": "default_scenario.json",
+      "filename": "default_scenario.json"
     }
   ]
 }
