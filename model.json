@@ -6,6 +6,7 @@
     "country": "AFG",
     "version": "1.0",
     "file_id": "Asthma Model",
+    "name": "NCD Rebuild - Asthma Disease Model",
     "description": "The rebuild of the Spectrum Asthma Disease Model"
   },
   "runtime": {
