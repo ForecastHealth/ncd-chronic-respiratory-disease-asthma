@@ -2,14 +2,6 @@
 This document describes the Asthma state-transition model, and the scenarios which are run using it.
 If you are uncertain about the general appendix 3 methodologies, or have general queries, [please refer to the README](README.md).
 
-## Link to the Interactive Tool
-You can scenarios using the asthma model [by using this interactive tool](./tool.html)
-
-
-## Link to Model
-- Baseline (as reference): [Link to Botech Online Model](https://botech.forecasthealth.org/?userId=appendix_3&modelId=asthma_baseline&readOnly=1)
-
-
 ##  The Asthma Model and its design
 ### Asthma Models creates three scenarios: Null_Asthma, CR1, and CR3
 The Asthma Model refers to a "Model architecture": A structure of states and transitions, which can be used to run different scenarios.
