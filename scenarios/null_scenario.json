@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "label": "Default Scenario",
-  "description": "The scenario all interventions are scaled to 0% coverage",
+    "name": "Appendix 3 - Null Scenario",
+    "description": "The scenario all interventions are scaled to 0% coverage",
     "authors": [],
     "date_created": "2024-12-10 13:04"
   },
@@ -34,7 +34,7 @@
       ]
     },
     "Low Dose Beclometasone Target Coverage": {
-      "value": 0.0,
+      "value": 0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.value"
@@ -62,7 +62,7 @@
       ]
     },
     "High Dose Beclometasone Target Coverage": {
-      "value": 0.0,
+      "value": 0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_Coverage')].generate_array.parameters.value"
@@ -90,7 +90,7 @@
       ]
     },
     "Oral Prednisolone Target Coverage": {
-      "value": 0.0,
+      "value": 0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.value"
@@ -118,7 +118,7 @@
       ]
     },
     "Inhaled Short Acting Beta Agonist Target Coverage": {
-      "value": 0.0,
+      "value": 0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.value"

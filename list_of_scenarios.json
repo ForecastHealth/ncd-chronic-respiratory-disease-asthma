@@ -1,19 +1,19 @@
 {
   "scenarios": [
     {
-      "name": "null_scenario.json",
+      "name": "Appendix 3 - Null Scenario",
       "filename": "null_scenario.json"
     },
     {
-      "name": "cr1_scenario.json",
+      "name": "Appendix 3 - CR1 Scenario",
       "filename": "cr1_scenario.json"
     },
     {
-      "name": "cr3_scenario.json",
+      "name": "Appendix 3 - CR3 Scenario",
       "filename": "cr3_scenario.json"
     },
     {
-      "name": "default_scenario.json",
+      "name": "Default Scenario",
       "filename": "default_scenario.json"
     }
   ]
