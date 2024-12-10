@@ -19,7 +19,7 @@
       "x": 128.39,
       "y": -38.58,
       "label": "AsthmaEpsd Mortality",
-      "node_type": "surrogate",
+      "node_type": "SURROGATE",
       "color": "#7038E1",
       "generate_array": {
         "method": "single_value",
@@ -44,7 +44,8 @@
           "measure": "deaths"
         }
       },
-      "flush": true
+      "flush": true,
+      "node_type": "CONSTANT"
     },
     {
       "id": "Blended_Disability_Transform",
@@ -58,7 +59,8 @@
           "value": 1
         }
       },
-      "flush": true
+      "flush": true,
+      "node_type": "FUNCTION"
     },
     {
       "id": "Disability_Effect_Transform",
@@ -73,7 +75,8 @@
         "parameters": {
           "value": 1
         }
-      }
+      },
+      "node_type": "FUNCTION"
     },
     {
       "id": "LowDoseBeclom_Mortality_Impact",
@@ -87,7 +90,8 @@
         "parameters": {
           "value": -0.5
         }
-      }
+      },
+      "node_type": "CONSTANT"
     },
     {
       "id": "LowDoseBeclom_Mortality_Effect",
@@ -101,7 +105,8 @@
         "parameters": {
           "value": 1
         }
-      }
+      },
+      "node_type": "FUNCTION"
     },
     {
       "id": "Asthma_Blended_Disability",
@@ -115,7 +120,8 @@
           "value": 1
         }
       },
-      "flush": true
+      "flush": true,
+      "node_type": "FUNCTION"
     },
     {
       "id": "Deceased",
@@ -123,7 +129,7 @@
       "y": -56.22,
       "label": "Deceased",
       "description": "The state of being dead",
-      "node_type": "state",
+      "node_type": "STATE",
       "balance_type": "array",
       "color": "#FB6375",
       "order": 3,
@@ -135,7 +141,8 @@
       "y": -55.85,
       "label": "AsthmaEpsd",
       "ageing": true,
-      "color": "#E5EF73"
+      "color": "#E5EF73",
+      "node_type": "STATE"
     },
     {
       "id": "Healthy_Disability",
@@ -150,7 +157,8 @@
         "parameters": {
           "country": "AFG"
         }
-      }
+      },
+      "node_type": "CONSTANT"
     },
     {
       "id": "Asthma_Disability",
@@ -166,7 +174,8 @@
           "country": "AFG",
           "observation": "AsthmaEpsd -> Disability"
         }
-      }
+      },
+      "node_type": "CONSTANT"
     },
     {
       "id": "Births",
@@ -176,7 +185,8 @@
       "description": "Store of the number of births in the population",
       "balance_type": "array",
       "flush": true,
-      "color": "#EB7FEF"
+      "color": "#EB7FEF",
+      "node_type": "FUNCTION"
     },
     {
       "id": "DsFreeSus",
@@ -184,7 +194,7 @@
       "y": -76.49,
       "label": "DsFreeSus",
       "description": "State holding the balance of the healthy population",
-      "node_type": "state",
+      "node_type": "STATE",
       "balance_type": "array",
       "ageing": true,
       "generate_array": {
@@ -209,7 +219,8 @@
         "parameters": {
           "value": 1
         }
-      }
+      },
+      "node_type": "FUNCTION"
     },
     {
       "id": "AsthmaOralPrednisolone_Disability_Effect",
@@ -223,7 +234,8 @@
         "parameters": {
           "value": 1
         }
-      }
+      },
+      "node_type": "FUNCTION"
     },
     {
       "id": "HighDoseBeclom_Disability_Effect",
@@ -237,7 +249,8 @@
         "parameters": {
           "value": 1
         }
-      }
+      },
+      "node_type": "FUNCTION"
     },
     {
       "id": "HighDoseBeclom_Calculated_Coverage",
@@ -251,7 +264,8 @@
         }
       },
       "color": "#06B4E1",
-      "flush": true
+      "flush": true,
+      "node_type": "FUNCTION"
     },
     {
       "id": "LowDoseBeclom_Calculated_Coverage",
@@ -265,7 +279,8 @@
         }
       },
       "color": "#06B4E1",
-      "flush": true
+      "flush": true,
+      "node_type": "FUNCTION"
     },
     {
       "id": "AsthmaOralPrednisolone_Calculated_Coverage",
@@ -279,7 +294,8 @@
         }
       },
       "color": "#06B4E1",
-      "flush": true
+      "flush": true,
+      "node_type": "FUNCTION"
     },
     {
       "id": "LowDoseBeclom_Disability_Effect",
@@ -293,7 +309,8 @@
         "parameters": {
           "value": 1
         }
-      }
+      },
+      "node_type": "FUNCTION"
     },
     {
       "id": "InhaledShortActingBeta_Calculated_Coverage",
@@ -307,7 +324,8 @@
         }
       },
       "color": "#06B4E1",
-      "flush": true
+      "flush": true,
+      "node_type": "FUNCTION"
     },
     {
       "id": "InhaledShortActingBeta_Disability_Impact",
@@ -321,7 +339,8 @@
         "parameters": {
           "value": -0.00961066
         }
-      }
+      },
+      "node_type": "CONSTANT"
     },
     {
       "id": "AsthmaOralPrednisolone_Disability_Impact",
@@ -335,7 +354,8 @@
         "parameters": {
           "value": -0.3373407
         }
-      }
+      },
+      "node_type": "CONSTANT"
     },
     {
       "id": "HighDoseBeclom_Disability_Impact",
@@ -349,7 +369,8 @@
         "parameters": {
           "value": -0.13260075
         }
-      }
+      },
+      "node_type": "CONSTANT"
     },
     {
       "id": "LowDoseBeclom_Disability_Impact",
@@ -363,7 +384,8 @@
         "parameters": {
           "value": -0.07979948
         }
-      }
+      },
+      "node_type": "CONSTANT"
     },
     {
       "id": "InhaledShortActingBeta_Coverage",
@@ -377,7 +399,8 @@
         }
       },
       "color": "#06B4E1",
-      "flush": true
+      "flush": true,
+      "node_type": "CONSTANT"
     },
     {
       "id": "InhaledShortActingBeta_StartingCoverage",
@@ -386,13 +409,16 @@
       "label": "InhaledShortActingBeta_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
-        "postprocessing": {"negative": true},
+        "postprocessing": {
+          "negative": true
+        },
         "method": "single_value",
         "parameters": {
           "value": 0.05
         }
       },
-      "color": "#06B4E1"
+      "color": "#06B4E1",
+      "node_type": "CONSTANT"
     },
     {
       "id": "AsthmaOralPrednisolone_Coverage",
@@ -406,7 +432,8 @@
         }
       },
       "color": "#06B4E1",
-      "flush": true
+      "flush": true,
+      "node_type": "CONSTANT"
     },
     {
       "id": "AsthmaOralPrednisolone_StartingCoverage",
@@ -416,12 +443,15 @@
       "generate_array": {
         "fetch_once": true,
         "method": "single_value",
-        "postprocessing": {"negative": true},
+        "postprocessing": {
+          "negative": true
+        },
         "parameters": {
           "value": 0.05
         }
       },
-      "color": "#06B4E1"
+      "color": "#06B4E1",
+      "node_type": "CONSTANT"
     },
     {
       "id": "HighDoseBeclom_Coverage",
@@ -435,7 +465,8 @@
         }
       },
       "color": "#06B4E1",
-      "flush": true
+      "flush": true,
+      "node_type": "CONSTANT"
     },
     {
       "id": "HighDoseBeclom_StartingCoverage",
@@ -445,12 +476,15 @@
       "generate_array": {
         "fetch_once": true,
         "method": "single_value",
-        "postprocessing": {"negative": true},
+        "postprocessing": {
+          "negative": true
+        },
         "parameters": {
           "value": 0.05
         }
       },
-      "color": "#06B4E1"
+      "color": "#06B4E1",
+      "node_type": "CONSTANT"
     },
     {
       "id": "LowDoseBeclom_Coverage",
@@ -464,7 +498,8 @@
         }
       },
       "color": "#06B4E1",
-      "flush": true
+      "flush": true,
+      "node_type": "CONSTANT"
     },
     {
       "id": "LowDoseBeclom_StartingCoverage",
@@ -473,13 +508,16 @@
       "label": "LowDoseBeclom_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
-        "postprocessing": {"negative": true},
+        "postprocessing": {
+          "negative": true
+        },
         "method": "single_value",
         "parameters": {
           "value": 0.05
         }
       },
-      "color": "#06B4E1"
+      "color": "#06B4E1",
+      "node_type": "CONSTANT"
     },
     {
       "id": "AsthmaOralPrednisolone_PIN",
@@ -493,7 +531,8 @@
           "value": 0.323
         }
       },
-      "color": "#06B4E1"
+      "color": "#06B4E1",
+      "node_type": "CONSTANT"
     },
     {
       "id": "InhaledShortActingBeta_PIN",
@@ -507,7 +546,8 @@
           "value": 0.3
         }
       },
-      "color": "#06B4E1"
+      "color": "#06B4E1",
+      "node_type": "CONSTANT"
     },
     {
       "id": "HighDoseBeclom_PIN",
@@ -521,7 +561,8 @@
           "value": 0.3
         }
       },
-      "color": "#06B4E1"
+      "color": "#06B4E1",
+      "node_type": "CONSTANT"
     },
     {
       "id": "LowDoseBeclom_PIN",
@@ -535,7 +576,8 @@
           "value": 0.4
         }
       },
-      "color": "#06B4E1"
+      "color": "#06B4E1",
+      "node_type": "CONSTANT"
     },
     {
       "id": "Mortality_Effect_Transform",
@@ -550,14 +592,15 @@
         "parameters": {
           "value": 1
         }
-      }
+      },
+      "node_type": "FUNCTION"
     },
     {
       "id": "nKC8vwhN",
       "x": 93.04,
       "y": -44.44,
       "label": "DsFreeSus HYL",
-      "node_type": "surrogate",
+      "node_type": "SURROGATE",
       "color": "#7038E1",
       "generate_array": {
         "method": "single_value",
@@ -573,7 +616,7 @@
       "y": -31.68,
       "label": "Healthy Years Lived",
       "description": "A store of disability adjusted life years",
-      "node_type": "state",
+      "node_type": "STATE",
       "balance_type": "array",
       "color": "#FFB255",
       "flush": true
@@ -583,7 +626,7 @@
       "x": 60.9,
       "y": -45.17,
       "label": "AsthmaEpsd HYL",
-      "node_type": "surrogate",
+      "node_type": "SURROGATE",
       "color": "#7038E1",
       "generate_array": {
         "method": "single_value",
@@ -605,7 +648,8 @@
           "value": 1
         }
       },
-      "flush": true
+      "flush": true,
+      "node_type": "FUNCTION"
     },
     {
       "id": "sBeYN0kb",
@@ -619,7 +663,8 @@
           "value": 1
         }
       },
-      "flush": true
+      "flush": true,
+      "node_type": "FUNCTION"
     },
     {
       "id": "W7MB6GWT",
@@ -633,7 +678,8 @@
           "value": 1
         }
       },
-      "flush": true
+      "flush": true,
+      "node_type": "FUNCTION"
     }
   ],
   "links": [
