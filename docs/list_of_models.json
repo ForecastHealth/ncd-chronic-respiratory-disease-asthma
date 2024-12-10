@@ -1,8 +1,0 @@
-{
-  "models": [
-    {
-      "name": "asthma.json",
-      "path": "./models/asthma.json"
-    }
-  ]
-}
