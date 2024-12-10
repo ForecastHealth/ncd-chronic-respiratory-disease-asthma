@@ -3,94 +3,11 @@
     "user": "appendix_3",
     "intervention": "asthma",
     "scenario": "baseline",
-    "country": "COUNTRY",
+    "country": "AFG",
     "version": "1.0",
     "file_id": "Asthma Model",
     "description": "The rebuild of the Spectrum Asthma Disease Model"
   },
-  "entrypoints": [
-    {
-      "id": "COUNTRY",
-      "description": "Replace Country Specific Params",
-      "position": [
-        "generate_array",
-        "parameters"
-      ],
-      "value": "AFG"
-    },
-    {
-      "id": "LowDoseBeclom_Coverage",
-      "description": "Target coverage for Low Dose Beclometasone",
-      "position": [
-        "generate_array",
-        "parameters"
-      ],
-      "value": 0.05
-    },
-    {
-      "id": "LowDoseBeclom_StartingCoverage",
-      "description": "Starting coverage for Low Dose Beclometasone",
-      "position": [
-        "generate_array",
-        "parameters"
-      ],
-      "value": 0.05
-    },
-    {
-      "id": "HighDoseBeclom_Coverage",
-      "description": "Target coverage for High Dose Beclometasone",
-      "position": [
-        "generate_array",
-        "parameters"
-      ],
-      "value": 0.05
-    },
-    {
-      "id": "HighDoseBeclom_StartingCoverage",
-      "description": "Starting coverage for High Dose Beclometasone",
-      "position": [
-        "generate_array",
-        "parameters"
-      ],
-      "value": 0.05
-    },
-    {
-      "id": "AsthmaOralPrednisolone_Coverage",
-      "description": "Target coverage for Oral Prednisolone",
-      "position": [
-        "generate_array",
-        "parameters"
-      ],
-      "value": 0.05
-    },
-    {
-      "id": "AsthmaOralPrednisolone_StartingCoverage",
-      "description": "Starting coverage for Oral Prednisolone",
-      "position": [
-        "generate_array",
-        "parameters"
-      ],
-      "value": 0.05
-    },
-    {
-      "id": "InhaledShortActingBeta_Coverage",
-      "description": "Target coverage for Inhaled Short Acting Beta Agonist",
-      "position": [
-        "generate_array",
-        "parameters"
-      ],
-      "value": 0.05
-    },
-    {
-      "id": "InhaledShortActingBeta_StartingCoverage",
-      "description": "Starting coverage for Inhaled Short Acting Beta Agonist",
-      "position": [
-        "generate_array",
-        "parameters"
-      ],
-      "value": 0.05
-    }
-  ],
   "runtime": {
     "startYear": 2020,
     "endYear": 2041
@@ -121,7 +38,7 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "COUNTRY",
+          "country": "AFG",
           "disease": "Asthma",
           "measure": "deaths"
         }
@@ -230,7 +147,7 @@
         "data_fetcher_label": "fhdb",
         "method": "healthy_disability",
         "parameters": {
-          "country": "COUNTRY"
+          "country": "AFG"
         }
       }
     },
@@ -245,7 +162,7 @@
         "data_fetcher_label": "asthma",
         "method": "get_observation",
         "parameters": {
-          "country": "COUNTRY",
+          "country": "AFG",
           "observation": "AsthmaEpsd -> Disability"
         }
       }
@@ -273,7 +190,7 @@
         "data_fetcher_label": "fhdb",
         "method": "population",
         "parameters": {
-          "country": "COUNTRY"
+          "country": "AFG"
         },
         "fetch_once": true
       },
@@ -728,7 +645,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "COUNTRY"
+          "country": "AFG"
         }
       },
       "label": "DsFreeSus -> DsFreeSus"
@@ -746,7 +663,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "COUNTRY"
+          "country": "AFG"
         }
       },
       "label": "DsFreeSus -> Births"
@@ -764,7 +681,7 @@
         "data_fetcher_label": "fhdb",
         "method": "sex_ratio",
         "parameters": {
-          "country": "COUNTRY",
+          "country": "AFG",
           "sex": "m"
         }
       },
@@ -789,7 +706,7 @@
         "data_fetcher_label": "fhdb",
         "method": "sex_ratio",
         "parameters": {
-          "country": "COUNTRY",
+          "country": "AFG",
           "sex": "f"
         }
       },
@@ -814,7 +731,7 @@
         "data_fetcher_label": "fhdb",
         "method": "mortality",
         "parameters": {
-          "country": "COUNTRY"
+          "country": "AFG"
         }
       },
       "label": "DsFreeSus -> Deceased"
@@ -832,7 +749,7 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "COUNTRY",
+          "country": "AFG",
           "disease": "Asthma",
           "measure": "incidence"
         }
@@ -852,7 +769,7 @@
         "data_fetcher_label": "asthma",
         "method": "get_observation",
         "parameters": {
-          "country": "COUNTRY",
+          "country": "AFG",
           "observation": "AsthmaEpsd -> DsFreeSus"
         }
       },
@@ -871,7 +788,7 @@
         "data_fetcher_label": "fhdb",
         "method": "fertility",
         "parameters": {
-          "country": "COUNTRY"
+          "country": "AFG"
         }
       },
       "label": "AsthmaEpsd -> Births"
@@ -889,7 +806,7 @@
         "data_fetcher_label": "fhdb",
         "method": "migration",
         "parameters": {
-          "country": "COUNTRY"
+          "country": "AFG"
         }
       },
       "label": "AsthmaEpsd -> AsthmaEpsd"
@@ -908,7 +825,7 @@
         "data_fetcher_label": "fhdb",
         "method": "epidemiology",
         "parameters": {
-          "country": "COUNTRY",
+          "country": "AFG",
           "disease": "Asthma",
           "measure": "prevalence"
         }
