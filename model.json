@@ -385,9 +385,10 @@
       "label": "InhaledShortActingBeta_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
+        "postprocessing": {"negative": true},
         "method": "single_value",
         "parameters": {
-          "value": -0.05
+          "value": 0.05
         }
       },
       "color": "#06B4E1"
@@ -414,8 +415,9 @@
       "generate_array": {
         "fetch_once": true,
         "method": "single_value",
+        "postprocessing": {"negative": true},
         "parameters": {
-          "value": -0.05
+          "value": 0.05
         }
       },
       "color": "#06B4E1"
@@ -442,8 +444,9 @@
       "generate_array": {
         "fetch_once": true,
         "method": "single_value",
+        "postprocessing": {"negative": true},
         "parameters": {
-          "value": -0.05
+          "value": 0.05
         }
       },
       "color": "#06B4E1"
@@ -469,9 +472,10 @@
       "label": "LowDoseBeclom_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
+        "postprocessing": {"negative": true},
         "method": "single_value",
         "parameters": {
-          "value": -0.05
+          "value": 0.05
         }
       },
       "color": "#06B4E1"
