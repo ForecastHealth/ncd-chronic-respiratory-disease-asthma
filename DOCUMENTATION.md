@@ -1,6 +1,4 @@
 # The Asthma Model, and its Scenarios
-This document describes the Asthma state-transition model, and the scenarios which are run using it.
-If you are uncertain about the general appendix 3 methodologies, or have general queries, [please refer to the README](README.md).
 
 ##  The Asthma Model and its design
 ### Asthma Models creates three scenarios: Null_Asthma, CR1, and CR3
@@ -42,31 +40,28 @@ While treatments are always present in the structure of the Asthma model, their 
 **NOTE** - These figures imply a modification of effect sizes.
 E.g. `LowDoseBeclom` reduces the CFR of `AsthmaEpsd` by 50% (-0.5).
 
-- LowDoseBeclom
-    - Disability: -0.07979948
-    - Mortality: -0.5
-- HighDoseBeclom
-    - Disability:-0.13260075
-- InhaledShortActingBeta
-    - Disability:-0.00961066
-- AsthmaOralPrednisolone
-    - Disability:-0.3373407
+| Treatment | Impact on Disability | Impact on Mortality |
+|-----------|---------------------|-------------------|
+| LowDoseBeclom | -0.07979948 | -0.5 |
+| HighDoseBeclom | -0.13260075 | - |
+| InhaledShortActingBeta | -0.00961066 | - |
+| AsthmaOralPrednisolone | -0.3373407 | - |
 
 ### Population in Need
 **NOTE** - Refers to the proportion of people in `AsthmaEpsd` who are "in need" of this treatment.
 e.g. 30% of `AsthmaEpsd` are "in need" of `InhaledShortActingBeta`
-- LowDoseBeclom: 0.4
-- HighDoseBeclom: 0.3
-- InhaledShortActingBeta: 0.3
-- AsthmaOralPrednisolone: 0.323
+
+| Treatment | Population in Need |
+|-----------|-------------------|
+| LowDoseBeclom | 0.4 |
+| HighDoseBeclom | 0.3 |
+| InhaledShortActingBeta | 0.3 |
+| AsthmaOralPrednisolone | 0.323 |
 
 ### The Model has two key components
 The Asthma model is large, but can be broken down into two components.
-![Both Components Together](./static/asthma_both_components.png)
 
 #### The main component moves people between states
-![The Main Component](./static/asthma_main_component.png)
-
 The main component has the states we've introduced: `DsFreeSus`, `AsthmaEpsd`, `Deceased`, `Disability`, `Births`.
 Importantly there are some other states which sit between states:
 - `DsFreeSus Disability` sits between `DsFreeSus` and `Disability`
@@ -81,7 +76,6 @@ This is a structural decision we have made, but it doesn't change the results.
 Rather, we do this, so we can show how the calculations work to determine the disability and mortality effects.
 
 #### The calculation component sets the transition rates
-![The Calculation Component](./static/asthma_calculation_component.png)
 The "Surrogate Nodes" mentioned above, are set by a series of calculations in the model.
 We will explain these in detail below in the section "The Order of Operations".
 
@@ -249,9 +243,7 @@ If the year was 2019, it is now 2020.
 If the year was 2020, it is now 2021.
 If the year was 2119, the model simulation ends.
 
-# Outstanding Issues / Clarifications / Questions
+## Outstanding Issues / Clarifications / Questions
 - Our current demographic projection may differ substantially from previous model's demographic project.
     - Changes to fertility rates, background mortality, and migration rates may all affect the magnitude of the results.
 - We are not sure if there has been discounting on effects.
-
-[Link to Results](https://forecasthealth.org/who-appendix3-cr/)
