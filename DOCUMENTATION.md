@@ -1,5 +1,14 @@
 # The Asthma Model, and its Scenarios
 
+## Interventions Table
+
+| Category                   | Code | Name                                                                                                        |
+|----------------------------|------|-------------------------------------------------------------------------------------------------------------|
+| Chronic respiratory diseases | CR1  | Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids                      |
+| Chronic respiratory diseases | CR3  | Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone                      |
+
+---
+
 ##  The Asthma Model and its design
 ### Asthma Models creates three scenarios: Null_Asthma, CR1, and CR3
 The Asthma Model refers to a "Model architecture": A structure of states and transitions, which can be used to run different scenarios.
