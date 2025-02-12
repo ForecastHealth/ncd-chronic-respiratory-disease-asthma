@@ -1,35 +1,31 @@
 {
   "scenarios": [
     {
-      "name": "Tobacco T1 Scenario",
+      "name": "Appendix 3 - Tobacco T1 Scenario",
       "filename": "tobacco_t1.json"
     },
     {
-      "name": "Tobacco Null Scenario",
+      "name": "Appendix 3 - CR1 Scenario",
+      "filename": "asthma_cr1_scenario.json"
+    },
+    {
+      "name": "Appendix 3 - Tobacco Null Scenario",
       "filename": "tobacco_null.json"
     },
     {
-      "name": "Tobacco T2 Scenario",
+      "name": "Appendix 3 - Tobacco T2 Scenario",
       "filename": "tobacco_t2.json"
     },
     {
-      "name": "UNAVAILABLE - Tobacco T3 Scenario",
+      "name": "UNAVAILABLE - Appendix 3 - Tobacco T3 Scenario",
       "filename": "tobacco_t3.json"
     },
     {
-      "name": "Appendix 3 - Null Scenario",
-      "filename": "null_scenario.json"
+      "name": "Appendix 3 - Asthma Null Scenario",
+      "filename": "asthma_null_scenario.json"
     },
     {
-      "name": "Appendix 3 - CR1 Scenario",
-      "filename": "cr1_scenario.json"
-    },
-    {
-      "name": "Appendix 3 - CR3 Scenario",
-      "filename": "cr3_scenario.json"
-    },
-    {
-      "name": "Tobacco T6 Scenario",
+      "name": "Appendix 3 -Tobacco T6 Scenario",
       "filename": "tobacco_t6.json"
     },
     {
@@ -37,16 +33,20 @@
       "filename": "default_scenario.json"
     },
     {
-      "name": "Tobacco T7 Scenario",
+      "name": "Appendix 3 -Tobacco T7 Scenario",
       "filename": "tobacco_t7.json"
     },
     {
-      "name": "UNAVAILABLE - Tobacco T4 Scenario",
+      "name": "UNAVAILABLE - Appendix 3 -Tobacco T4 Scenario",
       "filename": "tobacco_t4.json"
     },
     {
-      "name": "Tobacco T5 Scenario",
+      "name": "Appendix 3 -Tobacco T5 Scenario",
       "filename": "tobacco_t5.json"
+    },
+    {
+      "name": "Appendix 3 - CR3 Scenario",
+      "filename": "asthma_cr3_scenario.json"
     }
   ]
 }
