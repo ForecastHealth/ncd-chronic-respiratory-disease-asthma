@@ -1,6 +1,22 @@
 {
   "scenarios": [
     {
+      "name": "Tobacco T1 Scenario",
+      "filename": "tobacco_t1.json"
+    },
+    {
+      "name": "Tobacco Null Scenario",
+      "filename": "tobacco_null.json"
+    },
+    {
+      "name": "Tobacco T2 Scenario",
+      "filename": "tobacco_t2.json"
+    },
+    {
+      "name": "UNAVAILABLE - Tobacco T3 Scenario",
+      "filename": "tobacco_t3.json"
+    },
+    {
       "name": "Appendix 3 - Null Scenario",
       "filename": "null_scenario.json"
     },
@@ -13,8 +29,24 @@
       "filename": "cr3_scenario.json"
     },
     {
+      "name": "Tobacco T6 Scenario",
+      "filename": "tobacco_t6.json"
+    },
+    {
       "name": "Default Scenario",
       "filename": "default_scenario.json"
+    },
+    {
+      "name": "Tobacco T7 Scenario",
+      "filename": "tobacco_t7.json"
+    },
+    {
+      "name": "UNAVAILABLE - Tobacco T4 Scenario",
+      "filename": "tobacco_t4.json"
+    },
+    {
+      "name": "Tobacco T5 Scenario",
+      "filename": "tobacco_t5.json"
     }
   ]
 }
