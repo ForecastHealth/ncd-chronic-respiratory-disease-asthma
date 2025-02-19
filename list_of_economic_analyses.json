@@ -1,0 +1,12 @@
+{
+  "economic_analyses": [
+    {
+      "name": "CR3",
+      "filename": "cr3.json"
+    },
+    {
+      "name": "CR1",
+      "filename": "cr1.json"
+    }
+  ]
+}
