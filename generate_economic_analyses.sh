@@ -1,5 +1,5 @@
 #!/bin/bash
-find ./economic-analysis -name '*.json' -print0 | while IFS= read -r -d '' file; do
+find ./economic-analyses -name '*.json' -print0 | while IFS= read -r -d '' file; do
     title=$(jq -r '.name // empty' "$file")
     
     # If title is missing, use the filename
