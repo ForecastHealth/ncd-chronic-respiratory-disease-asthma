@@ -26,6 +26,8 @@ def create_economic_analyses():
                     'name': cea_data.get('name', ''),
                     'description': cea_data.get('description', ''),
                     'country_override': iso3,
+                    'baseline_scenario_label': cea_data.get('baseline_name', ''),
+                    'comparator_scenario_label': cea_data.get('comparator_name', ''),
                     'numerator_label': cea_data.get('numerator', ''),
                     'denominator_label': cea_data.get('denominator', '')
                 }
