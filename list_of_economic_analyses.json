@@ -1,12 +1,3502 @@
-{
-  "economic_analyses": [
+[
     {
-      "name": "CR3",
-      "filename": "cr3.json"
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "AFG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
     },
     {
-      "name": "CR1",
-      "filename": "cr1.json"
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ALA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ALB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "DZA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ASM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "AND",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "AGO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "AIA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ATA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ATG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ARG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ARM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ABW",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "AUS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "AUT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "AZE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BHS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BHR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BGD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BRB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BLR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BEL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BLZ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BEN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BMU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BTN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BOL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BES",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BIH",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BWA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BVT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BRA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "IOT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BRN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BGR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BFA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BDI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "KHM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CMR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CAN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CPV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CYM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CAF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TCD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CHL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CHN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CXR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CCK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "COL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "COM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "COG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "COD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "COK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CRI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CIV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "HRV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CUB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CUW",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CYP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CZE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "DNK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "DJI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "DMA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "DOM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ECU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "EGY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SLV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GNQ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ERI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "EST",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ETH",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "FLK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "FRO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "FJI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "FIN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "FRA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GUF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PYF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ATF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GAB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GMB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GEO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "DEU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GHA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GIB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GRC",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GRL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GRD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GLP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GUM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GTM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GGY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GIN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GNB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GUY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "HTI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "HMD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "VAT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "HND",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "HKG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "HUN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ISL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "IND",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "IDN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "IRN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "IRQ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "IRL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "IMN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ISR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ITA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "JAM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "JPN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "JEY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "JOR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "KAZ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "KEN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "KIR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PRK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "KOR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "XKX",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "KWT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "KGZ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LAO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LVA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LBN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LSO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LBR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LBY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LIE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LTU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LUX",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MAC",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MKD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MDG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MWI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MYS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MDV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MLI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MLT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MHL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MTQ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MRT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MUS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MYT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MEX",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "FSM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MDA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MCO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MNG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MNE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MSR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MAR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MOZ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MMR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NAM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NRU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NPL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NLD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NCL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NZL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NIC",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NER",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NGA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NIU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NFK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MNP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "NOR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "OMN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PAK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PLW",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PSE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PAN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PNG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PRY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PER",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PHL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PCN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "POL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PRT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "PRI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "QAT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "REU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ROU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "RUS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "RWA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "BLM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SHN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "KNA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LCA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "MAF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SPM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "VCT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "WSM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SMR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "STP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SAU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SEN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SRB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SYC",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SLE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SGP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SXM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SVK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SVN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SLB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SOM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ZAF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SGS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SSD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ESP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "LKA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SDN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SUR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SJM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SWZ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SWE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "CHE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "SYR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TWN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TJK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TZA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "THA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TLS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TGO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TKL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TON",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TTO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TUN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TUR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TKM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TCA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "TUV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "UGA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "UKR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ARE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "GBR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "USA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "UMI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "URY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "UZB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "VUT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "VEN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "VNM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "VGB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "VIR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "WLF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ESH",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "YEM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ZMB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "ZWE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "AFG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ALA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ALB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "DZA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ASM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "AND",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "AGO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "AIA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ATA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ATG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ARG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ARM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ABW",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "AUS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "AUT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "AZE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BHS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BHR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BGD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BRB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BLR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BEL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BLZ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BEN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BMU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BTN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BOL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BES",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BIH",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BWA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BVT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BRA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "IOT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BRN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BGR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BFA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BDI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "KHM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CMR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CAN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CPV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CYM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CAF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TCD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CHL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CHN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CXR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CCK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "COL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "COM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "COG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "COD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "COK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CRI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CIV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "HRV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CUB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CUW",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CYP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CZE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "DNK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "DJI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "DMA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "DOM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ECU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "EGY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SLV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GNQ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ERI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "EST",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ETH",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "FLK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "FRO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "FJI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "FIN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "FRA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GUF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PYF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ATF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GAB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GMB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GEO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "DEU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GHA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GIB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GRC",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GRL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GRD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GLP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GUM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GTM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GGY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GIN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GNB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GUY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "HTI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "HMD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "VAT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "HND",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "HKG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "HUN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ISL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "IND",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "IDN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "IRN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "IRQ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "IRL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "IMN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ISR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ITA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "JAM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "JPN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "JEY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "JOR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "KAZ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "KEN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "KIR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PRK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "KOR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "XKX",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "KWT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "KGZ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LAO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LVA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LBN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LSO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LBR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LBY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LIE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LTU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LUX",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MAC",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MKD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MDG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MWI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MYS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MDV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MLI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MLT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MHL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MTQ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MRT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MUS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MYT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MEX",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "FSM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MDA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MCO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MNG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MNE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MSR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MAR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MOZ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MMR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NAM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NRU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NPL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NLD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NCL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NZL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NIC",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NER",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NGA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NIU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NFK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MNP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "NOR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "OMN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PAK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PLW",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PSE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PAN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PNG",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PRY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PER",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PHL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PCN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "POL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PRT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "PRI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "QAT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "REU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ROU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "RUS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "RWA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "BLM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SHN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "KNA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LCA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "MAF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SPM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "VCT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "WSM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SMR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "STP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SAU",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SEN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SRB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SYC",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SLE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SGP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SXM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SVK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SVN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SLB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SOM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ZAF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SGS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SSD",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ESP",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "LKA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SDN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SUR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SJM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SWZ",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SWE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "CHE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "SYR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TWN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TJK",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TZA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "THA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TLS",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TGO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TKL",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TON",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TTO",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TUN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TUR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TKM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TCA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "TUV",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "UGA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "UKR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ARE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "GBR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "USA",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "UMI",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "URY",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "UZB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "VUT",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "VEN",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "VNM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "VGB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "VIR",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "WLF",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ESH",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "YEM",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ZMB",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
+    },
+    {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "ZWE",
+        "numerator_label": "costs",
+        "denominator_label": "hylg"
     }
-  ]
-}
+]
