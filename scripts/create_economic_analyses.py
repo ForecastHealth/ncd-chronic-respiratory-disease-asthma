@@ -14,7 +14,7 @@ def create_economic_analyses():
     economic_analyses = []
     
     # Process each economic analysis file
-    cea_files = glob.glob('./cea/*.json')
+    cea_files = glob.glob('./economic-analyses/*.json')
     for file_path in cea_files:
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
