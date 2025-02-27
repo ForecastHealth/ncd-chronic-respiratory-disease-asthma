@@ -1,14 +1,8 @@
 {
     "name": "CR3",
     "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
-    "baseline": {
-        "scenario": "asthma_null_scenario",
-        "resources": null
-    },
-    "comparator": {
-        "scenario": "asthma_cr3_scenario",
-        "resources": null
-    },
+    "baseline_name": "Appendix 3 - Asthma Null Scenario",
+    "comparator_name": "Appendix 3 - CR3 Scenario",
     "numerator": "costs",
     "denominator": "hylg"
 }
