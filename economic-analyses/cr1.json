@@ -1,8 +1,8 @@
 {
     "name": "CR1",
     "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
-    "baseline_name": "Appendix 3 - Asthma Null Scenario",
-    "comparator_name": "Appendix 3 - CR1 Scenario",
+    "baseline_name": "asthma_null_scenario",
+    "comparator_name": "asthma_cr1_scenario",
     "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }
