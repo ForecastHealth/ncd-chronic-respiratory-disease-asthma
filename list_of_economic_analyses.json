@@ -5,8 +5,8 @@
         "country_override": "AFG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -14,8 +14,8 @@
         "country_override": "ALA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -23,8 +23,8 @@
         "country_override": "ALB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -32,8 +32,8 @@
         "country_override": "DZA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -41,8 +41,8 @@
         "country_override": "ASM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -50,8 +50,8 @@
         "country_override": "AND",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -59,8 +59,8 @@
         "country_override": "AGO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -68,8 +68,8 @@
         "country_override": "AIA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -77,8 +77,8 @@
         "country_override": "ATA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -86,8 +86,8 @@
         "country_override": "ATG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -95,8 +95,8 @@
         "country_override": "ARG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -104,8 +104,8 @@
         "country_override": "ARM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -113,8 +113,8 @@
         "country_override": "ABW",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -122,8 +122,8 @@
         "country_override": "AUS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -131,8 +131,8 @@
         "country_override": "AUT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -140,8 +140,8 @@
         "country_override": "AZE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -149,8 +149,8 @@
         "country_override": "BHS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -158,8 +158,8 @@
         "country_override": "BHR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -167,8 +167,8 @@
         "country_override": "BGD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -176,8 +176,8 @@
         "country_override": "BRB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -185,8 +185,8 @@
         "country_override": "BLR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -194,8 +194,8 @@
         "country_override": "BEL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -203,8 +203,8 @@
         "country_override": "BLZ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -212,8 +212,8 @@
         "country_override": "BEN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -221,8 +221,8 @@
         "country_override": "BMU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -230,8 +230,8 @@
         "country_override": "BTN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -239,8 +239,8 @@
         "country_override": "BOL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -248,8 +248,8 @@
         "country_override": "BES",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -257,8 +257,8 @@
         "country_override": "BIH",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -266,8 +266,8 @@
         "country_override": "BWA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -275,8 +275,8 @@
         "country_override": "BVT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -284,8 +284,8 @@
         "country_override": "BRA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -293,8 +293,8 @@
         "country_override": "IOT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -302,8 +302,8 @@
         "country_override": "BRN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -311,8 +311,8 @@
         "country_override": "BGR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -320,8 +320,8 @@
         "country_override": "BFA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -329,8 +329,8 @@
         "country_override": "BDI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -338,8 +338,8 @@
         "country_override": "KHM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -347,8 +347,8 @@
         "country_override": "CMR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -356,8 +356,8 @@
         "country_override": "CAN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -365,8 +365,8 @@
         "country_override": "CPV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -374,8 +374,8 @@
         "country_override": "CYM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -383,8 +383,8 @@
         "country_override": "CAF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -392,8 +392,8 @@
         "country_override": "TCD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -401,8 +401,8 @@
         "country_override": "CHL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -410,8 +410,8 @@
         "country_override": "CHN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -419,8 +419,8 @@
         "country_override": "CXR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -428,8 +428,8 @@
         "country_override": "CCK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -437,8 +437,8 @@
         "country_override": "COL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -446,8 +446,8 @@
         "country_override": "COM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -455,8 +455,8 @@
         "country_override": "COG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -464,8 +464,8 @@
         "country_override": "COD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -473,8 +473,8 @@
         "country_override": "COK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -482,8 +482,8 @@
         "country_override": "CRI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -491,8 +491,8 @@
         "country_override": "CIV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -500,8 +500,8 @@
         "country_override": "HRV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -509,8 +509,8 @@
         "country_override": "CUB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -518,8 +518,8 @@
         "country_override": "CUW",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -527,8 +527,8 @@
         "country_override": "CYP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -536,8 +536,8 @@
         "country_override": "CZE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -545,8 +545,8 @@
         "country_override": "DNK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -554,8 +554,8 @@
         "country_override": "DJI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -563,8 +563,8 @@
         "country_override": "DMA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -572,8 +572,8 @@
         "country_override": "DOM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -581,8 +581,8 @@
         "country_override": "ECU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -590,8 +590,8 @@
         "country_override": "EGY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -599,8 +599,8 @@
         "country_override": "SLV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -608,8 +608,8 @@
         "country_override": "GNQ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -617,8 +617,8 @@
         "country_override": "ERI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -626,8 +626,8 @@
         "country_override": "EST",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -635,8 +635,8 @@
         "country_override": "ETH",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -644,8 +644,8 @@
         "country_override": "FLK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -653,8 +653,8 @@
         "country_override": "FRO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -662,8 +662,8 @@
         "country_override": "FJI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -671,8 +671,8 @@
         "country_override": "FIN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -680,8 +680,8 @@
         "country_override": "FRA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -689,8 +689,8 @@
         "country_override": "GUF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -698,8 +698,8 @@
         "country_override": "PYF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -707,8 +707,8 @@
         "country_override": "ATF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -716,8 +716,8 @@
         "country_override": "GAB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -725,8 +725,8 @@
         "country_override": "GMB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -734,8 +734,8 @@
         "country_override": "GEO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -743,8 +743,8 @@
         "country_override": "DEU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -752,8 +752,8 @@
         "country_override": "GHA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -761,8 +761,8 @@
         "country_override": "GIB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -770,8 +770,8 @@
         "country_override": "GRC",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -779,8 +779,8 @@
         "country_override": "GRL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -788,8 +788,8 @@
         "country_override": "GRD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -797,8 +797,8 @@
         "country_override": "GLP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -806,8 +806,8 @@
         "country_override": "GUM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -815,8 +815,8 @@
         "country_override": "GTM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -824,8 +824,8 @@
         "country_override": "GGY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -833,8 +833,8 @@
         "country_override": "GIN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -842,8 +842,8 @@
         "country_override": "GNB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -851,8 +851,8 @@
         "country_override": "GUY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -860,8 +860,8 @@
         "country_override": "HTI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -869,8 +869,8 @@
         "country_override": "HMD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -878,8 +878,8 @@
         "country_override": "VAT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -887,8 +887,8 @@
         "country_override": "HND",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -896,8 +896,8 @@
         "country_override": "HKG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -905,8 +905,8 @@
         "country_override": "HUN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -914,8 +914,8 @@
         "country_override": "ISL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -923,8 +923,8 @@
         "country_override": "IND",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -932,8 +932,8 @@
         "country_override": "IDN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -941,8 +941,8 @@
         "country_override": "IRN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -950,8 +950,8 @@
         "country_override": "IRQ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -959,8 +959,8 @@
         "country_override": "IRL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -968,8 +968,8 @@
         "country_override": "IMN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -977,8 +977,8 @@
         "country_override": "ISR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -986,8 +986,8 @@
         "country_override": "ITA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -995,8 +995,8 @@
         "country_override": "JAM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1004,8 +1004,8 @@
         "country_override": "JPN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1013,8 +1013,8 @@
         "country_override": "JEY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1022,8 +1022,8 @@
         "country_override": "JOR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1031,8 +1031,8 @@
         "country_override": "KAZ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1040,8 +1040,8 @@
         "country_override": "KEN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1049,8 +1049,8 @@
         "country_override": "KIR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1058,8 +1058,8 @@
         "country_override": "PRK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1067,8 +1067,8 @@
         "country_override": "KOR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1076,8 +1076,8 @@
         "country_override": "XKX",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1085,8 +1085,8 @@
         "country_override": "KWT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1094,8 +1094,8 @@
         "country_override": "KGZ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1103,8 +1103,8 @@
         "country_override": "LAO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1112,8 +1112,8 @@
         "country_override": "LVA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1121,8 +1121,8 @@
         "country_override": "LBN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1130,8 +1130,8 @@
         "country_override": "LSO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1139,8 +1139,8 @@
         "country_override": "LBR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1148,8 +1148,8 @@
         "country_override": "LBY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1157,8 +1157,8 @@
         "country_override": "LIE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1166,8 +1166,8 @@
         "country_override": "LTU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1175,8 +1175,8 @@
         "country_override": "LUX",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1184,8 +1184,8 @@
         "country_override": "MAC",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1193,8 +1193,8 @@
         "country_override": "MKD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1202,8 +1202,8 @@
         "country_override": "MDG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1211,8 +1211,8 @@
         "country_override": "MWI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1220,8 +1220,8 @@
         "country_override": "MYS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1229,8 +1229,8 @@
         "country_override": "MDV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1238,8 +1238,8 @@
         "country_override": "MLI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1247,8 +1247,8 @@
         "country_override": "MLT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1256,8 +1256,8 @@
         "country_override": "MHL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1265,8 +1265,8 @@
         "country_override": "MTQ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1274,8 +1274,8 @@
         "country_override": "MRT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1283,8 +1283,8 @@
         "country_override": "MUS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1292,8 +1292,8 @@
         "country_override": "MYT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1301,8 +1301,8 @@
         "country_override": "MEX",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1310,8 +1310,8 @@
         "country_override": "FSM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1319,8 +1319,8 @@
         "country_override": "MDA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1328,8 +1328,8 @@
         "country_override": "MCO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1337,8 +1337,8 @@
         "country_override": "MNG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1346,8 +1346,8 @@
         "country_override": "MNE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1355,8 +1355,8 @@
         "country_override": "MSR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1364,8 +1364,8 @@
         "country_override": "MAR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1373,8 +1373,8 @@
         "country_override": "MOZ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1382,8 +1382,8 @@
         "country_override": "MMR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1391,8 +1391,8 @@
         "country_override": "NAM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1400,8 +1400,8 @@
         "country_override": "NRU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1409,8 +1409,8 @@
         "country_override": "NPL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1418,8 +1418,8 @@
         "country_override": "NLD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1427,8 +1427,8 @@
         "country_override": "NCL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1436,8 +1436,8 @@
         "country_override": "NZL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1445,8 +1445,8 @@
         "country_override": "NIC",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1454,8 +1454,8 @@
         "country_override": "NER",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1463,8 +1463,8 @@
         "country_override": "NGA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1472,8 +1472,8 @@
         "country_override": "NIU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1481,8 +1481,8 @@
         "country_override": "NFK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1490,8 +1490,8 @@
         "country_override": "MNP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1499,8 +1499,8 @@
         "country_override": "NOR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1508,8 +1508,8 @@
         "country_override": "OMN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1517,8 +1517,8 @@
         "country_override": "PAK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1526,8 +1526,8 @@
         "country_override": "PLW",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1535,8 +1535,8 @@
         "country_override": "PSE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1544,8 +1544,8 @@
         "country_override": "PAN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1553,8 +1553,8 @@
         "country_override": "PNG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1562,8 +1562,8 @@
         "country_override": "PRY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1571,8 +1571,8 @@
         "country_override": "PER",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1580,8 +1580,8 @@
         "country_override": "PHL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1589,8 +1589,8 @@
         "country_override": "PCN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1598,8 +1598,8 @@
         "country_override": "POL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1607,8 +1607,8 @@
         "country_override": "PRT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1616,8 +1616,8 @@
         "country_override": "PRI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1625,8 +1625,8 @@
         "country_override": "QAT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1634,8 +1634,8 @@
         "country_override": "REU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1643,8 +1643,8 @@
         "country_override": "ROU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1652,8 +1652,8 @@
         "country_override": "RUS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1661,8 +1661,8 @@
         "country_override": "RWA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1670,8 +1670,8 @@
         "country_override": "BLM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1679,8 +1679,8 @@
         "country_override": "SHN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1688,8 +1688,8 @@
         "country_override": "KNA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1697,8 +1697,8 @@
         "country_override": "LCA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1706,8 +1706,8 @@
         "country_override": "MAF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1715,8 +1715,8 @@
         "country_override": "SPM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1724,8 +1724,8 @@
         "country_override": "VCT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1733,8 +1733,8 @@
         "country_override": "WSM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1742,8 +1742,8 @@
         "country_override": "SMR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1751,8 +1751,8 @@
         "country_override": "STP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1760,8 +1760,8 @@
         "country_override": "SAU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1769,8 +1769,8 @@
         "country_override": "SEN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1778,8 +1778,8 @@
         "country_override": "SRB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1787,8 +1787,8 @@
         "country_override": "SYC",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1796,8 +1796,8 @@
         "country_override": "SLE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1805,8 +1805,8 @@
         "country_override": "SGP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1814,8 +1814,8 @@
         "country_override": "SXM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1823,8 +1823,8 @@
         "country_override": "SVK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1832,8 +1832,8 @@
         "country_override": "SVN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1841,8 +1841,8 @@
         "country_override": "SLB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1850,8 +1850,8 @@
         "country_override": "SOM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1859,8 +1859,8 @@
         "country_override": "ZAF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1868,8 +1868,8 @@
         "country_override": "SGS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1877,8 +1877,8 @@
         "country_override": "SSD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1886,8 +1886,8 @@
         "country_override": "ESP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1895,8 +1895,8 @@
         "country_override": "LKA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1904,8 +1904,8 @@
         "country_override": "SDN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1913,8 +1913,8 @@
         "country_override": "SUR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1922,8 +1922,8 @@
         "country_override": "SJM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1931,8 +1931,8 @@
         "country_override": "SWZ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1940,8 +1940,8 @@
         "country_override": "SWE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1949,8 +1949,8 @@
         "country_override": "CHE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1958,8 +1958,8 @@
         "country_override": "SYR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1967,8 +1967,8 @@
         "country_override": "TWN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1976,8 +1976,8 @@
         "country_override": "TJK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1985,8 +1985,8 @@
         "country_override": "TZA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -1994,8 +1994,8 @@
         "country_override": "THA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2003,8 +2003,8 @@
         "country_override": "TLS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2012,8 +2012,8 @@
         "country_override": "TGO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2021,8 +2021,8 @@
         "country_override": "TKL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2030,8 +2030,8 @@
         "country_override": "TON",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2039,8 +2039,8 @@
         "country_override": "TTO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2048,8 +2048,8 @@
         "country_override": "TUN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2057,8 +2057,8 @@
         "country_override": "TUR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2066,8 +2066,8 @@
         "country_override": "TKM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2075,8 +2075,8 @@
         "country_override": "TCA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2084,8 +2084,8 @@
         "country_override": "TUV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2093,8 +2093,8 @@
         "country_override": "UGA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2102,8 +2102,8 @@
         "country_override": "UKR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2111,8 +2111,8 @@
         "country_override": "ARE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2120,8 +2120,8 @@
         "country_override": "GBR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2129,8 +2129,8 @@
         "country_override": "USA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2138,8 +2138,8 @@
         "country_override": "UMI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2147,8 +2147,8 @@
         "country_override": "URY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2156,8 +2156,8 @@
         "country_override": "UZB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2165,8 +2165,8 @@
         "country_override": "VUT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2174,8 +2174,8 @@
         "country_override": "VEN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2183,8 +2183,8 @@
         "country_override": "VNM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2192,8 +2192,8 @@
         "country_override": "VGB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2201,8 +2201,8 @@
         "country_override": "VIR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2210,8 +2210,8 @@
         "country_override": "WLF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2219,8 +2219,8 @@
         "country_override": "ESH",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2228,8 +2228,8 @@
         "country_override": "YEM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2237,8 +2237,8 @@
         "country_override": "ZMB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR3",
@@ -2246,8 +2246,8 @@
         "country_override": "ZWE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2255,8 +2255,8 @@
         "country_override": "AFG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2264,8 +2264,8 @@
         "country_override": "ALA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2273,8 +2273,8 @@
         "country_override": "ALB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2282,8 +2282,8 @@
         "country_override": "DZA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2291,8 +2291,8 @@
         "country_override": "ASM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2300,8 +2300,8 @@
         "country_override": "AND",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2309,8 +2309,8 @@
         "country_override": "AGO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2318,8 +2318,8 @@
         "country_override": "AIA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2327,8 +2327,8 @@
         "country_override": "ATA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2336,8 +2336,8 @@
         "country_override": "ATG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2345,8 +2345,8 @@
         "country_override": "ARG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2354,8 +2354,8 @@
         "country_override": "ARM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2363,8 +2363,8 @@
         "country_override": "ABW",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2372,8 +2372,8 @@
         "country_override": "AUS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2381,8 +2381,8 @@
         "country_override": "AUT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2390,8 +2390,8 @@
         "country_override": "AZE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2399,8 +2399,8 @@
         "country_override": "BHS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2408,8 +2408,8 @@
         "country_override": "BHR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2417,8 +2417,8 @@
         "country_override": "BGD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2426,8 +2426,8 @@
         "country_override": "BRB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2435,8 +2435,8 @@
         "country_override": "BLR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2444,8 +2444,8 @@
         "country_override": "BEL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2453,8 +2453,8 @@
         "country_override": "BLZ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2462,8 +2462,8 @@
         "country_override": "BEN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2471,8 +2471,8 @@
         "country_override": "BMU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2480,8 +2480,8 @@
         "country_override": "BTN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2489,8 +2489,8 @@
         "country_override": "BOL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2498,8 +2498,8 @@
         "country_override": "BES",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2507,8 +2507,8 @@
         "country_override": "BIH",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2516,8 +2516,8 @@
         "country_override": "BWA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2525,8 +2525,8 @@
         "country_override": "BVT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2534,8 +2534,8 @@
         "country_override": "BRA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2543,8 +2543,8 @@
         "country_override": "IOT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2552,8 +2552,8 @@
         "country_override": "BRN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2561,8 +2561,8 @@
         "country_override": "BGR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2570,8 +2570,8 @@
         "country_override": "BFA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2579,8 +2579,8 @@
         "country_override": "BDI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2588,8 +2588,8 @@
         "country_override": "KHM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2597,8 +2597,8 @@
         "country_override": "CMR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2606,8 +2606,8 @@
         "country_override": "CAN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2615,8 +2615,8 @@
         "country_override": "CPV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2624,8 +2624,8 @@
         "country_override": "CYM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2633,8 +2633,8 @@
         "country_override": "CAF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2642,8 +2642,8 @@
         "country_override": "TCD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2651,8 +2651,8 @@
         "country_override": "CHL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2660,8 +2660,8 @@
         "country_override": "CHN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2669,8 +2669,8 @@
         "country_override": "CXR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2678,8 +2678,8 @@
         "country_override": "CCK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2687,8 +2687,8 @@
         "country_override": "COL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2696,8 +2696,8 @@
         "country_override": "COM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2705,8 +2705,8 @@
         "country_override": "COG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2714,8 +2714,8 @@
         "country_override": "COD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2723,8 +2723,8 @@
         "country_override": "COK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2732,8 +2732,8 @@
         "country_override": "CRI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2741,8 +2741,8 @@
         "country_override": "CIV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2750,8 +2750,8 @@
         "country_override": "HRV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2759,8 +2759,8 @@
         "country_override": "CUB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2768,8 +2768,8 @@
         "country_override": "CUW",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2777,8 +2777,8 @@
         "country_override": "CYP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2786,8 +2786,8 @@
         "country_override": "CZE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2795,8 +2795,8 @@
         "country_override": "DNK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2804,8 +2804,8 @@
         "country_override": "DJI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2813,8 +2813,8 @@
         "country_override": "DMA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2822,8 +2822,8 @@
         "country_override": "DOM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2831,8 +2831,8 @@
         "country_override": "ECU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2840,8 +2840,8 @@
         "country_override": "EGY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2849,8 +2849,8 @@
         "country_override": "SLV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2858,8 +2858,8 @@
         "country_override": "GNQ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2867,8 +2867,8 @@
         "country_override": "ERI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2876,8 +2876,8 @@
         "country_override": "EST",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2885,8 +2885,8 @@
         "country_override": "ETH",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2894,8 +2894,8 @@
         "country_override": "FLK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2903,8 +2903,8 @@
         "country_override": "FRO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2912,8 +2912,8 @@
         "country_override": "FJI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2921,8 +2921,8 @@
         "country_override": "FIN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2930,8 +2930,8 @@
         "country_override": "FRA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2939,8 +2939,8 @@
         "country_override": "GUF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2948,8 +2948,8 @@
         "country_override": "PYF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2957,8 +2957,8 @@
         "country_override": "ATF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2966,8 +2966,8 @@
         "country_override": "GAB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2975,8 +2975,8 @@
         "country_override": "GMB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2984,8 +2984,8 @@
         "country_override": "GEO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -2993,8 +2993,8 @@
         "country_override": "DEU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3002,8 +3002,8 @@
         "country_override": "GHA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3011,8 +3011,8 @@
         "country_override": "GIB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3020,8 +3020,8 @@
         "country_override": "GRC",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3029,8 +3029,8 @@
         "country_override": "GRL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3038,8 +3038,8 @@
         "country_override": "GRD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3047,8 +3047,8 @@
         "country_override": "GLP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3056,8 +3056,8 @@
         "country_override": "GUM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3065,8 +3065,8 @@
         "country_override": "GTM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3074,8 +3074,8 @@
         "country_override": "GGY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3083,8 +3083,8 @@
         "country_override": "GIN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3092,8 +3092,8 @@
         "country_override": "GNB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3101,8 +3101,8 @@
         "country_override": "GUY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3110,8 +3110,8 @@
         "country_override": "HTI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3119,8 +3119,8 @@
         "country_override": "HMD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3128,8 +3128,8 @@
         "country_override": "VAT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3137,8 +3137,8 @@
         "country_override": "HND",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3146,8 +3146,8 @@
         "country_override": "HKG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3155,8 +3155,8 @@
         "country_override": "HUN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3164,8 +3164,8 @@
         "country_override": "ISL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3173,8 +3173,8 @@
         "country_override": "IND",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3182,8 +3182,8 @@
         "country_override": "IDN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3191,8 +3191,8 @@
         "country_override": "IRN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3200,8 +3200,8 @@
         "country_override": "IRQ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3209,8 +3209,8 @@
         "country_override": "IRL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3218,8 +3218,8 @@
         "country_override": "IMN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3227,8 +3227,8 @@
         "country_override": "ISR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3236,8 +3236,8 @@
         "country_override": "ITA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3245,8 +3245,8 @@
         "country_override": "JAM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3254,8 +3254,8 @@
         "country_override": "JPN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3263,8 +3263,8 @@
         "country_override": "JEY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3272,8 +3272,8 @@
         "country_override": "JOR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3281,8 +3281,8 @@
         "country_override": "KAZ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3290,8 +3290,8 @@
         "country_override": "KEN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3299,8 +3299,8 @@
         "country_override": "KIR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3308,8 +3308,8 @@
         "country_override": "PRK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3317,8 +3317,8 @@
         "country_override": "KOR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3326,8 +3326,8 @@
         "country_override": "XKX",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3335,8 +3335,8 @@
         "country_override": "KWT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3344,8 +3344,8 @@
         "country_override": "KGZ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3353,8 +3353,8 @@
         "country_override": "LAO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3362,8 +3362,8 @@
         "country_override": "LVA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3371,8 +3371,8 @@
         "country_override": "LBN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3380,8 +3380,8 @@
         "country_override": "LSO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3389,8 +3389,8 @@
         "country_override": "LBR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3398,8 +3398,8 @@
         "country_override": "LBY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3407,8 +3407,8 @@
         "country_override": "LIE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3416,8 +3416,8 @@
         "country_override": "LTU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3425,8 +3425,8 @@
         "country_override": "LUX",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3434,8 +3434,8 @@
         "country_override": "MAC",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3443,8 +3443,8 @@
         "country_override": "MKD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3452,8 +3452,8 @@
         "country_override": "MDG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3461,8 +3461,8 @@
         "country_override": "MWI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3470,8 +3470,8 @@
         "country_override": "MYS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3479,8 +3479,8 @@
         "country_override": "MDV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3488,8 +3488,8 @@
         "country_override": "MLI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3497,8 +3497,8 @@
         "country_override": "MLT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3506,8 +3506,8 @@
         "country_override": "MHL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3515,8 +3515,8 @@
         "country_override": "MTQ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3524,8 +3524,8 @@
         "country_override": "MRT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3533,8 +3533,8 @@
         "country_override": "MUS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3542,8 +3542,8 @@
         "country_override": "MYT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3551,8 +3551,8 @@
         "country_override": "MEX",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3560,8 +3560,8 @@
         "country_override": "FSM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3569,8 +3569,8 @@
         "country_override": "MDA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3578,8 +3578,8 @@
         "country_override": "MCO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3587,8 +3587,8 @@
         "country_override": "MNG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3596,8 +3596,8 @@
         "country_override": "MNE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3605,8 +3605,8 @@
         "country_override": "MSR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3614,8 +3614,8 @@
         "country_override": "MAR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3623,8 +3623,8 @@
         "country_override": "MOZ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3632,8 +3632,8 @@
         "country_override": "MMR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3641,8 +3641,8 @@
         "country_override": "NAM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3650,8 +3650,8 @@
         "country_override": "NRU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3659,8 +3659,8 @@
         "country_override": "NPL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3668,8 +3668,8 @@
         "country_override": "NLD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3677,8 +3677,8 @@
         "country_override": "NCL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3686,8 +3686,8 @@
         "country_override": "NZL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3695,8 +3695,8 @@
         "country_override": "NIC",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3704,8 +3704,8 @@
         "country_override": "NER",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3713,8 +3713,8 @@
         "country_override": "NGA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3722,8 +3722,8 @@
         "country_override": "NIU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3731,8 +3731,8 @@
         "country_override": "NFK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3740,8 +3740,8 @@
         "country_override": "MNP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3749,8 +3749,8 @@
         "country_override": "NOR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3758,8 +3758,8 @@
         "country_override": "OMN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3767,8 +3767,8 @@
         "country_override": "PAK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3776,8 +3776,8 @@
         "country_override": "PLW",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3785,8 +3785,8 @@
         "country_override": "PSE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3794,8 +3794,8 @@
         "country_override": "PAN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3803,8 +3803,8 @@
         "country_override": "PNG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3812,8 +3812,8 @@
         "country_override": "PRY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3821,8 +3821,8 @@
         "country_override": "PER",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3830,8 +3830,8 @@
         "country_override": "PHL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3839,8 +3839,8 @@
         "country_override": "PCN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3848,8 +3848,8 @@
         "country_override": "POL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3857,8 +3857,8 @@
         "country_override": "PRT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3866,8 +3866,8 @@
         "country_override": "PRI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3875,8 +3875,8 @@
         "country_override": "QAT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3884,8 +3884,8 @@
         "country_override": "REU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3893,8 +3893,8 @@
         "country_override": "ROU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3902,8 +3902,8 @@
         "country_override": "RUS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3911,8 +3911,8 @@
         "country_override": "RWA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3920,8 +3920,8 @@
         "country_override": "BLM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3929,8 +3929,8 @@
         "country_override": "SHN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3938,8 +3938,8 @@
         "country_override": "KNA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3947,8 +3947,8 @@
         "country_override": "LCA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3956,8 +3956,8 @@
         "country_override": "MAF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3965,8 +3965,8 @@
         "country_override": "SPM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3974,8 +3974,8 @@
         "country_override": "VCT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3983,8 +3983,8 @@
         "country_override": "WSM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -3992,8 +3992,8 @@
         "country_override": "SMR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4001,8 +4001,8 @@
         "country_override": "STP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4010,8 +4010,8 @@
         "country_override": "SAU",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4019,8 +4019,8 @@
         "country_override": "SEN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4028,8 +4028,8 @@
         "country_override": "SRB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4037,8 +4037,8 @@
         "country_override": "SYC",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4046,8 +4046,8 @@
         "country_override": "SLE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4055,8 +4055,8 @@
         "country_override": "SGP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4064,8 +4064,8 @@
         "country_override": "SXM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4073,8 +4073,8 @@
         "country_override": "SVK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4082,8 +4082,8 @@
         "country_override": "SVN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4091,8 +4091,8 @@
         "country_override": "SLB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4100,8 +4100,8 @@
         "country_override": "SOM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4109,8 +4109,8 @@
         "country_override": "ZAF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4118,8 +4118,8 @@
         "country_override": "SGS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4127,8 +4127,8 @@
         "country_override": "SSD",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4136,8 +4136,8 @@
         "country_override": "ESP",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4145,8 +4145,8 @@
         "country_override": "LKA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4154,8 +4154,8 @@
         "country_override": "SDN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4163,8 +4163,8 @@
         "country_override": "SUR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4172,8 +4172,8 @@
         "country_override": "SJM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4181,8 +4181,8 @@
         "country_override": "SWZ",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4190,8 +4190,8 @@
         "country_override": "SWE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4199,8 +4199,8 @@
         "country_override": "CHE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4208,8 +4208,8 @@
         "country_override": "SYR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4217,8 +4217,8 @@
         "country_override": "TWN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4226,8 +4226,8 @@
         "country_override": "TJK",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4235,8 +4235,8 @@
         "country_override": "TZA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4244,8 +4244,8 @@
         "country_override": "THA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4253,8 +4253,8 @@
         "country_override": "TLS",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4262,8 +4262,8 @@
         "country_override": "TGO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4271,8 +4271,8 @@
         "country_override": "TKL",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4280,8 +4280,8 @@
         "country_override": "TON",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4289,8 +4289,8 @@
         "country_override": "TTO",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4298,8 +4298,8 @@
         "country_override": "TUN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4307,8 +4307,8 @@
         "country_override": "TUR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4316,8 +4316,8 @@
         "country_override": "TKM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4325,8 +4325,8 @@
         "country_override": "TCA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4334,8 +4334,8 @@
         "country_override": "TUV",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4343,8 +4343,8 @@
         "country_override": "UGA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4352,8 +4352,8 @@
         "country_override": "UKR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4361,8 +4361,8 @@
         "country_override": "ARE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4370,8 +4370,8 @@
         "country_override": "GBR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4379,8 +4379,8 @@
         "country_override": "USA",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4388,8 +4388,8 @@
         "country_override": "UMI",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4397,8 +4397,8 @@
         "country_override": "URY",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4406,8 +4406,8 @@
         "country_override": "UZB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4415,8 +4415,8 @@
         "country_override": "VUT",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4424,8 +4424,8 @@
         "country_override": "VEN",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4433,8 +4433,8 @@
         "country_override": "VNM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4442,8 +4442,8 @@
         "country_override": "VGB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4451,8 +4451,8 @@
         "country_override": "VIR",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4460,8 +4460,8 @@
         "country_override": "WLF",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4469,8 +4469,8 @@
         "country_override": "ESH",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4478,8 +4478,8 @@
         "country_override": "YEM",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4487,8 +4487,8 @@
         "country_override": "ZMB",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     },
     {
         "name": "CR1",
@@ -4496,7 +4496,7 @@
         "country_override": "ZWE",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
         "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
-        "numerator_label": "costs",
-        "denominator_label": "hylg"
+        "numerator_label": "",
+        "denominator_label": "Healthy Years Lived"
     }
 ]
