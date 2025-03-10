@@ -3,6 +3,6 @@
     "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
     "baseline_name": "Appendix 3 - Asthma Null Scenario",
     "comparator_name": "Appendix 3 - CR1 Scenario",
-    "numerator": "",
+    "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }
