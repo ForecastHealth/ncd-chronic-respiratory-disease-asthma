@@ -3,6 +3,6 @@
     "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
     "baseline_name": "Appendix 3 - Asthma Null Scenario",
     "comparator_name": "Appendix 3 - CR3 Scenario",
-    "numerator": "",
+    "numerator": "costs",
     "denominator": "Healthy Years Lived"
 }
