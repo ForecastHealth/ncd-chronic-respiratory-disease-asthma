@@ -3391,6 +3391,14 @@
       ]
     },
     {
+      "method": "echo",
+      "batch": false,
+      "narration": "Record Healthy Years Lived",
+      "included_source_nodes": [
+        "yRNlzW3v"
+      ]
+    },
+    {
       "method": "flush",
       "narration": "Flush unneeded values"
     }
