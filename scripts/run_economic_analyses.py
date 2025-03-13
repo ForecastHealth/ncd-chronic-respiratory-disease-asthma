@@ -14,7 +14,6 @@ Options:
 import csv
 import requests
 import sys
-import json
 import time
 import argparse
 from typing import List, Optional, Tuple
@@ -166,12 +165,6 @@ def main():
     # Print summary
     success_count = sum(1 for r in results if r["status"] == "success")
     print(f"\nSummary: {success_count}/{len(analysis_ids)} analyses completed successfully")
-    
-    # Save results to file
-    with open("analysis_results.json", "w") as f:
-        json.dump(results, f, indent=2)
-    
-    print(f"Results saved to analysis_results.json")
 
 if __name__ == "__main__":
     main()
