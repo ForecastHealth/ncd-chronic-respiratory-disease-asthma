@@ -387,12 +387,8 @@ def upload_resources(db_identifiers_path: Path, model_id: str,
     return resource_ids
 
 
-def upload_economic_analyses(
-    db_identifiers_path: Path,
-    model_id: str,
-    api_base_url: str,
-    admin_token: str
-) -> int:
+def upload_economic_analyses(db_identifiers_path: Path, model_id: str,
+                            api_base_url: str, admin_token: str, scenario_ids: List[str] = None) -> int:
     """Upload economic analyses to the API."""
     print_section("Uploading Economic Analyses")
     
