@@ -3395,7 +3395,9 @@
       "batch": false,
       "narration": "Record Healthy Years Lived",
       "included_source_nodes": [
-        "yRNlzW3v"
+        "yRNlzW3v",
+        "Deceased",
+        "AsthmaEpsd"
       ]
     },
     {
