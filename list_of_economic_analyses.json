@@ -9,9 +9,27 @@
         "denominator_label": "Healthy Years Lived"
     },
     {
+        "name": "ASTHMA_T1",
+        "description": "Increase excise taxes and prices on tobacco products",
+        "country_override": "HUN",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T1 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
         "name": "ASTHMA_T2",
         "description": "Implement plain/standardized packaging and/or large graphic health warnings on all tobacco packages",
         "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T2 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "ASTHMA_T2",
+        "description": "Implement plain/standardized packaging and/or large graphic health warnings on all tobacco packages",
+        "country_override": "HUN",
         "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
         "comparator_scenario_label": "Appendix 3 - Tobacco T2 Scenario",
         "numerator_label": "costs",
@@ -27,9 +45,27 @@
         "denominator_label": "Healthy Years Lived"
     },
     {
+        "name": "ASTHMA_T3",
+        "description": "Enact and enforce comprehensive bans on tobacco advertising, promotion and sponsorship",
+        "country_override": "HUN",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T3 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
         "name": "ASTHMA_T6",
         "description": "Provision of cost-covered effective population-wide support (including brief advice, national toll-free quit line services and mCessation) for tobacco cessation to all tobacco users",
         "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T6 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "ASTHMA_T6",
+        "description": "Provision of cost-covered effective population-wide support (including brief advice, national toll-free quit line services and mCessation) for tobacco cessation to all tobacco users",
+        "country_override": "HUN",
         "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
         "comparator_scenario_label": "Appendix 3 - Tobacco T6 Scenario",
         "numerator_label": "costs",
@@ -45,9 +81,27 @@
         "denominator_label": "Healthy Years Lived"
     },
     {
+        "name": "CR3",
+        "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone",
+        "country_override": "HUN",
+        "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - CR3 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
         "name": "ASTHMA_T7",
         "description": "Provision of cost-covered effective pharmacological interventions to all tobacco users who want to quit",
         "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T7 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "ASTHMA_T7",
+        "description": "Provision of cost-covered effective pharmacological interventions to all tobacco users who want to quit",
+        "country_override": "HUN",
         "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
         "comparator_scenario_label": "Appendix 3 - Tobacco T7 Scenario",
         "numerator_label": "costs",
@@ -63,6 +117,15 @@
         "denominator_label": "Healthy Years Lived"
     },
     {
+        "name": "CR1",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+        "country_override": "HUN",
+        "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - CR1 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
         "name": "ASTHMA_T4",
         "description": "Eliminate exposure to second-hand tobacco smoke in all indoor workplaces, public places, public transport",
         "country_override": "AFG",
@@ -72,9 +135,27 @@
         "denominator_label": "Healthy Years Lived"
     },
     {
+        "name": "ASTHMA_T4",
+        "description": "Eliminate exposure to second-hand tobacco smoke in all indoor workplaces, public places, public transport",
+        "country_override": "HUN",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T4 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
         "name": "ASTHMA_T5",
         "description": "Implement effective mass media campaigns that educate the public about the harms of smoking/tobacco use and second-hand smoke",
         "country_override": "AFG",
+        "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T5 Scenario",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "ASTHMA_T5",
+        "description": "Implement effective mass media campaigns that educate the public about the harms of smoking/tobacco use and second-hand smoke",
+        "country_override": "HUN",
         "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario",
         "comparator_scenario_label": "Appendix 3 - Tobacco T5 Scenario",
         "numerator_label": "costs",
