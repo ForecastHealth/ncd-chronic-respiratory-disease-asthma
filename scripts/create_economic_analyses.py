@@ -4,29 +4,28 @@ import json
 import glob
 import os
 import argparse
+import re
 
 def create_economic_analyses():
     # Initialize list to store economic analyses
     economic_analyses = []
     
-    # Load countries data
-    countries_file_path = './list_of_countries.json'
-    country_iso3_codes = []
+    # Dynamically extract countries from scenario filenames
+    scenario_files = glob.glob('./scenarios/*.json')
+    country_iso3_codes = set()
     
-    if os.path.exists(countries_file_path):
-        try:
-            # Load countries data
-            with open(countries_file_path, 'r', encoding='utf-8') as f:
-                countries_data = json.load(f)
-            
-            # Extract ISO3 codes
-            country_iso3_codes = [country['iso3'] for country in countries_data['countries']]
-            print(f"Using countries from: {countries_file_path}")
-        except (json.JSONDecodeError, KeyError, FileNotFoundError) as e:
-            print(f"Error processing countries file: {e}")
-            return
-    else:
-        print(f"Countries file not found: {countries_file_path}")
+    # Extract unique ISO3 codes from scenario filenames
+    for scenario_file in scenario_files:
+        filename = os.path.basename(scenario_file)
+        match = re.search(r'_([A-Z]{3})\.json$', filename)
+        if match:
+            country_iso3_codes.add(match.group(1))
+    
+    country_iso3_codes = sorted(list(country_iso3_codes))
+    print(f"Found {len(country_iso3_codes)} countries from scenario files: {', '.join(country_iso3_codes)}")
+    
+    if not country_iso3_codes:
+        print("No countries found in scenario filenames.")
         return
     
     # Ensure economic-analyses directory exists
@@ -59,7 +58,35 @@ def create_economic_analyses():
                 
                 # Check if both scenario files exist for this country
                 if os.path.exists(baseline_scenario_file) and os.path.exists(comparison_scenario_file):
-                    # Add ISO3 code to name and description if they exist
+                    # Get the actual scenario names and metadata labels from their JSON files
+                    try:
+                        with open(baseline_scenario_file, 'r', encoding='utf-8') as f:
+                            baseline_data = json.load(f)
+                        baseline_label = baseline_data.get('metadata', {}).get('label')
+                        if not baseline_label:
+                            print(f"Warning: Missing metadata.label in {baseline_scenario_file}")
+                            # Use filename stem as fallback
+                            baseline_label = baseline_scenario_stub
+                        baseline_user_friendly_name = f"{baseline_label} - {iso3}"
+                    except Exception as e:
+                        print(f"Error reading baseline scenario {baseline_scenario_file}: {e}")
+                        # Use filename as fallback
+                        baseline_user_friendly_name = f"{baseline_scenario_stub}_{iso3}"
+
+                    try:
+                        with open(comparison_scenario_file, 'r', encoding='utf-8') as f:
+                            comparison_data = json.load(f)
+                        comparison_label = comparison_data.get('metadata', {}).get('label')
+                        if not comparison_label:
+                            print(f"Warning: Missing metadata.label in {comparison_scenario_file}")
+                            comparison_label = comparison_scenario_stub
+                        comparison_user_friendly_name = f"{comparison_label} - {iso3}"
+                    except Exception as e:
+                        print(f"Error reading comparison scenario {comparison_scenario_file}: {e}")
+                        # Use filename as fallback
+                        comparison_user_friendly_name = f"{comparison_scenario_stub}_{iso3}"
+                    
+                    # Use template name and append country
                     name = template_data.get('name', '')
                     description = template_data.get('description', '')
                     
@@ -72,8 +99,8 @@ def create_economic_analyses():
                     analysis = {
                         'name': name,
                         'description': description,
-                        'baseline_scenario_label': f"{baseline_scenario_stub}_{iso3}",
-                        'comparator_scenario_label': f"{comparison_scenario_stub}_{iso3}",
+                        'baseline_scenario_label': baseline_user_friendly_name,
+                        'comparator_scenario_label': comparison_user_friendly_name,
                         'numerator_label': template_data.get('numerator', ''),
                         'denominator_label': template_data.get('denominator', '')
                     }
@@ -94,6 +121,16 @@ def create_economic_analyses():
     
     print(f"Created {analyses_created} economic analyses for {len(country_iso3_codes)} countries and {len(template_files)} analysis templates.")
     print(f"Total records: {len(economic_analyses)}")
+
+def get_scenario_name(scenario_file):
+    """Extract the scenario name from its JSON file."""
+    try:
+        with open(scenario_file, 'r', encoding='utf-8') as f:
+            scenario_data = json.load(f)
+        return scenario_data.get('metadata', {}).get('label', os.path.basename(scenario_file).split('.')[0])
+    except (json.JSONDecodeError, FileNotFoundError) as e:
+        print(f"Error reading scenario file {scenario_file}: {e}")
+        return os.path.basename(scenario_file).split('.')[0]
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Create economic analyses using templates and country-specific scenarios')
