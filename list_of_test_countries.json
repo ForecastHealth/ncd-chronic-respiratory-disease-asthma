@@ -3,6 +3,10 @@
         {
             "name": "Afghanistan",
             "iso3": "AFG"
+        },
+        {
+            "name": "Hungary",
+            "iso3": "HUN"
         }
     ]
 }
