@@ -48,6 +48,22 @@
         "denominator_label": "Healthy Years Lived"
     },
     {
+        "name": "CR1_DEFAULT - AFG",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids vs. Default - AFG",
+        "baseline_scenario_label": "Default Scenario - AFG",
+        "comparator_scenario_label": "Appendix 3 - CR1 Scenario - AFG",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "CR1_DEFAULT - HUN",
+        "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids vs. Default - HUN",
+        "baseline_scenario_label": "Default Scenario - HUN",
+        "comparator_scenario_label": "Appendix 3 - CR1 Scenario - HUN",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
         "name": "CR3 - AFG",
         "description": "Long-term management of asthma with inhaled bronchodilator and low-dose beclometasone - AFG",
         "baseline_scenario_label": "Appendix 3 - Asthma Null Scenario - AFG",
@@ -76,6 +92,22 @@
         "description": "Provision of cost-covered effective pharmacological interventions to all tobacco users who want to quit - HUN",
         "baseline_scenario_label": "Appendix 3 - Tobacco Null Scenario - HUN",
         "comparator_scenario_label": "Appendix 3 - Tobacco T7 Scenario - HUN",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "ASTHMA_T1_DEFAULT - AFG",
+        "description": "Increase excise taxes and prices on tobacco products, compared with default scenario - AFG",
+        "baseline_scenario_label": "Default Scenario - AFG",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T1 Scenario - AFG",
+        "numerator_label": "costs",
+        "denominator_label": "Healthy Years Lived"
+    },
+    {
+        "name": "ASTHMA_T1_DEFAULT - HUN",
+        "description": "Increase excise taxes and prices on tobacco products, compared with default scenario - HUN",
+        "baseline_scenario_label": "Default Scenario - HUN",
+        "comparator_scenario_label": "Appendix 3 - Tobacco T1 Scenario - HUN",
         "numerator_label": "costs",
         "denominator_label": "Healthy Years Lived"
     },
