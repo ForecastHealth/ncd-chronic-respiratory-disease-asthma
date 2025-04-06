@@ -3915,6 +3915,7 @@
       "batch": false,
       "narration": "Record Metrics",
       "included_source_nodes": [
+        "DsFreeSus",
         "yRNlzW3v",
         "Deceased",
         "AsthmaEpsd",
