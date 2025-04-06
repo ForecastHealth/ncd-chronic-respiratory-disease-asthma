@@ -1,8 +1,0 @@
-{
-    "name": "CR1_DEFAULT",
-    "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids vs. Default",
-    "baseline_name": "default_scenario",
-    "comparator_name": "asthma_cr1_scenario",
-    "numerator": "costs",
-    "denominator": "Healthy Years Lived"
-}
