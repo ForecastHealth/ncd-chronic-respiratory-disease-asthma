@@ -32,6 +32,7 @@
         "$.links[?(@.id=='Z6UVoLxv')].generate_array.parameters.country",
         "$.links[?(@.id=='tGFmOvlz')].generate_array.parameters.country",
         "$.links[?(@.id=='yCtPKnQ5')].generate_array.parameters.country",
+        "$.links[?(@.id=='kdE7JaZO')].generate_array.parameters.country",
         "$.links[?(@.id=='z2MaEXxg')].generate_array.parameters.country"
       ]
     },
