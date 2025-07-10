@@ -5,7 +5,7 @@ import logging
 from typing import Dict, Any, List, Optional
 
 from ..db import ValidationDatabase
-from .api_client import fetch_analytics_data
+from .api_client import fetch_analytics_with_defaults
 from .ulid_parser import extract_ulid_from_job_name, validate_ulid_format
 
 logger = logging.getLogger(__name__)
@@ -16,7 +16,7 @@ class DatabaseAnalyticsProcessor:
 
     def fetch_analytics_for_ulid(self, ulid: str, environment: str = "standard") -> Optional[List[Dict]]:
         try:
-            return fetch_analytics_data(environment=environment, ulid=ulid)
+            return fetch_analytics_with_defaults(environment=environment, ulid=ulid)
         except Exception as e:
             logger.error(f"Failed to fetch analytics for ULID {ulid}: {e}")
             return None
