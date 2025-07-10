@@ -100,7 +100,7 @@ def process_job_analytics(
     
     try:
         # Step 1: Extract ULID from job name
-        ulid = extract_ulid_from_job_name(job_name)
+        ulid = extract_ulid_from_job_name(job_name, environment)
         if not ulid:
             result["error"] = f"Could not extract ULID from job name: {job_name}"
             print(f"❌ {result['error']}")
