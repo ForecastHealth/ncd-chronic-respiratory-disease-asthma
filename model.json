@@ -3410,6 +3410,10 @@
   ],
   "subroutines": [
     {
+      "method": "flush",
+      "narration": "Flush unneeded values"
+    },
+    {
       "method": "generate_balance",
       "batch": false,
       "narration": "All Constants and Functions are initialised",
@@ -3915,7 +3919,6 @@
       "batch": false,
       "narration": "Record Metrics",
       "included_source_nodes": [
-        "DsFreeSus",
         "yRNlzW3v",
         "Deceased",
         "AsthmaEpsd",
@@ -3931,10 +3934,6 @@
         "tUQMkCEv",
         "N4Cpf6le"
       ]
-    },
-    {
-      "method": "flush",
-      "narration": "Flush unneeded values"
     }
   ],
   "equilibrium": {
