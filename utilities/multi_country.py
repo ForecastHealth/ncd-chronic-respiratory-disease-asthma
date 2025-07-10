@@ -486,58 +486,44 @@ def validate_multiple_countries(
                         completed_at=datetime.now()
                     )
             
-            # Step 8: Generate analytics for successful jobs
+            # Step 8: Process analytics and store in database
             if generate_analytics and completed_jobs:
                 if verbose:
-                    print_step("8", "Generating analytics for completed jobs")
+                    print_step("8", "Processing analytics and storing in database")
                 
-                model_basename = Path(model_path).stem
                 scenario_basename = Path(scenario_path).stem
                 
                 analytics_success = 0
                 for iso3, job_info in completed_jobs.items():
                     if job_info.get('success') and job_info.get('job_name'):
                         try:
-                            # Generate regular CSV analytics
-                            analytics_result = process_job_analytics(
-                                job_name=job_info['job_name'],
-                                model_name=f"{model_basename}_{iso3}",
-                                scenario_name=scenario_basename,
-                                environment=environment,
-                                preview=False  # Don't preview for batch
-                            )
-                            
-                            # Also store in database if available
-                            if analytics_processor and run_id and analytics_result['success']:
-                                try:
-                                    db_result = analytics_processor.process_job_with_database(
-                                        job_name=job_info['job_name'],
-                                        run_id=run_id,
-                                        country=iso3,
-                                        scenario=scenario_basename,
-                                        model_name=f"{model_basename}_{iso3}",
-                                        environment=environment,
-                                        save_csv=False  # CSV already saved above
-                                    )
-                                    if db_result['success'] and verbose:
-                                        print(f"📊 Database: Stored {db_result['data_records']} metrics for {job_info['name']}")
-                                except Exception as e:
+                            # Store directly in database (no CSV generation)
+                            if analytics_processor and run_id:
+                                db_result = analytics_processor.process_job_with_database(
+                                    job_name=job_info['job_name'],
+                                    run_id=run_id,
+                                    country=iso3,
+                                    scenario=scenario_basename,
+                                    model_name=f"model_{iso3}",
+                                    environment=environment,
+                                    save_csv=False  # Database only
+                                )
+                                if db_result['success']:
+                                    analytics_success += 1
                                     if verbose:
-                                        print(f"⚠️  Database storage failed for {job_info['name']}: {e}")
-                            
-                            if analytics_result['success']:
-                                analytics_success += 1
-                                if verbose:
-                                    print(f"✅ Analytics generated for {job_info['name']}: {analytics_result['data_records']} records")
+                                        print(f"✅ Analytics stored for {job_info['name']}: {db_result['data_records']} metrics in database")
+                                else:
+                                    if verbose:
+                                        print(f"⚠️  Analytics failed for {job_info['name']}: {db_result.get('error')}")
                             else:
                                 if verbose:
-                                    print(f"⚠️  Analytics failed for {job_info['name']}: {analytics_result.get('error')}")
+                                    print(f"⚠️  Database not available for {job_info['name']}")
                         except Exception as e:
                             if verbose:
                                 print(f"⚠️  Analytics error for {job_info['name']}: {e}")
                 
                 if verbose:
-                    print(f"📊 Analytics generated for {analytics_success}/{len(completed_jobs)} completed jobs")
+                    print(f"📊 Analytics processed for {analytics_success}/{len(completed_jobs)} completed jobs")
         
         else:
             if verbose:
