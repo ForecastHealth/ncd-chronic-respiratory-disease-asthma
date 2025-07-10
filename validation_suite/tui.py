@@ -46,7 +46,7 @@ def get_model_files() -> List[str]:
     return sorted([p for p in glob.glob("*.json") + glob.glob("models/*.json") if "scenario" not in p and "list" not in p]) or ["model.json"]
 
 def get_scenario_files() -> List[str]:
-    return sorted(glob.glob("scenario-templates/*.json")) or ["scenarios/default_scenario.json"]
+    return sorted(glob.glob("scenarios/*.json")) or ["scenarios/default_scenario.json"]
 
 def get_country_files() -> List[str]:
     return sorted(glob.glob("countries/*.json")) or []
