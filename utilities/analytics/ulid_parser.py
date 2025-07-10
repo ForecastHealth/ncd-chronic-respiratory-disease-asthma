@@ -9,16 +9,20 @@ import re
 from typing import Optional
 
 
-def extract_ulid_from_job_name(job_name: str, environment: str = "standard") -> Optional[str]:
+def extract_ulid_from_job_name(job_name: str, environment: str = None) -> Optional[str]:
     """
     Extract ULID from a job name.
     
     Expected format: botech-sim-{environment}-{ULID}
-    Example: botech-sim-standard-01JY6Z5TZPYS4PWF91B1WKDDX5
+    Examples: 
+        - botech-sim-standard-01JY6Z5TZPYS4PWF91B1WKDDX5
+        - botech-sim-appendix_3-01JZS6RHM5YA77NM6N20ZAB706
+        - botech-sim-default-01JY6Z5TZPYS4PWF91B1WKDDX5
     
     Args:
         job_name: The job name containing the ULID
-        environment: The environment name (e.g., "standard", "appendix_3")
+        environment: The environment name (e.g., "standard", "appendix_3"). 
+                    If None, will match any environment.
         
     Returns:
         str: The extracted ULID if found, None otherwise
@@ -28,7 +32,12 @@ def extract_ulid_from_job_name(job_name: str, environment: str = "standard") -> 
     
     # ULID pattern: 26 characters, Crockford's Base32 alphabet
     # Starts with timestamp (10 chars) + randomness (16 chars)
-    ulid_pattern = rf'botech-sim-{environment}-([0123456789ABCDEFGHJKMNPQRSTVWXYZ]{{26}})'
+    if environment:
+        # Match specific environment
+        ulid_pattern = rf'botech-sim-{re.escape(environment)}-([0123456789ABCDEFGHJKMNPQRSTVWXYZ]{{26}})$'
+    else:
+        # Match any environment
+        ulid_pattern = r'botech-sim-[^-]+-([0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26})$'
     
     match = re.search(ulid_pattern, job_name)
     if match:
