@@ -10,7 +10,7 @@ import time
 import requests
 from typing import Dict, Any, Optional
 
-from .file_utils import load_json_file
+from .scenario_utils import load_json_file
 
 
 # Configuration
