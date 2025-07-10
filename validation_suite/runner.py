@@ -24,7 +24,7 @@ class EnhancedValidationRunner:
     """
     Enhanced validation runner with database integration and incremental execution.
     """
-    def __init__(self, db_path: str = "validation_results.db"):
+    def __init__(self, db_path: str = "results.db"):
         self.db = ValidationDatabase(db_path)
         self.db_path = db_path
 

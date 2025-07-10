@@ -49,7 +49,7 @@ def validate_multiple_countries(
     verbose: bool,
     generate_analytics: bool,
     max_instances: int = MAX_INSTANCES,
-    database_path: str = "validation_results.db",
+    database_path: str = "results.db",
     run_id: Optional[int] = None # Expect a run_id from the orchestrator
 ) -> bool:
     """

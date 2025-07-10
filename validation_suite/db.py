@@ -26,7 +26,7 @@ class ValidationDatabase:
     multi-country multi-scenario validation system.
     """
     
-    def __init__(self, db_path: str = "validation_results.db"):
+    def __init__(self, db_path: str = "results.db"):
         """
         Initialize database connection.
         

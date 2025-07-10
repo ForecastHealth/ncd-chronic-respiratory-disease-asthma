@@ -11,7 +11,7 @@ from .ulid_parser import extract_ulid_from_job_name, validate_ulid_format
 logger = logging.getLogger(__name__)
 
 class DatabaseAnalyticsProcessor:
-    def __init__(self, db_path: str = "validation_results.db"):
+    def __init__(self, db_path: str = "results.db"):
         self.db = ValidationDatabase(db_path)
 
     def fetch_analytics_for_ulid(self, ulid: str, environment: str = "standard") -> Optional[List[Dict]]:
