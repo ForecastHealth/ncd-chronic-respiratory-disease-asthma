@@ -16,7 +16,7 @@ ANALYTICS_BASE_URL = "https://analytics.forecasthealth.org"
 
 # Default Query Configuration - MODIFY THESE TO CHANGE ANALYTICS QUERIES
 DEFAULT_ANALYTICS_QUERY = {
-    "event_type": "*",
+    "event_type": "ECHO",
     "group_by": ["element_label"],
     "group_by_date": "timestamp:year", 
     "aggregations": "value:last",
