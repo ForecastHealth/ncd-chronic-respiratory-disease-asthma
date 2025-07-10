@@ -82,7 +82,7 @@ class EnhancedValidationRunner:
                 scenario_path=scenario_path,
                 countries_path=temp_countries_path,
                 environment=environment,
-                poll_interval=10,
+                poll_interval=3,
                 max_wait_time=7200,
                 skip_api_test=False,
                 no_cleanup=False,

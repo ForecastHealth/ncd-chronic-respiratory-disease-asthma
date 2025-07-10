@@ -6,10 +6,33 @@ import json
 import os
 import sys
 import glob
+import logging
 from pathlib import Path
 from typing import List, Dict, Any
 
 from .runner import EnhancedValidationRunner
+
+# Configure logging for the TUI to show INFO level messages
+logging.basicConfig(level=logging.INFO, format='%(levelname)s:%(name)s:%(message)s')
+
+def load_env_file(file_path: str = ".env.local") -> Dict[str, str]:
+    """Load environment variables from a .env file."""
+    env_vars = {}
+    try:
+        with open(file_path, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, value = line.split('=', 1)
+                    env_vars[key.strip()] = value.strip()
+    except FileNotFoundError:
+        pass
+    return env_vars
+
+def get_default_environment() -> str:
+    """Get the default environment from .env.local or fallback to 'standard'."""
+    env_vars = load_env_file()
+    return env_vars.get('ENVIRONMENT', 'standard')
 
 def load_json_file(file_path: str) -> Any:
     try:
@@ -26,7 +49,7 @@ def get_scenario_files() -> List[str]:
     return sorted(glob.glob("scenario-templates/*.json")) or ["scenarios/default_scenario.json"]
 
 def get_country_files() -> List[str]:
-    return sorted(glob.glob("list_of_*.json")) or []
+    return sorted(glob.glob("countries/*.json")) or []
 
 def get_environments() -> List[str]:
     return ["default", "standard", "appendix_3"]
@@ -73,7 +96,7 @@ def run_validation(selections: Dict[str, str]) -> None:
         
         result = runner.run(
             model_path=selections["Model"],
-            countries_file="list_of_countries.json",
+            countries_file="countries/list_of_countries.json",
             scenario_templates_dir=str(Path(selections["Scenario"]).parent),
             environment=selections["Environment"],
             max_instances=100,
@@ -99,7 +122,7 @@ def main():
     selections = {
         "Model": "model.json",
         "Scenario": get_scenario_files()[0] if get_scenario_files() else "",
-        "Environment": "standard",
+        "Environment": get_default_environment(),
         "Countries": "all"
     }
     
