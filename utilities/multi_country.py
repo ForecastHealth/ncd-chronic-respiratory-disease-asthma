@@ -3,11 +3,14 @@ Multi-country validation logic.
 
 This module handles the complete workflow for validating models across
 multiple countries, including parallel job submission and analytics generation.
+Enhanced with database integration for tracking validation runs and results.
 """
 
 import time
+import subprocess
 from pathlib import Path
 from typing import Dict, Any, List
+from datetime import datetime
 
 # Configuration
 MAX_INSTANCES = 100  # Maximum number of concurrent AWS Batch jobs
@@ -19,6 +22,14 @@ from .validation import (
 )
 from .validation.api_client import submit_simulation_job, get_job_status
 from .analytics import process_job_analytics
+
+# Database integration
+try:
+    from .validation_db import ValidationDatabase
+    from .analytics.database_processor import DatabaseAnalyticsProcessor
+    DATABASE_AVAILABLE = True
+except ImportError:
+    DATABASE_AVAILABLE = False
 
 
 def count_active_jobs(job_results: Dict[str, Dict[str, Any]]) -> int:
@@ -311,6 +322,14 @@ def poll_multiple_jobs(
     return completed_jobs
 
 
+def get_git_commit() -> str:
+    """Get current git commit hash."""
+    try:
+        return subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode().strip()
+    except subprocess.CalledProcessError:
+        return "unknown"
+
+
 def validate_multiple_countries(
     model_path: str,
     scenario_path: str,
@@ -322,7 +341,8 @@ def validate_multiple_countries(
     no_cleanup: bool,
     verbose: bool,
     generate_analytics: bool,
-    max_instances: int = MAX_INSTANCES
+    max_instances: int = MAX_INSTANCES,
+    database_path: str = "validation_results.db"
 ) -> bool:
     """
     Validate model changes across multiple countries.
@@ -330,11 +350,29 @@ def validate_multiple_countries(
     This function runs the complete validation pipeline for each country
     in the countries list, submitting jobs in parallel and collecting
     analytics for each country separately.
+    Enhanced with database integration for tracking validation runs and results.
     """
     from . import print_header, print_step
     
     if verbose:
         print_header("Multi-Country Validation")
+    
+    # Initialize database if available
+    db = None
+    analytics_processor = None
+    run_id = None
+    database_enabled = DATABASE_AVAILABLE
+    
+    if database_enabled:
+        try:
+            db = ValidationDatabase(database_path)
+            analytics_processor = DatabaseAnalyticsProcessor(database_path)
+            if verbose:
+                print(f"📊 Database initialized: {database_path}")
+        except Exception as e:
+            if verbose:
+                print(f"⚠️  Database initialization failed: {e}")
+            database_enabled = False
     
     try:
         # Step 1: Load countries list
@@ -376,6 +414,15 @@ def validate_multiple_countries(
                 if not no_cleanup:
                     cleanup_tmp_directory()
                 return False
+        
+        # Initialize database run tracking
+        if db and not skip_api_test:
+            git_commit = get_git_commit()
+            scenario_name = Path(scenario_path).stem
+            total_jobs = len(country_scenarios)
+            run_id = db.start_validation_run(git_commit, total_jobs)
+            if verbose:
+                print(f"📊 Started database run {run_id} (commit: {git_commit[:8]}, {total_jobs} jobs)")
         
         # Step 4: Submit jobs in parallel (if not skipping API test)
         job_results = {}
@@ -419,6 +466,26 @@ def validate_multiple_countries(
             
             completed_jobs = poll_multiple_jobs(job_results, poll_interval, max_wait_time, verbose)
             
+            # Record job results in database
+            if db and run_id:
+                scenario_basename = Path(scenario_path).stem
+                for iso3, job_info in completed_jobs.items():
+                    job_status = "success" if job_info.get('success') else "failed"
+                    ulid = ""
+                    if job_info.get('job_name'):
+                        from .analytics.ulid_parser import extract_ulid_from_job_name
+                        ulid = extract_ulid_from_job_name(job_info['job_name'], environment) or ""
+                    
+                    db.record_job_result(
+                        run_id=run_id,
+                        country=iso3,
+                        scenario=scenario_basename,
+                        ulid=ulid,
+                        job_status=job_status,
+                        submitted_at=datetime.now(),  # We don't have exact timestamps
+                        completed_at=datetime.now()
+                    )
+            
             # Step 8: Generate analytics for successful jobs
             if generate_analytics and completed_jobs:
                 if verbose:
@@ -431,6 +498,7 @@ def validate_multiple_countries(
                 for iso3, job_info in completed_jobs.items():
                     if job_info.get('success') and job_info.get('job_name'):
                         try:
+                            # Generate regular CSV analytics
                             analytics_result = process_job_analytics(
                                 job_name=job_info['job_name'],
                                 model_name=f"{model_basename}_{iso3}",
@@ -438,6 +506,25 @@ def validate_multiple_countries(
                                 environment=environment,
                                 preview=False  # Don't preview for batch
                             )
+                            
+                            # Also store in database if available
+                            if analytics_processor and run_id and analytics_result['success']:
+                                try:
+                                    db_result = analytics_processor.process_job_with_database(
+                                        job_name=job_info['job_name'],
+                                        run_id=run_id,
+                                        country=iso3,
+                                        scenario=scenario_basename,
+                                        model_name=f"{model_basename}_{iso3}",
+                                        environment=environment,
+                                        save_csv=False  # CSV already saved above
+                                    )
+                                    if db_result['success'] and verbose:
+                                        print(f"📊 Database: Stored {db_result['data_records']} metrics for {job_info['name']}")
+                                except Exception as e:
+                                    if verbose:
+                                        print(f"⚠️  Database storage failed for {job_info['name']}: {e}")
+                            
                             if analytics_result['success']:
                                 analytics_success += 1
                                 if verbose:
@@ -462,10 +549,18 @@ def validate_multiple_countries(
         elif verbose:
             print(f"\n📁 Temporary files preserved in: {tmp_dir}")
         
-        # Success summary
+        # Success summary and database finalization
         if not skip_api_test:
             successful_jobs = len([j for j in job_results.values() if j.get('submitted')])
             completed_jobs_count = len([j for j in job_results.values() if j.get('success')])
+            failed_jobs_count = len([j for j in job_results.values() if j.get('submitted') and not j.get('success')])
+            
+            # Update database run status
+            if db and run_id:
+                final_status = "completed" if failed_jobs_count == 0 else "failed"
+                db.update_run_status(run_id, final_status, completed_jobs_count, failed_jobs_count)
+                if verbose:
+                    print(f"📊 Database run {run_id} updated: {final_status} ({completed_jobs_count} success, {failed_jobs_count} failed)")
             
             if verbose:
                 print_header("Multi-Country Validation Complete")
