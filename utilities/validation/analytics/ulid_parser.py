@@ -13,8 +13,11 @@ def extract_ulid_from_job_name(job_name: str) -> Optional[str]:
     """
     Extract ULID from a job name.
     
-    Expected format: botech-sim-standard-{ULID}
-    Example: botech-sim-standard-01JY6Z5TZPYS4PWF91B1WKDDX5
+    Expected format: botech-sim-{environment}-{ULID}
+    Examples: 
+        - botech-sim-standard-01JY6Z5TZPYS4PWF91B1WKDDX5
+        - botech-sim-appendix_3-01JZS6RHM5YA77NM6N20ZAB706
+        - botech-sim-default-01JY6Z5TZPYS4PWF91B1WKDDX5
     
     Args:
         job_name: The job name containing the ULID
@@ -27,7 +30,8 @@ def extract_ulid_from_job_name(job_name: str) -> Optional[str]:
     
     # ULID pattern: 26 characters, Crockford's Base32 alphabet
     # Starts with timestamp (10 chars) + randomness (16 chars)
-    ulid_pattern = r'botech-sim-standard-([0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26})$'
+    # Updated to match any environment (standard, appendix_3, default, etc.)
+    ulid_pattern = r'botech-sim-[^-]+-([0123456789ABCDEFGHJKMNPQRSTVWXYZ]{26})$'
     
     match = re.search(ulid_pattern, job_name)
     if match:
