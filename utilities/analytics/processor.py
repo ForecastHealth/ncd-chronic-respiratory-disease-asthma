@@ -139,7 +139,7 @@ def process_job_analytics(
         csv_path = validation_dir / csv_filename
         
         print(f"📄 Converting to CSV...")
-        if save_analytics_csv(data, str(csv_path)):
+        if save_analytics_csv(data, str(csv_path), include_metadata=False):
             result["csv_path"] = str(csv_path)
             print(f"✅ CSV saved: {csv_path}")
         else:

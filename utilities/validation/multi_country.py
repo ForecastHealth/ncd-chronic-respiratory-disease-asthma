@@ -379,6 +379,7 @@ def validate_multiple_countries(
         
         # Step 4: Submit jobs in parallel (if not skipping API test)
         job_results = {}
+        completed_jobs = {}
         if not skip_api_test:
             if verbose:
                 print_step("4", "Testing API connectivity")
@@ -418,6 +419,12 @@ def validate_multiple_countries(
                 print_step("7", f"Polling {len([j for j in job_results.values() if j.get('submitted')])} jobs for completion")
             
             completed_jobs = poll_multiple_jobs(job_results, poll_interval, max_wait_time, verbose)
+            
+            # Debug: Check what's in completed_jobs
+            if verbose:
+                print(f"\n🔍 Debug - Number of completed jobs: {len(completed_jobs)}")
+                for iso3, job_info in completed_jobs.items():
+                    print(f"  {iso3}: success={job_info.get('success')}, job_name={job_info.get('job_name')}")
             
             # Step 8: Generate analytics for successful jobs
             if generate_analytics and completed_jobs:
@@ -465,7 +472,12 @@ def validate_multiple_countries(
         # Success summary
         if not skip_api_test:
             successful_jobs = len([j for j in job_results.values() if j.get('submitted')])
-            completed_jobs_count = len([j for j in job_results.values() if j.get('success')])
+            
+            # Debug: print completed_jobs to understand the issue
+            if verbose:
+                print(f"\n📊 Debug - completed_jobs: {completed_jobs}")
+            
+            completed_jobs_count = len([j for j in completed_jobs.values() if j.get('success')])
             
             if verbose:
                 print_header("Multi-Country Validation Complete")
