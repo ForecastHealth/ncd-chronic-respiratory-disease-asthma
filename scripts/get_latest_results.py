@@ -30,18 +30,18 @@ def get_latest_results(db_path="results.db"):
             scenario,
             MAX(run_id) as latest_run_id
         FROM metrics 
-        WHERE element_label = 'DALYs'
+        WHERE element_label = 'Healthy Years Lived'
         GROUP BY country, scenario
     )
     SELECT 
         m.country,
         m.scenario,
-        SUM(m.value) as total_dalys
+        SUM(m.value) as HYL
     FROM metrics m
     JOIN latest_runs lr ON m.country = lr.country 
                         AND m.scenario = lr.scenario 
                         AND m.run_id = lr.latest_run_id
-    WHERE m.element_label = 'DALYs'
+    WHERE m.element_label = 'Healthy Years Lived'
     GROUP BY m.country, m.scenario
     ORDER BY m.country, m.scenario
     """

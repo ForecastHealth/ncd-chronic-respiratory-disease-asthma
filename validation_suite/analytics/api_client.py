@@ -21,7 +21,7 @@ DEFAULT_ANALYTICS_QUERY = {
     "group_by_date": "timestamp:year", 
     "aggregations": "value:last",
     "filters": {
-        "element_label": "DALYs"
+        "element_label": "Healthy Years Lived"
     }
 }
 
