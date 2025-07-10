@@ -6,7 +6,7 @@ country-specific scenarios, and managing country-related operations.
 """
 
 from typing import List, Dict, Any
-from .validation.file_utils import load_json_file, save_json_file
+from .scenario_utils import load_json_file, save_json_file
 
 
 def load_countries_list(countries_path: str) -> List[Dict[str, str]]:
