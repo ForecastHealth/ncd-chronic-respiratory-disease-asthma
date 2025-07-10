@@ -420,12 +420,6 @@ def validate_multiple_countries(
             
             completed_jobs = poll_multiple_jobs(job_results, poll_interval, max_wait_time, verbose)
             
-            # Debug: Check what's in completed_jobs
-            if verbose:
-                print(f"\n🔍 Debug - Number of completed jobs: {len(completed_jobs)}")
-                for iso3, job_info in completed_jobs.items():
-                    print(f"  {iso3}: success={job_info.get('success')}, job_name={job_info.get('job_name')}")
-            
             # Step 8: Generate analytics for successful jobs
             if generate_analytics and completed_jobs:
                 if verbose:
@@ -459,24 +453,8 @@ def validate_multiple_countries(
                 if verbose:
                     print(f"📊 Analytics generated for {analytics_success}/{len(completed_jobs)} completed jobs")
         
-        else:
-            if verbose:
-                print_step("4", "Skipping API test (offline mode)")
-        
-        # Step 9: Cleanup
-        if not no_cleanup:
-            cleanup_tmp_directory()
-        elif verbose:
-            print(f"\n📁 Temporary files preserved in: {tmp_dir}")
-        
-        # Success summary
-        if not skip_api_test:
+            # Success summary for API test mode
             successful_jobs = len([j for j in job_results.values() if j.get('submitted')])
-            
-            # Debug: print completed_jobs to understand the issue
-            if verbose:
-                print(f"\n📊 Debug - completed_jobs: {completed_jobs}")
-            
             completed_jobs_count = len([j for j in completed_jobs.values() if j.get('success')])
             
             if verbose:
@@ -492,13 +470,23 @@ def validate_multiple_countries(
                 else:
                     print("\n❌ No countries completed successfully")
             
-            return completed_jobs_count == len(countries)
+            success_result = completed_jobs_count == len(countries)
+        
         else:
             if verbose:
+                print_step("4", "Skipping API test (offline mode)")
                 print_header("Multi-Country Validation Complete")
                 print(f"🗺️  Countries processed: {len(countries)} (offline mode)")
                 print("\n💚 All countries scenarios created successfully!")
-            return True
+            success_result = True
+        
+        # Step 9: Cleanup
+        if not no_cleanup:
+            cleanup_tmp_directory()
+        elif verbose:
+            print(f"\n📁 Temporary files preserved in: {tmp_dir}")
+        
+        return success_result
         
     except Exception as e:
         if verbose:
