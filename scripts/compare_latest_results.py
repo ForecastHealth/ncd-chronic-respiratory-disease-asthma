@@ -123,7 +123,7 @@ def main():
         
         # Print header
         print(f"Comparison: {args.comparison} minus {args.baseline}")
-        print("Country\tDifference in DALYs")
+        print("Country\tDifference in Healthy Years Lived")
         print("-" * 50)
         
         # Print results
