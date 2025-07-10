@@ -23,7 +23,7 @@ def main():
     parser.add_argument("--model", default="model.json", help="Path to model file")
     parser.add_argument("--countries-file", default="countries/list_of_countries.json", help="Path to countries JSON file")
     parser.add_argument("--scenarios-dir", default="scenario-templates", help="Directory with scenario templates")
-    parser.add_argument("--database", default="validation_results.db", help="Path to validation database")
+    parser.add_argument("--database", default="results.db", help="Path to validation database")
     parser.add_argument("--status", action="store_true", help="Show recent run status")
     parser.add_argument("--verbose", action="store_true", help="Verbose output")
 
