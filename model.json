@@ -4,9 +4,9 @@
     "intervention": "asthma",
     "scenario": "baseline",
     "country": "AFG",
-    "version": "1.0",
+    "version": "0.8.0",
     "file_id": "Asthma Model",
-    "name": "NCD Rebuild - Asthma Disease Model",
+    "name": "Asthma",
     "description": "The rebuild of the Spectrum Asthma Disease Model"
   },
   "runtime": {
