@@ -3728,17 +3728,17 @@
     },
     {
       "method": "push_balance_to_edges",
-      "narration": "Calculate Mortality Surrogate (Transform Effect)",
-      "included_edges": [
-        "qIdKl1m3"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
       "batch": false,
       "narration": "Calculate Mortality Surrogate (Add CFR to Surrogate)",
       "included_edges": [
         "NXoCjigb"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Mortality Surrogate (Transform Effect)",
+      "included_edges": [
+        "qIdKl1m3"
       ]
     },
     {
