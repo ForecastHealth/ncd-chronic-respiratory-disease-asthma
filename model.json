@@ -2164,7 +2164,7 @@
     {
       "id": "srfoaH6g",
       "source": "Disability_Effect_Transform",
-      "target": "sBeYN0kb",
+      "target": "Asthma_Disability",
       "edge_type": "projection",
       "requires_source_balance": true,
       "remove_value_from_source": false,
@@ -2174,9 +2174,6 @@
         "parameters": {
           "value": 1
         }
-      },
-      "postprocessing": {
-        "inverse": true
       },
       "label": "Disability_Effect_Transform -> Combined_DW"
     },
