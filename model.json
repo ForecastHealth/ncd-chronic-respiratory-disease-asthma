@@ -2175,7 +2175,10 @@
           "value": 1
         }
       },
-      "label": "Disability_Effect_Transform -> Combined_DW"
+      "label": "Disability_Effect_Transform -> Combined_DW",
+      "postprocessing": {
+        "inverse": true
+      }
     },
     {
       "id": "F2a0bWMZ",
