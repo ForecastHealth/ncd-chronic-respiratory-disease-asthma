@@ -2174,6 +2174,9 @@
           "value": 1
         }
       },
+      "postprocessing": {
+        "inverse": true
+      },
       "label": "Disability_Effect_Transform -> Combined_DW"
     },
     {
