@@ -16,8 +16,8 @@
   "nodes": [
     {
       "id": "AsthmaEpsd Mortality",
-      "x": 136.27,
-      "y": -15.84,
+      "x": 136.29,
+      "y": -17.11,
       "label": "AsthmaEpsd Mortality",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -31,8 +31,8 @@
     },
     {
       "id": "AsthmaEpsd_CFR",
-      "x": 196.6,
-      "y": -14.19,
+      "x": 196.62,
+      "y": -15.46,
       "label": "AsthmaEpsd_CFR",
       "color": "#06B4E1",
       "generate_array": {
@@ -49,8 +49,8 @@
     },
     {
       "id": "Blended_Disability_Transform",
-      "x": -38.67,
-      "y": -39.94,
+      "x": -42.05,
+      "y": -31.86,
       "label": "Combined_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -64,8 +64,8 @@
     },
     {
       "id": "Disability_Effect_Transform",
-      "x": -83.93,
-      "y": -14.12,
+      "x": -83.91,
+      "y": -15.39,
       "label": "Disability_Effect_Transform",
       "description": "Removing each effect from 1",
       "color": "#06B4E1",
@@ -80,8 +80,8 @@
     },
     {
       "id": "LowDoseBeclom_Mortality_Impact",
-      "x": -53.09,
-      "y": 96.56,
+      "x": -53.07,
+      "y": 95.29,
       "color": "#06B4E1",
       "label": "LowDoseBeclom_Mortality_Impact",
       "generate_array": {
@@ -95,8 +95,8 @@
     },
     {
       "id": "LowDoseBeclom_Mortality_Effect",
-      "x": -52.78,
-      "y": 74.14,
+      "x": -52.76,
+      "y": 72.87,
       "color": "#06B4E1",
       "flush": true,
       "label": "LowDoseBeclom_Mortality_Effect",
@@ -110,8 +110,8 @@
     },
     {
       "id": "Asthma_Blended_Disability",
-      "x": -52.17,
-      "y": -55.99,
+      "x": -47.68,
+      "y": -39.62,
       "label": "Asthma_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -125,8 +125,8 @@
     },
     {
       "id": "Deceased",
-      "x": 151.83,
-      "y": 4.37,
+      "x": 151.85,
+      "y": 3.1,
       "label": "Deceased-DsFreeSus",
       "description": "The state of being dead",
       "node_type": "STATE",
@@ -137,8 +137,8 @@
     },
     {
       "id": "AsthmaEpsd",
-      "x": 39.86,
-      "y": 5.15,
+      "x": 39.88,
+      "y": 3.88,
       "label": "AsthmaEpsd",
       "ageing": true,
       "color": "#E5EF73",
@@ -146,8 +146,8 @@
     },
     {
       "id": "Healthy_Disability",
-      "x": 0.7,
-      "y": -75.97,
+      "x": 31.54,
+      "y": -43.45,
       "label": "Healthy_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -162,8 +162,8 @@
     },
     {
       "id": "Asthma_Disability",
-      "x": -60.41,
-      "y": -75.88,
+      "x": -89.51,
+      "y": -44.63,
       "label": "Asthma_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
@@ -179,8 +179,8 @@
     },
     {
       "id": "Births",
-      "x": 12.15,
-      "y": -24.05,
+      "x": 12.17,
+      "y": -25.32,
       "label": "Births",
       "description": "Store of the number of births in the population",
       "balance_type": "array",
@@ -190,8 +190,8 @@
     },
     {
       "id": "DsFreeSus",
-      "x": 51.35,
-      "y": -24.16,
+      "x": 51.37,
+      "y": -25.43,
       "label": "DsFreeSus",
       "description": "State holding the balance of the healthy population",
       "node_type": "STATE",
@@ -209,8 +209,8 @@
     },
     {
       "id": "InhaledShortActingBeta_Disability_Effect",
-      "x": -142.54,
-      "y": 60,
+      "x": -142.52,
+      "y": 58.73,
       "color": "#06B4E1",
       "flush": true,
       "label": "InhaledShortActingBeta_Disability_Effect",
@@ -224,8 +224,8 @@
     },
     {
       "id": "AsthmaOralPrednisolone_Disability_Effect",
-      "x": -143.75,
-      "y": 54.46,
+      "x": -143.73,
+      "y": 53.19,
       "color": "#06B4E1",
       "flush": true,
       "label": "AsthmaOralPrednisolone_Disability_Effect",
@@ -239,8 +239,8 @@
     },
     {
       "id": "HighDoseBeclom_Disability_Effect",
-      "x": -145.5,
-      "y": 49.26,
+      "x": -145.48,
+      "y": 47.99,
       "color": "#06B4E1",
       "flush": true,
       "label": "HighDoseBeclom_Disability_Effect",
@@ -254,8 +254,8 @@
     },
     {
       "id": "HighDoseBeclom_Calculated_Coverage",
-      "x": -146.6,
-      "y": 119.51,
+      "x": -146.58,
+      "y": 118.24,
       "label": "HighDoseBeclom_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -269,8 +269,8 @@
     },
     {
       "id": "LowDoseBeclom_Calculated_Coverage",
-      "x": -149.91,
-      "y": 111.91,
+      "x": -149.89,
+      "y": 110.64,
       "label": "LowDoseBeclom_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -284,8 +284,8 @@
     },
     {
       "id": "AsthmaOralPrednisolone_Calculated_Coverage",
-      "x": -145.37,
-      "y": 125.48,
+      "x": -145.35,
+      "y": 124.21,
       "label": "AsthmaOralPrednisolone_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -299,8 +299,8 @@
     },
     {
       "id": "LowDoseBeclom_Disability_Effect",
-      "x": -149.08,
-      "y": 44.21,
+      "x": -149.06,
+      "y": 42.94,
       "color": "#06B4E1",
       "flush": true,
       "label": "LowDoseBeclom_Disability_Effect",
@@ -314,8 +314,8 @@
     },
     {
       "id": "InhaledShortActingBeta_Calculated_Coverage",
-      "x": -143.48,
-      "y": 131.41,
+      "x": -143.46,
+      "y": 130.14,
       "label": "InhaledShortActingBeta_Calculated_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -329,8 +329,8 @@
     },
     {
       "id": "InhaledShortActingBeta_Disability_Impact",
-      "x": -141.35,
-      "y": 5.01,
+      "x": -141.33,
+      "y": 3.74,
       "color": "#06B4E1",
       "label": "InhaledShortActingBeta_Disability_Impact",
       "generate_array": {
@@ -344,8 +344,8 @@
     },
     {
       "id": "AsthmaOralPrednisolone_Disability_Impact",
-      "x": -144.13,
-      "y": -0.86,
+      "x": -144.11,
+      "y": -2.13,
       "color": "#06B4E1",
       "label": "AsthmaOralPrednisolone_Disability_Impact",
       "generate_array": {
@@ -359,8 +359,8 @@
     },
     {
       "id": "HighDoseBeclom_Disability_Impact",
-      "x": -147.56,
-      "y": -5.91,
+      "x": -147.54,
+      "y": -7.18,
       "color": "#06B4E1",
       "label": "HighDoseBeclom_Disability_Impact",
       "generate_array": {
@@ -374,8 +374,8 @@
     },
     {
       "id": "LowDoseBeclom_Disability_Impact",
-      "x": -151.73,
-      "y": -11.23,
+      "x": -151.71,
+      "y": -12.5,
       "color": "#06B4E1",
       "label": "LowDoseBeclom_Disability_Impact",
       "generate_array": {
@@ -389,8 +389,8 @@
     },
     {
       "id": "InhaledShortActingBeta_Coverage",
-      "x": -150.92,
-      "y": 196.36,
+      "x": -150.9,
+      "y": 195.09,
       "label": "InhaledShortActingBeta_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -404,8 +404,8 @@
     },
     {
       "id": "InhaledShortActingBeta_StartingCoverage",
-      "x": -147.89,
-      "y": 202.58,
+      "x": -147.87,
+      "y": 201.31,
       "label": "InhaledShortActingBeta_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -422,8 +422,8 @@
     },
     {
       "id": "AsthmaOralPrednisolone_Coverage",
-      "x": -166.16,
-      "y": 180.55,
+      "x": -166.14,
+      "y": 179.28,
       "label": "AsthmaOralPrednisolone_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -437,8 +437,8 @@
     },
     {
       "id": "AsthmaOralPrednisolone_StartingCoverage",
-      "x": -163.81,
-      "y": 184.63,
+      "x": -163.79,
+      "y": 183.36,
       "label": "AsthmaOralPrednisolone_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -455,8 +455,8 @@
     },
     {
       "id": "HighDoseBeclom_Coverage",
-      "x": -185.61,
-      "y": 166.33,
+      "x": -185.59,
+      "y": 165.06,
       "label": "HighDoseBeclom_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -470,8 +470,8 @@
     },
     {
       "id": "HighDoseBeclom_StartingCoverage",
-      "x": -184.39,
-      "y": 170.28,
+      "x": -184.37,
+      "y": 169.01,
       "label": "HighDoseBeclom_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -488,8 +488,8 @@
     },
     {
       "id": "LowDoseBeclom_Coverage",
-      "x": -208.42,
-      "y": 150.45,
+      "x": -208.4,
+      "y": 149.18,
       "label": "LowDoseBeclom_Coverage",
       "generate_array": {
         "method": "single_value",
@@ -503,8 +503,8 @@
     },
     {
       "id": "LowDoseBeclom_StartingCoverage",
-      "x": -207.73,
-      "y": 156.87,
+      "x": -207.71,
+      "y": 155.6,
       "label": "LowDoseBeclom_StartingCoverage",
       "generate_array": {
         "fetch_once": true,
@@ -521,8 +521,8 @@
     },
     {
       "id": "AsthmaOralPrednisolone_PIN",
-      "x": -225.86,
-      "y": 84.61,
+      "x": -225.84,
+      "y": 83.34,
       "label": "AsthmaOralPrednisolone_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -536,8 +536,8 @@
     },
     {
       "id": "InhaledShortActingBeta_PIN",
-      "x": -227.27,
-      "y": 91.33,
+      "x": -227.25,
+      "y": 90.06,
       "label": "InhaledShortActingBeta_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -551,8 +551,8 @@
     },
     {
       "id": "HighDoseBeclom_PIN",
-      "x": -234.06,
-      "y": 77.57,
+      "x": -234.04,
+      "y": 76.3,
       "label": "HighDoseBeclom_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -566,8 +566,8 @@
     },
     {
       "id": "LowDoseBeclom_PIN",
-      "x": -234.88,
-      "y": 70.72,
+      "x": -234.86,
+      "y": 69.45,
       "label": "LowDoseBeclom_PIN",
       "generate_array": {
         "fetch_once": true,
@@ -581,8 +581,8 @@
     },
     {
       "id": "Mortality_Effect_Transform",
-      "x": -12.11,
-      "y": 48.6,
+      "x": -12.09,
+      "y": 47.33,
       "label": "Mortality_Effect_Transform",
       "description": "Removing each effect from 1",
       "color": "#06B4E1",
@@ -597,8 +597,8 @@
     },
     {
       "id": "nKC8vwhN",
-      "x": -5.19,
-      "y": 7.89,
+      "x": -5.17,
+      "y": 6.62,
       "label": "DsFreeSus HYL",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -612,8 +612,8 @@
     },
     {
       "id": "yRNlzW3v",
-      "x": -25.13,
-      "y": 20.65,
+      "x": -25.11,
+      "y": 19.38,
       "label": "Healthy Years Lived",
       "description": "A store of disability adjusted life years",
       "node_type": "STATE",
@@ -623,8 +623,8 @@
     },
     {
       "id": "6fCgpoYB",
-      "x": -37.33,
-      "y": 7.16,
+      "x": -37.31,
+      "y": 5.89,
       "label": "AsthmaEpsd HYL",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -638,8 +638,8 @@
     },
     {
       "id": "Fow1hNl6",
-      "x": -9.39,
-      "y": -56.56,
+      "x": -14.26,
+      "y": -43.38,
       "label": "Healthy_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -653,8 +653,8 @@
     },
     {
       "id": "sBeYN0kb",
-      "x": -38.93,
-      "y": -25.92,
+      "x": -39.55,
+      "y": -19.75,
       "label": "Combined_DW",
       "color": "#06B4E1",
       "generate_array": {
@@ -668,8 +668,8 @@
     },
     {
       "id": "W7MB6GWT",
-      "x": -39.1,
-      "y": -13.04,
+      "x": -38.44,
+      "y": -7.51,
       "label": "Modified_HYL",
       "color": "#06B4E1",
       "generate_array": {
@@ -683,8 +683,8 @@
     },
     {
       "id": "rXFK8r54",
-      "x": 191.71,
-      "y": -28.82,
+      "x": 191.73,
+      "y": -30.09,
       "label": "AsthmaEpsd_Incidence_Rate",
       "color": "#06B4E1",
       "node_type": "CONSTANT",
@@ -701,8 +701,8 @@
     },
     {
       "id": "4iPxzqKo",
-      "x": 136.07,
-      "y": -28.92,
+      "x": 136.09,
+      "y": -30.19,
       "label": "AsthmaEpsd Incidence",
       "node_type": "SURROGATE",
       "color": "#7038E1",
@@ -716,8 +716,8 @@
     },
     {
       "id": "BXOLckIN",
-      "x": 270.56,
-      "y": -66.67,
+      "x": 270.58,
+      "y": -67.94,
       "label": "paf-denom-t",
       "generate_array": {
         "method": "single_value",
@@ -729,8 +729,8 @@
     },
     {
       "id": "oGP2Nze1",
-      "x": 342.81,
-      "y": -2.36,
+      "x": 342.83,
+      "y": -3.63,
       "label": "paf-denom-0",
       "generate_array": {
         "method": "single_value",
@@ -742,8 +742,8 @@
     },
     {
       "id": "PjHF9FHh",
-      "x": 188.42,
-      "y": -40.03,
+      "x": 188.44,
+      "y": -41.3,
       "label": "rf-all",
       "flush": true,
       "generate_array": {
@@ -755,8 +755,8 @@
     },
     {
       "id": "j8mr17a2",
-      "x": 275.02,
-      "y": -27.54,
+      "x": 275.04,
+      "y": -28.81,
       "label": "paf-tobacco-delta",
       "flush": true,
       "generate_array": {
@@ -768,8 +768,8 @@
     },
     {
       "id": "zxPMOyBk",
-      "x": 292.53,
-      "y": -8.4,
+      "x": 292.55,
+      "y": -9.67,
       "label": "paf-tobacco-0",
       "generate_array": {
         "method": "single_value",
@@ -781,8 +781,8 @@
     },
     {
       "id": "o1hbxc1R",
-      "x": 298.25,
-      "y": 14.12,
+      "x": 298.27,
+      "y": 12.85,
       "label": "excess-risk-0-tobacco",
       "generate_array": {
         "method": "single_value",
@@ -794,8 +794,8 @@
     },
     {
       "id": "h6Dd182n",
-      "x": 262.72,
-      "y": -41.71,
+      "x": 262.74,
+      "y": -42.98,
       "label": "paf-tobacco-t",
       "generate_array": {
         "method": "single_value",
@@ -807,8 +807,8 @@
     },
     {
       "id": "xFQ7WDDN",
-      "x": 195.51,
-      "y": -59,
+      "x": 195.53,
+      "y": -60.27,
       "label": "excess-risk-t-tobacco",
       "generate_array": {
         "method": "single_value",
@@ -820,8 +820,8 @@
     },
     {
       "id": "UJon4r9l",
-      "x": 220.63,
-      "y": -84.06,
+      "x": 220.65,
+      "y": -85.33,
       "label": "relative-risk-tobacco-asthma",
       "node_type": "CONSTANT",
       "color": "#E5EF73",
@@ -839,8 +839,8 @@
     },
     {
       "id": "HvEhBiqV",
-      "x": 145.5,
-      "y": -47.5,
+      "x": 145.52,
+      "y": -48.77,
       "label": "prevalence-0-tobacco",
       "color": "#E5EF73",
       "flush": false,
@@ -857,8 +857,8 @@
     },
     {
       "id": "OujFYFdY",
-      "x": 153.52,
-      "y": -64.62,
+      "x": 153.54,
+      "y": -65.89,
       "label": "prevalence-t-tobacco",
       "generate_array": {
         "method": "single_value",
@@ -872,8 +872,8 @@
     },
     {
       "id": "DsMKQaMl",
-      "x": 32.41,
-      "y": -51.57,
+      "x": 32.43,
+      "y": -52.84,
       "label": "total-prevalence-reduction-tobacco",
       "generate_array": {
         "method": "single_value",
@@ -887,8 +887,8 @@
     },
     {
       "id": "yeUjLivi",
-      "x": -78.03,
-      "y": -59.83,
+      "x": -78.01,
+      "y": -61.1,
       "label": "effect-size-tobacco-protect",
       "flush": true,
       "generate_array": {
@@ -902,8 +902,8 @@
     },
     {
       "id": "Rw3STfqr",
-      "x": -81.48,
-      "y": -73.13,
+      "x": -81.46,
+      "y": -74.4,
       "label": "delta-coverage-tobacco-protect",
       "generate_array": {
         "method": "single_value",
@@ -917,8 +917,8 @@
     },
     {
       "id": "f2zVbmFC",
-      "x": -84.59,
-      "y": -98.6,
+      "x": -84.57,
+      "y": -99.87,
       "label": "target-coverage-tobacco-protect",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -932,8 +932,8 @@
     },
     {
       "id": "kmOgayPc",
-      "x": -87,
-      "y": -103.81,
+      "x": -86.98,
+      "y": -105.08,
       "label": "baseline-coverage-tobacco-protect",
       "generate_array": {
         "postprocessing": {
@@ -950,8 +950,8 @@
     },
     {
       "id": "dhCjk23F",
-      "x": -46.55,
-      "y": -65.37,
+      "x": -46.53,
+      "y": -66.64,
       "label": "effect-size-tobacco-quitbrief",
       "flush": true,
       "generate_array": {
@@ -965,8 +965,8 @@
     },
     {
       "id": "c6rmN2fs",
-      "x": -40.89,
-      "y": -83.35,
+      "x": -40.87,
+      "y": -84.62,
       "label": "delta-coverage-tobacco-quitbrief",
       "generate_array": {
         "method": "single_value",
@@ -980,8 +980,8 @@
     },
     {
       "id": "Go1VxQNw",
-      "x": -39.16,
-      "y": -108.19,
+      "x": -39.14,
+      "y": -109.46,
       "label": "target-coverage-tobacco-quitbrief",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -995,8 +995,8 @@
     },
     {
       "id": "iSPWJd93",
-      "x": -38.59,
-      "y": -113.86,
+      "x": -38.57,
+      "y": -115.13,
       "label": "baseline-coverage-tobacco-quitbrief",
       "generate_array": {
         "postprocessing": {
@@ -1013,8 +1013,8 @@
     },
     {
       "id": "UW8uObpi",
-      "x": -9.08,
-      "y": -70.37,
+      "x": -9.06,
+      "y": -71.64,
       "label": "effect-size-tobacco-quitcessation",
       "flush": true,
       "generate_array": {
@@ -1028,8 +1028,8 @@
     },
     {
       "id": "b1QqmB9J",
-      "x": -3.41,
-      "y": -87.89,
+      "x": -3.39,
+      "y": -89.16,
       "label": "delta-coverage-tobacco-quitcessation",
       "generate_array": {
         "method": "single_value",
@@ -1043,8 +1043,8 @@
     },
     {
       "id": "ACrnBpRW",
-      "x": 17.48,
-      "y": -120.58,
+      "x": 17.5,
+      "y": -121.85,
       "label": "target-coverage-tobacco-quitcessation",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -1058,8 +1058,8 @@
     },
     {
       "id": "exp5DafX",
-      "x": 16.66,
-      "y": -126.71,
+      "x": 16.68,
+      "y": -127.98,
       "label": "baseline-coverage-tobacco-quitcessation",
       "generate_array": {
         "postprocessing": {
@@ -1076,8 +1076,8 @@
     },
     {
       "id": "c7kD60U5",
-      "x": 17.78,
-      "y": -64.99,
+      "x": 17.8,
+      "y": -66.26,
       "label": "effect-size-tobacco-warnlabel",
       "flush": true,
       "generate_array": {
@@ -1091,8 +1091,8 @@
     },
     {
       "id": "CpV9O9hQ",
-      "x": 51.61,
-      "y": -92.2,
+      "x": 51.63,
+      "y": -93.47,
       "label": "delta-coverage-tobacco-warnlabel",
       "generate_array": {
         "method": "single_value",
@@ -1106,8 +1106,8 @@
     },
     {
       "id": "Sr0tR2ig",
-      "x": 54.49,
-      "y": -134.82,
+      "x": 54.51,
+      "y": -136.09,
       "label": "target-coverage-tobacco-warnlabel",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -1121,8 +1121,8 @@
     },
     {
       "id": "jVgKAsq8",
-      "x": 55.75,
-      "y": -140.25,
+      "x": 55.77,
+      "y": -141.52,
       "label": "baseline-coverage-tobacco-warnlabel",
       "generate_array": {
         "postprocessing": {
@@ -1139,8 +1139,8 @@
     },
     {
       "id": "RFyZaSPm",
-      "x": 45.33,
-      "y": -59.37,
+      "x": 45.35,
+      "y": -60.64,
       "label": "effect-size-tobacco-massmedia",
       "flush": true,
       "generate_array": {
@@ -1154,8 +1154,8 @@
     },
     {
       "id": "z8dEXLS9",
-      "x": 86.08,
-      "y": -86.82,
+      "x": 86.1,
+      "y": -88.09,
       "label": "delta-coverage-tobacco-massmedia",
       "generate_array": {
         "method": "single_value",
@@ -1169,8 +1169,8 @@
     },
     {
       "id": "lFeWKUSt",
-      "x": 107.33,
-      "y": -120.77,
+      "x": 107.35,
+      "y": -122.04,
       "label": "target-coverage-tobacco-massmedia",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -1184,8 +1184,8 @@
     },
     {
       "id": "kH5YhKYM",
-      "x": 108.1,
-      "y": -125.74,
+      "x": 108.12,
+      "y": -127.01,
       "label": "baseline-coverage-tobacco-massmedia",
       "generate_array": {
         "postprocessing": {
@@ -1202,8 +1202,8 @@
     },
     {
       "id": "cahejWW9",
-      "x": 84.75,
-      "y": -54.05,
+      "x": 84.77,
+      "y": -55.32,
       "label": "effect-size-tobacco-ban",
       "flush": true,
       "generate_array": {
@@ -1217,8 +1217,8 @@
     },
     {
       "id": "llX00Ofj",
-      "x": 129.64,
-      "y": -81.87,
+      "x": 129.66,
+      "y": -83.14,
       "label": "delta-coverage-tobacco-ban",
       "generate_array": {
         "method": "single_value",
@@ -1232,8 +1232,8 @@
     },
     {
       "id": "a6OhDhjp",
-      "x": 159.5,
-      "y": -109.65,
+      "x": 159.52,
+      "y": -110.92,
       "label": "target-coverage-tobacco-ban",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -1247,8 +1247,8 @@
     },
     {
       "id": "zUseZJKK",
-      "x": 158.28,
-      "y": -113.8,
+      "x": 158.3,
+      "y": -115.07,
       "label": "baseline-coverage-tobacco-ban",
       "generate_array": {
         "postprocessing": {
@@ -1265,8 +1265,8 @@
     },
     {
       "id": "wdoGuxrz",
-      "x": -116.77,
-      "y": -51.96,
+      "x": -116.75,
+      "y": -53.23,
       "label": "effect-size-tobacco-tax",
       "flush": true,
       "generate_array": {
@@ -1282,8 +1282,8 @@
     },
     {
       "id": "bdg7vh5J",
-      "x": -120.35,
-      "y": -67.05,
+      "x": -120.33,
+      "y": -68.32,
       "label": "delta-coverage-tobacco-protect",
       "generate_array": {
         "method": "single_value",
@@ -1297,8 +1297,8 @@
     },
     {
       "id": "BTDc3bch",
-      "x": -120.97,
-      "y": -87.1,
+      "x": -120.95,
+      "y": -88.37,
       "label": "target-coverage-tobacco-tax",
       "node_type": "CONSTANT",
       "color": "#06B4E1",
@@ -1312,8 +1312,8 @@
     },
     {
       "id": "lFMuQmak",
-      "x": -117.93,
-      "y": -81.19,
+      "x": -117.91,
+      "y": -82.46,
       "label": "baseline-coverage-tobacco-tax",
       "generate_array": {
         "postprocessing": {
@@ -1330,48 +1330,48 @@
     },
     {
       "id": "b736zFQf",
-      "x": 114.98,
-      "y": 66.58,
+      "x": 115,
+      "y": 65.31,
       "label": "YLD-DsFreeSus",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "dycEX5CW",
-      "x": 84.39,
-      "y": 85.82,
+      "x": 84.41,
+      "y": 84.55,
       "label": "YLD-AsthmaEpsd",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "a98IyNnU",
-      "x": 191.2,
-      "y": 54.12,
+      "x": 191.22,
+      "y": 52.85,
       "label": "YLL-DsFreeSus",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "MCxDBlE3",
-      "x": 153.59,
-      "y": 54.3,
+      "x": 153.61,
+      "y": 53.03,
       "label": "YLL-AsthmaEpsd",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "6CymLJWw",
-      "x": 160.23,
-      "y": 96.12,
+      "x": 160.25,
+      "y": 94.85,
       "label": "DALYs",
       "color": "#FFB255",
       "flush": true
     },
     {
       "id": "N4Cpf6le",
-      "x": 120.79,
-      "y": 20.53,
+      "x": 120.81,
+      "y": 19.26,
       "label": "Deceased-AsthmaEpsd",
       "description": "The state of being dead",
       "node_type": "STATE",
@@ -1382,32 +1382,32 @@
     },
     {
       "id": "Th8rib7e",
-      "x": 4.49,
-      "y": 113.25,
+      "x": 4.51,
+      "y": 111.98,
       "color": "#FFB255",
       "label": "PopulationReached-LowDoseBeclom",
       "flush": true
     },
     {
       "id": "7jR6zfXt",
-      "x": 16.31,
-      "y": 120.73,
+      "x": 16.33,
+      "y": 119.46,
       "color": "#FFB255",
       "label": "PopulationReached-HighDoseBeclom",
       "flush": true
     },
     {
       "id": "8N5hy7kA",
-      "x": 20.82,
-      "y": 128.93,
+      "x": 20.84,
+      "y": 127.66,
       "color": "#FFB255",
       "label": "PopulationReached-AsthmaOralPrednisolone",
       "flush": true
     },
     {
       "id": "iMcmFjlP",
-      "x": 27.05,
-      "y": 135.91,
+      "x": 27.07,
+      "y": 134.64,
       "color": "#FFB255",
       "label": "PopulationReached-InhaledShortActingBeta",
       "flush": true
