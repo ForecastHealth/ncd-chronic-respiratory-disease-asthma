@@ -337,7 +337,7 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": -0.00961066
+          "value": 0.00961066
         }
       },
       "node_type": "CONSTANT"
@@ -352,7 +352,7 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": -0.3373407
+          "value": 0.3373407
         }
       },
       "node_type": "CONSTANT"
@@ -367,7 +367,7 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": -0.13260075
+          "value": 0.13260075
         }
       },
       "node_type": "CONSTANT"
@@ -382,7 +382,7 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": -0.07979948
+          "value": 0.07979948
         }
       },
       "node_type": "CONSTANT"
