@@ -91,7 +91,7 @@
       ]
     },
     "Oral Prednisolone Target Coverage": {
-      "value": 0.05,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.value"

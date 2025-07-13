@@ -35,7 +35,7 @@
       ]
     },
     "Low Dose Beclometasone Target Coverage": {
-      "value": 0.05,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.value"
@@ -63,7 +63,7 @@
       ]
     },
     "High Dose Beclometasone Target Coverage": {
-      "value": 0.05,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_Coverage')].generate_array.parameters.value"
@@ -119,7 +119,7 @@
       ]
     },
     "Inhaled Short Acting Beta Agonist Target Coverage": {
-      "value": 0.05,
+      "value": 0.0,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.value"
