@@ -58,7 +58,7 @@
       ]
     },
     "Low Dose Beclometasone Disability Impact": {
-      "value": -0.07979948,
+      "value": 0.07979948,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_Disability_Impact')].generate_array.parameters.value"
@@ -86,7 +86,7 @@
       ]
     },
     "High Dose Beclometasone Disability Impact": {
-      "value": -0.13260075,
+      "value": 0.13260075,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_Disability_Impact')].generate_array.parameters.value"
@@ -114,7 +114,7 @@
       ]
     },
     "Oral Prednisolone Disability Impact": {
-      "value": -0.3373407,
+      "value": 0.3373407,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_Disability_Impact')].generate_array.parameters.value"
@@ -142,7 +142,7 @@
       ]
     },
     "Inhaled Short Acting Beta Agonist Disability Impact": {
-      "value": -0.00961066,
+      "value": 0.00961066,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_Disability_Impact')].generate_array.parameters.value"
