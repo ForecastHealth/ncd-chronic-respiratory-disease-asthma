@@ -29,6 +29,7 @@
     },
     "Low Dose Beclometasone Baseline Coverage": {
       "value": 0.05,
+      "category": "Coverage",
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_StartingCoverage')].generate_array.parameters.value"
@@ -36,6 +37,7 @@
     },
     "Low Dose Beclometasone Target Coverage": {
       "value": 0.95,
+      "category": "Coverage",
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.value"
@@ -43,6 +45,7 @@
     },
     "Low Dose Beclometasone Population In Need": {
       "value": 0.4,
+      "category": "Population in Need",
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_PIN')].generate_array.parameters.value"
@@ -50,6 +53,7 @@
     },
     "Low Dose Beclometasone Disability Impact": {
       "value": 0.07979948,
+      "category": "Intervention Effects",
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_Disability_Impact')].generate_array.parameters.value"
@@ -57,6 +61,7 @@
     },
     "High Dose Beclometasone Baseline Coverage": {
       "value": 0.05,
+      "category": "Coverage",
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_StartingCoverage')].generate_array.parameters.value"
@@ -64,6 +69,7 @@
     },
     "High Dose Beclometasone Target Coverage": {
       "value": 0.95,
+      "category": "Coverage",
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_Coverage')].generate_array.parameters.value"
@@ -71,6 +77,7 @@
     },
     "High Dose Beclometasone Population In Need": {
       "value": 0.3,
+      "category": "Population in Need",
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_PIN')].generate_array.parameters.value"
@@ -78,6 +85,7 @@
     },
     "High Dose Beclometasone Disability Impact": {
       "value": 0.13260075,
+      "category": "Intervention Effects",
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_Disability_Impact')].generate_array.parameters.value"
@@ -85,6 +93,7 @@
     },
     "Oral Prednisolone Baseline Coverage": {
       "value": 0.05,
+      "category": "Coverage",
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_StartingCoverage')].generate_array.parameters.value"
@@ -92,6 +101,7 @@
     },
     "Oral Prednisolone Target Coverage": {
       "value": 0.0,
+      "category": "Coverage",
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.value"
@@ -99,6 +109,7 @@
     },
     "Oral Prednisolone Population In Need": {
       "value": 0.323,
+      "category": "Population in Need",
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_PIN')].generate_array.parameters.value"
@@ -106,6 +117,7 @@
     },
     "Oral Prednisolone Disability Impact": {
       "value": 0.3373407,
+      "category": "Intervention Effects",
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_Disability_Impact')].generate_array.parameters.value"
@@ -113,6 +125,7 @@
     },
     "Inhaled Short Acting Beta Agonist Baseline Coverage": {
       "value": 0.05,
+      "category": "Coverage",
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_StartingCoverage')].generate_array.parameters.value"
@@ -120,6 +133,7 @@
     },
     "Inhaled Short Acting Beta Agonist Target Coverage": {
       "value": 0.95,
+      "category": "Coverage",
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.value"
@@ -127,6 +141,7 @@
     },
     "Inhaled Short Acting Beta Agonist Population In Need": {
       "value": 0.3,
+      "category": "Population in Need",
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_PIN')].generate_array.parameters.value"
@@ -134,6 +149,7 @@
     },
     "Inhaled Short Acting Beta Agonist Disability Impact": {
       "value": 0.00961066,
+      "category": "Intervention Effects",
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_Disability_Impact')].generate_array.parameters.value"
