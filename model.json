@@ -167,7 +167,7 @@
       "label": "Asthma_Disability_Weight",
       "color": "#06B4E1",
       "generate_array": {
-        "fetch_once": true,
+        "generate_once": true,
         "data_fetcher_label": "asthma",
         "method": "get_observation",
         "parameters": {
@@ -175,7 +175,8 @@
           "observation": "AsthmaEpsd -> Disability"
         }
       },
-      "node_type": "CONSTANT"
+      "node_type": "CONSTANT",
+      "flush": true
     },
     {
       "id": "Births",
