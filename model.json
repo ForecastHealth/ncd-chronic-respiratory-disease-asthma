@@ -126,6 +126,7 @@
           "observation": "DsFreeSus -> Disability"
         }
       },
+      "flush": true,
       "node_type": "CONSTANT"
     },
     {
@@ -658,6 +659,7 @@
       "color": "#06B4E1",
       "node_type": "CONSTANT",
       "generate_array": {
+        "generate_once": true,
         "data_fetcher_label": "asthma",
         "method": "get_observation",
         "parameters": {
