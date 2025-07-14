@@ -119,11 +119,10 @@
       "color": "#06B4E1",
       "generate_array": {
         "generate_once": true,
-        "data_fetcher_label": "asthma",
-        "method": "get_observation",
+        "data_fetcher_label": "fhdb",
+        "method": "healthy_disability",
         "parameters": {
-          "country": "AFG",
-          "observation": "DsFreeSus -> Disability"
+          "country": "AFG"
         }
       },
       "flush": true,
