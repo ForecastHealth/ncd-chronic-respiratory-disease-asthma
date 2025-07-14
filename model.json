@@ -1551,6 +1551,7 @@
       "remove_value_from_source": true,
       "value_to_target_operator": "add",
       "generate_array": {
+        "fetch_once": true,
         "data_fetcher_label": "asthma",
         "method": "get_observation",
         "parameters": {
