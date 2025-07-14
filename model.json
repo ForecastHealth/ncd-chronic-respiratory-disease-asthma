@@ -2333,27 +2333,6 @@
       "label": "AsthmaEpsd Incidence -> AsthmaEpsd"
     },
     {
-      "id": "CJdATzE7",
-      "source": "DsFreeSus",
-      "target": "AsthmaEpsd",
-      "description": "Progression of asthma episode",
-      "edge_type": "transition",
-      "requires_source_balance": true,
-      "remove_value_from_source": true,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "fetch_once": true,
-        "data_fetcher_label": "fhdb",
-        "method": "epidemiology",
-        "parameters": {
-          "country": "AFG",
-          "disease": "Asthma",
-          "measure": "incidence"
-        }
-      },
-      "label": "Incidence DsFreeSus -> AsthmaEpsd"
-    },
-    {
       "id": "8g0Xnawu",
       "source": "PjHF9FHh",
       "target": "4iPxzqKo",
