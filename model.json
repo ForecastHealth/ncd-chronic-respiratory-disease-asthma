@@ -2044,7 +2044,10 @@
           "value": 1
         }
       },
-      "label": "HighDoseBeclom_Disability_Effect -> Disability_Effect_Transform"
+      "label": "HighDoseBeclom_Disability_Effect -> Disability_Effect_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "wPKJBZiQ",
@@ -2060,7 +2063,10 @@
           "value": 1
         }
       },
-      "label": "LowDoseBeclom_Disability_Effect -> Disability_Effect_Transform"
+      "label": "LowDoseBeclom_Disability_Effect -> Disability_Effect_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "qiQ7YmdW",
@@ -2076,7 +2082,10 @@
           "value": 1
         }
       },
-      "label": "AsthmaOralPrednisolone_Disability_Effect -> Disability_Effect_Transform"
+      "label": "AsthmaOralPrednisolone_Disability_Effect -> Disability_Effect_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "qWuAOIFi",
@@ -2092,7 +2101,10 @@
           "value": 1
         }
       },
-      "label": "InhaledShortActingBeta_Disability_Effect -> Disability_Effect_Transform"
+      "label": "InhaledShortActingBeta_Disability_Effect -> Disability_Effect_Transform",
+      "postprocessing": {
+        "negative": true
+      }
     },
     {
       "id": "qIdKl1m3",
@@ -2175,10 +2187,7 @@
           "value": 1
         }
       },
-      "label": "Disability_Effect_Transform -> Combined_DW",
-      "postprocessing": {
-        "inverse": true
-      }
+      "label": "Disability_Effect_Transform -> Combined_DW"
     },
     {
       "id": "F2a0bWMZ",
