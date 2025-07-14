@@ -3679,17 +3679,6 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
-      "narration": "Push AsthmaEpsd to Population Reached",
-      "included_edges": [
-        "N9rFWbuG",
-        "8kfRNFLI",
-        "t7xlBFu5",
-        "M7XAks2c"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
-      "batch": false,
       "narration": "Modify Population Reached by PIN and Coverage",
       "included_edges": [
         "Bqivj1vn",
