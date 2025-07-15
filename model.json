@@ -3652,14 +3652,6 @@
     },
     {
       "method": "push_balance_to_edges",
-      "batch": false,
-      "narration": "Modify Combined DW with intervention effects",
-      "included_edges": [
-        "srfoaH6g"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
       "narration": "Calculate Healthy and Asthma HYL",
       "included_edges": [
         "xzIbLyfh",
@@ -3680,6 +3672,14 @@
       "narration": "Calculate Combined DW",
       "included_edges": [
         "q68b5NmN"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Modify Combined DW with intervention effects",
+      "included_edges": [
+        "srfoaH6g"
       ]
     },
     {
