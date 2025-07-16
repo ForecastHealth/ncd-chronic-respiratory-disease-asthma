@@ -10,8 +10,8 @@
     "description": "The rebuild of the Spectrum Asthma Disease Model"
   },
   "runtime": {
-    "startYear": 2019,
-    "endYear": 2111
+    "startYear": 2020,
+    "endYear": 2120
   },
   "nodes": [
     {
