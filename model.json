@@ -831,11 +831,10 @@
       "generate_array": {
         "fetch_once": true,
         "data_fetcher_label": "risk_factors",
-        "method": "relative_risk",
+        "method": "relative_risk_631",
         "parameters": {
-          "schema": "tobacco",
-          "risk_factor": "Tobacco",
-          "disease": "Asthma"
+          "disease": "Asthma",
+          "risk_factor": "Tobacco"
         }
       }
     },
