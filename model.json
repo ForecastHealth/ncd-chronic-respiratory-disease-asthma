@@ -833,7 +833,7 @@
         "data_fetcher_label": "risk_factors",
         "method": "relative_risk_631",
         "parameters": {
-          "disease": "Asthma",
+          "disease": "asthma",
           "risk_factor": "Tobacco"
         }
       }
