@@ -54,8 +54,8 @@
       "category": "Population In Need"
     },
     "Low Dose Beclometasone Disability Impact": {
-      "value": 0.07979948,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
+      "value": 0.08,
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_Disability_Impact')].generate_array.parameters.value"
       ],
@@ -86,8 +86,8 @@
       "category": "Population In Need"
     },
     "High Dose Beclometasone Disability Impact": {
-      "value": 0.13260075,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
+      "value": 0.132,
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_Disability_Impact')].generate_array.parameters.value"
       ],
@@ -118,8 +118,8 @@
       "category": "Population In Need"
     },
     "Oral Prednisolone Disability Impact": {
-      "value": 0.3373407,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
+      "value": 0.33,
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_Disability_Impact')].generate_array.parameters.value"
       ],
