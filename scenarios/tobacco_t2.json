@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "label": "Tobacco - T2 - Warning about the dangers of tobacco",
+    "description": "Implement plain/standardized packaging and/or large graphic health warnings on all tobacco packages",
+    "authors": [],
+    "date_created": "2025-02-12 10:34"
+  },
+  "parameters": {
+    "Country": {
+      "hidden": true,
+      "value": "AFG",
+      "paths": [
+        "$.nodes[?(@.id=='AsthmaEpsd_CFR')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='Healthy_Disability')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='Asthma_Disability')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='DsFreeSus')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='rXFK8r54')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='HvEhBiqV')].generate_array.parameters.country",
+        "$.nodes[?(@.id=='wdoGuxrz')].generate_array.parameters.country",
+        "$.links[?(@.id=='avvOYu19')].generate_array.parameters.country",
+        "$.links[?(@.id=='MCWFcR4e')].generate_array.parameters.country",
+        "$.links[?(@.id=='EXGS1xV6')].generate_array.parameters.country",
+        "$.links[?(@.id=='Yfenedx0')].generate_array.parameters.country",
+        "$.links[?(@.id=='09Q1rhSn')].generate_array.parameters.country",
+        "$.links[?(@.id=='Z6UVoLxv')].generate_array.parameters.country",
+        "$.links[?(@.id=='tGFmOvlz')].generate_array.parameters.country",
+        "$.links[?(@.id=='yCtPKnQ5')].generate_array.parameters.country",
+        "$.links[?(@.id=='kdE7JaZO')].generate_array.parameters.country",
+        "$.links[?(@.id=='z2MaEXxg')].generate_array.parameters.country"
+      ]
+    },
+    "Baseline Coverage Tobacco Warnlabel": {
+      "value": 0.05,
+      "description": "The baseline coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='jVgKAsq8')].generate_array.parameters.value"
+      ],
+      "category": "Coverage"
+    },
+    "Target Coverage Tobacco Warnlabel": {
+      "value": 0.05,
+      "description": "The target coverage for the intervention",
+      "paths": [
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.value"
+      ],
+      "category": "Coverage"
+    }
+  }
+}
