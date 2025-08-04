@@ -138,7 +138,7 @@ def check_afg_in_model(model: Dict[str, Any]) -> List[str]:
     return afg_paths
 
 
-def diagnose_scenario(model: Dict[str, Any], scenario: Dict[str, Any], terse: bool = False) -> None:
+def diagnose_scenario(model: Dict[str, Any], scenario: Dict[str, Any], scenario_path: str = None, terse: bool = False, fix: bool = False) -> None:
     """Diagnose scenario application warnings."""
     if 'parameters' not in scenario:
         print("Error: Scenario file must contain a 'parameters' section", file=sys.stderr)
@@ -148,6 +148,7 @@ def diagnose_scenario(model: Dict[str, Any], scenario: Dict[str, Any], terse: bo
     warnings_by_type = defaultdict(list)
     total_paths = 0
     successful_paths = 0
+    paths_to_remove = []  # Track paths to remove if --fix is enabled
     
     print(f"Analyzing scenario: {scenario.get('metadata', {}).get('label', 'Unknown')}")
     print("=" * 80)
@@ -183,6 +184,9 @@ def diagnose_scenario(model: Dict[str, Any], scenario: Dict[str, Any], terse: bo
                         'path': jsonpath_expr,
                         'details': details
                     })
+                    # Track paths to remove if fixing and ID doesn't exist
+                    if fix and diagnosis == 'id_not_exist':
+                        paths_to_remove.append((param_name, jsonpath_expr))
                 else:
                     successful_paths += 1
                     
@@ -266,6 +270,29 @@ def diagnose_scenario(model: Dict[str, Any], scenario: Dict[str, Any], terse: bo
         print("\nAll AFG paths are included in the Country parameter")
     
     print("\n" + "=" * 80)
+    
+    # Apply fixes if requested
+    if fix and paths_to_remove and scenario_path:
+        print("\nApplying fixes...")
+        print("-" * 80)
+        
+        # Remove paths from scenario
+        for param_name, path_to_remove in paths_to_remove:
+            if param_name in scenario['parameters'] and 'paths' in scenario['parameters'][param_name]:
+                if path_to_remove in scenario['parameters'][param_name]['paths']:
+                    scenario['parameters'][param_name]['paths'].remove(path_to_remove)
+        
+        # Save the fixed scenario
+        try:
+            with open(scenario_path, 'w', encoding='utf-8') as f:
+                json.dump(scenario, f, indent=2, ensure_ascii=False)
+            print(f"Fixed scenario saved: removed {len(paths_to_remove)} non-existent ID paths")
+            for param_name, path in paths_to_remove[:5]:  # Show first 5
+                print(f"  - Removed from '{param_name}': {path}")
+            if len(paths_to_remove) > 5:
+                print(f"  ... and {len(paths_to_remove) - 5} more")
+        except Exception as e:
+            print(f"Error: Failed to save fixed scenario: {e}", file=sys.stderr)
 
 
 def main():
@@ -288,6 +315,11 @@ def main():
         '--terse',
         action='store_true',
         help="Show only first few warnings of each type (default: show all warnings)"
+    )
+    parser.add_argument(
+        '--fix',
+        action='store_true',
+        help="Remove JSONPaths for non-existent IDs from scenario files"
     )
     
     args = parser.parse_args()
@@ -316,7 +348,7 @@ def main():
         scenario = load_json_file(scenario_path)
         
         # Diagnose scenario
-        diagnose_scenario(model, scenario, terse=args.terse)
+        diagnose_scenario(model, scenario, scenario_path=scenario_path, terse=args.terse, fix=args.fix)
 
 
 if __name__ == '__main__':
