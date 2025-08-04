@@ -282,6 +282,14 @@ def diagnose_scenario(model: Dict[str, Any], scenario: Dict[str, Any], scenario_
                 if path_to_remove in scenario['parameters'][param_name]['paths']:
                     scenario['parameters'][param_name]['paths'].remove(path_to_remove)
         
+        # Remove parameters that now have empty path lists
+        empty_params = []
+        for param_name in list(scenario['parameters'].keys()):
+            param_config = scenario['parameters'][param_name]
+            if 'paths' in param_config and isinstance(param_config['paths'], list) and len(param_config['paths']) == 0:
+                del scenario['parameters'][param_name]
+                empty_params.append(param_name)
+        
         # Save the fixed scenario
         try:
             with open(scenario_path, 'w', encoding='utf-8') as f:
@@ -291,6 +299,13 @@ def diagnose_scenario(model: Dict[str, Any], scenario: Dict[str, Any], scenario_
                 print(f"  - Removed from '{param_name}': {path}")
             if len(paths_to_remove) > 5:
                 print(f"  ... and {len(paths_to_remove) - 5} more")
+            
+            if empty_params:
+                print(f"Also removed {len(empty_params)} parameter(s) with empty path lists:")
+                for param_name in empty_params[:5]:  # Show first 5
+                    print(f"  - Parameter '{param_name}' (no remaining paths)")
+                if len(empty_params) > 5:
+                    print(f"  ... and {len(empty_params) - 5} more")
         except Exception as e:
             print(f"Error: Failed to save fixed scenario: {e}", file=sys.stderr)
 
