@@ -252,6 +252,14 @@
         "$.nodes[?(@.id=='zUseZJKK')].generate_array.parameters.value"
       ],
       "category": "Coverage"
+    },
+    "Price Change Tobacco Tax": {
+      "value": 0.0,
+      "description": "Percentage change in retail price of tobacco",
+      "paths": [
+        "$.nodes[?(@.id=='bdg7vh5J')].generate_array.parameters.value"
+      ],
+      "category": "Coverage"
     }
   }
 }
