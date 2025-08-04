@@ -279,9 +279,10 @@ def main():
         help="Path to the model JSON file"
     )
     parser.add_argument(
-        '--scenario',
+        '--scenarios',
         required=True,
-        help="Path to the scenario JSON file"
+        nargs='+',
+        help="Path(s) to scenario JSON file(s)"
     )
     parser.add_argument(
         '--terse',
@@ -296,19 +297,26 @@ def main():
         print(f"Error: Model file does not exist: {args.model}", file=sys.stderr)
         sys.exit(1)
     
-    if not Path(args.scenario).exists():
-        print(f"Error: Scenario file does not exist: {args.scenario}", file=sys.stderr)
-        sys.exit(1)
+    # Validate all scenario files exist
+    for scenario_path in args.scenarios:
+        if not Path(scenario_path).exists():
+            print(f"Error: Scenario file does not exist: {scenario_path}", file=sys.stderr)
+            sys.exit(1)
     
-    # Load files
+    # Load model
     print(f"Loading model: {args.model}")
     model = load_json_file(args.model)
     
-    print(f"Loading scenario: {args.scenario}")
-    scenario = load_json_file(args.scenario)
-    
-    # Diagnose scenario
-    diagnose_scenario(model, scenario, terse=args.terse)
+    # Process each scenario
+    for i, scenario_path in enumerate(args.scenarios):
+        if i > 0:
+            print("\n" + "#" * 80 + "\n")  # Separator between scenarios
+        
+        print(f"Loading scenario: {scenario_path}")
+        scenario = load_json_file(scenario_path)
+        
+        # Diagnose scenario
+        diagnose_scenario(model, scenario, terse=args.terse)
 
 
 if __name__ == '__main__':
