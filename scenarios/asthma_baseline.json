@@ -34,196 +34,224 @@
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_StartingCoverage')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Low Dose Beclometasone Target Coverage": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Low Dose Beclometasone Population In Need": {
       "value": 0.4,
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_PIN')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Population In Need"
     },
     "Low Dose Beclometasone Disability Impact": {
       "value": 0.07979948,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='LowDoseBeclom_Disability_Impact')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "High Dose Beclometasone Baseline Coverage": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_StartingCoverage')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "High Dose Beclometasone Target Coverage": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_Coverage')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "High Dose Beclometasone Population In Need": {
       "value": 0.3,
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_PIN')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Population In Need"
     },
     "High Dose Beclometasone Disability Impact": {
       "value": 0.13260075,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='HighDoseBeclom_Disability_Impact')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Oral Prednisolone Baseline Coverage": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_StartingCoverage')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Oral Prednisolone Target Coverage": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Oral Prednisolone Population In Need": {
       "value": 0.323,
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_PIN')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Population In Need"
     },
     "Oral Prednisolone Disability Impact": {
       "value": 0.3373407,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='AsthmaOralPrednisolone_Disability_Impact')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Inhaled Short Acting Beta Agonist Baseline Coverage": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_StartingCoverage')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Inhaled Short Acting Beta Agonist Target Coverage": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Inhaled Short Acting Beta Agonist Population In Need": {
       "value": 0.3,
       "description": "The proportion of persons with asthma who require the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_PIN')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Population In Need"
     },
     "Inhaled Short Acting Beta Agonist Disability Impact": {
       "value": 0.00961066,
       "description": "The proportion by which the disability weight is reduced due to the intervention",
       "paths": [
         "$.nodes[?(@.id=='InhaledShortActingBeta_Disability_Impact')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Impact"
     },
     "Target Coverage Tobacco Protect": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Baseline Coverage Tobacco Protect": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='kmOgayPc')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Target Coverage Tobacco Quitbrief": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Baseline Coverage Tobacco Quitbrief": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='iSPWJd93')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Target Coverage Tobacco Quitcessation": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Baseline Coverage Tobacco Quitcessation": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='exp5DafX')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Target Coverage Tobacco Warnlabel": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Baseline Coverage Tobacco Warnlabel": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='jVgKAsq8')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Target Coverage Tobacco Massmedia": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Baseline Coverage Tobacco Massmedia": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='kH5YhKYM')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Target Coverage Tobacco Ban": {
       "value": 0.05,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     },
     "Baseline Coverage Tobacco Ban": {
       "value": 0.05,
       "description": "The baseline coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='zUseZJKK')].generate_array.parameters.value"
-      ]
+      ],
+      "category": "Coverage"
     }
   }
 }
