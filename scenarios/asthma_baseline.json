@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "label": "Default Scenario",
+    "label": "Asthma - Baseline Scenario",
     "description": "A scenario where there is no change in the coverage of any intervention",
     "authors": [],
     "date_created": "2024-12-10 13:04"
@@ -8,7 +8,7 @@
   "parameters": {
     "Country": {
       "hidden": true,
-      "value": "AGO",
+      "value": "AFG",
       "paths": [
         "$.nodes[?(@.id=='AsthmaEpsd_CFR')].generate_array.parameters.country",
         "$.nodes[?(@.id=='Healthy_Disability')].generate_array.parameters.country",
