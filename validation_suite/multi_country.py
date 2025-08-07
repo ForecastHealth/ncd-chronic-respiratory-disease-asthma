@@ -179,20 +179,35 @@ def validate_multiple_countries(
         print(f"\n📋 Step 8: Processing analytics and storing in database")
         print("----------------------------------------")
         
-        # 4. Process analytics and update DB
+        # 4. Process analytics and update DB (serialized to avoid rate limits)
         all_successful = True
         successful_jobs = 0
         
+        # First pass: Update all job results in DB
         for iso3, job_info in completed_jobs.items():
             job_status = "success" if job_info['final_status'] == 'SUCCEEDED' else 'failed'
             job_name = job_info.get('job_name')
             
             # Update job result in DB
             db.record_job_result(run_id, iso3, Path(scenario_path).stem, job_name or '', job_status, None, datetime.now())
-
-            if job_status == 'success' and generate_analytics and job_name:
-                print(f"🔍 Fetching analytics data from environment: {environment}")
+            
+            if job_status != 'success':
+                all_successful = False
+        
+        # Second pass: Process analytics serially to avoid API rate limits
+        successful_analytics_jobs = [job_info for job_info in completed_jobs.values() 
+                                   if job_info['final_status'] == 'SUCCEEDED' and job_info.get('job_name')]
+        
+        if generate_analytics and successful_analytics_jobs:
+            print(f"📊 Processing analytics for {len(successful_analytics_jobs)} successful jobs (serialized)")
+            
+            for i, job_info in enumerate(successful_analytics_jobs, 1):
+                iso3 = next(iso3 for iso3, info in completed_jobs.items() if info == job_info)
+                job_name = job_info.get('job_name')
+                
+                print(f"🔍 [{i}/{len(successful_analytics_jobs)}] Fetching analytics for {job_info['name']} ({iso3})")
                 print(f"🆔 ULID: {job_name.split('-')[-1] if job_name else 'unknown'}")
+                
                 analytics_result = analytics_processor.process_job_with_database(
                     job_name=job_name,
                     run_id=run_id,
@@ -202,15 +217,18 @@ def validate_multiple_countries(
                     environment=environment,
                     save_csv=False # DB only
                 )
+                
                 if analytics_result['success']:
                     print(f"✅ Analytics stored for {job_info['name']}: {analytics_result.get('data_records', 0)} metrics in database")
                     successful_jobs += 1
                 else:
                     print(f"❌ Analytics processing failed for {job_info['name']}: {analytics_result.get('error')}")
                     logger.error(f"Analytics processing failed for {iso3}: {analytics_result.get('error')}")
-            
-            if job_status != 'success':
-                all_successful = False
+                
+                # Add delay between requests to avoid overwhelming the analytics API
+                # The analytics API has a 5-second cleanup delay for in-flight caches
+                if i < len(successful_analytics_jobs):
+                    time.sleep(5)
         
         print(f"📊 Analytics processed for {successful_jobs}/{len([j for j in completed_jobs.values() if j['final_status'] == 'SUCCEEDED'])} completed jobs")
 
