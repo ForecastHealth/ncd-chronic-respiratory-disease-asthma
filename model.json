@@ -3,15 +3,13 @@
     "user": "appendix_3",
     "intervention": "asthma",
     "scenario": "baseline",
-    "country": "AFG",
-    "version": "0.8.0",
-    "file_id": "Asthma Model",
     "name": "Asthma",
     "description": "The rebuild of the Spectrum Asthma Disease Model"
   },
   "runtime": {
     "startYear": 2020,
-    "endYear": 2120
+    "endYear": 2120,
+    "synchronous_iterations": 10
   },
   "nodes": [
     {
