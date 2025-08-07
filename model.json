@@ -3682,12 +3682,19 @@
       "narration": "Main Routine",
       "included_edges": [
         "Z6UVoLxv",
-        "09Q1rhSn",
         "dgLZdA4x",
-        "HGzwp14L",
-        "kdE7JaZO"
+        "HGzwp14L"
       ],
       "batch": true
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Background Mortality",
+      "included_edges": [
+        "09Q1rhSn",
+        "kdE7JaZO"
+      ],
+      "batch": false
     },
     {
       "method": "push_balance_to_edges",
