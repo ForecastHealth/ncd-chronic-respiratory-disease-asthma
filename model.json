@@ -8,7 +8,8 @@
   },
   "runtime": {
     "startYear": 2020,
-    "endYear": 2121
+    "endYear": 2121,
+    "synchronous_iterations": 10
   },
   "nodes": [
     {
