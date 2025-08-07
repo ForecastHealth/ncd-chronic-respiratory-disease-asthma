@@ -1,12 +1,36 @@
 {
     "countries": [
         {
-            "name": "Afghanistan",
-            "iso3": "AFG"
+            "name": "Thailand",
+            "iso3": "THA"
         },
         {
-            "name": "Angola",
-            "iso3": "AGO"
+            "name": "Argentina",
+            "iso3": "ARG"
+        },
+        {
+            "name": "China",
+            "iso3": "CHN"
+        },
+        {
+            "name": "Poland",
+            "iso3": "POL"
+        },
+        {
+            "name": "Kenya",
+            "iso3": "KEN"
+        },
+        {
+            "name": "India",
+            "iso3": "IND"
+        },
+        {
+            "name": "Brazil",
+            "iso3": "BRA"
+        },
+        {
+            "name": "Russia",
+            "iso3": "RUS"
         }
     ]
 }
