@@ -1381,24 +1381,6 @@
   ],
   "links": [
     {
-      "id": "avvOYu19",
-      "source": "DsFreeSus",
-      "target": "DsFreeSus",
-      "description": "Adjust the state by the net migration rate",
-      "edge_type": "modifier",
-      "value_to_target_operator": "add",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "migration",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "DsFreeSus -> DsFreeSus"
-    },
-    {
       "id": "MCWFcR4e",
       "source": "DsFreeSus",
       "target": "Births",
@@ -1520,24 +1502,6 @@
         }
       },
       "label": "AsthmaEpsd -> Births"
-    },
-    {
-      "id": "yCtPKnQ5",
-      "source": "AsthmaEpsd",
-      "target": "AsthmaEpsd",
-      "description": "Adjust the state by the net migration rate",
-      "edge_type": "modifier",
-      "value_to_target_operator": "add",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "migration",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "AsthmaEpsd -> AsthmaEpsd"
     },
     {
       "id": "z2MaEXxg",
