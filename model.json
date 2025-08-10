@@ -1514,7 +1514,7 @@
       "value_to_target_operator": "add",
       "generate_array": {
         "data_fetcher_label": "fhdb",
-        "method": "demproj_fertility",
+        "method": "demproj_births",
         "parameters": {
           "country": "AFG"
         }
