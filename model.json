@@ -7,8 +7,8 @@
     "description": "The rebuild of the Spectrum Asthma Disease Model"
   },
   "runtime": {
-    "startYear": 2020,
-    "endYear": 2121,
+    "startYear": 2019,
+    "endYear": 2120,
     "synchronous_iterations": 10
   },
   "nodes": [
@@ -199,7 +199,7 @@
       "ageing": true,
       "generate_array": {
         "data_fetcher_label": "fhdb",
-        "method": "population",
+        "method": "demproj_population",
         "parameters": {
           "country": "AFG"
         },
@@ -1409,7 +1409,7 @@
       "value_to_target_operator": "add",
       "generate_array": {
         "data_fetcher_label": "fhdb",
-        "method": "fertility",
+        "method": "demproj_births",
         "parameters": {
           "country": "AFG"
         }
@@ -1427,7 +1427,7 @@
       "value_to_target_operator": "add",
       "generate_array": {
         "data_fetcher_label": "fhdb",
-        "method": "sex_ratio",
+        "method": "demproj_sexratio",
         "parameters": {
           "country": "AFG",
           "sex": "m"
@@ -1452,7 +1452,7 @@
       "value_to_target_operator": "add",
       "generate_array": {
         "data_fetcher_label": "fhdb",
-        "method": "sex_ratio",
+        "method": "demproj_sexratio",
         "parameters": {
           "country": "AFG",
           "sex": "f"
@@ -1477,7 +1477,7 @@
       "value_to_target_operator": "add",
       "generate_array": {
         "data_fetcher_label": "fhdb",
-        "method": "mortality",
+        "method": "demproj_mortality",
         "parameters": {
           "country": "AFG"
         }
@@ -3270,7 +3270,7 @@
       "value_to_target_operator": "add",
       "generate_array": {
         "data_fetcher_label": "fhdb",
-        "method": "mortality",
+        "method": "demproj_mortality",
         "parameters": {
           "country": "AFG"
         }
