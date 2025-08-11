@@ -1,7 +1,9 @@
 # Configuration for Asthma Baseline Scenario
 metadata:
   label: "Asthma - Baseline Scenario"
-  description: "A scenario where there is no change in the coverage of any intervention"
+  description: | 
+    A scenario where there is no change in the coverage of any intervention.
+    This baseline scenario is useful when you're interested in varying multiple interventions at the same time.
   authors: []
 
 # Components to include (from build/components/)

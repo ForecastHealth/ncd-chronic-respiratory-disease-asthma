@@ -22,17 +22,5 @@ overrides:
     value: 0
   "Inhaled Short Acting Beta Agonist Target Coverage":
     value: 0
-  "Target Coverage Tobacco Protect":
-    value: 0
-  "Target Coverage Tobacco Quitbrief":
-    value: 0
-  "Target Coverage Tobacco Quitcessation":
-    value: 0
-  "Target Coverage Tobacco Warnlabel":
-    value: 0
-  "Target Coverage Tobacco Massmedia":
-    value: 0
-  "Target Coverage Tobacco Ban":
-    value: 0
 
 output: ../scenarios/asthma_null.json
