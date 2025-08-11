@@ -1,9 +1,9 @@
 {
   "metadata": {
     "label": "Appendix 3 - CR1 Scenario",
-    "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids.",
+    "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids.\nThis scenario exposes the parameters for the Oral Prednisolone intervention.\nThis was the mapping for the CR1 Scenario in Appendix 3 simulations.\nOral prednisolone reduces the disability weight of persons living with Asthma.\nIt increases the target coverage from the baseline of five percent, to the target coverage of ninety-five percent,\nwhich was a standard coverage change for Appendix 3 simulations.\nThis should typically be run as a comparison scenario, with the baseline scenario being the Asthma Baseline, or this same scenario but with the target coverage having a smaller scale-up coverage.\n",
     "authors": [],
-    "date_created": "2025-08-11 14:00"
+    "date_created": "2025-08-11 16:56"
   },
   "parameters": {
     "Country": {

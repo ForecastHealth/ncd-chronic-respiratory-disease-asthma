@@ -3,7 +3,7 @@
     "label": "Appendix 3 - Asthma Null Scenario",
     "description": "The scenario all interventions are scaled to 0% coverage. Used as the baseline scenario for analyses in Appendix 3 for clinical interventions.",
     "authors": [],
-    "date_created": "2025-08-11 14:00"
+    "date_created": "2025-08-11 16:56"
   },
   "parameters": {
     "Country": {
@@ -232,24 +232,6 @@
         "$.nodes[?(@.id=='InhaledShortActingBeta_Disability_Impact')].generate_array.parameters.value"
       ],
       "category": "Impact"
-    },
-    "Target Coverage Tobacco Protect": {
-      "value": 0
-    },
-    "Target Coverage Tobacco Quitbrief": {
-      "value": 0
-    },
-    "Target Coverage Tobacco Quitcessation": {
-      "value": 0
-    },
-    "Target Coverage Tobacco Warnlabel": {
-      "value": 0
-    },
-    "Target Coverage Tobacco Massmedia": {
-      "value": 0
-    },
-    "Target Coverage Tobacco Ban": {
-      "value": 0
     }
   }
 }
