@@ -393,9 +393,14 @@
       "y": 193.27,
       "label": "InhaledShortActingBeta_Coverage",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
@@ -426,9 +431,14 @@
       "y": 177.46,
       "label": "AsthmaOralPrednisolone_Coverage",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
@@ -459,9 +469,14 @@
       "y": 163.24,
       "label": "HighDoseBeclom_Coverage",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
@@ -492,9 +507,14 @@
       "y": 147.36,
       "label": "LowDoseBeclom_Coverage",
       "generate_array": {
-        "method": "single_value",
+        "method": "linear_with_arbitrary_length",
         "parameters": {
-          "value": 0.05
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
         }
       },
       "color": "#06B4E1",
