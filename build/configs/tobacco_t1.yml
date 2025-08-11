@@ -1,0 +1,17 @@
+# Configuration for Asthma Baseline Scenario
+metadata:
+  label: "Asthma - Tobacco - Baseline Scenario"
+  description: "Increase excise taxes and prices on tobacco products"
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - base.json
+  - tobacco_tax.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: {}
+
+# Output file path (relative to build directory)
+output: ../scenarios/tobacco_t1.json
