@@ -548,7 +548,7 @@
         "fetch_once": true,
         "method": "single_value",
         "parameters": {
-          "value": 0.323
+          "value": 0.3
         }
       },
       "color": "#06B4E1",
