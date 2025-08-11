@@ -7,11 +7,7 @@ metadata:
 # Components to include
 components:
   - base.json
-  - low_dose_beclom.json
-  - high_dose_beclom.json
-  - oral_prednisolone.json
-  - inhaled_beta_agonist.json
-  - tobacco_interventions.json
+  - asthma_oral_prednisolone.json
 
 # Override specific values for CR1 scenario
 overrides:

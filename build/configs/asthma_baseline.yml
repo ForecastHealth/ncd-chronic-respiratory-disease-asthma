@@ -7,11 +7,17 @@ metadata:
 # Components to include (from build/components/)
 components:
   - base.json
-  - low_dose_beclom.json
-  - high_dose_beclom.json
-  - oral_prednisolone.json
-  - inhaled_beta_agonist.json
-  - tobacco_interventions.json
+  - asthma_low_dose_beclom.json
+  - asthma_high_dose_beclom.json
+  - asthma_oral_prednisolone.json
+  - asthma_inhaled_beta_agonist.json
+  - tobacco_ban.json
+  - tobacco_massmedia.json
+  - tobacco_protect.json
+  - tobacco_quitbrief.json
+  - tobacco_quitcessation.json
+  - tobacco_tax.json
+  - tobacco_warnlabel.json
 
 # Optional: Override specific parameter values
 # These will be applied after merging components

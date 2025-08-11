@@ -7,15 +7,15 @@ metadata:
 # Components to include
 components:
   - base.json
-  - low_dose_beclom.json
-  - high_dose_beclom.json
-  - oral_prednisolone.json
-  - inhaled_beta_agonist.json
-  - tobacco_interventions.json
+  - asthma_low_dose_beclom.json
+  - asthma_high_dose_beclom.json
+  - asthma_inhaled_beta_agonist.json
 
 # Override specific values for CR3 scenario
 overrides:
   "Low Dose Beclometasone Target Coverage":
+    value: 0.95
+  "High Dose Beclometasone Target Coverage":
     value: 0.95
   "Inhaled Short Acting Beta Agonist Target Coverage":
     value: 0.95
