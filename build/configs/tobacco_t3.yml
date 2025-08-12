@@ -14,7 +14,7 @@ components:
 # Optional: Override specific parameter values
 # These will be applied after merging components
 overrides:
-  "Tobacco Ban Target Coverage":
+  "Target Coverage Tobacco Ban":
     value: 0.95
 
 # Output file path (relative to build directory)
