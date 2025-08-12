@@ -1,6 +1,6 @@
 # Configuration for Inhaled Short Acting Beta Agonist Only
 metadata:
-  label: "Inhaled Short Acting Beta Agonist"
+  label: "Clinical Intervention - Inhaled Short Acting Beta Agonist"
   description: |
     Long-term management of asthma with Inhaled Short-Acting Beta Agonist only.
     Inhaled Short-Acting Beta Agonist provides symptom relief, reducing the disability weight by approximately 1%.
@@ -13,8 +13,6 @@ components:
   - asthma_inhaled_beta_agonist.json
 
 # Override specific values for Inhaled Short Acting Beta Agonist scenario
-overrides:
-  "Inhaled Short Acting Beta Agonist Target Coverage":
-    value: 0.95
+overrides: {}
 
 output: ../scenarios/asthma_inhaled_beta_agonist.json

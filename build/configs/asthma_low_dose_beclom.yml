@@ -1,6 +1,6 @@
 # Configuration for Low Dose Beclometasone Only
 metadata:
-  label: "Low Dose Beclometasone"
+  label: "Clinical Intervention - Low Dose Beclometasone"
   description: |
     Long-term management of asthma with Low Dose Beclometasone only.
     Low Dose Beclometasone reduces the disability weight of persons living with Asthma by 8% and reduces asthma case fatality by 50%.
@@ -13,8 +13,6 @@ components:
   - asthma_low_dose_beclom.json
 
 # Override specific values for Low Dose Beclometasone scenario
-overrides:
-  "Low Dose Beclometasone Target Coverage":
-    value: 0.95
+overrides: {}
 
 output: ../scenarios/asthma_low_dose_beclom.json

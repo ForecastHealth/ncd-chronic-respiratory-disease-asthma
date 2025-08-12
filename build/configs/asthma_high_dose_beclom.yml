@@ -1,6 +1,6 @@
 # Configuration for High Dose Beclometasone Only
 metadata:
-  label: "High Dose Beclometasone"
+  label: "Clinical Intervention - High Dose Beclometasone"
   description: |
     Long-term management of asthma with High Dose Beclometasone only.
     High Dose Beclometasone reduces the disability weight by 13.2%.
@@ -13,8 +13,6 @@ components:
   - asthma_high_dose_beclom.json
 
 # Override specific values for High Dose Beclometasone scenario
-overrides:
-  "High Dose Beclometasone Target Coverage":
-    value: 0.95
+overrides: {}
 
 output: ../scenarios/asthma_high_dose_beclom.json
