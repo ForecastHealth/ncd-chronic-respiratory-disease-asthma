@@ -44,7 +44,7 @@
   },
   "Oral Prednisolone Disability Impact": {
     "description": "The proportion by which the disability weight is reduced due to the intervention",
-    "value": 0.33,
+    "value": 0.337,
     "paths": [
       "$.nodes[?(@.id=='AsthmaOralPrednisolone_Disability_Impact')].generate_array.parameters.value"
     ],
