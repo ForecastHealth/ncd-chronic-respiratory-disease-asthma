@@ -3,7 +3,7 @@
     "label": "Clinical Intervention - Oral Prednisolone",
     "description": "Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids.\nThis scenario exposes the parameters for the Oral Prednisolone intervention.\nOral prednisolone reduces the disability weight of persons living with Asthma.\n",
     "authors": [],
-    "date_created": "2025-08-12 13:58"
+    "date_created": "2025-08-12 14:18"
   },
   "parameters": {
     "Country": {

@@ -3,7 +3,7 @@
     "label": "Appendix 3 - Tobacco 6 - Cessation support services",
     "description": "Tobacco cessation support intervention that provides brief advice, quit lines, and behavioral support.\nThis scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.\n",
     "authors": [],
-    "date_created": "2025-08-12 13:58"
+    "date_created": "2025-08-12 14:18"
   },
   "parameters": {
     "Country": {
@@ -40,7 +40,7 @@
       "category": "Coverage"
     },
     "Target Coverage Tobacco Quitbrief": {
-      "value": 0.05,
+      "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.end_value",
@@ -63,9 +63,6 @@
         "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
-    },
-    "Target Coverage Tobacco QuitBrief": {
-      "value": 0.95
     }
   }
 }
