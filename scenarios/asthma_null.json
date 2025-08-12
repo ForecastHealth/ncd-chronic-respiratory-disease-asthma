@@ -3,7 +3,7 @@
     "label": "Appendix 3 - Asthma Null Scenario",
     "description": "The scenario all interventions are scaled to 0% coverage. Used as the baseline scenario for analyses in Appendix 3 for clinical interventions.",
     "authors": [],
-    "date_created": "2025-08-12 13:44"
+    "date_created": "2025-08-12 13:58"
   },
   "parameters": {
     "Country": {

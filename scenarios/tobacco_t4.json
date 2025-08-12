@@ -3,7 +3,7 @@
     "label": "Appendix 3 - Tobacco 4 - Smoke-free environments",
     "description": "Smoke-free environment intervention that protects people from tobacco smoke in public places.\nThis scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.\n",
     "authors": [],
-    "date_created": "2025-08-12 13:44"
+    "date_created": "2025-08-12 13:58"
   },
   "parameters": {
     "Country": {
@@ -40,7 +40,7 @@
       "category": "Coverage"
     },
     "Target Coverage Tobacco Protect": {
-      "value": 0.05,
+      "value": 0.95,
       "description": "The target coverage for the intervention",
       "paths": [
         "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.end_value",
@@ -63,9 +63,6 @@
         "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
-    },
-    "Tobacco Protect Target Coverage": {
-      "value": 0.95
     }
   }
 }
