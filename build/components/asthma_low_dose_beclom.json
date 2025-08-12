@@ -49,5 +49,13 @@
       "$.nodes[?(@.id=='LowDoseBeclom_Disability_Impact')].generate_array.parameters.value"
     ],
     "category": "Impact"
+  },
+  "Low Dose Beclometasone Mortality Impact": {
+    "description": "The proportion by which the case fatality rate is reduced due to the intervention",
+    "value": 0.5,
+    "paths": [
+      "$.nodes[?(@.id=='LowDoseBeclom_Mortality_Impact')].generate_array.parameters.value"
+    ],
+    "category": "Impact"
   }
 }
