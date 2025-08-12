@@ -14,8 +14,8 @@ components:
 # Optional: Override specific parameter values
 # These will be applied after merging components
 overrides:
-  "Tobacco Tax Target Coverage":
-    value: 0.95
+  "Price Change Tobacco Tax":
+    value: 0.25
 
 # Output file path (relative to build directory)
 output: ../scenarios/tobacco_t1.json
