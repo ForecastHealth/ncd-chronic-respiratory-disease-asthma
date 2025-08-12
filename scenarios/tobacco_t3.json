@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "label": "Tobacco - T3 - Advertising and promotion bans",
+    "label": "Appendix 3 - Tobacco 3 - Advertising and promotion bans",
     "description": "Tobacco advertising ban intervention that enforces comprehensive bans on tobacco advertising, promotion and sponsorship.\nThis scenario modifies coverage parameters from baseline to target levels which reduces tobacco prevalence and subsequently affects diabetes incidence rates.\n",
     "authors": [],
-    "date_created": "2025-08-12 10:08"
+    "date_created": "2025-08-12 13:44"
   },
   "parameters": {
     "Country": {
@@ -63,6 +63,9 @@
         "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.end_index"
       ],
       "category": "Coverage"
+    },
+    "Tobacco Ban Target Coverage": {
+      "value": 0.95
     }
   }
 }
