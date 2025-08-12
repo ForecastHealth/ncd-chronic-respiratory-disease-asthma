@@ -1,6 +1,6 @@
 # Configuration for Tobacco T1 Scenario
 metadata:
-  label: "Tobacco - T1 - Increase excise taxes and prices"
+  label: "Appendix 3 - Tobacco 1 - Increase excise taxes and prices"
   description: |
     Tobacco tax intervention that increases retail prices to reduce tobacco prevalence.
     This scenario modifies the price change parameters which reduces tobacco prevalence and subsequently affects diabetes incidence rates.
@@ -13,7 +13,9 @@ components:
 
 # Optional: Override specific parameter values
 # These will be applied after merging components
-overrides: {}
+overrides:
+  "Tobacco Tax Target Coverage":
+    value: 0.95
 
 # Output file path (relative to build directory)
 output: ../scenarios/tobacco_t1.json
