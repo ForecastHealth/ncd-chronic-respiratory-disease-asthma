@@ -9,6 +9,7 @@ metadata:
 # Components to include (from build/components/)
 components:
   - base.json
+  - runtime.json
   - tobacco_quitbrief.json
 
 # Optional: Override specific parameter values
