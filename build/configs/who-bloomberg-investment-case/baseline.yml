@@ -1,0 +1,24 @@
+# Configuration for Asthma Baseline Scenario
+metadata:
+  label: "Baseline Scenario"
+  description: | 
+    A scenario where there is no change in the coverage of any intervention.
+    This baseline scenario is useful when you're interested in varying multiple interventions at the same time.
+  authors: []
+
+# Components to include (from build/components/)
+components:
+  - runtime.json
+  - base.json
+
+# Optional: Override specific parameter values
+# These will be applied after merging components
+overrides: 
+  "Start Year":
+    value: 2025
+  "End Year": 
+    value: 2051
+
+
+# Output file path (relative to build directory)
+output: ../scenarios/who-bloomberg-investment-case/asthma_baseline.json
