@@ -97,8 +97,6 @@ def find_latest_file(pattern, tmp_dir="tmp"):
 def check_scenario_files_exist(ulid, scenario, tmp_dir="tmp"):
     """Check if all required files exist for a scenario."""
     required_files = {
-        'edge': f"{ulid}_{scenario}_edge_*.json",
-        'balance': f"{ulid}_{scenario}_balance_*.json",
         'echo': f"{ulid}_{scenario}_echo_*.json"
     }
     

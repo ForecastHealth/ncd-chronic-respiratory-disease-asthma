@@ -83,8 +83,8 @@ def main():
                        help='Use all ULIDs from validation_results.csv')
     parser.add_argument('--output-dir', default='tmp',
                        help='Output directory for JSON files (default: tmp)')
-    parser.add_argument('--delay', type=float, default=0.5,
-                       help='Delay between requests in seconds (default: 0.5)')
+    parser.add_argument('--delay', type=float, default=5.0,
+                       help='Delay between requests in seconds (default: 5.0)')
     parser.add_argument('--analytics-types', nargs='+', 
                        choices=['edge_values_calculated', 'balance_set', 'echo', 'all'],
                        default=['echo'],
