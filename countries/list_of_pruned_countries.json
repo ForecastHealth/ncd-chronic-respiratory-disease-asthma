@@ -73,10 +73,6 @@
             "iso3": "BTN"
         },
         {
-            "name": "Bolivia, Plurinational State of",
-            "iso3": "BOL"
-        },
-        {
             "name": "Bosnia and Herzegovina",
             "iso3": "BIH"
         },
@@ -189,10 +185,6 @@
             "iso3": "DOM"
         },
         {
-            "name": "Ecuador",
-            "iso3": "ECU"
-        },
-        {
             "name": "Egypt",
             "iso3": "EGY"
         },
@@ -277,10 +269,6 @@
             "iso3": "HND"
         },
         {
-            "name": "Hong Kong",
-            "iso3": "HKG"
-        },
-        {
             "name": "Hungary",
             "iso3": "HUN"
         },
@@ -343,10 +331,6 @@
         {
             "name": "Korea, Republic of",
             "iso3": "KOR"
-        },
-        {
-            "name": "Kosovo",
-            "iso3": "XKX"
         },
         {
             "name": "Kuwait",
@@ -493,10 +477,6 @@
             "iso3": "PAK"
         },
         {
-            "name": "Palestine, State of",
-            "iso3": "PSE"
-        },
-        {
             "name": "Panama",
             "iso3": "PAN"
         },
@@ -509,10 +489,6 @@
             "iso3": "PRY"
         },
         {
-            "name": "Peru",
-            "iso3": "PER"
-        },
-        {
             "name": "Philippines",
             "iso3": "PHL"
         },
@@ -523,10 +499,6 @@
         {
             "name": "Portugal",
             "iso3": "PRT"
-        },
-        {
-            "name": "Puerto Rico",
-            "iso3": "PRI"
         },
         {
             "name": "Qatar",
@@ -597,10 +569,6 @@
             "iso3": "ZAF"
         },
         {
-            "name": "South Sudan",
-            "iso3": "SSD"
-        },
-        {
             "name": "Spain",
             "iso3": "ESP"
         },
@@ -633,10 +601,6 @@
             "iso3": "SYR"
         },
         {
-            "name": "Taiwan, Province of China",
-            "iso3": "TWN"
-        },
-        {
             "name": "Tajikistan",
             "iso3": "TJK"
         },
@@ -647,10 +611,6 @@
         {
             "name": "Thailand",
             "iso3": "THA"
-        },
-        {
-            "name": "Timor-Leste",
-            "iso3": "TLS"
         },
         {
             "name": "Togo",
@@ -715,10 +675,6 @@
         {
             "name": "Viet Nam",
             "iso3": "VNM"
-        },
-        {
-            "name": "Western Sahara",
-            "iso3": "ESH"
         },
         {
             "name": "Yemen",
