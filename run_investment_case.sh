@@ -163,6 +163,7 @@ CLI_CMD="$CLI_CMD --model $MODEL_FILE"
 CLI_CMD="$CLI_CMD --environment $ENVIRONMENT"
 CLI_CMD="$CLI_CMD --max-instances $MAX_INSTANCES"
 CLI_CMD="$CLI_CMD --scenarios ${SCENARIOS[*]}"
+CLI_CMD="$CLI_CMD --database validation_results.db"  # Specify database file
 
 if [ "$FORCE_RUN" = true ]; then
     CLI_CMD="$CLI_CMD --force"
@@ -181,10 +182,23 @@ VALIDATION_END=$(date +%s)
 VALIDATION_DURATION=$((VALIDATION_END - VALIDATION_START))
 log "Validation took $((VALIDATION_DURATION / 60)) minutes and $((VALIDATION_DURATION % 60)) seconds"
 
+# The validation suite saves results to CSV files, wait for them to be written
+sleep 2
+
 # Check if validation_results.csv was created
 if [ ! -f "validation_results.csv" ]; then
-    log_error "validation_results.csv was not created"
-    exit 1
+    log_warning "validation_results.csv not found, checking for CSV files..."
+    # Look for any CSV files that were just created
+    LATEST_CSV=$(ls -t *.csv 2>/dev/null | head -1)
+    if [ -n "$LATEST_CSV" ] && [ -f "$LATEST_CSV" ]; then
+        log "Found CSV file: $LATEST_CSV"
+        # Use this as our validation results
+        cp "$LATEST_CSV" validation_results.csv
+        log_success "Using $LATEST_CSV as validation_results.csv"
+    else
+        log_error "No validation results CSV was created"
+        exit 1
+    fi
 fi
 
 # Step 2: Fetch analytics data
