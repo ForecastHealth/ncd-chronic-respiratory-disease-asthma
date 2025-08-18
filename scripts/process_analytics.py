@@ -230,8 +230,8 @@ def main():
                        help='Use validation_results.csv')
     parser.add_argument('--output-dir', default='results',
                        help='Output directory for results (default: results)')
-    parser.add_argument('--output-format', choices=['json', 'csv', 'both'], default='both',
-                       help='Output format (default: both)')
+    parser.add_argument('--output-format', choices=['json', 'csv', 'both'], default='csv',
+                       help='Output format (default: csv)')
     parser.add_argument('--tmp-dir', default='tmp',
                        help='Directory containing fetched JSON files (default: tmp)')
     parser.add_argument('--metrics', nargs='+',
