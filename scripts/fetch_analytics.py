@@ -6,6 +6,8 @@ Usage:
     python3 fetch_analytics.py --ulids ULID1 ULID2 ULID3
     python3 fetch_analytics.py --csv validation_results.csv
     python3 fetch_analytics.py --all  # Use all ULIDs from validation_results.csv
+    python3 fetch_analytics.py --ulids ULID1 --analytics-types edge_values_calculated balance_set
+    python3 fetch_analytics.py --ulids ULID1 --analytics-types all
 """
 
 import json
@@ -83,6 +85,10 @@ def main():
                        help='Output directory for JSON files (default: tmp)')
     parser.add_argument('--delay', type=float, default=0.5,
                        help='Delay between requests in seconds (default: 0.5)')
+    parser.add_argument('--analytics-types', nargs='+', 
+                       choices=['edge_values_calculated', 'balance_set', 'echo', 'all'],
+                       default=['echo'],
+                       help='Analytics types to fetch (default: echo only). Use "all" to fetch all types.')
     
     args = parser.parse_args()
     
@@ -116,8 +122,17 @@ def main():
             print(f"No ULIDs found in {csv_path}")
             return 1
     
-    # Process each ULID - make three requests per ULID (EDGE_VALUES_CALCULATED, BALANCE_SET, and ECHO)
-    event_types = ["EDGE_VALUES_CALCULATED", "BALANCE_SET", "ECHO"]
+    # Determine which analytics types to fetch
+    if 'all' in args.analytics_types:
+        event_types = ["EDGE_VALUES_CALCULATED", "BALANCE_SET", "ECHO"]
+    else:
+        type_mapping = {
+            'edge_values_calculated': 'EDGE_VALUES_CALCULATED',
+            'balance_set': 'BALANCE_SET', 
+            'echo': 'ECHO'
+        }
+        event_types = [type_mapping[t] for t in args.analytics_types]
+    
     total_requests = len(ulid_list) * len(event_types)
     print(f"Fetching data for {len(ulid_list)} ULIDs ({total_requests} total requests)...")
     print("-" * 60)
