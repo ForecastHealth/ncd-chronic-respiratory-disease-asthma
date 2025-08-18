@@ -16,6 +16,8 @@ from .scenario_utils import apply_scenario_to_model, validate_json_files
 from .api_client import submit_simulation_job, get_job_status, test_api_health
 from .db import ValidationDatabase
 from .analytics.processor import DatabaseAnalyticsProcessor
+from .analytics.ulid_parser import extract_ulid_from_job_name
+from .csv_writer import ValidationCSVWriter
 from .country_utils import get_country_display_list, create_country_scenario, load_countries_list
 
 logger = logging.getLogger(__name__)
@@ -60,6 +62,7 @@ def validate_multiple_countries(
 
     db = ValidationDatabase(database_path)
     analytics_processor = DatabaseAnalyticsProcessor(database_path)
+    csv_writer = ValidationCSVWriter()
 
     if not run_id:
         logger.error("A valid run_id must be provided to validate_multiple_countries.")
@@ -176,14 +179,15 @@ def validate_multiple_countries(
         
         print(f"\n📊 Polling complete: {len([j for j in completed_jobs.values() if j['final_status'] == 'SUCCEEDED'])}/{len(completed_jobs)} jobs succeeded")
 
-        print(f"\n📋 Step 8: Processing analytics and storing in database")
+        print(f"\n📋 Step 8: Saving validation results to CSV")
         print("----------------------------------------")
         
-        # 4. Process analytics and update DB (serialized to avoid rate limits)
+        # 4. Save results to CSV and update DB
         all_successful = True
         successful_jobs = 0
+        csv_results = []
         
-        # First pass: Update all job results in DB
+        # Process all job results
         for iso3, job_info in completed_jobs.items():
             job_status = "success" if job_info['final_status'] == 'SUCCEEDED' else 'failed'
             job_name = job_info.get('job_name')
@@ -191,46 +195,26 @@ def validate_multiple_countries(
             # Update job result in DB
             db.record_job_result(run_id, iso3, Path(scenario_path).stem, job_name or '', job_status, None, datetime.now())
             
-            if job_status != 'success':
-                all_successful = False
-        
-        # Second pass: Process analytics serially to avoid API rate limits
-        successful_analytics_jobs = [job_info for job_info in completed_jobs.values() 
-                                   if job_info['final_status'] == 'SUCCEEDED' and job_info.get('job_name')]
-        
-        if generate_analytics and successful_analytics_jobs:
-            print(f"📊 Processing analytics for {len(successful_analytics_jobs)} successful jobs (serialized)")
-            
-            for i, job_info in enumerate(successful_analytics_jobs, 1):
-                iso3 = next(iso3 for iso3, info in completed_jobs.items() if info == job_info)
-                job_name = job_info.get('job_name')
-                
-                print(f"🔍 [{i}/{len(successful_analytics_jobs)}] Fetching analytics for {job_info['name']} ({iso3})")
-                print(f"🆔 ULID: {job_name.split('-')[-1] if job_name else 'unknown'}")
-                
-                analytics_result = analytics_processor.process_job_with_database(
-                    job_name=job_name,
-                    run_id=run_id,
-                    country=iso3,
-                    scenario=Path(scenario_path).stem,
-                    model_name=Path(model_path).stem,
-                    environment=environment,
-                    save_csv=False # DB only
-                )
-                
-                if analytics_result['success']:
-                    print(f"✅ Analytics stored for {job_info['name']}: {analytics_result.get('data_records', 0)} metrics in database")
+            if job_status == 'success' and job_name:
+                # Extract ULID from job name and save to CSV
+                ulid = extract_ulid_from_job_name(job_name, environment)
+                if ulid:
+                    csv_results.append((ulid, iso3, Path(scenario_path).stem))
+                    print(f"✅ Saved result for {job_info['name']} - ULID: {ulid}")
                     successful_jobs += 1
                 else:
-                    print(f"❌ Analytics processing failed for {job_info['name']}: {analytics_result.get('error')}")
-                    logger.error(f"Analytics processing failed for {iso3}: {analytics_result.get('error')}")
-                
-                # Add delay between requests to avoid overwhelming the analytics API
-                # The analytics API has a 5-second cleanup delay for in-flight caches
-                if i < len(successful_analytics_jobs):
-                    time.sleep(5)
+                    print(f"⚠️  Could not extract ULID from job name: {job_name}")
+            else:
+                all_successful = False
         
-        print(f"📊 Analytics processed for {successful_jobs}/{len([j for j in completed_jobs.values() if j['final_status'] == 'SUCCEEDED'])} completed jobs")
+        # Write all results to CSV in batch
+        if csv_results:
+            if csv_writer.write_batch_results(csv_results):
+                print(f"📊 Saved {len(csv_results)} validation results to CSV")
+            else:
+                print(f"❌ Failed to save results to CSV")
+        
+        print(f"📊 Validation complete: {successful_jobs}/{len(completed_jobs)} jobs succeeded")
 
         return all_successful
 
