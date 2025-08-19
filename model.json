@@ -3635,7 +3635,8 @@
         "Blended_Disability_Transform",
         "Fow1hNl6",
         "sBeYN0kb",
-        "W7MB6GWT"
+        "W7MB6GWT",
+        "DXhAVyOP"
       ]
     },
     {
@@ -3662,7 +3663,9 @@
         "Healthy_Disability",
         "Asthma_Disability",
         "AsthmaEpsd_CFR",
-        "rXFK8r54"
+        "rXFK8r54",
+        "HaYRxeQQ",
+        "mrGezI4c"
       ]
     },
     {
@@ -3865,6 +3868,21 @@
     },
     {
       "method": "push_balance_to_edges",
+      "narration": "Initialise Economic Value with HYL",
+      "included_edges": [
+        "DbLhgNYh"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Scale Economic Value by GDP per capita and LFP rate",
+      "included_edges": [
+        "pfDEgvPv",
+        "B48YPJzw"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
       "batch": false,
       "narration": "Add prevalence to YLD nodes",
       "included_edges": [
@@ -3934,7 +3952,8 @@
         "8N5hy7kA",
         "iMcmFjlP",
         "tUQMkCEv",
-        "N4Cpf6le"
+        "N4Cpf6le",
+        "DXhAVyOP"
       ]
     }
   ]
