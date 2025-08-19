@@ -1427,6 +1427,50 @@
       "color": "#FFB255",
       "label": "PopulationReached-InhaledShortActingBeta",
       "flush": true
+    },
+    {
+      "id": "DXhAVyOP",
+      "x": -59.83,
+      "y": 33.36,
+      "label": "Economic Value",
+      "color": "#FFB255",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true
+    },
+    {
+      "id": "HaYRxeQQ",
+      "x": -77.56,
+      "y": 13.91,
+      "label": "GDP Per Capita",
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "wb_gdp_per_capita",
+        "parameters": {
+          "country": "AFG"
+        },
+        "fetch_once": true
+      }
+    },
+    {
+      "id": "mrGezI4c",
+      "x": -84.55,
+      "y": 23.53,
+      "label": "Labour Force Participation",
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "wb_gdp_per_capita",
+        "parameters": {
+          "country": "AFG"
+        },
+        "fetch_once": true
+      }
     }
   ],
   "links": [
@@ -3326,6 +3370,45 @@
         }
       },
       "label": "Background Mortality AsthmaEpsd"
+    },
+    {
+      "id": "pfDEgvPv",
+      "source": "HaYRxeQQ",
+      "target": "DXhAVyOP",
+      "value_to_target_operator": "multiply",
+      "remove_value_from_source": false,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "B48YPJzw",
+      "source": "mrGezI4c",
+      "target": "DXhAVyOP",
+      "value_to_target_operator": "multiply",
+      "remove_value_from_source": false,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "DbLhgNYh",
+      "source": "yRNlzW3v",
+      "target": "DXhAVyOP",
+      "value_to_target_operator": "add",
+      "remove_value_from_source": false,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
     }
   ],
   "subroutines": [
