@@ -1465,7 +1465,7 @@
       "color": "#06B4E1",
       "generate_array": {
         "data_fetcher_label": "fhdb",
-        "method": "wb_gdp_per_capita",
+        "method": "ilo_labour_force_participation_rate",
         "parameters": {
           "country": "AFG"
         },
