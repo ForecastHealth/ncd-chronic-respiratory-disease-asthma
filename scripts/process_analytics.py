@@ -41,6 +41,7 @@ SCENARIO_TO_COST_TAG = {
     'd7_scenario': 'D7',
     # Chronic respiratory interventions
     'asthma_cr1_scenario': 'CR1',
+    'asthma_cr1': 'CR1',
     'cr1_scenario': 'CR1',
     'cr2_scenario': 'CR2',
     'asthma_cr3_scenario': 'CR3',
@@ -409,6 +410,7 @@ def main():
     invalid_comparisons = 0
     
     for country, entries in data_by_country.items():
+        print(f"Processing {country}...")
         # Find baseline ULID for this country
         baseline_entry = None
         comparison_entries = []
@@ -452,7 +454,6 @@ def main():
                 continue
             
             # Calculate metrics
-            print(f"✓ Processing {country}/{comp_entry['scenario']}")
             results = process_comparison(
                 baseline_files, 
                 comp_files,
@@ -463,9 +464,6 @@ def main():
             
             country_results[comp_entry['scenario']] = results
             valid_comparisons += 1
-            
-            # Print results
-            print(format_results(country, comp_entry['scenario'], results))
         
         if country_results:
             all_results[country] = country_results
@@ -483,12 +481,6 @@ def main():
         save_results_csv(all_results, csv_path)
         print(f"✓ CSV results saved to: {csv_path}")
     
-    # Summary
-    print(f"\n{'='*60}")
-    print(f"Processing complete:")
-    print(f"  Valid comparisons: {valid_comparisons}")
-    print(f"  Invalid comparisons: {invalid_comparisons}")
-    print(f"  Countries processed: {len(all_results)}")
     
     return 0
 
