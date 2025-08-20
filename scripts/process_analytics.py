@@ -59,6 +59,20 @@ METRICS_CONFIG = {
         "element_labels": ["Healthy Years Lived"],
         "year_filter": lambda y: y <= 2035,
         "aggregation": "sum"
+    },
+    "economic_benefit_2030": {
+        "name": "Economic benefit (USD) by 2030",
+        "event_type": "echo",
+        "element_labels": ["Economic Value"],
+        "year_filter": lambda y: y <= 2030,
+        "aggregation": "sum"
+    },
+    "economic_benefit_2035": {
+        "name": "Economic benefit (USD) by 2035",
+        "event_type": "echo",
+        "element_labels": ["Economic Value"],
+        "year_filter": lambda y: y <= 2035,
+        "aggregation": "sum"
     }
 }
 
