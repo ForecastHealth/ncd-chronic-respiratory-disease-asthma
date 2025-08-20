@@ -158,14 +158,16 @@ METRICS_CONFIG = {
         "event_type": "echo",
         "element_labels": ["Economic Value"],
         "year_filter": lambda y: y <= 2030,
-        "aggregation": "sum"
+        "aggregation": "sum",
+        "apply_discounting": True
     },
     "economic_benefit_2035": {
         "name": "Economic benefit (USD) by 2035",
         "event_type": "echo",
         "element_labels": ["Economic Value"],
         "year_filter": lambda y: y <= 2035,
-        "aggregation": "sum"
+        "aggregation": "sum",
+        "apply_discounting": True
     },
     "intervention_cost_2030": {
         "name": "Intervention cost (USD) by 2030",
@@ -258,6 +260,9 @@ def calculate_metric(data, metric_config, cost_per_capita=None):
         
         # Handle different aggregation types
         if metric_config['aggregation'] == 'sum':
+            # Apply discounting if specified
+            if metric_config.get('apply_discounting', False) and year:
+                value = calculate_discounted_value(value, year)
             total += value
         elif metric_config['aggregation'] == 'cost' and cost_per_capita is not None:
             # For cost calculations: multiply population by per capita cost
