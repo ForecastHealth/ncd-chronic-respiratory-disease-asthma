@@ -304,19 +304,44 @@ def save_results_json(all_results, output_path):
 
 
 def save_results_csv(all_results, output_path):
-    """Save results to CSV file matching NEW_SCHEMA format."""
+    """Save results to CSV file matching NEW_SCHEMA format with timestamp and cumulative values."""
     rows = []
+    
+    # First collect all rows and organize by country/scenario/metric
+    organized_data = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
     
     for country, scenarios in all_results.items():
         for scenario, yearly_data in scenarios.items():
             for year, metrics in yearly_data.items():
                 for metric_key, metric_data in metrics.items():
+                    organized_data[country][scenario][metric_data['name']].append({
+                        'year': year,
+                        'value': metric_data['difference']
+                    })
+    
+    # Now create rows with cumulative values
+    for country, scenarios in organized_data.items():
+        for scenario, metrics in scenarios.items():
+            for metric_name, yearly_values in metrics.items():
+                # Sort by year
+                yearly_values.sort(key=lambda x: x['year'])
+                
+                cumulative_sum = 0
+                for year_data in yearly_values:
+                    year = year_data['year']
+                    value = year_data['value']
+                    cumulative_sum += value
+                    
+                    # Create timestamp for January 1st of the year
+                    timestamp = f"{year}-01-01"
+                    
                     row = {
                         'country': country,
                         'scenario': scenario,
-                        'metric': metric_data['name'],
-                        'year': year,
-                        'value': metric_data['difference']
+                        'metric': metric_name,
+                        'year': timestamp,
+                        'value': value,
+                        'cum_value': cumulative_sum
                     }
                     rows.append(row)
     
@@ -325,7 +350,7 @@ def save_results_csv(all_results, output_path):
     
     if rows:
         with open(output_path, 'w', newline='') as f:
-            fieldnames = ['country', 'scenario', 'metric', 'year', 'value']
+            fieldnames = ['country', 'scenario', 'metric', 'year', 'value', 'cum_value']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(rows)
