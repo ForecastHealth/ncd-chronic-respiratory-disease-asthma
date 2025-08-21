@@ -28,18 +28,19 @@ psql -h $DB_HOST -U $DB_USER -d $DB_NAME -c "CREATE SCHEMA IF NOT EXISTS who_blo
 FILENAME=$(basename "$RESULTS_FILE" .csv)
 TABLE_NAME="who_bloomberg_investment_case.${FILENAME}"
 
-# Create the table with the new CSV structure matching NEW_SCHEMA.md
+# Create the table with the new CSV structure matching NEW_SCHEMA.md with timestamp and cumulative values
 psql -h $DB_HOST -U $DB_USER -d $DB_NAME -c "DROP TABLE IF EXISTS $TABLE_NAME;"
 psql -h $DB_HOST -U $DB_USER -d $DB_NAME -c "CREATE TABLE $TABLE_NAME (
     country VARCHAR(3),
     scenario TEXT,
     metric TEXT,
-    year INTEGER,
-    value NUMERIC
+    year DATE,
+    value NUMERIC,
+    cum_value NUMERIC
 );"
 
 # Load the data from the CSV file into the table
-psql -h $DB_HOST -U $DB_USER -d $DB_NAME -c "\copy $TABLE_NAME (country, scenario, metric, year, value) FROM '$RESULTS_FILE' DELIMITER ',' CSV HEADER;"
+psql -h $DB_HOST -U $DB_USER -d $DB_NAME -c "\copy $TABLE_NAME (country, scenario, metric, year, value, cum_value) FROM '$RESULTS_FILE' DELIMITER ',' CSV HEADER;"
 
 echo "Uploaded $RESULTS_FILE to $TABLE_NAME"
 
