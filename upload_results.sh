@@ -36,11 +36,12 @@ psql -h $DB_HOST -U $DB_USER -d $DB_NAME -c "CREATE TABLE $TABLE_NAME (
     metric TEXT,
     year DATE,
     value NUMERIC,
-    cum_value NUMERIC
+    cum_value NUMERIC,
+    source TEXT
 );"
 
 # Load the data from the CSV file into the table
-psql -h $DB_HOST -U $DB_USER -d $DB_NAME -c "\copy $TABLE_NAME (country, scenario, metric, year, value, cum_value) FROM '$RESULTS_FILE' DELIMITER ',' CSV HEADER;"
+psql -h $DB_HOST -U $DB_USER -d $DB_NAME -c "\copy $TABLE_NAME (country, scenario, metric, year, value, cum_value, source) FROM '$RESULTS_FILE' DELIMITER ',' CSV HEADER;"
 
 echo "Uploaded $RESULTS_FILE to $TABLE_NAME"
 
