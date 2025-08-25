@@ -114,6 +114,12 @@ METRICS_CONFIG = {
         "element_labels": ["DsFreeSus", "AsthmaEpsd"],
         "aggregation": "cost",
         "apply_discounting": True
+    },
+    "cases": {
+        "name": "cases",
+        "event_type": "echo",
+        "element_labels": ["AsthmaEpsd"],
+        "aggregation": "yearly"
     }
 }
 
