@@ -118,7 +118,7 @@ METRICS_CONFIG = {
     "cases": {
         "name": "cases",
         "event_type": "echo",
-        "element_labels": ["AsthmaEpsd"],
+        "element_labels": ["STATE_StrokeAcute", "STATE_IHDAcute"],
         "aggregation": "yearly"
     }
 }
@@ -177,7 +177,7 @@ def load_json_file(filepath):
         return json.load(f)
 
 
-def calculate_metric_by_year(data, metric_config, cost_per_capita=None):
+def calculate_metric_by_year(data, metric_config, cost_per_capita=None, scenario_name=None):
     """Calculate metrics grouped by year."""
     yearly_values = defaultdict(float)
     
@@ -206,6 +206,11 @@ def calculate_metric_by_year(data, metric_config, cost_per_capita=None):
         elif metric_config['aggregation'] == 'cost' and cost_per_capita is not None:
             # For cost calculations: multiply population by per capita cost
             cost_value = value * cost_per_capita
+            
+            # Apply special scaling for cv1 scenario costs
+            if scenario_name and scenario_name in ['cv1', 'cv1_scenario']:
+                # Scale down costs by (0.5-0.21)/(0.95-0.05) = 0.29/0.9
+                cost_value = cost_value * (0.29 / 0.9)
             
             # Apply discounting if specified
             if metric_config.get('apply_discounting', False):
@@ -245,7 +250,7 @@ def process_comparison(baseline_files, comparison_files, scenario_name=None, cos
         if metric_config.get('aggregation') == 'cost':
             # For cost metrics, only calculate for the comparison scenario
             baseline_yearly = defaultdict(float)  # No intervention cost for baseline
-            comparison_yearly = calculate_metric_by_year(comparison_data, metric_config, cost_per_capita)
+            comparison_yearly = calculate_metric_by_year(comparison_data, metric_config, cost_per_capita, scenario_name)
         else:
             baseline_yearly = calculate_metric_by_year(baseline_data, metric_config)
             comparison_yearly = calculate_metric_by_year(comparison_data, metric_config, cost_per_capita)
