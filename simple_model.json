@@ -1,0 +1,1616 @@
+{
+  "metadata": {
+    "user": "appendix_3",
+    "intervention": "asthma",
+    "scenario": "baseline",
+    "name": "Asthma",
+    "description": "The rebuild of the Spectrum Asthma Disease Model"
+  },
+  "runtime": {
+    "startYear": 2020,
+    "endYear": 2040,
+    "synchronous_iterations": 10
+  },
+  "nodes": [
+    {
+      "id": "AsthmaEpsd Mortality",
+      "x": 128.75,
+      "y": -45.22,
+      "label": "AsthmaEpsd Mortality",
+      "node_type": "SURROGATE",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true
+    },
+    {
+      "id": "AsthmaEpsd_CFR",
+      "x": 189.08,
+      "y": -43.57,
+      "label": "AsthmaEpsd_CFR",
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
+        "parameters": {
+          "country": "AFG",
+          "disease": "Asthma",
+          "measure": "deaths"
+        }
+      },
+      "flush": true,
+      "node_type": "CONSTANT"
+    },
+    {
+      "id": "Blended_Disability_Transform",
+      "x": -49.59,
+      "y": -59.97,
+      "label": "Combined_HYL",
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true,
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "Disability_Effect_Transform",
+      "x": -91.45,
+      "y": -43.5,
+      "label": "Disability_Effect_Transform",
+      "description": "Removing each effect from 1",
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "LowDoseBeclom_Mortality_Impact",
+      "x": -60.61,
+      "y": 67.18,
+      "color": "#06B4E1",
+      "label": "LowDoseBeclom_Mortality_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.5
+        }
+      },
+      "node_type": "CONSTANT"
+    },
+    {
+      "id": "LowDoseBeclom_Mortality_Effect",
+      "x": -60.3,
+      "y": 44.76,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "LowDoseBeclom_Mortality_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "Asthma_Blended_Disability",
+      "x": -55.22,
+      "y": -67.73,
+      "label": "Asthma_HYL",
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true,
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "Deceased",
+      "x": 144.31,
+      "y": -25.01,
+      "label": "Deceased-DsFreeSus",
+      "description": "The state of being dead",
+      "node_type": "STATE",
+      "balance_type": "array",
+      "color": "#FB6375",
+      "order": 3,
+      "flush": true
+    },
+    {
+      "id": "AsthmaEpsd",
+      "x": 32.34,
+      "y": -24.23,
+      "label": "AsthmaEpsd",
+      "ageing": true,
+      "color": "#E5EF73",
+      "node_type": "STATE"
+    },
+    {
+      "id": "Healthy_Disability",
+      "x": 24,
+      "y": -71.56,
+      "label": "Healthy_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "generate_once": true,
+        "data_fetcher_label": "fhdb",
+        "method": "healthy_disability",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "flush": true,
+      "node_type": "CONSTANT"
+    },
+    {
+      "id": "Asthma_Disability",
+      "x": -97.05,
+      "y": -72.74,
+      "label": "Asthma_Disability_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "generate_once": true,
+        "data_fetcher_label": "asthma",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "AsthmaEpsd -> Disability"
+        }
+      },
+      "node_type": "CONSTANT",
+      "flush": true
+    },
+    {
+      "id": "Births",
+      "x": 4.63,
+      "y": -53.43,
+      "label": "Births",
+      "description": "Store of the number of births in the population",
+      "balance_type": "array",
+      "flush": true,
+      "color": "#EB7FEF",
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "DsFreeSus",
+      "x": 43.83,
+      "y": -53.54,
+      "label": "DsFreeSus",
+      "description": "State holding the balance of the healthy population",
+      "node_type": "STATE",
+      "balance_type": "array",
+      "ageing": true,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "population",
+        "parameters": {
+          "country": "AFG"
+        },
+        "fetch_once": true
+      },
+      "color": "#3CD009"
+    },
+    {
+      "id": "AsthmaOralPrednisolone_Disability_Effect",
+      "x": -151.27,
+      "y": 25.08,
+      "color": "#06B4E1",
+      "flush": true,
+      "label": "AsthmaOralPrednisolone_Disability_Effect",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "AsthmaOralPrednisolone_Calculated_Coverage",
+      "x": -152.89,
+      "y": 96.1,
+      "label": "AsthmaOralPrednisolone_Calculated_Coverage",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "AsthmaOralPrednisolone_Disability_Impact",
+      "x": -151.65,
+      "y": -30.24,
+      "color": "#06B4E1",
+      "label": "AsthmaOralPrednisolone_Disability_Impact",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.3373407
+        }
+      },
+      "node_type": "CONSTANT"
+    },
+    {
+      "id": "AsthmaOralPrednisolone_Coverage",
+      "x": -173.68,
+      "y": 151.17,
+      "label": "AsthmaOralPrednisolone_Coverage",
+      "generate_array": {
+        "method": "linear_with_arbitrary_length",
+        "parameters": {
+          "start_value": 0.05,
+          "end_value": 0.05,
+          "start_index": 1,
+          "end_index": 2,
+          "fill_before": 0.05,
+          "fill_after": 0.05
+        }
+      },
+      "color": "#06B4E1",
+      "flush": true,
+      "node_type": "CONSTANT"
+    },
+    {
+      "id": "AsthmaOralPrednisolone_StartingCoverage",
+      "x": -171.33,
+      "y": 155.25,
+      "label": "AsthmaOralPrednisolone_StartingCoverage",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "postprocessing": {
+          "negative": true
+        },
+        "parameters": {
+          "value": 0.05
+        }
+      },
+      "color": "#06B4E1",
+      "node_type": "CONSTANT"
+    },
+    {
+      "id": "AsthmaOralPrednisolone_PIN",
+      "x": -233.38,
+      "y": 55.23,
+      "label": "AsthmaOralPrednisolone_PIN",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.3
+        }
+      },
+      "color": "#06B4E1",
+      "node_type": "CONSTANT"
+    },
+    {
+      "id": "Mortality_Effect_Transform",
+      "x": -19.63,
+      "y": 19.22,
+      "label": "Mortality_Effect_Transform",
+      "description": "Removing each effect from 1",
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "nKC8vwhN",
+      "x": -12.71,
+      "y": -21.49,
+      "label": "DsFreeSus HYL",
+      "node_type": "SURROGATE",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true
+    },
+    {
+      "id": "yRNlzW3v",
+      "x": -32.65,
+      "y": -8.73,
+      "label": "Healthy Years Lived",
+      "description": "A store of disability adjusted life years",
+      "node_type": "STATE",
+      "balance_type": "array",
+      "color": "#FFB255",
+      "flush": true
+    },
+    {
+      "id": "6fCgpoYB",
+      "x": -44.85,
+      "y": -22.22,
+      "label": "AsthmaEpsd HYL",
+      "node_type": "SURROGATE",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "flush": true
+    },
+    {
+      "id": "Fow1hNl6",
+      "x": -21.8,
+      "y": -71.49,
+      "label": "Healthy_HYL",
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true,
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "sBeYN0kb",
+      "x": -47.09,
+      "y": -47.86,
+      "label": "Combined_DW",
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true,
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "W7MB6GWT",
+      "x": -45.98,
+      "y": -35.62,
+      "label": "Modified_HYL",
+      "color": "#06B4E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true,
+      "node_type": "FUNCTION"
+    },
+    {
+      "id": "rXFK8r54",
+      "x": 184.19,
+      "y": -58.2,
+      "label": "AsthmaEpsd_Incidence_Rate",
+      "color": "#06B4E1",
+      "node_type": "CONSTANT",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
+        "parameters": {
+          "country": "AFG",
+          "disease": "Asthma",
+          "measure": "incidence"
+        }
+      },
+      "flush": true
+    },
+    {
+      "id": "4iPxzqKo",
+      "x": 128.55,
+      "y": -58.3,
+      "label": "AsthmaEpsd Incidence",
+      "node_type": "SURROGATE",
+      "color": "#7038E1",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "flush": true
+    },
+    {
+      "id": "b736zFQf",
+      "x": 107.46,
+      "y": 37.2,
+      "label": "YLD-DsFreeSus",
+      "color": "#FFB255",
+      "flush": true
+    },
+    {
+      "id": "dycEX5CW",
+      "x": 76.87,
+      "y": 56.44,
+      "label": "YLD-AsthmaEpsd",
+      "color": "#FFB255",
+      "flush": true
+    },
+    {
+      "id": "a98IyNnU",
+      "x": 183.68,
+      "y": 24.74,
+      "label": "YLL-DsFreeSus",
+      "color": "#FFB255",
+      "flush": true
+    },
+    {
+      "id": "MCxDBlE3",
+      "x": 146.07,
+      "y": 24.92,
+      "label": "YLL-AsthmaEpsd",
+      "color": "#FFB255",
+      "flush": true
+    },
+    {
+      "id": "6CymLJWw",
+      "x": 152.71,
+      "y": 66.74,
+      "label": "DALYs",
+      "color": "#FFB255",
+      "flush": true
+    },
+    {
+      "id": "N4Cpf6le",
+      "x": 113.27,
+      "y": -8.85,
+      "label": "Deceased-AsthmaEpsd",
+      "description": "The state of being dead",
+      "node_type": "STATE",
+      "balance_type": "array",
+      "color": "#FB6375",
+      "order": 3,
+      "flush": true
+    },
+    {
+      "id": "8N5hy7kA",
+      "x": 13.3,
+      "y": 99.55,
+      "color": "#FFB255",
+      "label": "PopulationReached-AsthmaOralPrednisolone",
+      "flush": true
+    }
+  ],
+  "links": [
+    {
+      "id": "avvOYu19",
+      "source": "DsFreeSus",
+      "target": "DsFreeSus",
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "value_to_target_operator": "add",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DsFreeSus -> DsFreeSus"
+    },
+    {
+      "id": "MCWFcR4e",
+      "source": "DsFreeSus",
+      "target": "Births",
+      "description": "Project the number of births using the population and ASFR",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "fertility",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DsFreeSus -> Births"
+    },
+    {
+      "id": "EXGS1xV6",
+      "source": "Births",
+      "target": "DsFreeSus",
+      "description": "Male births into the population",
+      "edge_type": "modifier",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "sex_ratio",
+        "parameters": {
+          "country": "AFG",
+          "sex": "m"
+        }
+      },
+      "weighted_balance_postprocessing": {
+        "into": [
+          0,
+          0
+        ]
+      },
+      "label": "Births -> DsFreeSus"
+    },
+    {
+      "id": "Yfenedx0",
+      "source": "Births",
+      "target": "DsFreeSus",
+      "description": "Female births into the population",
+      "edge_type": "modifier",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "sex_ratio",
+        "parameters": {
+          "country": "AFG",
+          "sex": "f"
+        }
+      },
+      "weighted_balance_postprocessing": {
+        "into": [
+          1,
+          0
+        ]
+      },
+      "label": "Births -> DsFreeSus"
+    },
+    {
+      "id": "09Q1rhSn",
+      "source": "DsFreeSus",
+      "target": "Deceased",
+      "description": "Transition people into the mortality state",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "DsFreeSus -> Deceased"
+    },
+    {
+      "id": "Z6UVoLxv",
+      "source": "AsthmaEpsd",
+      "target": "DsFreeSus",
+      "description": "Remission of Asthma to DsFreeSus",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "asthma",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "AsthmaEpsd -> DsFreeSus"
+        }
+      },
+      "label": "AsthmaEpsd -> DsFreeSus"
+    },
+    {
+      "id": "tGFmOvlz",
+      "source": "AsthmaEpsd",
+      "target": "Births",
+      "description": "Project the number of births using the population and ASFR",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "fertility",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "AsthmaEpsd -> Births"
+    },
+    {
+      "id": "yCtPKnQ5",
+      "source": "AsthmaEpsd",
+      "target": "AsthmaEpsd",
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "value_to_target_operator": "add",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "AsthmaEpsd -> AsthmaEpsd"
+    },
+    {
+      "id": "z2MaEXxg",
+      "source": "DsFreeSus",
+      "target": "AsthmaEpsd",
+      "description": "Progression of asthma episode",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "fetch_once": true,
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
+        "parameters": {
+          "country": "AFG",
+          "disease": "Asthma",
+          "measure": "prevalence"
+        }
+      },
+      "label": "Prevalence DsFreeSus -> AsthmaEpsd"
+    },
+    {
+      "id": "xzIbLyfh",
+      "source": "Asthma_Disability",
+      "target": "Asthma_Blended_Disability",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "label": "Asthma_Disability_Weight -> Asthma_HYL"
+    },
+    {
+      "id": "TSPTW7Pk",
+      "source": "AsthmaOralPrednisolone_StartingCoverage",
+      "target": "AsthmaOralPrednisolone_Calculated_Coverage",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaOralPrednisolone_StartingCoverage -> AsthmaOralPrednisolone_Calculated_Coverage"
+    },
+    {
+      "id": "8vUFIddy",
+      "source": "AsthmaOralPrednisolone_Coverage",
+      "target": "AsthmaOralPrednisolone_Calculated_Coverage",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaOralPrednisolone_Coverage -> AsthmaOralPrednisolone_Calculated_Coverage"
+    },
+    {
+      "id": "uOXAd2DT",
+      "source": "AsthmaOralPrednisolone_PIN",
+      "target": "AsthmaOralPrednisolone_Disability_Effect",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaOralPrednisolone_PIN -> AsthmaOralPrednisolone_Disability_Effect"
+    },
+    {
+      "id": "lZHA9uFx",
+      "source": "AsthmaOralPrednisolone_Calculated_Coverage",
+      "target": "AsthmaOralPrednisolone_Disability_Effect",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaOralPrednisolone_Calculated_Coverage -> AsthmaOralPrednisolone_Disability_Effect"
+    },
+    {
+      "id": "UCXitHFE",
+      "source": "AsthmaOralPrednisolone_Disability_Impact",
+      "target": "AsthmaOralPrednisolone_Disability_Effect",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaOralPrednisolone_Disability_Impact -> AsthmaOralPrednisolone_Disability_Effect"
+    },
+    {
+      "id": "XQpD4ZiQ",
+      "source": "LowDoseBeclom_Mortality_Impact",
+      "target": "LowDoseBeclom_Mortality_Effect",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "LowDoseBeclom_Mortality_Impact -> LowDoseBeclom_Mortality_Effect"
+    },
+    {
+      "id": "NXoCjigb",
+      "source": "AsthmaEpsd_CFR",
+      "target": "AsthmaEpsd Mortality",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaEpsd_CFR -> AsthmaEpsd Mortality"
+    },
+    {
+      "id": "rjNQuHBi",
+      "source": "LowDoseBeclom_Mortality_Effect",
+      "target": "Mortality_Effect_Transform",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "LowDoseBeclom_Mortality_Effect -> Mortality_Effect_Transform"
+    },
+    {
+      "id": "NWhCzdIp",
+      "source": "Asthma_Blended_Disability",
+      "target": "Blended_Disability_Transform",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Asthma_HYL -> Combined_HYL"
+    },
+    {
+      "id": "qiQ7YmdW",
+      "source": "AsthmaOralPrednisolone_Disability_Effect",
+      "target": "Disability_Effect_Transform",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaOralPrednisolone_Disability_Effect -> Disability_Effect_Transform",
+      "postprocessing": {
+        "negative": true
+      }
+    },
+    {
+      "id": "qIdKl1m3",
+      "source": "Mortality_Effect_Transform",
+      "target": "AsthmaEpsd Mortality",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Mortality_Effect_Transform -> AsthmaEpsd Mortality",
+      "postprocessing": {
+        "inverse": true
+      }
+    },
+    {
+      "id": "dgLZdA4x",
+      "source": "AsthmaEpsd",
+      "target": "AsthmaEpsd Mortality",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "label": "AsthmaEpsd -> AsthmaEpsd Mortality"
+    },
+    {
+      "id": "KGnQzUiU",
+      "source": "Fow1hNl6",
+      "target": "nKC8vwhN",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Healthy_HYL -> DsFreeSus_HYL"
+    },
+    {
+      "id": "giAFe9qp",
+      "source": "DsFreeSus",
+      "target": "nKC8vwhN",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "remove_value_from_source": false,
+      "label": "DsFreeSus -> DsFreeSus HYL"
+    },
+    {
+      "id": "ZTeJZRMo",
+      "source": "nKC8vwhN",
+      "target": "yRNlzW3v",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "DsFreeSus HYL -> Healthy Years Lived"
+    },
+    {
+      "id": "srfoaH6g",
+      "source": "Disability_Effect_Transform",
+      "target": "Asthma_Disability",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Disability_Effect_Transform -> Combined_DW"
+    },
+    {
+      "id": "F2a0bWMZ",
+      "source": "AsthmaEpsd",
+      "target": "6fCgpoYB",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "remove_value_from_source": false,
+      "label": "AsthmaEpsd -> AsthmaEpsd HYL"
+    },
+    {
+      "id": "9ArOqGpt",
+      "source": "6fCgpoYB",
+      "target": "yRNlzW3v",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaEpsd HYL -> Healthy Years Lived"
+    },
+    {
+      "id": "DjwxypZ1",
+      "source": "Healthy_Disability",
+      "target": "Fow1hNl6",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "label": "Healthy_Disability_Weight -> Healthy_HYL"
+    },
+    {
+      "id": "8oQTfjGg",
+      "source": "Fow1hNl6",
+      "target": "Blended_Disability_Transform",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Healthy_HYL -> Combined_HYL"
+    },
+    {
+      "id": "qYdyg8Y5",
+      "source": "W7MB6GWT",
+      "target": "6fCgpoYB",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "Modified_HYL -> AsthmaEpsd HYL"
+    },
+    {
+      "id": "0suML9Qe",
+      "source": "sBeYN0kb",
+      "target": "W7MB6GWT",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "label": "Combined_DW -> Modified_HYL"
+    },
+    {
+      "id": "q68b5NmN",
+      "source": "Blended_Disability_Transform",
+      "target": "sBeYN0kb",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "label": "Combined_HYL -> Combined_DW"
+    },
+    {
+      "id": "oOJgYZ0V",
+      "source": "rXFK8r54",
+      "target": "4iPxzqKo",
+      "edge_type": "projection",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaEpsd_Incidence_Rate -> AsthmaEpsd Incidence"
+    },
+    {
+      "id": "HGzwp14L",
+      "source": "DsFreeSus",
+      "target": "4iPxzqKo",
+      "edge_type": "transition",
+      "set_by_surrogate": true,
+      "label": "DsFreeSus -> AsthmaEpsd Incidence"
+    },
+    {
+      "id": "wAhdgLwg",
+      "source": "4iPxzqKo",
+      "target": "AsthmaEpsd",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaEpsd Incidence -> AsthmaEpsd"
+    },
+    {
+      "id": "aUcpDiiY",
+      "source": "b736zFQf",
+      "target": "6CymLJWw",
+      "value_to_target_operator": "add",
+      "remove_value_from_source": false,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "4irXyNFb",
+      "source": "a98IyNnU",
+      "target": "6CymLJWw",
+      "value_to_target_operator": "add",
+      "remove_value_from_source": false,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "pfdr4vDi",
+      "source": "MCxDBlE3",
+      "target": "6CymLJWw",
+      "value_to_target_operator": "add",
+      "remove_value_from_source": false,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "spLLHc6B",
+      "source": "dycEX5CW",
+      "target": "6CymLJWw",
+      "value_to_target_operator": "add",
+      "remove_value_from_source": false,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "PovmQQCi",
+      "source": "AsthmaEpsd Mortality",
+      "target": "N4Cpf6le",
+      "requires_source_balance": true,
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "label": "AsthmaEpsd Mortality -> Deceased"
+    },
+    {
+      "id": "SX1OAMyE",
+      "source": "Deceased",
+      "target": "a98IyNnU",
+      "value_to_target_operator": "add",
+      "remove_value_from_source": false,
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "yll_weights",
+        "parameters": {}
+      }
+    },
+    {
+      "id": "XHQWmcx1",
+      "source": "N4Cpf6le",
+      "target": "MCxDBlE3",
+      "value_to_target_operator": "add",
+      "remove_value_from_source": false,
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "yll_weights",
+        "parameters": {}
+      }
+    },
+    {
+      "id": "65f8gAJV",
+      "source": "AsthmaEpsd",
+      "target": "dycEX5CW",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add"
+    },
+    {
+      "id": "thJ1j7QJ",
+      "source": "DsFreeSus",
+      "target": "b736zFQf",
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "qZzim17x",
+      "source": "sBeYN0kb",
+      "target": "dycEX5CW",
+      "value_to_target_operator": "multiply",
+      "remove_value_from_source": false,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "AK0cEUsh",
+      "source": "Healthy_Disability",
+      "target": "b736zFQf",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "W4sc2PrG",
+      "source": "AsthmaOralPrednisolone_PIN",
+      "target": "8N5hy7kA",
+      "value_to_target_operator": "multiply",
+      "remove_value_from_source": false,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "t7xlBFu5",
+      "source": "AsthmaEpsd",
+      "target": "8N5hy7kA",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add"
+    },
+    {
+      "id": "P0CzNGjt",
+      "source": "AsthmaOralPrednisolone_Calculated_Coverage",
+      "target": "8N5hy7kA",
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      }
+    },
+    {
+      "id": "kdE7JaZO",
+      "source": "AsthmaEpsd",
+      "target": "N4Cpf6le",
+      "description": "Transition people into the mortality state",
+      "edge_type": "transition",
+      "requires_source_balance": true,
+      "remove_value_from_source": true,
+      "value_to_target_operator": "add",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "label": "Background Mortality AsthmaEpsd"
+    }
+  ],
+  "subroutines": [
+    {
+      "method": "flush",
+      "narration": "Flush unneeded values"
+    },
+    {
+      "method": "generate_balance",
+      "narration": "Generate the population",
+      "included_source_nodes": [
+        "DsFreeSus"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Allocate prevalence",
+      "included_edges": [
+        "z2MaEXxg"
+      ]
+    },
+    {
+      "method": "generate_balance",
+      "narration": "Generate the base values of the surrogate nodes",
+      "included_source_nodes": [
+        "AsthmaEpsd Mortality",
+        "nKC8vwhN",
+        "6fCgpoYB",
+        "4iPxzqKo"
+      ]
+    },
+    {
+      "method": "generate_balance",
+      "narration": "Generate the base values of the function nodes for constants",
+      "included_source_nodes": [
+        "AsthmaOralPrednisolone_Calculated_Coverage",
+        "AsthmaOralPrednisolone_Disability_Effect",
+        "LowDoseBeclom_Mortality_Effect",
+        "Asthma_Blended_Disability",
+        "Disability_Effect_Transform",
+        "Blended_Disability_Transform",
+        "Fow1hNl6",
+        "sBeYN0kb",
+        "W7MB6GWT"
+      ]
+    },
+    {
+      "method": "generate_balance",
+      "narration": "Generate the values of the constants",
+      "included_source_nodes": [
+        "AsthmaOralPrednisolone_Disability_Impact",
+        "AsthmaOralPrednisolone_PIN",
+        "AsthmaOralPrednisolone_Coverage",
+        "AsthmaOralPrednisolone_StartingCoverage",
+        "LowDoseBeclom_Mortality_Impact",
+        "Healthy_Disability",
+        "Asthma_Disability",
+        "AsthmaEpsd_CFR",
+        "rXFK8r54"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate the Incidence Surrogate",
+      "included_edges": [
+        "oOJgYZ0V"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Coverage",
+      "included_edges": [
+        "8vUFIddy",
+        "TSPTW7Pk"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Disability Effects",
+      "included_edges": [
+        "uOXAd2DT",
+        "UCXitHFE",
+        "lZHA9uFx"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Remove Disability Effects from 1.0",
+      "included_edges": [
+        "qiQ7YmdW"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Modify disease disability weight with intervention effects",
+      "included_edges": [
+        "srfoaH6g"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Healthy and Asthma HYL",
+      "included_edges": [
+        "xzIbLyfh",
+        "DjwxypZ1"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Calculated Combined HYL",
+      "included_edges": [
+        "NWhCzdIp",
+        "8oQTfjGg"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate Combined DW",
+      "included_edges": [
+        "q68b5NmN"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculated Modified HYL",
+      "included_edges": [
+        "0suML9Qe"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Calculate DsFreeSus Disability Surrogate",
+      "included_edges": [
+        "KGnQzUiU"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculated Asthma HYL Surrogate",
+      "included_edges": [
+        "qYdyg8Y5"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Mortality Effects",
+      "included_edges": [
+        "XQpD4ZiQ"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Transform Mortality Effect",
+      "included_edges": [
+        "rjNQuHBi"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Calculate Mortality Surrogate (Add CFR to Surrogate)",
+      "included_edges": [
+        "NXoCjigb"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Mortality Surrogate (Transform Effect)",
+      "included_edges": [
+        "qIdKl1m3"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Record Births to Birth Node",
+      "included_edges": [
+        "MCWFcR4e",
+        "tGFmOvlz"
+      ]
+    },
+    {
+      "method": "synchronous_transfer",
+      "narration": "Main Routine",
+      "included_edges": [
+        "Z6UVoLxv",
+        "dgLZdA4x",
+        "HGzwp14L"
+      ],
+      "batch": true
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Background Mortality",
+      "included_edges": [
+        "09Q1rhSn",
+        "kdE7JaZO"
+      ],
+      "batch": false
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Push AsthmaEpsd to populations reached",
+      "included_edges": [
+        "t7xlBFu5"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Modify Population Reached by PIN and Coverage",
+      "included_edges": [
+        "W4sc2PrG",
+        "P0CzNGjt"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Record HYL",
+      "included_edges": [
+        "giAFe9qp",
+        "F2a0bWMZ"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Add prevalence to YLD nodes",
+      "included_edges": [
+        "65f8gAJV",
+        "thJ1j7QJ"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Multiply YLDs by Disability Weights",
+      "included_edges": [
+        "65f8gAJV",
+        "thJ1j7QJ"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Migration of Populations",
+      "included_edges": [
+        "avvOYu19",
+        "yCtPKnQ5"
+      ]
+    },
+    {
+      "method": "age",
+      "narration": "Age the populations",
+      "included_source_nodes": [
+        "DsFreeSus",
+        "AsthmaEpsd"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Women give birth",
+      "included_edges": [
+        "EXGS1xV6",
+        "Yfenedx0"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "batch": false,
+      "narration": "Add values to DALYs",
+      "included_edges": [
+        "aUcpDiiY",
+        "4irXyNFb",
+        "pfdr4vDi",
+        "spLLHc6B"
+      ]
+    },
+    {
+      "method": "echo",
+      "batch": false,
+      "narration": "Record Metrics",
+      "included_source_nodes": [
+        "DsFreeSus",
+        "yRNlzW3v",
+        "Deceased",
+        "AsthmaEpsd",
+        "b736zFQf",
+        "dycEX5CW",
+        "a98IyNnU",
+        "MCxDBlE3",
+        "6CymLJWw",
+        "8N5hy7kA",
+        "N4Cpf6le"
+      ]
+    }
+  ]
+}
