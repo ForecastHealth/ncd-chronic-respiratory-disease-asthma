@@ -3488,48 +3488,6 @@
       "value_to_target_operator": "multiply"
     },
     {
-      "id": "ResourceAbs_LowDoseBeclom_Base_1",
-      "source": "AsthmaEpsd",
-      "target": "ResourcePopulationReached_LowDoseBeclom",
-      "label": "AsthmaEpsd -> ResourcePopulationReached-LowDoseBeclom",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add"
-    },
-    {
-      "id": "ResourceAbs_LowDoseBeclom_PIN",
-      "source": "LowDoseBeclom_PIN",
-      "target": "ResourcePopulationReached_LowDoseBeclom",
-      "label": "LowDoseBeclom_PIN -> ResourcePopulationReached-LowDoseBeclom",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply"
-    },
-    {
-      "id": "ResourceAbs_LowDoseBeclom_Coverage",
-      "source": "LowDoseBeclom_Coverage",
-      "target": "ResourcePopulationReached_LowDoseBeclom",
-      "label": "LowDoseBeclom_Coverage -> ResourcePopulationReached-LowDoseBeclom",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply"
-    },
-    {
       "id": "ResourceAbs_HighDoseBeclom_Base_1",
       "source": "AsthmaEpsd",
       "target": "ResourcePopulationReached_HighDoseBeclom",
@@ -3604,6 +3562,48 @@
       "source": "InhaledShortActingBeta_Coverage",
       "target": "ResourcePopulationReached_InhaledShortActingBeta",
       "label": "InhaledShortActingBeta_Coverage -> ResourcePopulationReached-InhaledShortActingBeta",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_LowDoseBeclom_Base_1",
+      "source": "AsthmaEpsd",
+      "target": "ResourcePopulationReached_LowDoseBeclom",
+      "label": "AsthmaEpsd -> ResourcePopulationReached-LowDoseBeclom",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "add"
+    },
+    {
+      "id": "ResourceAbs_LowDoseBeclom_PIN",
+      "source": "LowDoseBeclom_PIN",
+      "target": "ResourcePopulationReached_LowDoseBeclom",
+      "label": "LowDoseBeclom_PIN -> ResourcePopulationReached-LowDoseBeclom",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "remove_value_from_source": false,
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "id": "ResourceAbs_LowDoseBeclom_Coverage",
+      "source": "LowDoseBeclom_Coverage",
+      "target": "ResourcePopulationReached_LowDoseBeclom",
+      "label": "LowDoseBeclom_Coverage -> ResourcePopulationReached-LowDoseBeclom",
       "generate_array": {
         "method": "single_value",
         "parameters": {
