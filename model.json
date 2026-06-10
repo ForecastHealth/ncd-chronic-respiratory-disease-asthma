@@ -4017,7 +4017,7 @@
       ]
     },
     {
-      "method": "synchronous_transfer",
+      "method": "transition_system",
       "narration": "Main Routine",
       "included_edges": [
         "Z6UVoLxv",
