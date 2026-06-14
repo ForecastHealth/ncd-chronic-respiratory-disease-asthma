@@ -1,0 +1,451 @@
+{
+  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "component_id": "burden-metrics",
+  "declared_inputs": [],
+  "internal_link_ids": [
+    "xzIbLyfh",
+    "NWhCzdIp",
+    "KGnQzUiU",
+    "ZTeJZRMo",
+    "srfoaH6g",
+    "9ArOqGpt",
+    "DjwxypZ1",
+    "8oQTfjGg",
+    "qYdyg8Y5",
+    "aUcpDiiY",
+    "4irXyNFb",
+    "pfdr4vDi",
+    "spLLHc6B",
+    "AK0cEUsh"
+  ],
+  "links": [
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "id": "xzIbLyfh",
+      "label": "Asthma_Disability_Weight -> Asthma_HYL",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "Asthma_Disability",
+      "target": "Asthma_Blended_Disability",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "NWhCzdIp",
+      "label": "Asthma_HYL -> Combined_HYL",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "Asthma_Blended_Disability",
+      "target": "Blended_Disability_Transform",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "KGnQzUiU",
+      "label": "Healthy_HYL -> DsFreeSus_HYL",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "Fow1hNl6",
+      "target": "nKC8vwhN",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ZTeJZRMo",
+      "label": "DsFreeSus HYL -> Healthy Years Lived",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "nKC8vwhN",
+      "target": "yRNlzW3v",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "srfoaH6g",
+      "label": "Disability_Effect_Transform -> Combined_DW",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "Disability_Effect_Transform",
+      "target": "Asthma_Disability",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "9ArOqGpt",
+      "label": "AsthmaEpsd HYL -> Healthy Years Lived",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "6fCgpoYB",
+      "target": "yRNlzW3v",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "id": "DjwxypZ1",
+      "label": "Healthy_Disability_Weight -> Healthy_HYL",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "Healthy_Disability",
+      "target": "Fow1hNl6",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "8oQTfjGg",
+      "label": "Healthy_HYL -> Combined_HYL",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "Fow1hNl6",
+      "target": "Blended_Disability_Transform",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "qYdyg8Y5",
+      "label": "Modified_HYL -> AsthmaEpsd HYL",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "W7MB6GWT",
+      "target": "6fCgpoYB",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "aUcpDiiY",
+      "remove_value_from_source": false,
+      "source": "b736zFQf",
+      "target": "6CymLJWw",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "4irXyNFb",
+      "remove_value_from_source": false,
+      "source": "a98IyNnU",
+      "target": "6CymLJWw",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "pfdr4vDi",
+      "remove_value_from_source": false,
+      "source": "MCxDBlE3",
+      "target": "6CymLJWw",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "spLLHc6B",
+      "remove_value_from_source": false,
+      "source": "dycEX5CW",
+      "target": "6CymLJWw",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "AK0cEUsh",
+      "remove_value_from_source": false,
+      "source": "Healthy_Disability",
+      "target": "b736zFQf",
+      "value_to_target_operator": "multiply"
+    }
+  ],
+  "module_type": "generated_first_pass_boundary",
+  "nodes": [
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "Blended_Disability_Transform",
+      "label": "Combined_HYL",
+      "node_type": "FUNCTION",
+      "x": -44.59,
+      "y": -33.68
+    },
+    {
+      "color": "#06B4E1",
+      "description": "Removing each effect from 1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "Disability_Effect_Transform",
+      "label": "Disability_Effect_Transform",
+      "node_type": "FUNCTION",
+      "x": -86.45,
+      "y": -17.21
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "Asthma_Blended_Disability",
+      "label": "Asthma_HYL",
+      "node_type": "FUNCTION",
+      "x": -50.22,
+      "y": -41.44
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "generate_once": true,
+        "method": "healthy_disability",
+        "parameters": {
+          "country": "AUS"
+        }
+      },
+      "id": "Healthy_Disability",
+      "label": "Healthy_Disability_Weight",
+      "node_type": "CONSTANT",
+      "x": 29,
+      "y": -45.27
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "data_fetcher_label": "asthma",
+        "generate_once": true,
+        "method": "get_observation",
+        "parameters": {
+          "country": "AUS",
+          "observation": "AsthmaEpsd -> Disability"
+        }
+      },
+      "id": "Asthma_Disability",
+      "label": "Asthma_Disability_Weight",
+      "node_type": "CONSTANT",
+      "x": -92.05,
+      "y": -46.45
+    },
+    {
+      "color": "#7038E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "nKC8vwhN",
+      "label": "DsFreeSus HYL",
+      "node_type": "SURROGATE",
+      "x": -7.71,
+      "y": 4.8
+    },
+    {
+      "balance_type": "array",
+      "color": "#FFB255",
+      "description": "A store of disability adjusted life years",
+      "flush": true,
+      "id": "yRNlzW3v",
+      "label": "Healthy Years Lived",
+      "node_type": "STATE",
+      "x": -27.65,
+      "y": 17.56
+    },
+    {
+      "color": "#7038E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "6fCgpoYB",
+      "label": "AsthmaEpsd HYL",
+      "node_type": "SURROGATE",
+      "x": -39.85,
+      "y": 4.07
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "Fow1hNl6",
+      "label": "Healthy_HYL",
+      "node_type": "FUNCTION",
+      "x": -16.8,
+      "y": -45.2
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "W7MB6GWT",
+      "label": "Modified_HYL",
+      "node_type": "FUNCTION",
+      "x": -40.98,
+      "y": -9.33
+    },
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "id": "b736zFQf",
+      "label": "YLD-DsFreeSus",
+      "x": 112.46,
+      "y": 63.49
+    },
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "id": "dycEX5CW",
+      "label": "YLD-AsthmaEpsd",
+      "x": 81.87,
+      "y": 82.73
+    },
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "id": "a98IyNnU",
+      "label": "YLL-DsFreeSus",
+      "x": 188.68,
+      "y": 51.03
+    },
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "id": "MCxDBlE3",
+      "label": "YLL-AsthmaEpsd",
+      "x": 151.07,
+      "y": 51.21
+    },
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "id": "6CymLJWw",
+      "label": "DALYs",
+      "x": 157.71,
+      "y": 93.03
+    }
+  ],
+  "owned_node_ids": [
+    "Blended_Disability_Transform",
+    "Disability_Effect_Transform",
+    "Asthma_Blended_Disability",
+    "Healthy_Disability",
+    "Asthma_Disability",
+    "nKC8vwhN",
+    "yRNlzW3v",
+    "6fCgpoYB",
+    "Fow1hNl6",
+    "W7MB6GWT",
+    "b736zFQf",
+    "dycEX5CW",
+    "a98IyNnU",
+    "MCxDBlE3",
+    "6CymLJWw"
+  ],
+  "published_outputs": [],
+  "runtime_role": "downstream_handoff",
+  "schema": "forecast-health.generated-module-component.v1"
+}

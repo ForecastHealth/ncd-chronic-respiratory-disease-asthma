@@ -1,0 +1,1406 @@
+{
+  "links": [
+    {
+      "link_id": "MCWFcR4e",
+      "link_payload": {
+        "description": "Project the number of births using the population and ASFR",
+        "edge_type": "projection",
+        "generate_array": {
+          "data_fetcher_label": "fhdb",
+          "method": "fertility",
+          "parameters": {
+            "country": "AUS"
+          }
+        },
+        "id": "MCWFcR4e",
+        "label": "DsFreeSus -> Births",
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "DsFreeSus",
+        "target": "Births",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "DsFreeSus",
+      "source_component": "demographic-substrate",
+      "target": "Births",
+      "target_component": "metrics-and-helpers"
+    },
+    {
+      "link_id": "EXGS1xV6",
+      "link_payload": {
+        "description": "Male births into the population",
+        "edge_type": "modifier",
+        "generate_array": {
+          "data_fetcher_label": "fhdb",
+          "method": "sex_ratio",
+          "parameters": {
+            "country": "AUS",
+            "sex": "m"
+          }
+        },
+        "id": "EXGS1xV6",
+        "label": "Births -> DsFreeSus",
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "Births",
+        "target": "DsFreeSus",
+        "value_to_target_operator": "add",
+        "weighted_balance_postprocessing": {
+          "into": [
+            0,
+            0
+          ]
+        }
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "Births",
+      "source_component": "metrics-and-helpers",
+      "target": "DsFreeSus",
+      "target_component": "demographic-substrate"
+    },
+    {
+      "link_id": "Yfenedx0",
+      "link_payload": {
+        "description": "Female births into the population",
+        "edge_type": "modifier",
+        "generate_array": {
+          "data_fetcher_label": "fhdb",
+          "method": "sex_ratio",
+          "parameters": {
+            "country": "AUS",
+            "sex": "f"
+          }
+        },
+        "id": "Yfenedx0",
+        "label": "Births -> DsFreeSus",
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "Births",
+        "target": "DsFreeSus",
+        "value_to_target_operator": "add",
+        "weighted_balance_postprocessing": {
+          "into": [
+            1,
+            0
+          ]
+        }
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "Births",
+      "source_component": "metrics-and-helpers",
+      "target": "DsFreeSus",
+      "target_component": "demographic-substrate"
+    },
+    {
+      "link_id": "Z6UVoLxv",
+      "link_payload": {
+        "description": "Remission of Asthma to DsFreeSus",
+        "edge_type": "transition",
+        "generate_array": {
+          "data_fetcher_label": "asthma",
+          "method": "get_observation",
+          "parameters": {
+            "country": "AUS",
+            "observation": "AsthmaEpsd -> DsFreeSus"
+          }
+        },
+        "id": "Z6UVoLxv",
+        "label": "AsthmaEpsd -> DsFreeSus",
+        "remove_value_from_source": true,
+        "requires_source_balance": true,
+        "source": "AsthmaEpsd",
+        "target": "DsFreeSus",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "DsFreeSus",
+      "target_component": "demographic-substrate"
+    },
+    {
+      "link_id": "tGFmOvlz",
+      "link_payload": {
+        "description": "Project the number of births using the population and ASFR",
+        "edge_type": "projection",
+        "generate_array": {
+          "data_fetcher_label": "fhdb",
+          "method": "fertility",
+          "parameters": {
+            "country": "AUS"
+          }
+        },
+        "id": "tGFmOvlz",
+        "label": "AsthmaEpsd -> Births",
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "AsthmaEpsd",
+        "target": "Births",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "Births",
+      "target_component": "metrics-and-helpers"
+    },
+    {
+      "link_id": "z2MaEXxg",
+      "link_payload": {
+        "description": "Progression of asthma episode",
+        "edge_type": "transition",
+        "generate_array": {
+          "data_fetcher_label": "fhdb",
+          "fetch_once": true,
+          "method": "epidemiology",
+          "parameters": {
+            "country": "AUS",
+            "disease": "Asthma",
+            "measure": "prevalence"
+          }
+        },
+        "id": "z2MaEXxg",
+        "label": "Prevalence DsFreeSus -> AsthmaEpsd",
+        "remove_value_from_source": true,
+        "requires_source_balance": true,
+        "source": "DsFreeSus",
+        "target": "AsthmaEpsd",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "DsFreeSus",
+      "source_component": "demographic-substrate",
+      "target": "AsthmaEpsd",
+      "target_component": "epidemiology-core"
+    },
+    {
+      "link_id": "rjNQuHBi",
+      "link_payload": {
+        "edge_type": "projection",
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "rjNQuHBi",
+        "label": "LowDoseBeclom_Mortality_Effect -> Mortality_Effect_Transform",
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "LowDoseBeclom_Mortality_Effect",
+        "target": "Mortality_Effect_Transform",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "LowDoseBeclom_Mortality_Effect",
+      "source_component": "intervention-lowdosebeclom",
+      "target": "Mortality_Effect_Transform",
+      "target_component": "epidemiology-core"
+    },
+    {
+      "link_id": "HxXZJWFz",
+      "link_payload": {
+        "edge_type": "projection",
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "HxXZJWFz",
+        "label": "HighDoseBeclom_Disability_Effect -> Disability_Effect_Transform",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "HighDoseBeclom_Disability_Effect",
+        "target": "Disability_Effect_Transform",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "HighDoseBeclom_Disability_Effect",
+      "source_component": "intervention-highdosebeclom",
+      "target": "Disability_Effect_Transform",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "wPKJBZiQ",
+      "link_payload": {
+        "edge_type": "projection",
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "wPKJBZiQ",
+        "label": "LowDoseBeclom_Disability_Effect -> Disability_Effect_Transform",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "LowDoseBeclom_Disability_Effect",
+        "target": "Disability_Effect_Transform",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "LowDoseBeclom_Disability_Effect",
+      "source_component": "intervention-lowdosebeclom",
+      "target": "Disability_Effect_Transform",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "qiQ7YmdW",
+      "link_payload": {
+        "edge_type": "projection",
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "qiQ7YmdW",
+        "label": "AsthmaOralPrednisolone_Disability_Effect -> Disability_Effect_Transform",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "AsthmaOralPrednisolone_Disability_Effect",
+        "target": "Disability_Effect_Transform",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaOralPrednisolone_Disability_Effect",
+      "source_component": "intervention-asthmaoralprednisolone",
+      "target": "Disability_Effect_Transform",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "qWuAOIFi",
+      "link_payload": {
+        "edge_type": "projection",
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "qWuAOIFi",
+        "label": "InhaledShortActingBeta_Disability_Effect -> Disability_Effect_Transform",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "InhaledShortActingBeta_Disability_Effect",
+        "target": "Disability_Effect_Transform",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "InhaledShortActingBeta_Disability_Effect",
+      "source_component": "intervention-inhaledshortactingbeta",
+      "target": "Disability_Effect_Transform",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "giAFe9qp",
+      "link_payload": {
+        "edge_type": "transition",
+        "id": "giAFe9qp",
+        "label": "DsFreeSus -> DsFreeSus HYL",
+        "remove_value_from_source": false,
+        "set_by_surrogate": true,
+        "source": "DsFreeSus",
+        "target": "nKC8vwhN"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "DsFreeSus",
+      "source_component": "demographic-substrate",
+      "target": "nKC8vwhN",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "F2a0bWMZ",
+      "link_payload": {
+        "edge_type": "transition",
+        "id": "F2a0bWMZ",
+        "label": "AsthmaEpsd -> AsthmaEpsd HYL",
+        "remove_value_from_source": false,
+        "set_by_surrogate": true,
+        "source": "AsthmaEpsd",
+        "target": "6fCgpoYB"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "6fCgpoYB",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "0suML9Qe",
+      "link_payload": {
+        "edge_type": "projection",
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          },
+          "postprocessing": {
+            "negative": true
+          }
+        },
+        "id": "0suML9Qe",
+        "label": "Combined_DW -> Modified_HYL",
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "sBeYN0kb",
+        "target": "W7MB6GWT",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "sBeYN0kb",
+      "source_component": "metrics-and-helpers",
+      "target": "W7MB6GWT",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "q68b5NmN",
+      "link_payload": {
+        "edge_type": "projection",
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          },
+          "postprocessing": {
+            "negative": true
+          }
+        },
+        "id": "q68b5NmN",
+        "label": "Combined_HYL -> Combined_DW",
+        "remove_value_from_source": false,
+        "requires_source_balance": true,
+        "source": "Blended_Disability_Transform",
+        "target": "sBeYN0kb",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "Blended_Disability_Transform",
+      "source_component": "burden-metrics",
+      "target": "sBeYN0kb",
+      "target_component": "metrics-and-helpers"
+    },
+    {
+      "link_id": "HGzwp14L",
+      "link_payload": {
+        "edge_type": "transition",
+        "id": "HGzwp14L",
+        "label": "DsFreeSus -> AsthmaEpsd Incidence",
+        "set_by_surrogate": true,
+        "source": "DsFreeSus",
+        "target": "4iPxzqKo"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "DsFreeSus",
+      "source_component": "demographic-substrate",
+      "target": "4iPxzqKo",
+      "target_component": "epidemiology-core"
+    },
+    {
+      "link_id": "8g0Xnawu",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "8g0Xnawu",
+        "label": "rf-all -> surrogate",
+        "remove_value_from_source": false,
+        "source": "PjHF9FHh",
+        "target": "4iPxzqKo",
+        "value_to_target_operator": "multiply"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "PjHF9FHh",
+      "source_component": "metrics-and-helpers",
+      "target": "4iPxzqKo",
+      "target_component": "epidemiology-core"
+    },
+    {
+      "link_id": "OEiYTDSl",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "OEiYTDSl",
+        "label": "paf-tobacco-delta -> rf-all",
+        "remove_value_from_source": false,
+        "source": "j8mr17a2",
+        "target": "PjHF9FHh",
+        "value_to_target_operator": "multiply"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "j8mr17a2",
+      "source_component": "tobacco-risk-factor",
+      "target": "PjHF9FHh",
+      "target_component": "metrics-and-helpers"
+    },
+    {
+      "link_id": "3Th9TeK5",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "3Th9TeK5",
+        "label": "paf-denom-0 -> paf-tobacco",
+        "postprocessing": {
+          "reciprocal": true
+        },
+        "remove_value_from_source": false,
+        "source": "oGP2Nze1",
+        "target": "zxPMOyBk",
+        "value_to_target_operator": "multiply"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "oGP2Nze1",
+      "source_component": "metrics-and-helpers",
+      "target": "zxPMOyBk",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "pq2EZeBd",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "pq2EZeBd",
+        "label": "excess-risk-0-tobacco -> paf-denom",
+        "remove_value_from_source": false,
+        "source": "o1hbxc1R",
+        "target": "oGP2Nze1",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "o1hbxc1R",
+      "source_component": "tobacco-risk-factor",
+      "target": "oGP2Nze1",
+      "target_component": "metrics-and-helpers"
+    },
+    {
+      "link_id": "gq8NL4JU",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "gq8NL4JU",
+        "label": "paf-denom-t -> paf-tobacco-t",
+        "postprocessing": {
+          "reciprocal": true
+        },
+        "remove_value_from_source": false,
+        "source": "BXOLckIN",
+        "target": "h6Dd182n",
+        "value_to_target_operator": "multiply"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "BXOLckIN",
+      "source_component": "metrics-and-helpers",
+      "target": "h6Dd182n",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "6INl2rfV",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "6INl2rfV",
+        "label": "excess-risk-t-tobacco -> paf-denom",
+        "remove_value_from_source": false,
+        "source": "xFQ7WDDN",
+        "target": "BXOLckIN",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "xFQ7WDDN",
+      "source_component": "tobacco-risk-factor",
+      "target": "BXOLckIN",
+      "target_component": "metrics-and-helpers"
+    },
+    {
+      "link_id": "gNNBkOu1",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "gNNBkOu1",
+        "label": "effect-size-tobacco-protect -> total-prevalence-reduction",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "yeUjLivi",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "yeUjLivi",
+      "source_component": "intervention-risk-factor-nc-rftobaccoprotect-ncd-asthma-01k2rqxjwk1hqbhng6bmt3kcxr",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "OySggrWE",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "OySggrWE",
+        "label": "effect-size-tobacco-quitbrief -> total-prevalence-reduction",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "dhCjk23F",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "dhCjk23F",
+      "source_component": "intervention-risk-factor-nc-rftobaccoquitbrief-ncd-asthma-asthma-tobacco-t7",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "YwrdiLXR",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "YwrdiLXR",
+        "label": "effect-size-tobacco-quitcessation -> total-prevalence-reduction",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "UW8uObpi",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "UW8uObpi",
+      "source_component": "intervention-risk-factor-nc-rftobaccoquitmcessation-ncd-asthma-01k2rqxhnh8xvabypzkx9bnrf1",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "fIqGSdKp",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "fIqGSdKp",
+        "label": "effect-size-tobacco-warnlabel -> total-prevalence-reduction",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "c7kD60U5",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "c7kD60U5",
+      "source_component": "intervention-risk-factor-nc-rftobaccowarnlabel-ncd-asthma-01k2rqxd7hah2445kwhvnq7x0q",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "w3nbNhKx",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "w3nbNhKx",
+        "label": "effect-size-tobacco-massmedia -> total-prevalence-reduction",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "RFyZaSPm",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "RFyZaSPm",
+      "source_component": "intervention-risk-factor-nc-rftobaccowarnmassmedia-ncd-asthma-01k2rqxqcz80yxpx4qz39bm820",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "fuZURPtp",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "fuZURPtp",
+        "label": "effect-size-tobacco-ban -> total-prevalence-reduction",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "cahejWW9",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "cahejWW9",
+      "source_component": "intervention-risk-factor-nc-rftobaccoban-ncd-asthma-01k2rqxdzt3139x2b11qtdqdkr",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "WVqHHFyt",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "WVqHHFyt",
+        "label": "effect-size-tobacco-tax -> total-prevalence-reduction",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "wdoGuxrz",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "wdoGuxrz",
+      "source_component": "intervention-risk-factor-nc-rftobaccotax-ncd-asthma-01k2rqx93dwcpgw3p6fay7pbvy",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "SX1OAMyE",
+      "link_payload": {
+        "generate_array": {
+          "data_fetcher_label": "fhdb",
+          "method": "yll_weights",
+          "parameters": {}
+        },
+        "id": "SX1OAMyE",
+        "remove_value_from_source": false,
+        "source": "Deceased",
+        "target": "a98IyNnU",
+        "trigger": {
+          "method": "inflow",
+          "parameters": {
+            "value_to_use": "inflow"
+          }
+        },
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "Deceased",
+      "source_component": "demographic-substrate",
+      "target": "a98IyNnU",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "XHQWmcx1",
+      "link_payload": {
+        "generate_array": {
+          "data_fetcher_label": "fhdb",
+          "method": "yll_weights",
+          "parameters": {}
+        },
+        "id": "XHQWmcx1",
+        "remove_value_from_source": false,
+        "source": "N4Cpf6le",
+        "target": "MCxDBlE3",
+        "trigger": {
+          "method": "inflow",
+          "parameters": {
+            "value_to_use": "inflow"
+          }
+        },
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "N4Cpf6le",
+      "source_component": "epidemiology-core",
+      "target": "MCxDBlE3",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "65f8gAJV",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "65f8gAJV",
+        "remove_value_from_source": false,
+        "source": "AsthmaEpsd",
+        "target": "dycEX5CW",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "dycEX5CW",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "thJ1j7QJ",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "thJ1j7QJ",
+        "remove_value_from_source": false,
+        "source": "DsFreeSus",
+        "target": "b736zFQf",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "DsFreeSus",
+      "source_component": "demographic-substrate",
+      "target": "b736zFQf",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "qZzim17x",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "qZzim17x",
+        "remove_value_from_source": false,
+        "source": "sBeYN0kb",
+        "target": "dycEX5CW",
+        "value_to_target_operator": "multiply"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "sBeYN0kb",
+      "source_component": "metrics-and-helpers",
+      "target": "dycEX5CW",
+      "target_component": "burden-metrics"
+    },
+    {
+      "link_id": "N9rFWbuG",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "N9rFWbuG",
+        "remove_value_from_source": false,
+        "source": "AsthmaEpsd",
+        "target": "Th8rib7e",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "Th8rib7e",
+      "target_component": "intervention-lowdosebeclom"
+    },
+    {
+      "link_id": "8kfRNFLI",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "8kfRNFLI",
+        "remove_value_from_source": false,
+        "source": "AsthmaEpsd",
+        "target": "7jR6zfXt",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "7jR6zfXt",
+      "target_component": "intervention-highdosebeclom"
+    },
+    {
+      "link_id": "t7xlBFu5",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "t7xlBFu5",
+        "remove_value_from_source": false,
+        "source": "AsthmaEpsd",
+        "target": "8N5hy7kA",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "8N5hy7kA",
+      "target_component": "intervention-asthmaoralprednisolone"
+    },
+    {
+      "link_id": "M7XAks2c",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "M7XAks2c",
+        "remove_value_from_source": false,
+        "source": "AsthmaEpsd",
+        "target": "iMcmFjlP",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "iMcmFjlP",
+      "target_component": "intervention-inhaledshortactingbeta"
+    },
+    {
+      "link_id": "osbUZCyk",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "osbUZCyk",
+        "remove_value_from_source": false,
+        "source": "LowDoseBeclom_Calculated_Coverage",
+        "target": "iMcmFjlP",
+        "value_to_target_operator": "multiply"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "LowDoseBeclom_Calculated_Coverage",
+      "source_component": "intervention-lowdosebeclom",
+      "target": "iMcmFjlP",
+      "target_component": "intervention-inhaledshortactingbeta"
+    },
+    {
+      "link_id": "DbLhgNYh",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "DbLhgNYh",
+        "remove_value_from_source": false,
+        "source": "yRNlzW3v",
+        "target": "DXhAVyOP",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "yRNlzW3v",
+      "source_component": "burden-metrics",
+      "target": "DXhAVyOP",
+      "target_component": "economic-metrics"
+    },
+    {
+      "link_id": "ResourceAbs_AsthmaOralPrednisolone_Base_1",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "ResourceAbs_AsthmaOralPrednisolone_Base_1",
+        "label": "AsthmaEpsd -> ResourcePopulationReached-AsthmaOralPrednisolone",
+        "remove_value_from_source": false,
+        "source": "AsthmaEpsd",
+        "target": "ResourcePopulationReached_AsthmaOralPrednisolone",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "ResourcePopulationReached_AsthmaOralPrednisolone",
+      "target_component": "intervention-asthmaoralprednisolone"
+    },
+    {
+      "link_id": "ResourceAbs_HighDoseBeclom_Base_1",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "ResourceAbs_HighDoseBeclom_Base_1",
+        "label": "AsthmaEpsd -> ResourcePopulationReached-HighDoseBeclom",
+        "remove_value_from_source": false,
+        "source": "AsthmaEpsd",
+        "target": "ResourcePopulationReached_HighDoseBeclom",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "ResourcePopulationReached_HighDoseBeclom",
+      "target_component": "intervention-highdosebeclom"
+    },
+    {
+      "link_id": "ResourceAbs_InhaledShortActingBeta_Base_1",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "ResourceAbs_InhaledShortActingBeta_Base_1",
+        "label": "AsthmaEpsd -> ResourcePopulationReached-InhaledShortActingBeta",
+        "remove_value_from_source": false,
+        "source": "AsthmaEpsd",
+        "target": "ResourcePopulationReached_InhaledShortActingBeta",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "ResourcePopulationReached_InhaledShortActingBeta",
+      "target_component": "intervention-inhaledshortactingbeta"
+    },
+    {
+      "link_id": "ResourceAbs_LowDoseBeclom_Base_1",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "ResourceAbs_LowDoseBeclom_Base_1",
+        "label": "AsthmaEpsd -> ResourcePopulationReached-LowDoseBeclom",
+        "remove_value_from_source": false,
+        "source": "AsthmaEpsd",
+        "target": "ResourcePopulationReached_LowDoseBeclom",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "AsthmaEpsd",
+      "source_component": "epidemiology-core",
+      "target": "ResourcePopulationReached_LowDoseBeclom",
+      "target_component": "intervention-lowdosebeclom"
+    },
+    {
+      "link_id": "tcCessBriefAdviceEffectTotal",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "tcCessBriefAdviceEffectTotal",
+        "label": "effect-size-tobacco_cessation_brief_advice -> total-prevalence-reduction-tobacco",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "tcCessBriefAdviceEffect",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "tcCessBriefAdviceEffect",
+      "source_component": "intervention-tobacco-cessation-brief-advice",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "tcCessQuitlineEffectTotal",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "tcCessQuitlineEffectTotal",
+        "label": "effect-size-tobacco_cessation_quitline -> total-prevalence-reduction-tobacco",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "tcCessQuitlineEffect",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "tcCessQuitlineEffect",
+      "source_component": "intervention-tobacco-cessation-quitline",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "tcCessMcessationEffectTotal",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "tcCessMcessationEffectTotal",
+        "label": "effect-size-tobacco_cessation_mcessation -> total-prevalence-reduction-tobacco",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "tcCessMcessationEffect",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "tcCessMcessationEffect",
+      "source_component": "intervention-tobacco-cessation-mcessation",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "tcCessNicotineReplacementTherapyEffectTotal",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "tcCessNicotineReplacementTherapyEffectTotal",
+        "label": "effect-size-tobacco_cessation_nicotine_replacement_therapy -> total-prevalence-reduction-tobacco",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "tcCessNicotineReplacementTherapyEffect",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "tcCessNicotineReplacementTherapyEffect",
+      "source_component": "intervention-tobacco-cessation-nicotine-replacement-therapy",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "tcCessBupropionEffectTotal",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "tcCessBupropionEffectTotal",
+        "label": "effect-size-tobacco_cessation_bupropion -> total-prevalence-reduction-tobacco",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "tcCessBupropionEffect",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "tcCessBupropionEffect",
+      "source_component": "intervention-tobacco-cessation-bupropion",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "link_id": "tcCessVareniclineEffectTotal",
+      "link_payload": {
+        "generate_array": {
+          "method": "single_value",
+          "parameters": {
+            "value": 1
+          }
+        },
+        "id": "tcCessVareniclineEffectTotal",
+        "label": "effect-size-tobacco_cessation_varenicline -> total-prevalence-reduction-tobacco",
+        "postprocessing": {
+          "negative": true
+        },
+        "remove_value_from_source": false,
+        "source": "tcCessVareniclineEffect",
+        "target": "DsMKQaMl",
+        "value_to_target_operator": "add"
+      },
+      "runtime_role": "module_boundary_link",
+      "source": "tcCessVareniclineEffect",
+      "source_component": "intervention-tobacco-cessation-varenicline",
+      "target": "DsMKQaMl",
+      "target_component": "tobacco-risk-factor"
+    },
+    {
+      "health_effect_path": "tobacco_cessation_brief_advice",
+      "intervention_component_id": "tobacco_cessation.brief_advice",
+      "link_id": "handoff:intervention-tobacco-cessation-brief-advice:tobacco-risk-factor:changed-tobacco-state",
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "asthma-tobacco-cessation-brief-advice",
+      "source_component": "intervention-tobacco-cessation-brief-advice",
+      "source_output": "changed_tobacco_state",
+      "status": "upstream_cessation_intervention_to_tobacco_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "tobacco_cessation_modifier"
+    },
+    {
+      "health_effect_path": "tobacco_cessation_quitline",
+      "intervention_component_id": "tobacco_cessation.quitline",
+      "link_id": "handoff:intervention-tobacco-cessation-quitline:tobacco-risk-factor:changed-tobacco-state",
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "asthma-tobacco-cessation-quitline",
+      "source_component": "intervention-tobacco-cessation-quitline",
+      "source_output": "changed_tobacco_state",
+      "status": "upstream_cessation_intervention_to_tobacco_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "tobacco_cessation_modifier"
+    },
+    {
+      "health_effect_path": "tobacco_cessation_mcessation",
+      "intervention_component_id": "tobacco_cessation.mcessation",
+      "link_id": "handoff:intervention-tobacco-cessation-mcessation:tobacco-risk-factor:changed-tobacco-state",
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "asthma-tobacco-cessation-mcessation",
+      "source_component": "intervention-tobacco-cessation-mcessation",
+      "source_output": "changed_tobacco_state",
+      "status": "upstream_cessation_intervention_to_tobacco_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "tobacco_cessation_modifier"
+    },
+    {
+      "health_effect_path": "tobacco_cessation_nicotine_replacement_therapy",
+      "intervention_component_id": "tobacco_cessation.nicotine_replacement_therapy",
+      "link_id": "handoff:intervention-tobacco-cessation-nicotine-replacement-therapy:tobacco-risk-factor:changed-tobacco-state",
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "asthma-tobacco-cessation-nicotine-replacement-therapy",
+      "source_component": "intervention-tobacco-cessation-nicotine-replacement-therapy",
+      "source_output": "changed_tobacco_state",
+      "status": "upstream_cessation_intervention_to_tobacco_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "tobacco_cessation_modifier"
+    },
+    {
+      "health_effect_path": "tobacco_cessation_bupropion",
+      "intervention_component_id": "tobacco_cessation.bupropion",
+      "link_id": "handoff:intervention-tobacco-cessation-bupropion:tobacco-risk-factor:changed-tobacco-state",
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "asthma-tobacco-cessation-bupropion",
+      "source_component": "intervention-tobacco-cessation-bupropion",
+      "source_output": "changed_tobacco_state",
+      "status": "upstream_cessation_intervention_to_tobacco_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "tobacco_cessation_modifier"
+    },
+    {
+      "health_effect_path": "tobacco_cessation_varenicline",
+      "intervention_component_id": "tobacco_cessation.varenicline",
+      "link_id": "handoff:intervention-tobacco-cessation-varenicline:tobacco-risk-factor:changed-tobacco-state",
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "asthma-tobacco-cessation-varenicline",
+      "source_component": "intervention-tobacco-cessation-varenicline",
+      "source_output": "changed_tobacco_state",
+      "status": "upstream_cessation_intervention_to_tobacco_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "tobacco_cessation_modifier"
+    },
+    {
+      "link_id": "handoff:intervention-risk-factor-nc-rftobaccoprotect-ncd-asthma-01k2rqxjwk1hqbhng6bmt3kcxr:tobacco-risk-factor:changed-risk-factor-state",
+      "parameter_paths": [
+        "$.nodes[?(@.id=='kmOgayPc')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.fill_before",
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.fill_after",
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.start_index",
+        "$.nodes[?(@.id=='f2zVbmFC')].generate_array.parameters.end_index"
+      ],
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "01K2RQXJWK1HQBHNG6BMT3KCXR",
+      "source_component": "intervention-risk-factor-nc-rftobaccoprotect-ncd-asthma-01k2rqxjwk1hqbhng6bmt3kcxr",
+      "source_output": "changed_risk_factor_state",
+      "status": "upstream_intervention_to_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "risk_factor_intervention_modifier"
+    },
+    {
+      "link_id": "handoff:intervention-risk-factor-nc-rftobaccoquitbrief-ncd-asthma-asthma-tobacco-t7:tobacco-risk-factor:changed-risk-factor-state",
+      "parameter_paths": [
+        "$.nodes[?(@.id=='iSPWJd93')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.fill_before",
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.fill_after",
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.start_index",
+        "$.nodes[?(@.id=='Go1VxQNw')].generate_array.parameters.end_index"
+      ],
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "asthma-tobacco-t7",
+      "source_component": "intervention-risk-factor-nc-rftobaccoquitbrief-ncd-asthma-asthma-tobacco-t7",
+      "source_output": "changed_risk_factor_state",
+      "status": "upstream_intervention_to_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "risk_factor_intervention_modifier"
+    },
+    {
+      "link_id": "handoff:intervention-risk-factor-nc-rftobaccoquitmcessation-ncd-asthma-01k2rqxhnh8xvabypzkx9bnrf1:tobacco-risk-factor:changed-risk-factor-state",
+      "parameter_paths": [
+        "$.nodes[?(@.id=='exp5DafX')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.fill_before",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.fill_after",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.start_index",
+        "$.nodes[?(@.id=='ACrnBpRW')].generate_array.parameters.end_index"
+      ],
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "01K2RQXHNH8XVABYPZKX9BNRF1",
+      "source_component": "intervention-risk-factor-nc-rftobaccoquitmcessation-ncd-asthma-01k2rqxhnh8xvabypzkx9bnrf1",
+      "source_output": "changed_risk_factor_state",
+      "status": "upstream_intervention_to_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "risk_factor_intervention_modifier"
+    },
+    {
+      "link_id": "handoff:intervention-risk-factor-nc-rftobaccowarnlabel-ncd-asthma-01k2rqxd7hah2445kwhvnq7x0q:tobacco-risk-factor:changed-risk-factor-state",
+      "parameter_paths": [
+        "$.nodes[?(@.id=='jVgKAsq8')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.fill_before",
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.fill_after",
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.start_index",
+        "$.nodes[?(@.id=='Sr0tR2ig')].generate_array.parameters.end_index"
+      ],
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "01K2RQXD7HAH2445KWHVNQ7X0Q",
+      "source_component": "intervention-risk-factor-nc-rftobaccowarnlabel-ncd-asthma-01k2rqxd7hah2445kwhvnq7x0q",
+      "source_output": "changed_risk_factor_state",
+      "status": "upstream_intervention_to_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "risk_factor_intervention_modifier"
+    },
+    {
+      "link_id": "handoff:intervention-risk-factor-nc-rftobaccowarnmassmedia-ncd-asthma-01k2rqxqcz80yxpx4qz39bm820:tobacco-risk-factor:changed-risk-factor-state",
+      "parameter_paths": [
+        "$.nodes[?(@.id=='kH5YhKYM')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.fill_before",
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.fill_after",
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.start_index",
+        "$.nodes[?(@.id=='lFeWKUSt')].generate_array.parameters.end_index"
+      ],
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "01K2RQXQCZ80YXPX4QZ39BM820",
+      "source_component": "intervention-risk-factor-nc-rftobaccowarnmassmedia-ncd-asthma-01k2rqxqcz80yxpx4qz39bm820",
+      "source_output": "changed_risk_factor_state",
+      "status": "upstream_intervention_to_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "risk_factor_intervention_modifier"
+    },
+    {
+      "link_id": "handoff:intervention-risk-factor-nc-rftobaccoban-ncd-asthma-01k2rqxdzt3139x2b11qtdqdkr:tobacco-risk-factor:changed-risk-factor-state",
+      "parameter_paths": [
+        "$.nodes[?(@.id=='zUseZJKK')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.fill_before",
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.fill_after",
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.start_index",
+        "$.nodes[?(@.id=='a6OhDhjp')].generate_array.parameters.end_index"
+      ],
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "01K2RQXDZT3139X2B11QTDQDKR",
+      "source_component": "intervention-risk-factor-nc-rftobaccoban-ncd-asthma-01k2rqxdzt3139x2b11qtdqdkr",
+      "source_output": "changed_risk_factor_state",
+      "status": "upstream_intervention_to_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "risk_factor_intervention_modifier"
+    },
+    {
+      "link_id": "handoff:intervention-risk-factor-nc-rftobaccotax-ncd-asthma-01k2rqx93dwcpgw3p6fay7pbvy:tobacco-risk-factor:changed-risk-factor-state",
+      "parameter_paths": [
+        "$.nodes[?(@.id=='bdg7vh5J')].generate_array.parameters.value"
+      ],
+      "runtime_role": "link_then_inject_bundle",
+      "scenario_id": "01K2RQX93DWCPGW3P6FAY7PBVY",
+      "source_component": "intervention-risk-factor-nc-rftobaccotax-ncd-asthma-01k2rqx93dwcpgw3p6fay7pbvy",
+      "source_output": "changed_risk_factor_state",
+      "status": "upstream_intervention_to_risk_factor_contract",
+      "target_component": "tobacco-risk-factor",
+      "target_input": "risk_factor_intervention_modifier"
+    }
+  ],
+  "schema": "forecast-health.generated-link-contracts.v1"
+}

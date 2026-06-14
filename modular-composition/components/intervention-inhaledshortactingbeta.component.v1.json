@@ -1,0 +1,268 @@
+{
+  "boundary_note": "First-pass executable decomposition from current monolithic model labels. Cross-module links are retained as link contracts so the recomposed model remains runnable without changing model maths.",
+  "component_id": "intervention-inhaledshortactingbeta",
+  "declared_inputs": [],
+  "internal_link_ids": [
+    "8psyRF8D",
+    "RsDLpQaf",
+    "Fgwmnfc4",
+    "3fOHeEP3",
+    "yHEbF3n6",
+    "wQ4kyvLO",
+    "ResourceAbs_InhaledShortActingBeta_PIN",
+    "ResourceAbs_InhaledShortActingBeta_Coverage"
+  ],
+  "links": [
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "8psyRF8D",
+      "label": "InhaledShortActingBeta_StartingCoverage -> InhaledShortActingBeta_Calculated_Coverage",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "InhaledShortActingBeta_StartingCoverage",
+      "target": "InhaledShortActingBeta_Calculated_Coverage",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "RsDLpQaf",
+      "label": "InhaledShortActingBeta_Coverage -> InhaledShortActingBeta_Calculated_Coverage",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "InhaledShortActingBeta_Coverage",
+      "target": "InhaledShortActingBeta_Calculated_Coverage",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "Fgwmnfc4",
+      "label": "InhaledShortActingBeta_PIN -> InhaledShortActingBeta_Disability_Effect",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "InhaledShortActingBeta_PIN",
+      "target": "InhaledShortActingBeta_Disability_Effect",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "3fOHeEP3",
+      "label": "InhaledShortActingBeta_Calculated_Coverage -> InhaledShortActingBeta_Disability_Effect",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "InhaledShortActingBeta_Calculated_Coverage",
+      "target": "InhaledShortActingBeta_Disability_Effect",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "yHEbF3n6",
+      "label": "InhaledShortActingBeta_Disability_Impact -> InhaledShortActingBeta_Disability_Effect",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "InhaledShortActingBeta_Disability_Impact",
+      "target": "InhaledShortActingBeta_Disability_Effect",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "wQ4kyvLO",
+      "remove_value_from_source": false,
+      "source": "InhaledShortActingBeta_Calculated_Coverage",
+      "target": "iMcmFjlP",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_InhaledShortActingBeta_PIN",
+      "label": "InhaledShortActingBeta_PIN -> ResourcePopulationReached-InhaledShortActingBeta",
+      "remove_value_from_source": false,
+      "source": "InhaledShortActingBeta_PIN",
+      "target": "ResourcePopulationReached_InhaledShortActingBeta",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_InhaledShortActingBeta_Coverage",
+      "label": "InhaledShortActingBeta_Coverage -> ResourcePopulationReached-InhaledShortActingBeta",
+      "remove_value_from_source": false,
+      "source": "InhaledShortActingBeta_Coverage",
+      "target": "ResourcePopulationReached_InhaledShortActingBeta",
+      "value_to_target_operator": "multiply"
+    }
+  ],
+  "module_type": "generated_first_pass_boundary",
+  "nodes": [
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "InhaledShortActingBeta_Disability_Effect",
+      "label": "InhaledShortActingBeta_Disability_Effect",
+      "node_type": "FUNCTION",
+      "x": -145.06,
+      "y": 56.91
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "InhaledShortActingBeta_Calculated_Coverage",
+      "label": "InhaledShortActingBeta_Calculated_Coverage",
+      "node_type": "FUNCTION",
+      "x": -146,
+      "y": 128.32
+    },
+    {
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.00961066
+        }
+      },
+      "id": "InhaledShortActingBeta_Disability_Impact",
+      "label": "InhaledShortActingBeta_Disability_Impact",
+      "node_type": "CONSTANT",
+      "x": -143.87,
+      "y": 1.92
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "method": "linear_with_arbitrary_length",
+        "parameters": {
+          "end_index": 2,
+          "end_value": 0.05,
+          "fill_after": 0.05,
+          "fill_before": 0.05,
+          "start_index": 1,
+          "start_value": 0.05
+        }
+      },
+      "id": "InhaledShortActingBeta_Coverage",
+      "label": "InhaledShortActingBeta_Coverage",
+      "node_type": "CONSTANT",
+      "x": -153.44,
+      "y": 193.27
+    },
+    {
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.05
+        },
+        "postprocessing": {
+          "negative": true
+        }
+      },
+      "id": "InhaledShortActingBeta_StartingCoverage",
+      "label": "InhaledShortActingBeta_StartingCoverage",
+      "node_type": "CONSTANT",
+      "x": -150.41,
+      "y": 199.49
+    },
+    {
+      "color": "#06B4E1",
+      "generate_array": {
+        "fetch_once": true,
+        "method": "single_value",
+        "parameters": {
+          "value": 0.3
+        }
+      },
+      "id": "InhaledShortActingBeta_PIN",
+      "label": "InhaledShortActingBeta_PIN",
+      "node_type": "CONSTANT",
+      "x": -229.79,
+      "y": 88.24
+    },
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "id": "iMcmFjlP",
+      "label": "PopulationReached-InhaledShortActingBeta",
+      "x": 24.53,
+      "y": 132.82
+    },
+    {
+      "color": "#6EE7B7",
+      "flush": true,
+      "id": "ResourcePopulationReached_InhaledShortActingBeta",
+      "label": "ResourcePopulationReached-InhaledShortActingBeta",
+      "x": 52.53,
+      "y": 160.82
+    }
+  ],
+  "owned_node_ids": [
+    "InhaledShortActingBeta_Disability_Effect",
+    "InhaledShortActingBeta_Calculated_Coverage",
+    "InhaledShortActingBeta_Disability_Impact",
+    "InhaledShortActingBeta_Coverage",
+    "InhaledShortActingBeta_StartingCoverage",
+    "InhaledShortActingBeta_PIN",
+    "iMcmFjlP",
+    "ResourcePopulationReached_InhaledShortActingBeta"
+  ],
+  "published_outputs": [],
+  "runtime_role": "compiled_together",
+  "schema": "forecast-health.generated-module-component.v1"
+}
