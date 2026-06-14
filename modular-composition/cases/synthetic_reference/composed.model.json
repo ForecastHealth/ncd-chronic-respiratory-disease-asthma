@@ -2487,7 +2487,7 @@
     "description": "The rebuild of the Spectrum Asthma Disease Model",
     "intervention": "asthma",
     "modular_composition": {
-      "manifest": "state/modular-compositions/ncd-asthma/cases/synthetic_reference/composition.manifest.v1.json",
+      "manifest": "modular-composition/cases/synthetic_reference/composition.manifest.v1.json",
       "mode": "first_pass_executable_decomposition_without_math_change",
       "schema": "forecast-health.generated-modular-composition.v1"
     },
