@@ -11,6 +11,7 @@
     {
       "component_id": "burden-metrics",
       "internal_links": 14,
+      "module_type": "burden_metrics",
       "nodes": 15,
       "path": "components/burden-metrics.component.v1.json",
       "runtime_role": "downstream_handoff"
@@ -18,6 +19,7 @@
     {
       "component_id": "demographic-substrate",
       "internal_links": 2,
+      "module_type": "demographic_substrate",
       "nodes": 2,
       "path": "components/demographic-substrate.component.v1.json",
       "runtime_role": "compiled_together"
@@ -25,6 +27,7 @@
     {
       "component_id": "economic-metrics",
       "internal_links": 2,
+      "module_type": "economic_metrics",
       "nodes": 3,
       "path": "components/economic-metrics.component.v1.json",
       "runtime_role": "downstream_handoff"
@@ -32,6 +35,7 @@
     {
       "component_id": "epidemiology-core",
       "internal_links": 8,
+      "module_type": "epidemiology_core",
       "nodes": 7,
       "path": "components/epidemiology-core.component.v1.json",
       "runtime_role": "compiled_together"
@@ -39,6 +43,7 @@
     {
       "component_id": "intervention-asthmaoralprednisolone",
       "internal_links": 9,
+      "module_type": "clinical_intervention",
       "nodes": 8,
       "path": "components/intervention-asthmaoralprednisolone.component.v1.json",
       "runtime_role": "compiled_together"
@@ -46,6 +51,7 @@
     {
       "component_id": "intervention-highdosebeclom",
       "internal_links": 9,
+      "module_type": "clinical_intervention",
       "nodes": 8,
       "path": "components/intervention-highdosebeclom.component.v1.json",
       "runtime_role": "compiled_together"
@@ -53,6 +59,7 @@
     {
       "component_id": "intervention-inhaledshortactingbeta",
       "internal_links": 8,
+      "module_type": "clinical_intervention",
       "nodes": 8,
       "path": "components/intervention-inhaledshortactingbeta.component.v1.json",
       "runtime_role": "compiled_together"
@@ -60,6 +67,7 @@
     {
       "component_id": "intervention-lowdosebeclom",
       "internal_links": 12,
+      "module_type": "clinical_intervention",
       "nodes": 10,
       "path": "components/intervention-lowdosebeclom.component.v1.json",
       "runtime_role": "compiled_together"
@@ -67,7 +75,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccoban-ncd-asthma-01k2rqxdzt3139x2b11qtdqdkr",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccoban-ncd-asthma-01k2rqxdzt3139x2b11qtdqdkr.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -77,7 +87,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccoprotect-ncd-asthma-01k2rqxjwk1hqbhng6bmt3kcxr",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccoprotect-ncd-asthma-01k2rqxjwk1hqbhng6bmt3kcxr.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -87,7 +99,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccoquitbrief-ncd-asthma-asthma-tobacco-t7",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccoquitbrief-ncd-asthma-asthma-tobacco-t7.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -97,7 +111,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccoquitmcessation-ncd-asthma-01k2rqxhnh8xvabypzkx9bnrf1",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccoquitmcessation-ncd-asthma-01k2rqxhnh8xvabypzkx9bnrf1.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -107,7 +123,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccotax-ncd-asthma-01k2rqx93dwcpgw3p6fay7pbvy",
+      "family": "tobacco",
       "internal_links": 1,
+      "module_type": "risk_factor_intervention",
       "nodes": 2,
       "path": "components/intervention-risk-factor-nc-rftobaccotax-ncd-asthma-01k2rqx93dwcpgw3p6fay7pbvy.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -117,7 +135,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccowarnlabel-ncd-asthma-01k2rqxd7hah2445kwhvnq7x0q",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccowarnlabel-ncd-asthma-01k2rqxd7hah2445kwhvnq7x0q.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -127,7 +147,9 @@
     {
       "acts_on_module": "tobacco-risk-factor",
       "component_id": "intervention-risk-factor-nc-rftobaccowarnmassmedia-ncd-asthma-01k2rqxqcz80yxpx4qz39bm820",
+      "family": "tobacco",
       "internal_links": 3,
+      "module_type": "risk_factor_intervention",
       "nodes": 4,
       "path": "components/intervention-risk-factor-nc-rftobaccowarnmassmedia-ncd-asthma-01k2rqxqcz80yxpx4qz39bm820.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -139,6 +161,7 @@
       "component_id": "intervention-tobacco-cessation-brief-advice",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.brief_advice",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-brief-advice.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -150,6 +173,7 @@
       "component_id": "intervention-tobacco-cessation-bupropion",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.bupropion",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-bupropion.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -161,6 +185,7 @@
       "component_id": "intervention-tobacco-cessation-mcessation",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.mcessation",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-mcessation.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -172,6 +197,7 @@
       "component_id": "intervention-tobacco-cessation-nicotine-replacement-therapy",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.nicotine_replacement_therapy",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-nicotine-replacement-therapy.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -183,6 +209,7 @@
       "component_id": "intervention-tobacco-cessation-quitline",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.quitline",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-quitline.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -194,6 +221,7 @@
       "component_id": "intervention-tobacco-cessation-varenicline",
       "internal_links": 3,
       "intervention_component_id": "tobacco_cessation.varenicline",
+      "module_type": "tobacco_cessation_intervention",
       "nodes": 4,
       "path": "components/intervention-tobacco-cessation-varenicline.component.v1.json",
       "runtime_role": "link_then_inject_bundle",
@@ -203,6 +231,7 @@
     {
       "component_id": "metrics-and-helpers",
       "internal_links": 0,
+      "module_type": "model_helpers",
       "nodes": 5,
       "path": "components/metrics-and-helpers.component.v1.json",
       "runtime_role": "compiled_together"
@@ -210,6 +239,7 @@
     {
       "component_id": "tobacco-risk-factor",
       "internal_links": 10,
+      "module_type": "risk_factor_calculation",
       "nodes": 9,
       "path": "components/tobacco-risk-factor.component.v1.json",
       "runtime_role": "link_then_inject_bundle"
@@ -1628,5 +1658,6 @@
   },
   "schema": "forecast-health.generated-modular-composition.v1",
   "source_model": "model.json",
-  "source_repository": "/Users/rory/Models/ncd-asthma"
+  "source_repository": "/Users/rory/Models/ncd-asthma",
+  "updated_at": "2026-06-15T08:41:41+00:00"
 }
