@@ -1,0 +1,2540 @@
+{
+  "certification_statement": "This certificate records the scenario-country runs present in the source validation-run JSON. It is runtime execution evidence, not a claim that the model agrees with OneHealth Tool, Spectrum, or any other external comparator.",
+  "composition_record_id": "composition:ncd-asthma:client-manifest-current:v1",
+  "country_certificates": [
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:20.866004+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "a4cbef67827d7f78f76565c871ac82676c32a541016b22b7ac6920973e60500e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41505391.83,
+          "2030": 46594377.2,
+          "2040": 57253623.34,
+          "2046": 63523692.05,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2421522.92,
+          "2030": 3080221.19,
+          "2040": 4245883.14,
+          "2046": 4889528.93,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 301315.3,
+          "2030": 330324.21,
+          "2040": 387174.0,
+          "2046": 419319.8,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4272.35,
+          "2030": 5795.88,
+          "2040": 9704.17,
+          "2046": 12822.53,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4851278.47,
+          "2030": 6157929.94,
+          "2040": 8487310.45,
+          "2046": 9779947.83,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 493143.08,
+          "2030": 566202.75,
+          "2040": 725720.84,
+          "2046": 825933.16,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38154658.95,
+          "2030": 43023495.67,
+          "2040": 53100190.73,
+          "2046": 58938205.55,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "dd2771af65522fe357af9f0ebd8ed44ce14e25e311a3e8f7f4ac77d3e0633559",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "e551d7b458b90d4a2810be26833a3e53ff459005e2eeab866618c14166553f2a",
+      "rust_duration_seconds": 0.141,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "5f0981f25c15523974e16f4f33a6eb277c5be976c76531bfc5bd65c70851f164",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-null",
+      "scenario_name": "Appendix 3 - Asthma Null Scenario",
+      "started_at": "2026-06-02T20:38:08.132348+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:46.199674+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "8080f05147b39c78beec103d234c04dca258fd21ced80fc9bd5bb653fe6d6d95",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41505402.91,
+          "2030": 46594431.73,
+          "2040": 57253847.85,
+          "2046": 63524066.33,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2421649.46,
+          "2030": 3080504.74,
+          "2040": 4246526.34,
+          "2046": 4890443.7,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 301315.36,
+          "2030": 330324.6,
+          "2040": 387175.67,
+          "2046": 419322.52,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4231.83,
+          "2030": 5742.79,
+          "2040": 9618.02,
+          "2046": 12709.95,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4851531.97,
+          "2030": 6158496.8,
+          "2040": 8488596.18,
+          "2046": 9781777.54,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 492232.39,
+          "2030": 565014.67,
+          "2040": 723867.8,
+          "2046": 823604.2,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38168462.8,
+          "2030": 43041064.13,
+          "2040": 53124458.84,
+          "2046": 58966210.1,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "e7064fe70ac1646c7e558907117a091f16488ee213a02a0851cdc9f28308e86c",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "d1f34f7243914ba49ae5a4d82ead4763f01b5dfedb0cc6c99d028ba9daccd44a",
+      "rust_duration_seconds": 0.185,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "401c20690cfa2d93e91c6df78664f6d8297261386d8e1cba7e520f4ed7f80970",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-cr1",
+      "scenario_name": "Appendix 3 - CR1 Scenario",
+      "started_at": "2026-06-02T20:38:08.132495+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:52.650810+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "7d66491822d1126d5e898f7b3856fc12266a4ac17237aef68767dde741cfeea3",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41505602.72,
+          "2030": 46595417.07,
+          "2040": 57257910.94,
+          "2046": 63530843.08,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2423938.18,
+          "2030": 3085653.26,
+          "2040": 4258249.74,
+          "2046": 4907138.34,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 301316.48,
+          "2030": 330331.76,
+          "2040": 387205.81,
+          "2046": 419371.88,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 3496.64,
+          "2030": 4773.57,
+          "2040": 8036.96,
+          "2046": 10640.09,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4856117.19,
+          "2030": 6168789.66,
+          "2040": 8512030.66,
+          "2046": 9815169.86,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 475795.05,
+          "2030": 543526.55,
+          "2040": 690283.59,
+          "2046": 781357.95,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38167022.66,
+          "2030": 43041500.91,
+          "2040": 53130759.74,
+          "2046": 58977577.54,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "4f0052fce242329a771b6faf6f37e388197c811d6b846432e2d965e5a70d94ac",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "83fbe45cf628be375cd0d532836da71f83ff835b90955e906d3f9d403a8cec0a",
+      "rust_duration_seconds": 0.228,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "c800d18a874a7ee8fcf98dca7f39ebdad4d2eedeb9837b0c9babdc69943ba535",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-cr3",
+      "scenario_name": "Appendix 3 - CR3 Scenario",
+      "started_at": "2026-06-02T20:38:08.132545+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:37.230080+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "a4cbef67827d7f78f76565c871ac82676c32a541016b22b7ac6920973e60500e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41507834.68,
+          "2030": 46598677.31,
+          "2040": 57261740.62,
+          "2046": 63534250.05,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2419236.37,
+          "2030": 3076327.31,
+          "2040": 4238892.0,
+          "2046": 4880690.81,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 300803.62,
+          "2030": 329738.85,
+          "2040": 386413.12,
+          "2046": 418444.37,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4225.1,
+          "2030": 5728.52,
+          "2040": 9584.86,
+          "2046": 12662.29,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4846697.59,
+          "2030": 6150145.36,
+          "2040": 8473335.49,
+          "2046": 9762269.98,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 491598.27,
+          "2030": 563922.74,
+          "2040": 721875.65,
+          "2046": 821027.74,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38156111.75,
+          "2030": 43025548.95,
+          "2040": 53103531.02,
+          "2046": 58942411.92,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "58a32a143fcc39c70e4edfe0cc9cb57268a77b6eae68d04c751ad84843d07a43",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "4b281173efb3ace2b2a2c160dd7413f54dc582a77f2e91367e1637931ad49673",
+      "rust_duration_seconds": 0.135,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "933bb86038b707d6e6b9a888601140534ba3c27d0337ac62de470e7c7f96e0ee",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQX93DWCPGW3P6FAY7PBVY",
+      "scenario_name": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
+      "started_at": "2026-06-02T20:38:35.349027+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:40.398453+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "a4cbef67827d7f78f76565c871ac82676c32a541016b22b7ac6920973e60500e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41507121.66,
+          "2030": 46597682.22,
+          "2040": 57260121.87,
+          "2046": 63532223.67,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2419941.19,
+          "2030": 3077301.2,
+          "2040": 4240449.18,
+          "2046": 4882621.86,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 300899.78,
+          "2030": 329849.4,
+          "2040": 386557.61,
+          "2046": 418610.96,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4227.35,
+          "2030": 5732.12,
+          "2040": 9591.91,
+          "2046": 12672.03,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4848109.62,
+          "2030": 6152092.34,
+          "2040": 8476448.22,
+          "2046": 9766132.44,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 491791.53,
+          "2030": 564184.52,
+          "2040": 722290.22,
+          "2046": 821546.35,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38156067.31,
+          "2030": 43025480.33,
+          "2040": 53103400.56,
+          "2046": 58942235.99,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "396d64b1579ff1f3e05508c6125a3bd5df87cd517473e8abc32a2a3e3349d8e3",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "328b403cda7327213d3cbbaf450e753b236b3e47c9b84bb978caf83412e4fc91",
+      "rust_duration_seconds": 0.161,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "30589e4a922e043e4e331c398f9524c98471794cf3f782c9037660f6da77f0d7",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXD7HAH2445KWHVNQ7X0Q",
+      "scenario_name": "Appendix 3 - Tobacco 2 - Warning labels and standardized packaging",
+      "started_at": "2026-06-02T20:38:37.702234+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:43.023070+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "a4cbef67827d7f78f76565c871ac82676c32a541016b22b7ac6920973e60500e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41506431.92,
+          "2030": 46596377.74,
+          "2040": 57257603.91,
+          "2046": 63528949.84,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2420626.73,
+          "2030": 3078586.83,
+          "2040": 4242888.1,
+          "2046": 4885761.0,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 301066.56,
+          "2030": 330040.12,
+          "2040": 386805.69,
+          "2046": 418896.58,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4229.15,
+          "2030": 5736.4,
+          "2040": 9602.39,
+          "2046": 12687.25,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4849483.03,
+          "2030": 6154662.55,
+          "2040": 8481323.51,
+          "2046": 9772411.29,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 491968.54,
+          "2030": 564517.84,
+          "2040": 722923.67,
+          "2046": 822372.65,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38156026.85,
+          "2030": 43025396.6,
+          "2040": 53103209.49,
+          "2046": 58941965.39,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "dcf0d15525653ffbcbae5c9fa18c6111df5169099f3b54667680c359f8fbae33",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "162bd53b83e13f2780e1492bbe27974beaf047f6ddf24775bb46f04a67a9b2b2",
+      "rust_duration_seconds": 0.155,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "4fe4ecad84c5204397204cbd05d13071ac2645c599def070153c7102c4a8e288",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXDZT3139X2B11QTDQDKR",
+      "scenario_name": "Appendix 3 - Tobacco 3 - Advertising and promotion bans",
+      "started_at": "2026-06-02T20:38:40.382787+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:46.393238+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "8080f05147b39c78beec103d234c04dca258fd21ced80fc9bd5bb653fe6d6d95",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41507814.43,
+          "2030": 46598992.46,
+          "2040": 57262651.05,
+          "2046": 63535512.18,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2419252.65,
+          "2030": 3076009.89,
+          "2040": 4237999.4,
+          "2046": 4879468.71,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 300732.25,
+          "2030": 329657.81,
+          "2040": 386308.38,
+          "2046": 418324.0,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4225.55,
+          "2030": 5727.82,
+          "2040": 9581.38,
+          "2046": 12656.73,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4846730.2,
+          "2030": 6149510.78,
+          "2040": 8471551.24,
+          "2046": 9759825.57,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 491613.63,
+          "2030": 563849.51,
+          "2040": 721653.53,
+          "2046": 820715.8,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38156107.94,
+          "2030": 43025564.44,
+          "2040": 53103592.5,
+          "2046": 58942507.83,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "0797459ae8580d4124efdb1567f12d38c92744222f68588fe12474b0233d7aa9",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "69f2314bbb0026e9e74d81f3b3b0fe7eeb3b6ee478acae51fad248337478c9f4",
+      "rust_duration_seconds": 0.242,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "056c9ceef4022faba03d6f4cd6641ace958ecbdccf4dadb57efe16edfbd2a541",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXJWK1HQBHNG6BMT3KCXR",
+      "scenario_name": "Appendix 3 - Tobacco 4 - Smoke-free environments",
+      "started_at": "2026-06-02T20:38:43.410999+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:47.866827+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "8080f05147b39c78beec103d234c04dca258fd21ced80fc9bd5bb653fe6d6d95",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41507467.67,
+          "2030": 46598336.62,
+          "2040": 57261385.05,
+          "2046": 63533866.08,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2419597.3,
+          "2030": 3076656.26,
+          "2040": 4239225.65,
+          "2046": 4881047.04,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 300816.1,
+          "2030": 329753.71,
+          "2040": 386433.14,
+          "2046": 418467.65,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4226.45,
+          "2030": 5729.97,
+          "2040": 9586.66,
+          "2046": 12664.39,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4847420.66,
+          "2030": 6150802.98,
+          "2040": 8474002.45,
+          "2046": 9762982.52,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 491702.7,
+          "2030": 564017.23,
+          "2040": 721972.28,
+          "2046": 821131.61,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38156087.6,
+          "2030": 43025522.34,
+          "2040": 53103496.42,
+          "2046": 58942371.75,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "6cb20655f4c8d34b57c3f949978b5ebc17b8834ebde9efeeb6b64170260436a7",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "cb7009adbee6b78626674dfc2b024d6a53f129915ace20322d30a0533aaa7922",
+      "rust_duration_seconds": 0.146,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "9969998e758c1309e8613c3a0dac6e0ce69dd374d5aa5ebb68dbef3859ec62b1",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXQCZ80YXPX4QZ39BM820",
+      "scenario_name": "Appendix 3 - Tobacco 5 - Mass media campaigns",
+      "started_at": "2026-06-02T20:38:44.365960+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:50.580282+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "8080f05147b39c78beec103d234c04dca258fd21ced80fc9bd5bb653fe6d6d95",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41506672.99,
+          "2030": 46596833.66,
+          "2040": 57258483.93,
+          "2046": 63530094.02,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2420387.13,
+          "2030": 3078137.5,
+          "2040": 4242035.71,
+          "2046": 4884663.89,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 301008.27,
+          "2030": 329973.47,
+          "2040": 386718.99,
+          "2046": 418796.76,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4228.52,
+          "2030": 5734.91,
+          "2040": 9598.73,
+          "2046": 12681.93,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4849003.02,
+          "2030": 6153764.26,
+          "2040": 8479619.61,
+          "2046": 9770216.87,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 491906.69,
+          "2030": 564401.37,
+          "2040": 722702.33,
+          "2046": 822083.93,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38156040.99,
+          "2030": 43025425.86,
+          "2040": 53103276.27,
+          "2046": 58942059.96,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "221faf7278c8ad85908b4f270acfebbafd6a0d7bbab8b6d6449fa43a1cad5a8e",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "11839ad81e7bd9346fa5ef437e39326a5281b1f7381d5df5f67d472923222b11",
+      "rust_duration_seconds": 0.178,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "4d0a595cc53ab5defd89943471c3779ec7a98f40fcd856cc306e467ce4a5c55d",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXHNH8XVABYPZKX9BNRF1",
+      "scenario_name": "Appendix 3 - Tobacco 6 - Cessation support services",
+      "started_at": "2026-06-02T20:38:46.908421+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:52.310691+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "8080f05147b39c78beec103d234c04dca258fd21ced80fc9bd5bb653fe6d6d95",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41508625.35,
+          "2030": 46600526.22,
+          "2040": 57265611.83,
+          "2046": 63539361.94,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2418446.68,
+          "2030": 3074498.3,
+          "2040": 4235131.62,
+          "2046": 4875777.48,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 300536.13,
+          "2030": 329433.5,
+          "2040": 386016.56,
+          "2046": 417987.98,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4223.43,
+          "2030": 5722.78,
+          "2040": 9569.05,
+          "2046": 12638.81,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4845115.51,
+          "2030": 6146488.84,
+          "2040": 8465818.68,
+          "2046": 9752442.42,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 491405.24,
+          "2030": 563457.08,
+          "2040": 720907.64,
+          "2046": 819742.79,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38156155.51,
+          "2030": 43025662.89,
+          "2040": 53103817.22,
+          "2046": 58942826.12,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "843f7f1cf8ddb66418369777a545d41c26829092122c1f2c0f30f8cf4bfaca3a",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "a44d57c701d078cd20bb385ebcd98723e2424cc2e5e0be6523c8f65c68b2ca77",
+      "rust_duration_seconds": 0.322,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "ff252dfae47037c5acc8f1daf1dca3852dd1c877ae70c5f46fd7b3134be1bb70",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-tobacco-t7",
+      "scenario_name": "Appendix 3 - Tobacco 7 - Pharmacological cessation aids",
+      "started_at": "2026-06-02T20:38:48.431682+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:56.267046+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "030ed3a9aa6c62668bd2f1fba82ca38ed897eae57d395483cf1b34b723f68781",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41505402.91,
+          "2030": 46594431.73,
+          "2040": 57253847.85,
+          "2046": 63524066.33,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2421649.46,
+          "2030": 3080504.74,
+          "2040": 4246526.34,
+          "2046": 4890443.7,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 301315.36,
+          "2030": 330324.6,
+          "2040": 387175.67,
+          "2046": 419322.52,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4231.83,
+          "2030": 5742.79,
+          "2040": 9618.02,
+          "2046": 12709.95,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4851531.97,
+          "2030": 6158496.8,
+          "2040": 8488596.18,
+          "2046": 9781777.54,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 492232.39,
+          "2030": 565014.67,
+          "2040": 723867.8,
+          "2046": 823604.2,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38155966.49,
+          "2030": 43025271.7,
+          "2040": 53102924.51,
+          "2046": 58941561.83,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "7a9fafbe247de9f8c2698184e229b8c95d94c39e4c56fcc0758194d30c5484a9",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "2bdf8c234f5ab1dae814ffe8abc215df41d0fdf95c0c5af445c0c5ecebf7a87e",
+      "rust_duration_seconds": 0.128,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "7c373443c69f22875b26032e5fd0a70b56660e00c7412fdd55811c230276f667",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXPRHJEXZ1GRQACC2375S",
+      "scenario_name": "Baseline Scenario",
+      "started_at": "2026-06-02T20:38:08.132425+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:27.781777+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "a4cbef67827d7f78f76565c871ac82676c32a541016b22b7ac6920973e60500e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41505402.91,
+          "2030": 46594431.73,
+          "2040": 57253847.85,
+          "2046": 63524066.33,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2421649.46,
+          "2030": 3080504.74,
+          "2040": 4246526.34,
+          "2046": 4890443.7,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 301315.36,
+          "2030": 330324.6,
+          "2040": 387175.67,
+          "2046": 419322.52,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4231.83,
+          "2030": 5742.79,
+          "2040": 9618.02,
+          "2046": 12709.95,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4851531.97,
+          "2030": 6158496.8,
+          "2040": 8488596.18,
+          "2046": 9781777.54,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 492232.39,
+          "2030": 565014.67,
+          "2040": 723867.8,
+          "2046": 823604.2,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38155966.49,
+          "2030": 43025271.7,
+          "2040": 53102924.51,
+          "2046": 58941561.83,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "7a9fafbe247de9f8c2698184e229b8c95d94c39e4c56fcc0758194d30c5484a9",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "aab194a77264e28fd9fe3d757c925f6f668609ededbd4793ce8d972e227468a3",
+      "rust_duration_seconds": 0.123,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "7c373443c69f22875b26032e5fd0a70b56660e00c7412fdd55811c230276f667",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-high-dose-beclom",
+      "scenario_name": "Clinical Intervention - High Dose Beclometasone",
+      "started_at": "2026-06-02T20:38:26.698747+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:30.207251+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "a4cbef67827d7f78f76565c871ac82676c32a541016b22b7ac6920973e60500e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41505402.91,
+          "2030": 46594431.73,
+          "2040": 57253847.85,
+          "2046": 63524066.33,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2421649.46,
+          "2030": 3080504.74,
+          "2040": 4246526.34,
+          "2046": 4890443.7,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 301315.36,
+          "2030": 330324.6,
+          "2040": 387175.67,
+          "2046": 419322.52,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4231.83,
+          "2030": 5742.79,
+          "2040": 9618.02,
+          "2046": 12709.95,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4851531.97,
+          "2030": 6158496.8,
+          "2040": 8488596.18,
+          "2046": 9781777.54,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 492232.39,
+          "2030": 565014.67,
+          "2040": 723867.8,
+          "2046": 823604.2,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38155966.49,
+          "2030": 43025271.7,
+          "2040": 53102924.51,
+          "2046": 58941561.83,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "7a9fafbe247de9f8c2698184e229b8c95d94c39e4c56fcc0758194d30c5484a9",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "016cca765a034025f99ca62382ac657919c4fe04cbe92f43b8d5625a37fdd55f",
+      "rust_duration_seconds": 0.125,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "7c373443c69f22875b26032e5fd0a70b56660e00c7412fdd55811c230276f667",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-inhaled-beta-agonist",
+      "scenario_name": "Clinical Intervention - Inhaled Short Acting Beta Agonist",
+      "started_at": "2026-06-02T20:38:29.115736+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:32.751194+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "a4cbef67827d7f78f76565c871ac82676c32a541016b22b7ac6920973e60500e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41505402.91,
+          "2030": 46594431.73,
+          "2040": 57253847.85,
+          "2046": 63524066.33,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2421649.46,
+          "2030": 3080504.74,
+          "2040": 4246526.34,
+          "2046": 4890443.7,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 301315.36,
+          "2030": 330324.6,
+          "2040": 387175.67,
+          "2046": 419322.52,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4231.83,
+          "2030": 5742.79,
+          "2040": 9618.02,
+          "2046": 12709.95,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4851531.97,
+          "2030": 6158496.8,
+          "2040": 8488596.18,
+          "2046": 9781777.54,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 492232.39,
+          "2030": 565014.67,
+          "2040": 723867.8,
+          "2046": 823604.2,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38155966.49,
+          "2030": 43025271.7,
+          "2040": 53102924.51,
+          "2046": 58941561.83,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "7a9fafbe247de9f8c2698184e229b8c95d94c39e4c56fcc0758194d30c5484a9",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "473084e622ed79da6dd75effa8abf07cb34cfaeccbdebc4f63531be8097863de",
+      "rust_duration_seconds": 0.148,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "7c373443c69f22875b26032e5fd0a70b56660e00c7412fdd55811c230276f667",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-low-dose-beclom",
+      "scenario_name": "Clinical Intervention - Low Dose Beclometasone",
+      "started_at": "2026-06-02T20:38:31.539994+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "5e4b38d2df746b9b4fb710ced31e3a9ac20c923db9a8dfb1f65d8b296672e3af",
+      "completed_at": "2026-06-02T20:38:35.100779+00:00",
+      "country": "AFG",
+      "country_name": "Afghanistan",
+      "data_bundle_sha256": "a4cbef67827d7f78f76565c871ac82676c32a541016b22b7ac6920973e60500e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 41505402.91,
+          "2030": 46594431.73,
+          "2040": 57253847.85,
+          "2046": 63524066.33,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 2421649.46,
+          "2030": 3080504.74,
+          "2040": 4246526.34,
+          "2046": 4890443.7,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 301315.36,
+          "2030": 330324.6,
+          "2040": 387175.67,
+          "2046": 419322.52,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4231.83,
+          "2030": 5742.79,
+          "2040": 9618.02,
+          "2046": 12709.95,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 4851531.97,
+          "2030": 6158496.8,
+          "2040": 8488596.18,
+          "2046": 9781777.54,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 492232.39,
+          "2030": 565014.67,
+          "2040": 723867.8,
+          "2046": 823604.2,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 38155966.49,
+          "2030": 43025271.7,
+          "2040": 53102924.51,
+          "2046": 58941561.83,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "7a9fafbe247de9f8c2698184e229b8c95d94c39e4c56fcc0758194d30c5484a9",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "c299a076753fea13850ffd0ae602d6150ca54894089f41af31a2d092b400cf41",
+      "rust_duration_seconds": 0.152,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "7c373443c69f22875b26032e5fd0a70b56660e00c7412fdd55811c230276f667",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-oral-prednisolone",
+      "scenario_name": "Clinical Intervention - Oral Prednisolone",
+      "started_at": "2026-06-02T20:38:33.363105+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:39.346008+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "41ea329a923f021db5e08f275e76fc26dda305b2645d84af70226655493c1c69",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128375247.38,
+          "2030": 143112179.28,
+          "2040": 173507143.89,
+          "2046": 191983347.13,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5904083.42,
+          "2030": 7545796.83,
+          "2040": 10159318.8,
+          "2046": 11490886.17,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772555.5,
+          "2030": 836099.51,
+          "2040": 945790.49,
+          "2046": 1006896.06,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 6035.52,
+          "2030": 8405.48,
+          "2040": 14281.98,
+          "2046": 18724.04,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11806065.37,
+          "2030": 15088394.92,
+          "2040": 20312015.88,
+          "2046": 22975591.9,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1193638.03,
+          "2030": 1319589.68,
+          "2040": 1522417.77,
+          "2046": 1637002.59,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114901104.9,
+          "2030": 128727975.09,
+          "2040": 156348045.59,
+          "2046": 172706815.56,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "6dc3069baea3b33408f158378036dea18c5158678bb06812d8486d3fab13d3fa",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "9bc8e1b4e9af89e4c022055c1cefc48e1d366428d62fd6a9e5f9bb208b7ca228",
+      "rust_duration_seconds": 0.22,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "59feaf8f775527b237eae15ea1e1d5fc6313d3081dad5add82385db39d8b1a0d",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-null",
+      "scenario_name": "Appendix 3 - Asthma Null Scenario",
+      "started_at": "2026-06-02T20:38:08.132285+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:33.050042+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "b28af3732f8cd18ef98afc6faa1b8104f1d446a6f8631cd549d883c7d3d9069e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128375264.6,
+          "2030": 143112267.72,
+          "2040": 173507537.61,
+          "2046": 191984032.58,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5904265.01,
+          "2030": 7546212.24,
+          "2040": 10160280.84,
+          "2046": 11492260.11,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772555.57,
+          "2030": 836100.0,
+          "2040": 945792.77,
+          "2046": 1006899.96,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5977.45,
+          "2030": 8326.55,
+          "2040": 14151.23,
+          "2046": 18554.36,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11806428.48,
+          "2030": 15089225.56,
+          "2040": 20313939.34,
+          "2046": 22978339.04,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1192188.58,
+          "2030": 1317653.92,
+          "2040": 1519381.51,
+          "2046": 1633249.19,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114953542.35,
+          "2030": 128794886.17,
+          "2040": 156437735.77,
+          "2046": 172808045.91,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "800ce4baa053171885081566ead6f23369c872f68b7d35f9c98ab2f01bc4d664",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "230ca117d64ba133113824c10837a8fa0e7115a85bc419fc50bc70e84168e631",
+      "rust_duration_seconds": 0.14,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "8365d7e4b5b835369c7adf197f200f247de76a2262448e5b8071aba33d0c1144",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-cr1",
+      "scenario_name": "Appendix 3 - CR1 Scenario",
+      "started_at": "2026-06-02T20:38:08.132471+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:26.577543+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "af9a526008f7d1ad5fec9432645cabf05b484598f4b95ce74b2e6a292aacdffa",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128375574.85,
+          "2030": 143113863.69,
+          "2040": 173514649.02,
+          "2046": 191996416.45,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5907544.22,
+          "2030": 7553734.83,
+          "2040": 10177755.68,
+          "2046": 11517244.85,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772556.88,
+          "2030": 836108.97,
+          "2040": 945834.0,
+          "2046": 1006970.35,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4926.57,
+          "2030": 6891.97,
+          "2040": 11764.34,
+          "2046": 15451.4,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11812985.72,
+          "2030": 15104267.56,
+          "2040": 20348877.63,
+          "2046": 23028295.1,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1166059.65,
+          "2030": 1282717.94,
+          "2040": 1464512.72,
+          "2046": 1565378.58,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114943572.52,
+          "2030": 128785549.52,
+          "2040": 156434639.81,
+          "2046": 172811934.91,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "66ebd0cfc175816fa2ae277695c2048b8f26dd91e1609b00e3ecfe01b3e49a76",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "31c293d4134cd87574fd1abc858c89e375d4b91be5c9af3d8ea80bece9e9e26c",
+      "rust_duration_seconds": 0.123,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "4b1e390c3c3367ab39dc76081adffbfde2df221316c9ee44a1d994b1b4c01727",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-cr3",
+      "scenario_name": "Appendix 3 - CR3 Scenario",
+      "started_at": "2026-06-02T20:38:08.132518+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:37.423475+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "b28af3732f8cd18ef98afc6faa1b8104f1d446a6f8631cd549d883c7d3d9069e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128376496.0,
+          "2030": 143114410.1,
+          "2040": 173511457.14,
+          "2046": 191989075.72,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5903043.62,
+          "2030": 7544105.22,
+          "2040": 10156486.6,
+          "2046": 11487417.82,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772292.31,
+          "2030": 835793.39,
+          "2040": 945381.18,
+          "2046": 1006414.64,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5973.78,
+          "2030": 8318.88,
+          "2040": 14134.27,
+          "2046": 18530.75,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11803986.13,
+          "2030": 15085012.42,
+          "2040": 20306353.34,
+          "2046": 22968657.07,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1191832.52,
+          "2030": 1317036.76,
+          "2040": 1518286.65,
+          "2046": 1631870.19,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905955.81,
+          "2030": 128734392.59,
+          "2040": 156357246.46,
+          "2046": 172717651.93,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "5992b80595fc4664b46a056c9d95ae888f1ca8f7eabc11d4bd27ef51d1d7f6aa",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "ef5b3b01d093f05f313738b9663727526785e61b79a6c915fee9823b5e625c6f",
+      "rust_duration_seconds": 0.136,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "9b3139cf4dfdba0323398e0c0667689bdb6bf88a42251f6555710b23d7cb11a1",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQX93DWCPGW3P6FAY7PBVY",
+      "scenario_name": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
+      "started_at": "2026-06-02T20:38:35.346772+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:39.912863+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "41ea329a923f021db5e08f275e76fc26dda305b2645d84af70226655493c1c69",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128376136.41,
+          "2030": 143113912.87,
+          "2040": 173510664.65,
+          "2046": 191988085.52,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5903398.86,
+          "2030": 7544591.64,
+          "2040": 10157250.0,
+          "2046": 11488364.83,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772341.95,
+          "2030": 835851.32,
+          "2040": 945459.12,
+          "2046": 1006506.62,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5974.99,
+          "2030": 8320.79,
+          "2040": 14137.81,
+          "2046": 18535.47,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11804696.49,
+          "2030": 15085985.05,
+          "2040": 20307879.63,
+          "2046": 22970550.59,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1191939.54,
+          "2030": 1317182.34,
+          "2040": 1518509.09,
+          "2046": 1632141.38,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905923.69,
+          "2030": 128734345.21,
+          "2040": 156357163.6,
+          "2046": 172717544.23,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "f5b644b83139fb1cfa7977e4e31210a601244125f4af369075d30eb46645f007",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "e3f9ffd34ba76f7d96e563102535511e2baad25b9fd42e304b467a1b70588cad",
+      "rust_duration_seconds": 0.141,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "eff53608c8651331b8f1e3023abc575cdac94ea8fbbccf04963e45fdfc6afffe",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXD7HAH2445KWHVNQ7X0Q",
+      "scenario_name": "Appendix 3 - Tobacco 2 - Warning labels and standardized packaging",
+      "started_at": "2026-06-02T20:38:37.426007+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:43.023040+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "41ea329a923f021db5e08f275e76fc26dda305b2645d84af70226655493c1c69",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128375787.11,
+          "2030": 143113253.7,
+          "2040": 173509411.65,
+          "2046": 191986461.48,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5903745.89,
+          "2030": 7545240.98,
+          "2040": 10158464.45,
+          "2046": 11489925.7,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772427.54,
+          "2030": 835950.96,
+          "2040": 945592.81,
+          "2046": 1006664.23,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5975.98,
+          "2030": 8323.1,
+          "2040": 14143.18,
+          "2046": 18543.04,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11805390.43,
+          "2030": 15087283.45,
+          "2040": 20310307.75,
+          "2046": 22973671.47,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1192039.33,
+          "2030": 1317371.32,
+          "2040": 1518858.73,
+          "2046": 1632585.37,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905893.69,
+          "2030": 128734285.24,
+          "2040": 156357037.39,
+          "2046": 172717372.54,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "377c2ca5c06ec548b4be62aecff247df84312e70d0fe72ea58e9c34d57328c48",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "7af1bcc9b1b0971d991f1557d4ac4a56083a16104dc08b3484911802e056a257",
+      "rust_duration_seconds": 0.145,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "efb4731ac81b0b5b21ebcdd0f89ef0c61d074e5ff01ec6de4125852a4a5eecbd",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXDZT3139X2B11QTDQDKR",
+      "scenario_name": "Appendix 3 - Tobacco 3 - Advertising and promotion bans",
+      "started_at": "2026-06-02T20:38:39.697209+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:43.755115+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "41ea329a923f021db5e08f275e76fc26dda305b2645d84af70226655493c1c69",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128376486.49,
+          "2030": 143114573.54,
+          "2040": 173511920.58,
+          "2046": 191989713.41,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5903051.06,
+          "2030": 7543940.84,
+          "2040": 10156032.71,
+          "2046": 11486800.28,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772256.17,
+          "2030": 835751.46,
+          "2040": 945325.11,
+          "2046": 1006348.63,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5974.01,
+          "2030": 8318.47,
+          "2040": 14132.41,
+          "2046": 18527.88,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11804001.02,
+          "2030": 15084683.72,
+          "2040": 20305445.84,
+          "2046": 22967422.32,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1191839.51,
+          "2030": 1316992.89,
+          "2040": 1518158.54,
+          "2046": 1631696.23,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905953.75,
+          "2030": 128734405.32,
+          "2040": 156357290.11,
+          "2046": 172717716.33,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "21f06425f77c5cf1d32fb092168eb93d5d276c4ba868c2e6300a96866f0adc1e",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "4f2309b8012402d5f082a50d51549a74417688ffa5c22059f7d6ff72150c8cea",
+      "rust_duration_seconds": 0.162,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "60708e3a61d645726f32e50d9ce952d839a985e16f5d20e412c3af143d3ebbb3",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXJWK1HQBHNG6BMT3KCXR",
+      "scenario_name": "Appendix 3 - Tobacco 4 - Smoke-free environments",
+      "started_at": "2026-06-02T20:38:41.049507+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:47.408917+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "41ea329a923f021db5e08f275e76fc26dda305b2645d84af70226655493c1c69",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128376311.35,
+          "2030": 143114243.02,
+          "2040": 173511292.25,
+          "2046": 191988898.98,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5903225.06,
+          "2030": 7544266.42,
+          "2040": 10156641.71,
+          "2046": 11487583.02,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772299.08,
+          "2030": 835801.42,
+          "2040": 945392.15,
+          "2046": 1006427.67,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5974.5,
+          "2030": 8319.63,
+          "2040": 14135.11,
+          "2046": 18531.68,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11804348.94,
+          "2030": 15085334.76,
+          "2040": 20306663.45,
+          "2046": 22968987.38,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1191889.55,
+          "2030": 1317087.67,
+          "2040": 1518333.93,
+          "2046": 1631918.95,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905938.71,
+          "2030": 128734375.25,
+          "2040": 156357226.82,
+          "2046": 172717630.23,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "50f45f3e4be495c6b176894591e92818d6af956a226f0cc8311b5158b76097b0",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "203834ee20eef442804482f41aa0684ae16af14b588700d8cb9a368615569591",
+      "rust_duration_seconds": 0.194,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "db7477a58f6766d0e500ed320b333eefa42ad70b6e06171eaf71570ddb896e91",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXQCZ80YXPX4QZ39BM820",
+      "scenario_name": "Appendix 3 - Tobacco 5 - Mass media campaigns",
+      "started_at": "2026-06-02T20:38:43.453066+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:50.542917+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "41ea329a923f021db5e08f275e76fc26dda305b2645d84af70226655493c1c69",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128375909.28,
+          "2030": 143113484.24,
+          "2040": 173509849.87,
+          "2046": 191987029.46,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5903624.52,
+          "2030": 7545013.87,
+          "2040": 10158039.72,
+          "2046": 11489379.81,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772397.6,
+          "2030": 835916.11,
+          "2040": 945546.06,
+          "2046": 1006609.11,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5975.63,
+          "2030": 8322.29,
+          "2040": 14141.3,
+          "2046": 18540.39,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11805147.72,
+          "2030": 15086829.34,
+          "2040": 20309458.55,
+          "2046": 22972580.0,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1192004.43,
+          "2030": 1317305.23,
+          "2040": 1518736.46,
+          "2046": 1632430.1,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905904.18,
+          "2030": 128734306.21,
+          "2040": 156357081.53,
+          "2046": 172717432.59,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "a8154544be00c7d6d4f3704ebe646d59fffbf07776952c5f28cbedf609d74c07",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "981b5b5ebf42049695dbee844ac8502f786a1320ca0830bd7ee6ce21c5685cef",
+      "rust_duration_seconds": 0.165,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "af63feefc9b3039cef4af10aa4e02e8e76f852e12af44cef244a23616f749f45",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXHNH8XVABYPZKX9BNRF1",
+      "scenario_name": "Appendix 3 - Tobacco 6 - Cessation support services",
+      "started_at": "2026-06-02T20:38:46.698188+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:52.082320+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "41ea329a923f021db5e08f275e76fc26dda305b2645d84af70226655493c1c69",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128376895.3,
+          "2030": 143115345.1,
+          "2040": 173513387.44,
+          "2046": 191991614.76,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5902644.91,
+          "2030": 7543180.79,
+          "2040": 10154610.97,
+          "2046": 11484972.89,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772156.0,
+          "2030": 835634.83,
+          "2040": 945168.6,
+          "2046": 1006164.1,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5972.86,
+          "2030": 8315.77,
+          "2040": 14126.12,
+          "2046": 18519.02,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11803188.85,
+          "2030": 15083163.96,
+          "2040": 20302603.29,
+          "2046": 22963768.53,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1191722.66,
+          "2030": 1316771.59,
+          "2040": 1517749.01,
+          "2046": 1631176.17,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905988.85,
+          "2030": 128734475.52,
+          "2040": 156357437.86,
+          "2046": 172717917.34,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "3925ebc633a40ae605ce47493b3e929642120fdc7adaa62e3496bb5eb874e938",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "1778c6feacd7c5637c6d0ca5147bea8a8665185201edca48bdb2ad7dc422f410",
+      "rust_duration_seconds": 0.173,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "4df8c98386ef9b6c36f9905203a7ffefef4cdf5cab13519fd9368f4ecedbb7c9",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-tobacco-t7",
+      "scenario_name": "Appendix 3 - Tobacco 7 - Pharmacological cessation aids",
+      "started_at": "2026-06-02T20:38:48.117723+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:39:01.933661+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "e8eb1a58564e276c632d050457f1e260215089c5b9d0a901f57cefe9d13fa34d",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128375264.6,
+          "2030": 143112267.72,
+          "2040": 173507537.61,
+          "2046": 191984032.58,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5904265.01,
+          "2030": 7546212.24,
+          "2040": 10160280.84,
+          "2046": 11492260.11,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772555.57,
+          "2030": 836100.0,
+          "2040": 945792.77,
+          "2046": 1006899.96,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5977.45,
+          "2030": 8326.55,
+          "2040": 14151.23,
+          "2046": 18554.36,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11806428.48,
+          "2030": 15089225.56,
+          "2040": 20313939.34,
+          "2046": 22978339.04,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1192188.58,
+          "2030": 1317653.92,
+          "2040": 1519381.51,
+          "2046": 1633249.19,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905848.82,
+          "2030": 128734195.52,
+          "2040": 156356848.62,
+          "2046": 172717115.75,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "91bc1597506928dd1aa86dc0934c691402e30947abd975c3fc7462c3089243c6",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "126b9affdfbadf6b8ca09ceab4b464390d70ce6d014f0a78c60324c53ef0a03f",
+      "rust_duration_seconds": 0.127,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "84cdb64ac906ebb393bd4a3d3b65845e5124a36a08e3231a74dec66871d0b9c0",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "01K2RQXPRHJEXZ1GRQACC2375S",
+      "scenario_name": "Baseline Scenario",
+      "started_at": "2026-06-02T20:38:08.132392+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:39:34.362575+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "5d04590769c2527ed75482aec56c2cbd2a45f6e875d0a4aec1f621e0adcfe518",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128375264.6,
+          "2030": 143112267.72,
+          "2040": 173507537.61,
+          "2046": 191984032.58,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5904265.01,
+          "2030": 7546212.24,
+          "2040": 10160280.84,
+          "2046": 11492260.11,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772555.57,
+          "2030": 836100.0,
+          "2040": 945792.77,
+          "2046": 1006899.96,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5977.45,
+          "2030": 8326.55,
+          "2040": 14151.23,
+          "2046": 18554.36,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11806428.48,
+          "2030": 15089225.56,
+          "2040": 20313939.34,
+          "2046": 22978339.04,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1192188.58,
+          "2030": 1317653.92,
+          "2040": 1519381.51,
+          "2046": 1633249.19,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905848.82,
+          "2030": 128734195.52,
+          "2040": 156356848.62,
+          "2046": 172717115.75,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "91bc1597506928dd1aa86dc0934c691402e30947abd975c3fc7462c3089243c6",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "3a6bef2adfbce2837c26c293b48f9daa2f127a9390cdafe388c0451a28e5cbdf",
+      "rust_duration_seconds": 0.209,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "84cdb64ac906ebb393bd4a3d3b65845e5124a36a08e3231a74dec66871d0b9c0",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-high-dose-beclom",
+      "scenario_name": "Clinical Intervention - High Dose Beclometasone",
+      "started_at": "2026-06-02T20:38:20.988115+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:28.994565+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "af9a526008f7d1ad5fec9432645cabf05b484598f4b95ce74b2e6a292aacdffa",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128375264.6,
+          "2030": 143112267.72,
+          "2040": 173507537.61,
+          "2046": 191984032.58,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5904265.01,
+          "2030": 7546212.24,
+          "2040": 10160280.84,
+          "2046": 11492260.11,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772555.57,
+          "2030": 836100.0,
+          "2040": 945792.77,
+          "2046": 1006899.96,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5977.45,
+          "2030": 8326.55,
+          "2040": 14151.23,
+          "2046": 18554.36,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11806428.48,
+          "2030": 15089225.56,
+          "2040": 20313939.34,
+          "2046": 22978339.04,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1192188.58,
+          "2030": 1317653.92,
+          "2040": 1519381.51,
+          "2046": 1633249.19,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905848.82,
+          "2030": 128734195.52,
+          "2040": 156356848.62,
+          "2046": 172717115.75,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "91bc1597506928dd1aa86dc0934c691402e30947abd975c3fc7462c3089243c6",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "4a1ae79d6f3cb2bb3773baa0aa607f188b9715a584a36c30adf9f6c219f2e5e7",
+      "rust_duration_seconds": 0.129,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "84cdb64ac906ebb393bd4a3d3b65845e5124a36a08e3231a74dec66871d0b9c0",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-inhaled-beta-agonist",
+      "scenario_name": "Clinical Intervention - Inhaled Short Acting Beta Agonist",
+      "started_at": "2026-06-02T20:38:27.900543+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:31.415359+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "af9a526008f7d1ad5fec9432645cabf05b484598f4b95ce74b2e6a292aacdffa",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128375264.6,
+          "2030": 143112267.72,
+          "2040": 173507537.61,
+          "2046": 191984032.58,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5904265.01,
+          "2030": 7546212.24,
+          "2040": 10160280.84,
+          "2046": 11492260.11,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772555.57,
+          "2030": 836100.0,
+          "2040": 945792.77,
+          "2046": 1006899.96,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5977.45,
+          "2030": 8326.55,
+          "2040": 14151.23,
+          "2046": 18554.36,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11806428.48,
+          "2030": 15089225.56,
+          "2040": 20313939.34,
+          "2046": 22978339.04,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1192188.58,
+          "2030": 1317653.92,
+          "2040": 1519381.51,
+          "2046": 1633249.19,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905848.82,
+          "2030": 128734195.52,
+          "2040": 156356848.62,
+          "2046": 172717115.75,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "91bc1597506928dd1aa86dc0934c691402e30947abd975c3fc7462c3089243c6",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "f352547830475f768313e80915734e4defa0400234969a892a0a64008ff236e9",
+      "rust_duration_seconds": 0.125,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "84cdb64ac906ebb393bd4a3d3b65845e5124a36a08e3231a74dec66871d0b9c0",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-low-dose-beclom",
+      "scenario_name": "Clinical Intervention - Low Dose Beclometasone",
+      "started_at": "2026-06-02T20:38:30.327368+00:00",
+      "status": "pass"
+    },
+    {
+      "bundle_input_count": 1331,
+      "bundle_semantic_sha256": "f65355df9737f0c3b0b2019d19d6937c31f4f61f0f57b2b20515e6fa2cbf6558",
+      "completed_at": "2026-06-02T20:38:35.098212+00:00",
+      "country": "ETH",
+      "country_name": "Ethiopia",
+      "data_bundle_sha256": "b28af3732f8cd18ef98afc6faa1b8104f1d446a6f8631cd549d883c7d3d9069e",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 128375264.6,
+          "2030": 143112267.72,
+          "2040": 173507537.61,
+          "2046": 191984032.58,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 5904265.01,
+          "2030": 7546212.24,
+          "2040": 10160280.84,
+          "2046": 11492260.11,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 772555.57,
+          "2030": 836100.0,
+          "2040": 945792.77,
+          "2046": 1006899.96,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 5977.45,
+          "2030": 8326.55,
+          "2040": 14151.23,
+          "2046": 18554.36,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 11806428.48,
+          "2030": 15089225.56,
+          "2040": 20313939.34,
+          "2046": 22978339.04,
+          "metric": "Years lived with disability"
+        },
+        {
+          "2025": 1192188.58,
+          "2030": 1317653.92,
+          "2040": 1519381.51,
+          "2046": 1633249.19,
+          "metric": "Years of life lost"
+        },
+        {
+          "2025": 114905848.82,
+          "2030": 128734195.52,
+          "2040": 156356848.62,
+          "2046": 172717115.75,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "91bc1597506928dd1aa86dc0934c691402e30947abd975c3fc7462c3089243c6",
+      "model_id": "01K2RQX87G091TTBH00ANN38VP",
+      "model_slug": "ncd-asthma",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 66803,
+      "run_signature_sha256": "c6a5411d289e22953aed087486ba915aaed27da116568c9ad7be342252a0107f",
+      "rust_duration_seconds": 0.154,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "84cdb64ac906ebb393bd4a3d3b65845e5124a36a08e3231a74dec66871d0b9c0",
+      "rust_runner_path": "/Users/rory/Documents/botech-rust/target/release/run_model",
+      "rust_runner_sha256": "36b27f65ee3ea17d9145c91cd4ff17931c08d7a0274e7549b5e5806ffb95c703",
+      "scenario_id": "asthma-oral-prednisolone",
+      "scenario_name": "Clinical Intervention - Oral Prednisolone",
+      "started_at": "2026-06-02T20:38:32.874412+00:00",
+      "status": "pass"
+    }
+  ],
+  "country_scope": "default",
+  "created_at": "2026-06-02T20:49:10+00:00",
+  "failed": 0,
+  "generated_file_retention": "temporary materialised models, data bundles, and result CSVs are discarded after hashing and headline extraction",
+  "model_card_id": "model-card:ncd-asthma:client-manifest-current:v1",
+  "passed": 30,
+  "reference_country": "ETH",
+  "reference_headline_metrics": [
+    {
+      "2025": 128375247.38,
+      "2030": 143112179.28,
+      "2040": 173507143.89,
+      "2046": 191983347.13,
+      "metric": "Population at risk"
+    },
+    {
+      "2025": 5904083.42,
+      "2030": 7545796.83,
+      "2040": 10159318.8,
+      "2046": 11490886.17,
+      "metric": "Asthma prevalence state"
+    },
+    {
+      "2025": 772555.5,
+      "2030": 836099.51,
+      "2040": 945790.49,
+      "2046": 1006896.06,
+      "metric": "Asthma incidence flow"
+    },
+    {
+      "2025": 6035.52,
+      "2030": 8405.48,
+      "2040": 14281.98,
+      "2046": 18724.04,
+      "metric": "Asthma mortality flow"
+    },
+    {
+      "2025": 11806065.37,
+      "2030": 15088394.92,
+      "2040": 20312015.88,
+      "2046": 22975591.9,
+      "metric": "Years lived with disability"
+    },
+    {
+      "2025": 1193638.03,
+      "2030": 1319589.68,
+      "2040": 1522417.77,
+      "2046": 1637002.59,
+      "metric": "Years of life lost"
+    },
+    {
+      "2025": 114901104.9,
+      "2030": 128727975.09,
+      "2040": 156348045.59,
+      "2046": 172706815.56,
+      "metric": "Healthy years lived"
+    }
+  ],
+  "reference_scenario": "asthma-null",
+  "row_count": 30,
+  "run_certificate_id": "run-certificate:ncd-asthma:all-scenarios-default-20260602b:v1",
+  "run_certificate_signature_sha256": "1348fd1d132f9917e06f0fbba657b224c1eda582a9040bfb8e83f027bc01942b",
+  "scenario_scope": "all",
+  "schema": "run-certificate.v1",
+  "source_run_file_sha256": "65c637e60967e15878c9a8df7fb5748936c7465d0a9f0be25c0345320e84902d",
+  "source_run_id": "all-scenarios-default-20260602b",
+  "source_run_semantic_sha256": "9255bc6b6fd10c7035ff6f7e509dfa34ece9a6cf87a12c93bdacf40a017ea946",
+  "status": "pass",
+  "status_definition": "pass means the Rust runner exited successfully and emitted result rows for the scenario-country run",
+  "title": "Asthma Run Certificate",
+  "warnings": [
+    "This certificate records runtime execution evidence only. It does not compare model outputs with OneHealth Tool, Spectrum, Appendix 3 reference outputs, or another external comparator.",
+    "Generated data bundles are identified by hashes in the run JSON, but the hosted unified API/datafetcher source version that produced them is not pinned in this certificate."
+  ]
+}

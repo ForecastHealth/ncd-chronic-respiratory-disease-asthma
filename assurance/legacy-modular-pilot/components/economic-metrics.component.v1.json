@@ -1,0 +1,126 @@
+{
+  "component_id": "economic-metrics",
+  "contract": {
+    "inputs": [
+      {
+        "from_component": "burden-metrics",
+        "id": "healthy_years_lived"
+      },
+      {
+        "id": "gdp_per_capita",
+        "source": "fhdb.wb_gdp_per_capita"
+      },
+      {
+        "id": "labour_force_participation",
+        "source": "fhdb.ilo_labour_force_participation_rate"
+      }
+    ],
+    "outputs": [
+      {
+        "current_binding": "Economic Value",
+        "id": "economic_value"
+      }
+    ]
+  },
+  "description": "",
+  "kind": "downstream_handoff",
+  "label": "Economic metrics",
+  "links": [
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "pfDEgvPv",
+      "remove_value_from_source": false,
+      "source": "HaYRxeQQ",
+      "target": "DXhAVyOP",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "B48YPJzw",
+      "remove_value_from_source": false,
+      "source": "mrGezI4c",
+      "target": "DXhAVyOP",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "DbLhgNYh",
+      "remove_value_from_source": false,
+      "source": "yRNlzW3v",
+      "target": "DXhAVyOP",
+      "value_to_target_operator": "add"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "DXhAVyOP",
+      "label": "Economic Value",
+      "x": -59.83,
+      "y": 33.36
+    },
+    {
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "fetch_once": true,
+        "method": "wb_gdp_per_capita",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "HaYRxeQQ",
+      "label": "GDP Per Capita",
+      "x": -77.56,
+      "y": 13.91
+    },
+    {
+      "color": "#06B4E1",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "fetch_once": true,
+        "method": "ilo_labour_force_participation_rate",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "mrGezI4c",
+      "label": "Labour Force Participation",
+      "x": -84.55,
+      "y": 23.53
+    }
+  ],
+  "owned_link_ids": [
+    "pfDEgvPv",
+    "B48YPJzw",
+    "DbLhgNYh"
+  ],
+  "owned_node_ids": [
+    "DXhAVyOP",
+    "HaYRxeQQ",
+    "mrGezI4c"
+  ],
+  "schema": "asthma-component.v1"
+}

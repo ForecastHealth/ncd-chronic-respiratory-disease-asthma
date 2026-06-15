@@ -1,0 +1,82 @@
+{
+  "component_count": 9,
+  "components": [
+    {
+      "component_id": "demographic-substrate",
+      "component_ref": "components/demographic-substrate.component.v1.json",
+      "component_signature_sha256": "8f2b0fc93896f578fbd6257a1bc2eb7e25bec8bab8d773c6ce4e69886b04ecd2",
+      "execution_mode": "compiled_together_current_graph_boundary",
+      "label": "Demographic substrate",
+      "role": "Population substrate"
+    },
+    {
+      "component_id": "disease-epidemiology-core",
+      "component_ref": "components/disease-epidemiology-core.component.v1.json",
+      "component_signature_sha256": "a54b3566ec9188d226fa9a5428b277dc9680d4d8837461f93cec5e30bbcd86dc",
+      "execution_mode": "compiled_together_current_graph_boundary",
+      "label": "Disease epidemiology core",
+      "role": "Disease state and transfer mechanics"
+    },
+    {
+      "component_id": "burden-metrics",
+      "component_ref": "components/burden-metrics.component.v1.json",
+      "component_signature_sha256": "07fc0eb0e69c234e9b13329fa41c797f0abb5e95baa177df290b4274c2fd5be8",
+      "execution_mode": "compiled_together_current_graph_boundary",
+      "label": "Burden metrics",
+      "role": "Health-output metrics"
+    },
+    {
+      "component_id": "economic-metrics",
+      "component_ref": "components/economic-metrics.component.v1.json",
+      "component_signature_sha256": "c6344f05591e5a4d49fd31305cae388ee968e2f16f7929d97d96d101bf6bec0a",
+      "execution_mode": "downstream_metric_current_graph_boundary",
+      "label": "Economic metrics",
+      "role": "Economic output metrics"
+    },
+    {
+      "component_id": "tobacco-risk-factor",
+      "component_ref": "components/tobacco-risk-factor.component.v1.json",
+      "component_signature_sha256": "f961d47eba1fad33b7c5eb1300edc6f8a963b7d5cddf92458921b5c446bcb6db",
+      "execution_mode": "link_then_inject_bundle_candidate_current_graph_boundary",
+      "label": "Tobacco Risk Factor",
+      "role": "Risk-factor modifier"
+    },
+    {
+      "component_id": "clinical-low-dose-beclometasone",
+      "component_ref": "components/clinical-low-dose-beclometasone.component.v1.json",
+      "component_signature_sha256": "a2eaa946719280a2588f53bde238e29b39f2ef81485ce4fc606727f9b10ab8b0",
+      "execution_mode": "compiled_together_current_graph_boundary",
+      "label": "Clinical Low Dose Beclometasone",
+      "role": "Clinical intervention"
+    },
+    {
+      "component_id": "clinical-high-dose-beclometasone",
+      "component_ref": "components/clinical-high-dose-beclometasone.component.v1.json",
+      "component_signature_sha256": "cf9a069dc382771377bad2eefdfd442a967d7cb02cd69c1a0085955e31fbbf38",
+      "execution_mode": "compiled_together_current_graph_boundary",
+      "label": "Clinical High Dose Beclometasone",
+      "role": "Clinical intervention"
+    },
+    {
+      "component_id": "clinical-oral-prednisolone",
+      "component_ref": "components/clinical-oral-prednisolone.component.v1.json",
+      "component_signature_sha256": "0f5ea749ac15673c49f24715beb4ff7db6641a88a96d37dd95c7f70cbfe604b4",
+      "execution_mode": "compiled_together_current_graph_boundary",
+      "label": "Clinical Oral Prednisolone",
+      "role": "Clinical intervention"
+    },
+    {
+      "component_id": "clinical-inhaled-short-acting-beta-agonist",
+      "component_ref": "components/clinical-inhaled-short-acting-beta-agonist.component.v1.json",
+      "component_signature_sha256": "b5d0973c9146228ba828d0ec83df785edca6ae7817d44d4d4be257da52db57e8",
+      "execution_mode": "compiled_together_current_graph_boundary",
+      "label": "Clinical Inhaled Short Acting Beta Agonist",
+      "role": "Clinical intervention"
+    }
+  ],
+  "composition_record": "composition-record.v1.json",
+  "created_at": "2026-06-02T15:51:32+00:00",
+  "index_signature_sha256": "477cf1fc7630d30a3338fc0de0bbd4c88d8990703ba0c879f4dc9cfa097e44e0",
+  "model_slug": "ncd-asthma",
+  "schema": "ncd-module-index.v1"
+}

@@ -1,0 +1,239 @@
+
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.82in]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{microtype}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+\renewcommand{\familydefault}{\ttdefault}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+\definecolor{FHMuted}{HTML}{666666}
+\AtBeginDocument{\RaggedRight}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[L]{\footnotesize\color{FHMuted}Forecast Health}
+\fancyfoot[C]{\footnotesize\color{FHMuted}Model Card}
+\fancyfoot[R]{\footnotesize\color{FHMuted}Page \thepage\ of \pageref{LastPage}}
+\newcommand{\sectiontitle}[1]{\clearpage\phantomsection\addcontentsline{toc}{section}{#1}{\large\bfseries #1}\par\vspace{-2pt}}
+\begin{document}
+\includegraphics[width=1.08in]{/Users/rory/.codex/skills/fhi-memo/assets/logo-lockup-static.pdf}\hfill {\Large\bfseries Model Card}
+
+\vspace{14pt}\hrule height 0.8pt\vspace{16pt}
+{\Huge\bfseries Asthma}\par
+{\Large Ethiopia}\par
+\vspace{8pt}
+
+\clearpage
+\tableofcontents
+
+
+\sectiontitle{Identity}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{2.25in}X@{}}
+Model & Asthma\\
+Country & Ethiopia\\
+Reference parameter set & reference-parameter-set:ncd-asthma:synthetic-v1\\
+Scenario registry & scenario-registry:ncd-asthma:reference-synthetic-v1\\
+Source model hash & 94c67579de128117\\
+\end{tabularx}
+
+\sectiontitle{Reference Case}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{2.25in}X@{}}
+Reference case & Ethiopia asthma inputs\\
+Country code & ETH\\
+Output years & 2000-2100\\
+Engine runtime & 2000-2101\\
+Data bundle & 05f1380ee9926dff\\
+\end{tabularx}
+
+\sectiontitle{Provenance}
+\begingroup
+\small
+\begin{longtable}{@{}p{1.85in}p{2.25in}p{2.25in}@{}}
+\toprule
+\textbf{Record} & \textbf{Source} & \textbf{Citation}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Record} & \textbf{Source} & \textbf{Citation}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Age-specific fertility rate & World Population Prospects; 2022 revision, medium variant; United Nations Department of Economic and Social Affairs, Population Division & United Nations, Department of Economic and Social Affairs, Population Division. World Population Prospects 2022.\\
+Net migration rate & World Population Prospects; 2022 revision, general demographic indicators; United Nations Department of Economic and Social Affairs, Population Division & United Nations, Department of Economic and Social Affairs, Population Division. World Population Prospects 2022.\\
+Life table mortality by age and sex & World Population Prospects; 2022 revision, medium variant; United Nations Department of Economic and Social Affairs, Population Division & United Nations, Department of Economic and Social Affairs, Population Division. World Population Prospects 2022.\\
+Population by single year of age and sex & World Population Prospects; 2022 revision, medium variant; United Nations Department of Economic and Social Affairs, Population Division & United Nations, Department of Economic and Social Affairs, Population Division. World Population Prospects 2022.\\
+Sex ratio at birth & World Population Prospects; 2024 revision, medium variant; United Nations Department of Economic and Social Affairs, Population Division & United Nations, Department of Economic and Social Affairs, Population Division. World Population Prospects 2024.\\
+Healthy population disability weights by GBD region, sex and age bin & Spectrum/GBD disability-weight defaults; Spectrum GBModData disability-weight CSV; Avenir Health; Institute for Health Metrics and Evaluation; World Health Organization & Avenir Health. Spectrum Manual; GBD disability-weight defaults as bundled in Spectrum GBModData.\\
+Asthma high-dose beclometasone disability impact & Spectrum/OneHealth asthma disease association file; Spectrum 5 Asthma workbook; Avenir Health; World Health Organization & Avenir Health. OneHealth Manual. NCD module section; Avenir/WHO NCD OneHealth guide.\\
+Asthma high-dose beclometasone population in need & Spectrum/OneHealth asthma disease association file; Spectrum 5 Asthma workbook; Avenir Health; World Health Organization & Avenir Health. OneHealth Manual. NCD module section; Avenir/WHO NCD OneHealth guide.\\
+Asthma inhaled short-acting beta agonist disability impact & Spectrum/OneHealth asthma disease association file; Spectrum 5 Asthma workbook; Avenir Health; World Health Organization & Avenir Health. OneHealth Manual. NCD module section; Avenir/WHO NCD OneHealth guide.\\
+Asthma inhaled short-acting beta agonist population in need & Spectrum/OneHealth asthma disease association file; Spectrum 5 Asthma workbook; Avenir Health; World Health Organization & Avenir Health. OneHealth Manual. NCD module section; Avenir/WHO NCD OneHealth guide.\\
+Asthma low-dose beclometasone disability impact & Spectrum/OneHealth asthma disease association file; Spectrum 5 Asthma workbook; Avenir Health; World Health Organization & Avenir Health. OneHealth Manual. NCD module section; Avenir/WHO NCD OneHealth guide.\\
+Asthma low-dose beclometasone population in need & Spectrum/OneHealth asthma disease association file; Spectrum 5 Asthma workbook; Avenir Health; World Health Organization & Avenir Health. OneHealth Manual. NCD module section; Avenir/WHO NCD OneHealth guide.\\
+Asthma oral prednisolone disability impact & Spectrum/OneHealth asthma disease association file; Spectrum 5 Asthma workbook; Avenir Health; World Health Organization & Avenir Health. OneHealth Manual. NCD module section; Avenir/WHO NCD OneHealth guide.\\
+Asthma oral prednisolone population in need & Spectrum/OneHealth asthma disease association file; Spectrum 5 Asthma workbook; Avenir Health; World Health Organization & Avenir Health. OneHealth Manual. NCD module section; Avenir/WHO NCD OneHealth guide.\\
+NCD disease observations and intervention defaults & Spectrum/OneHealth NCD disease association files; Spectrum 5 ModData NC disease workbook set; Avenir Health; World Health Organization & Avenir Health. OneHealth Manual. NCD module section.\\
+GBD epidemiology for NCD models & Global Burden of Disease via Spectrum/OneHealth NCD defaults; GBD/Spectrum legacy default dataset; Institute for Health Metrics and Evaluation; Avenir Health; World Health Organization & Avenir/WHO. A user guide to the NCD cost and impact modules of the OneHealth Tool. January 2018.\\
+Risk-factor relative risks & Spectrum/OneHealth NCD relative-risk defaults; Spectrum 5 ModData NC workbook set; Avenir Health; World Health Organization & Avenir/WHO. A user guide to the NCD cost and impact modules of the OneHealth Tool. January 2018.\\
+Risk-factor prevalence defaults & Spectrum/OneHealth NCD risk-factor defaults; Spectrum 5 ModData NC workbook set; Avenir Health; World Health Organization & Avenir Health. OneHealth Manual; Avenir/WHO. A user guide to the NCD cost and impact modules of the OneHealth Tool.\\
+Alcohol and tobacco tax defaults & Spectrum/OneHealth NCD tax defaults; Spectrum 5 ModData NC workbook set; Avenir Health; World Health Organization & WHO. Technical briefing for Appendix 3 of the Global Action Plan for Non-Communicable Diseases: Tobacco control interventions. 28 November 2022.\\
+Tobacco intervention effect-size and tax assumptions & WHO Appendix 3 tobacco technical assumptions via Spectrum/OneHealth; WHO technical brief 2022; Spectrum RiskFactorData workbook; World Health Organization; Avenir Health & WHO. Technical briefing for Appendix 3 of the Global Action Plan for Non-Communicable Diseases: Tobacco control interventions. 28 November 2022.\\
+\end{longtable}
+\endgroup
+
+\sectiontitle{Provenance Gaps}
+\begingroup
+\small
+\begin{longtable}{@{}p{2.0in}p{1.25in}p{3.0in}@{}}
+\toprule
+\textbf{Fetcher} & \textbf{Method} & \textbf{Scope}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Fetcher} & \textbf{Method} & \textbf{Scope}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+fhdb & ilo\_labour\_force\_participation\_rate & ETH; 2000\\
+fhdb & wb\_gdp\_per\_capita & ETH; 2000\\
+fhdb & yll\_weights & 2000-2101\\
+\end{longtable}
+\endgroup
+
+\sectiontitle{Internal Validity}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{2.25in}X@{}}
+Country reference run & \textcolor{green!45!black}{\textbf{pass}}\\
+Result rows & 66803\\
+Data bundle & unified\_api\\
+Bundle inputs & 1331\\
+Headline checks & \textcolor{green!45!black}{\textbf{pass}}\\
+Result hash & 9cb0e3f54b273e2e\\
+\end{tabularx}
+
+\sectiontitle{Headline Outputs}
+\begin{longtable}{@{}lrrr@{}}
+\toprule
+\textbf{Year} & \textbf{Asthma prevalence state} & \textbf{Asthma incidence flow} & \textbf{Asthma mortality flow}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Year} & \textbf{Asthma prevalence state} & \textbf{Asthma incidence flow} & \textbf{Asthma mortality flow}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+2000 & 2,337,954 & 460,101 & 2,125\\
+2001 & 2,620,741 & 469,841 & 2,306\\
+2002 & 2,891,942 & 479,766 & 2,480\\
+2003 & 3,152,965 & 490,214 & 2,645\\
+2004 & 3,403,381 & 500,777 & 2,804\\
+2005 & 3,644,189 & 512,039 & 2,962\\
+2006 & 3,879,023 & 522,701 & 3,159\\
+2007 & 4,109,418 & 533,506 & 3,365\\
+2008 & 4,333,371 & 544,812 & 3,583\\
+2009 & 4,554,178 & 555,899 & 3,810\\
+2010 & 4,773,374 & 567,307 & 4,049\\
+2011 & 4,990,331 & 578,382 & 4,290\\
+2012 & 5,203,196 & 589,481 & 4,546\\
+2013 & 5,409,557 & 600,049 & 4,813\\
+2014 & 5,612,176 & 610,122 & 5,092\\
+2015 & 5,809,297 & 621,026 & 5,382\\
+2016 & 6,007,217 & 632,042 & 5,683\\
+2017 & 6,200,881 & 643,990 & 6,004\\
+2018 & 6,390,374 & 656,223 & 6,336\\
+2019 & 6,579,002 & 669,166 & 6,677\\
+2020 & 6,770,558 & 683,429 & 7,029\\
+2021 & 6,960,430 & 697,805 & 7,358\\
+2022 & 7,152,560 & 711,894 & 7,675\\
+2023 & 7,348,336 & 725,975 & 8,005\\
+2024 & 7,549,430 & 740,215 & 8,360\\
+2025 & 7,751,736 & 754,230 & 8,745\\
+2026 & 7,955,301 & 767,864 & 9,157\\
+2027 & 8,160,326 & 781,229 & 9,582\\
+2028 & 8,364,754 & 794,566 & 10,023\\
+2029 & 8,571,459 & 807,629 & 10,475\\
+2030 & 8,778,020 & 820,456 & 10,947\\
+2031 & 8,984,502 & 832,778 & 11,429\\
+2032 & 9,190,983 & 844,521 & 11,927\\
+2033 & 9,393,879 & 856,201 & 12,436\\
+2034 & 9,597,211 & 867,014 & 12,954\\
+2035 & 9,800,104 & 877,782 & 13,493\\
+2036 & 10,000,920 & 888,231 & 14,060\\
+2037 & 10,199,278 & 898,410 & 14,649\\
+2038 & 10,396,376 & 908,273 & 15,263\\
+2039 & 10,592,344 & 918,036 & 15,904\\
+2040 & 10,785,998 & 927,861 & 16,570\\
+2041 & 10,976,656 & 937,664 & 17,260\\
+2042 & 11,166,179 & 947,515 & 17,968\\
+2043 & 11,355,146 & 957,173 & 18,687\\
+2044 & 11,542,692 & 967,363 & 19,423\\
+2045 & 11,728,086 & 977,241 & 20,182\\
+2046 & 11,913,981 & 987,226 & 20,978\\
+2047 & 12,100,083 & 997,000 & 21,814\\
+2048 & 12,284,094 & 1,007,105 & 22,688\\
+2049 & 12,466,343 & 1,016,907 & 23,583\\
+2050 & 12,647,438 & 1,026,858 & 24,492\\
+2051 & 12,831,659 & 1,036,616 & 25,436\\
+2052 & 13,011,998 & 1,046,591 & 26,409\\
+2053 & 13,190,678 & 1,056,384 & 27,382\\
+2054 & 13,368,945 & 1,065,893 & 28,366\\
+2055 & 13,544,445 & 1,075,145 & 29,388\\
+2056 & 13,723,669 & 1,083,914 & 30,463\\
+2057 & 13,896,463 & 1,092,678 & 31,605\\
+2058 & 14,065,209 & 1,100,902 & 32,782\\
+2059 & 14,238,105 & 1,108,729 & 33,979\\
+2060 & 14,407,244 & 1,116,200 & 35,199\\
+2061 & 14,575,004 & 1,123,204 & 36,465\\
+2062 & 14,736,280 & 1,130,438 & 37,767\\
+2063 & 14,894,747 & 1,137,220 & 39,061\\
+2064 & 15,049,527 & 1,143,490 & 40,368\\
+2065 & 15,199,936 & 1,149,581 & 41,714\\
+2066 & 15,346,230 & 1,155,398 & 43,108\\
+2067 & 15,493,565 & 1,161,142 & 44,554\\
+2068 & 15,633,908 & 1,166,779 & 46,055\\
+2069 & 15,771,041 & 1,171,845 & 47,559\\
+2070 & 15,904,065 & 1,177,210 & 49,034\\
+2071 & 16,035,190 & 1,182,644 & 50,553\\
+2072 & 16,164,679 & 1,187,975 & 52,103\\
+2073 & 16,288,116 & 1,192,971 & 53,651\\
+2074 & 16,412,740 & 1,197,453 & 55,191\\
+2075 & 16,534,410 & 1,202,166 & 56,757\\
+2076 & 16,652,581 & 1,207,030 & 58,335\\
+2077 & 16,767,995 & 1,211,728 & 59,935\\
+2078 & 16,879,638 & 1,216,264 & 61,548\\
+2079 & 16,984,820 & 1,220,843 & 63,157\\
+2080 & 17,088,743 & 1,225,094 & 64,689\\
+2081 & 17,191,936 & 1,229,169 & 66,261\\
+2082 & 17,294,975 & 1,233,268 & 67,845\\
+2083 & 17,392,571 & 1,237,621 & 69,428\\
+2084 & 17,488,521 & 1,241,676 & 70,975\\
+2085 & 17,584,442 & 1,245,474 & 72,528\\
+2086 & 17,679,939 & 1,249,163 & 74,110\\
+2087 & 17,768,743 & 1,252,941 & 75,716\\
+2088 & 17,851,074 & 1,256,045 & 77,315\\
+2089 & 17,932,349 & 1,258,800 & 78,900\\
+2090 & 18,016,377 & 1,261,445 & 80,503\\
+2091 & 18,095,573 & 1,264,241 & 82,127\\
+2092 & 18,169,486 & 1,266,725 & 83,742\\
+2093 & 18,243,724 & 1,269,264 & 85,323\\
+2094 & 18,317,856 & 1,271,642 & 86,894\\
+2095 & 18,385,502 & 1,273,978 & 88,473\\
+2096 & 18,457,575 & 1,275,769 & 90,058\\
+2097 & 18,524,844 & 1,277,695 & 91,696\\
+2098 & 18,585,625 & 1,279,403 & 93,333\\
+2099 & 18,641,604 & 1,280,810 & 94,977\\
+2100 & 18,700,302 & 1,281,903 & 96,647\\
+\end{longtable}
+
+\end{document}

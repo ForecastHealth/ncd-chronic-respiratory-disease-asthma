@@ -1,0 +1,232 @@
+{
+  "component_id": "burden-metrics",
+  "component_signature_sha256": "07fc0eb0e69c234e9b13329fa41c797f0abb5e95baa177df290b4274c2fd5be8",
+  "contract_summary": "YLD, YLL, DALY, healthy-years-lived and disability-weight outputs derived from the disease graph.",
+  "execution_mode": "compiled_together_current_graph_boundary",
+  "independently_executable_now": false,
+  "label": "Burden metrics",
+  "limitations": [],
+  "matched_links": {
+    "count": 26,
+    "sample": [
+      {
+        "id": "Z6UVoLxv",
+        "label": "AsthmaEpsd -> DsFreeSus",
+        "source": "AsthmaEpsd",
+        "target": "DsFreeSus"
+      },
+      {
+        "id": "tGFmOvlz",
+        "label": "AsthmaEpsd -> Births",
+        "source": "AsthmaEpsd",
+        "target": "Births"
+      },
+      {
+        "id": "yCtPKnQ5",
+        "label": "AsthmaEpsd -> AsthmaEpsd",
+        "source": "AsthmaEpsd",
+        "target": "AsthmaEpsd"
+      },
+      {
+        "id": "z2MaEXxg",
+        "label": "Prevalence DsFreeSus -> AsthmaEpsd",
+        "source": "DsFreeSus",
+        "target": "AsthmaEpsd"
+      },
+      {
+        "id": "NXoCjigb",
+        "label": "AsthmaEpsd_CFR -> AsthmaEpsd Mortality",
+        "source": "AsthmaEpsd_CFR",
+        "target": "AsthmaEpsd Mortality"
+      },
+      {
+        "id": "qIdKl1m3",
+        "label": "Mortality_Effect_Transform -> AsthmaEpsd Mortality",
+        "source": "Mortality_Effect_Transform",
+        "target": "AsthmaEpsd Mortality"
+      },
+      {
+        "id": "dgLZdA4x",
+        "label": "AsthmaEpsd -> AsthmaEpsd Mortality",
+        "source": "AsthmaEpsd",
+        "target": "AsthmaEpsd Mortality"
+      },
+      {
+        "id": "giAFe9qp",
+        "label": "DsFreeSus -> DsFreeSus HYL",
+        "source": "DsFreeSus",
+        "target": "nKC8vwhN"
+      },
+      {
+        "id": "ZTeJZRMo",
+        "label": "DsFreeSus HYL -> Healthy Years Lived",
+        "source": "nKC8vwhN",
+        "target": "yRNlzW3v"
+      },
+      {
+        "id": "F2a0bWMZ",
+        "label": "AsthmaEpsd -> AsthmaEpsd HYL",
+        "source": "AsthmaEpsd",
+        "target": "6fCgpoYB"
+      },
+      {
+        "id": "9ArOqGpt",
+        "label": "AsthmaEpsd HYL -> Healthy Years Lived",
+        "source": "6fCgpoYB",
+        "target": "yRNlzW3v"
+      },
+      {
+        "id": "qYdyg8Y5",
+        "label": "Modified_HYL -> AsthmaEpsd HYL",
+        "source": "W7MB6GWT",
+        "target": "6fCgpoYB"
+      },
+      {
+        "id": "oOJgYZ0V",
+        "label": "AsthmaEpsd_Incidence_Rate -> AsthmaEpsd Incidence",
+        "source": "rXFK8r54",
+        "target": "4iPxzqKo"
+      },
+      {
+        "id": "HGzwp14L",
+        "label": "DsFreeSus -> AsthmaEpsd Incidence",
+        "source": "DsFreeSus",
+        "target": "4iPxzqKo"
+      },
+      {
+        "id": "wAhdgLwg",
+        "label": "AsthmaEpsd Incidence -> AsthmaEpsd",
+        "source": "4iPxzqKo",
+        "target": "AsthmaEpsd"
+      },
+      {
+        "id": "PovmQQCi",
+        "label": "AsthmaEpsd Mortality -> Deceased",
+        "source": "AsthmaEpsd Mortality",
+        "target": "N4Cpf6le"
+      },
+      {
+        "id": "65f8gAJV",
+        "label": null,
+        "source": "AsthmaEpsd",
+        "target": "dycEX5CW"
+      },
+      {
+        "id": "N9rFWbuG",
+        "label": null,
+        "source": "AsthmaEpsd",
+        "target": "Th8rib7e"
+      },
+      {
+        "id": "8kfRNFLI",
+        "label": null,
+        "source": "AsthmaEpsd",
+        "target": "7jR6zfXt"
+      },
+      {
+        "id": "t7xlBFu5",
+        "label": null,
+        "source": "AsthmaEpsd",
+        "target": "8N5hy7kA"
+      }
+    ]
+  },
+  "matched_nodes": {
+    "count": 14,
+    "sample": [
+      {
+        "id": "AsthmaEpsd Mortality",
+        "label": "AsthmaEpsd Mortality",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "AsthmaEpsd_CFR",
+        "label": "AsthmaEpsd_CFR",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "AsthmaEpsd",
+        "label": "AsthmaEpsd",
+        "node_type": "STATE"
+      },
+      {
+        "id": "Asthma_Disability",
+        "label": "Asthma_Disability_Weight",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "nKC8vwhN",
+        "label": "DsFreeSus HYL",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "yRNlzW3v",
+        "label": "Healthy Years Lived",
+        "node_type": "STATE"
+      },
+      {
+        "id": "6fCgpoYB",
+        "label": "AsthmaEpsd HYL",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "rXFK8r54",
+        "label": "AsthmaEpsd_Incidence_Rate",
+        "node_type": "CONSTANT"
+      },
+      {
+        "id": "4iPxzqKo",
+        "label": "AsthmaEpsd Incidence",
+        "node_type": "SURROGATE"
+      },
+      {
+        "id": "b736zFQf",
+        "label": "YLD-DsFreeSus",
+        "node_type": null
+      },
+      {
+        "id": "dycEX5CW",
+        "label": "YLD-AsthmaEpsd",
+        "node_type": null
+      },
+      {
+        "id": "a98IyNnU",
+        "label": "YLL-DsFreeSus",
+        "node_type": null
+      },
+      {
+        "id": "MCxDBlE3",
+        "label": "YLL-AsthmaEpsd",
+        "node_type": null
+      },
+      {
+        "id": "N4Cpf6le",
+        "label": "Deceased-AsthmaEpsd",
+        "node_type": "STATE"
+      }
+    ]
+  },
+  "matched_scenario_parameters": [],
+  "matching_rule": "Case-insensitive match against node id, node label, node tags, link id, link label, link endpoints, generated data fetcher blocks, and scenario parameter names.",
+  "model_id": "01K2RQX87G091TTBH00ANN38VP",
+  "model_slug": "ncd-asthma",
+  "outputs_or_handoffs": [
+    "Uses or publishes in-graph node balances and generated values.",
+    "Uses or publishes in-graph edge values and transfer events."
+  ],
+  "patterns": [
+    "\\byld\\b",
+    "\\byll\\b",
+    "\\bdaly\\b",
+    "\\bhyl\\b",
+    "healthy years",
+    "disability weight",
+    "AsthmaEpsd"
+  ],
+  "role": "Health-output metrics",
+  "scenario_parameter_changes_relative_to_baseline": [],
+  "scenario_parameter_presence": [],
+  "schema": "ncd-module-component.v1",
+  "source_model": "public/models/ncd-asthma/model.json",
+  "source_model_sha256": "94c67579de12811738fb01527657a2c35190a9f300d6c55a0d8498828b9ee8ae"
+}

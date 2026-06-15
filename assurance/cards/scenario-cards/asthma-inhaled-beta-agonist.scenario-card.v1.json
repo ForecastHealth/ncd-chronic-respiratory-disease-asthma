@@ -1,0 +1,228 @@
+{
+  "composition_record_id": "composition:ncd-asthma:client-manifest-current:v1",
+  "model_card_id": "model-card:ncd-asthma:client-manifest-current:v1",
+  "parameter_count": 53,
+  "parameter_values": [
+    [
+      "High Dose Beclometasone Baseline Coverage",
+      0.05
+    ],
+    [
+      "High Dose Beclometasone Target Coverage",
+      0.05
+    ],
+    [
+      "High Dose Beclometasone Scale-Up Start Year",
+      0
+    ],
+    [
+      "High Dose Beclometasone Scale-Up Final Year",
+      1
+    ],
+    [
+      "High Dose Beclometasone Population In Need",
+      0.3
+    ],
+    [
+      "High Dose Beclometasone Disability Impact",
+      0.132
+    ],
+    [
+      "Inhaled Short Acting Beta Agonist Baseline Coverage",
+      0.05
+    ],
+    [
+      "Inhaled Short Acting Beta Agonist Target Coverage",
+      0.05
+    ],
+    [
+      "Inhaled Short Acting Beta Agonist Scale-Up Start Year",
+      1
+    ],
+    [
+      "Inhaled Short Acting Beta Agonist Scale-Up Final year",
+      2
+    ],
+    [
+      "Inhaled Short Acting Beta Agonist Population In Need",
+      0.3
+    ],
+    [
+      "Inhaled Short Acting Beta Agonist Disability Impact",
+      0.00961066
+    ],
+    [
+      "Low Dose Beclometasone Baseline Coverage",
+      0.05
+    ],
+    [
+      "Low Dose Beclometasone Target Coverage",
+      0.05
+    ],
+    [
+      "Low Dose Beclometasone Scale-Up Start Year",
+      1
+    ],
+    [
+      "Low Dose Beclometasone Scale-Up Final Year",
+      2
+    ],
+    [
+      "Low Dose Beclometasone Population In Need",
+      0.4
+    ],
+    [
+      "Low Dose Beclometasone Disability Impact",
+      0.08
+    ],
+    [
+      "Low Dose Beclometasone Mortality Impact",
+      0.5
+    ],
+    [
+      "Oral Prednisolone Baseline Coverage",
+      0.05
+    ],
+    [
+      "Oral Prednisolone Target Coverage",
+      0.05
+    ],
+    [
+      "Oral Prednisolone Scale-Up Start Year",
+      1
+    ],
+    [
+      "Oral Prednisolone Scale-Up Final Year",
+      2
+    ],
+    [
+      "Oral Prednisolone Population In Need",
+      0.3
+    ],
+    [
+      "Oral Prednisolone Disability Impact",
+      0.337
+    ],
+    [
+      "Country",
+      "AFG"
+    ],
+    [
+      "Start Year",
+      2020
+    ],
+    [
+      "End Year",
+      2121
+    ],
+    [
+      "Baseline Coverage Tobacco Ban",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Ban",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Ban",
+      0
+    ],
+    [
+      "Scale-Up Final Year Tobacco Ban",
+      1
+    ],
+    [
+      "Baseline Coverage Tobacco Massmedia",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Massmedia",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Massmedia",
+      0
+    ],
+    [
+      "Scale-Up Final Year Tobacco Massmedia",
+      1
+    ],
+    [
+      "Baseline Coverage Tobacco Protect",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Protect",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Protect",
+      0
+    ],
+    [
+      "Scale-Up Final Year Tobacco Protect",
+      1
+    ],
+    [
+      "Baseline Coverage Tobacco Quitbrief",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Quitbrief",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Quitbrief",
+      0
+    ],
+    [
+      "Scale-Up Final Year Tobacco Quitbrief",
+      1
+    ],
+    [
+      "Baseline Coverage Tobacco Quitcessation",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Quitcessation",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Quitcessation",
+      0
+    ],
+    [
+      "Scale-Up Final Year Tobacco Quitcessation",
+      1
+    ],
+    [
+      "Price Difference Tobacco Tax",
+      0.0
+    ],
+    [
+      "Baseline Coverage Tobacco Warnlabel",
+      0.05
+    ],
+    [
+      "Target Coverage Tobacco Warnlabel",
+      0.05
+    ],
+    [
+      "Scale-Up Start Year Tobacco Warnlabel",
+      0
+    ],
+    [
+      "Scale-Up Final Year Tobacco Warnlabel",
+      1
+    ]
+  ],
+  "scenario_card_id": "scenario-card:ncd-asthma:asthma-inhaled-beta-agonist:client-manifest-current:v1",
+  "scenario_card_signature_sha256": "e40aa8cd27717cd00dff91cda2106ca57ab7999867152a09074cc7f65d8c9dac",
+  "scenario_id": "asthma-inhaled-beta-agonist",
+  "scenario_sha256": "63dd20fae15664a8d38399fb17ee52b93aeee1d4f8cfe6815f43b6a273db0cba",
+  "scenario_source": "public/models/ncd-asthma/scenarios/asthma_inhaled_beta_agonist.json",
+  "schema": "scenario-card.v1",
+  "scope_statement": "This is a manifest-level scenario card. If the scenario file contains a Country value, that value is the scenario authoring default; the run certificate records the countries actually materialised and executed.",
+  "summary": "Long-term management of asthma with Inhaled Short-Acting Beta Agonist only.\nInhaled Short-Acting Beta Agonist provides symptom relief, reducing the disability weight by approximately 1%.\nThis intervention increases target coverage from the baseline of five percent to ninety-five percent.\n",
+  "title": "Clinical Intervention - Inhaled Short Acting Beta Agonist"
+}

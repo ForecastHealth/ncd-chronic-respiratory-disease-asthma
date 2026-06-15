@@ -1,0 +1,117 @@
+{
+  "comparison": "old scenario application against embedded Afghanistan defaults versus scenario application after explicit current-reference materialisation for Afghanistan",
+  "failed": 0,
+  "model_slug": "ncd-asthma",
+  "passed": 15,
+  "reference_parameter_set_id": "reference-parameter-set:ncd-asthma:synthetic-v1",
+  "rows": [
+    {
+      "new_materialized_model_sha256": "181d29ac84a511feb1873f45aa8d98795a049dde6a83f0bb8dfbdc9a394a6472",
+      "old_materialized_model_sha256": "181d29ac84a511feb1873f45aa8d98795a049dde6a83f0bb8dfbdc9a394a6472",
+      "scenario_id": "asthma-null",
+      "scenario_name": "Appendix 3 - Asthma Null Scenario",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "f36ad189e739f12578b5c287d9694327f7cef385dae3f045ecc12cdd7c21e953",
+      "old_materialized_model_sha256": "f36ad189e739f12578b5c287d9694327f7cef385dae3f045ecc12cdd7c21e953",
+      "scenario_id": "01K2RQXPRHJEXZ1GRQACC2375S",
+      "scenario_name": "Baseline Scenario",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "c33f6ffaef1fdd43a06e269cec4b082acd15aa04ca128b750a799fc537593bb5",
+      "old_materialized_model_sha256": "c33f6ffaef1fdd43a06e269cec4b082acd15aa04ca128b750a799fc537593bb5",
+      "scenario_id": "asthma-cr1",
+      "scenario_name": "Appendix 3 - CR1 Scenario",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "cef825f9c9e0b076ed070b5d35420cce791c27ef75a9247d44ba4c1cf458ca05",
+      "old_materialized_model_sha256": "cef825f9c9e0b076ed070b5d35420cce791c27ef75a9247d44ba4c1cf458ca05",
+      "scenario_id": "asthma-cr3",
+      "scenario_name": "Appendix 3 - CR3 Scenario",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "f36ad189e739f12578b5c287d9694327f7cef385dae3f045ecc12cdd7c21e953",
+      "old_materialized_model_sha256": "f36ad189e739f12578b5c287d9694327f7cef385dae3f045ecc12cdd7c21e953",
+      "scenario_id": "asthma-high-dose-beclom",
+      "scenario_name": "Clinical Intervention - High Dose Beclometasone",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "f36ad189e739f12578b5c287d9694327f7cef385dae3f045ecc12cdd7c21e953",
+      "old_materialized_model_sha256": "f36ad189e739f12578b5c287d9694327f7cef385dae3f045ecc12cdd7c21e953",
+      "scenario_id": "asthma-inhaled-beta-agonist",
+      "scenario_name": "Clinical Intervention - Inhaled Short Acting Beta Agonist",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "f36ad189e739f12578b5c287d9694327f7cef385dae3f045ecc12cdd7c21e953",
+      "old_materialized_model_sha256": "f36ad189e739f12578b5c287d9694327f7cef385dae3f045ecc12cdd7c21e953",
+      "scenario_id": "asthma-low-dose-beclom",
+      "scenario_name": "Clinical Intervention - Low Dose Beclometasone",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "f36ad189e739f12578b5c287d9694327f7cef385dae3f045ecc12cdd7c21e953",
+      "old_materialized_model_sha256": "f36ad189e739f12578b5c287d9694327f7cef385dae3f045ecc12cdd7c21e953",
+      "scenario_id": "asthma-oral-prednisolone",
+      "scenario_name": "Clinical Intervention - Oral Prednisolone",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "1f0f9cc905afffd4ebe3539a9399126596cd4936e8d54c8f379eb394265e8ef3",
+      "old_materialized_model_sha256": "1f0f9cc905afffd4ebe3539a9399126596cd4936e8d54c8f379eb394265e8ef3",
+      "scenario_id": "01K2RQX93DWCPGW3P6FAY7PBVY",
+      "scenario_name": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "44b3971d9c1fea7c20f5a8656a7e37b828de8891833f25426e5bff57fb0c6d04",
+      "old_materialized_model_sha256": "44b3971d9c1fea7c20f5a8656a7e37b828de8891833f25426e5bff57fb0c6d04",
+      "scenario_id": "01K2RQXD7HAH2445KWHVNQ7X0Q",
+      "scenario_name": "Appendix 3 - Tobacco 2 - Warning labels and standardized packaging",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "d436cd3e77487f727e225f9080da28aa2ed5e1c3b79e55a1bd2841fa308f896d",
+      "old_materialized_model_sha256": "d436cd3e77487f727e225f9080da28aa2ed5e1c3b79e55a1bd2841fa308f896d",
+      "scenario_id": "01K2RQXDZT3139X2B11QTDQDKR",
+      "scenario_name": "Appendix 3 - Tobacco 3 - Advertising and promotion bans",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "7a3f53093b25f041bb1158bc8406d7aa2d190ba7ac7a4b08406c2ef2afb5a8d3",
+      "old_materialized_model_sha256": "7a3f53093b25f041bb1158bc8406d7aa2d190ba7ac7a4b08406c2ef2afb5a8d3",
+      "scenario_id": "01K2RQXJWK1HQBHNG6BMT3KCXR",
+      "scenario_name": "Appendix 3 - Tobacco 4 - Smoke-free environments",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "8b78e56c8e06e484195d419709ef44a78826bbfb6ec4ed72561d96448cd262cc",
+      "old_materialized_model_sha256": "8b78e56c8e06e484195d419709ef44a78826bbfb6ec4ed72561d96448cd262cc",
+      "scenario_id": "01K2RQXQCZ80YXPX4QZ39BM820",
+      "scenario_name": "Appendix 3 - Tobacco 5 - Mass media campaigns",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "2a406b9f951336236c017a7c3217201cacdd99839d7deaae65eb1398181ec07f",
+      "old_materialized_model_sha256": "2a406b9f951336236c017a7c3217201cacdd99839d7deaae65eb1398181ec07f",
+      "scenario_id": "01K2RQXHNH8XVABYPZKX9BNRF1",
+      "scenario_name": "Appendix 3 - Tobacco 6 - Cessation support services",
+      "status": "pass"
+    },
+    {
+      "new_materialized_model_sha256": "5fbc080b911a509fe3231275b705b74bd2106923c86da516ba83faf6e26dab9d",
+      "old_materialized_model_sha256": "5fbc080b911a509fe3231275b705b74bd2106923c86da516ba83faf6e26dab9d",
+      "scenario_id": "asthma-tobacco-t7",
+      "scenario_name": "Appendix 3 - Tobacco 7 - Pharmacological cessation aids",
+      "status": "pass"
+    }
+  ],
+  "schema": "scenario-materialization-compatibility.v1",
+  "signature_sha256": "55ab93c5150d6dcdad2d2a70c83b3bcd8817a0f0ec58ea845147dc4eeccbe571",
+  "total_scenarios": 15
+}

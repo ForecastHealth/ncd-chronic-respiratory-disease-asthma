@@ -1,0 +1,124 @@
+{
+  "created_at": "2026-06-03T13:39:14+00:00",
+  "model_slug": "ncd-asthma",
+  "reference_parameter_set_id": "reference-parameter-set:ncd-asthma:synthetic-v1",
+  "runs": {
+    "current_reference_eth": {
+      "bundle_input_count": 291,
+      "data_bundle_mode": "unified_api",
+      "data_bundle_sha256": "02d95abe96e4129299feeec525db69064005577cbdbb3551b1ee7e70998e3f58",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 130194826.38,
+          "2030": 144367113.0,
+          "2040": 174264026.06,
+          "2046": null,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 4344400.05,
+          "2030": 6560105.8,
+          "2040": 9715717.98,
+          "2046": null,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 788654.99,
+          "2030": 843529.07,
+          "2040": 947805.7,
+          "2046": null,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4909.69,
+          "2030": 7180.0,
+          "2040": 13096.17,
+          "2046": null,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 115306053.92,
+          "2030": 129081541.58,
+          "2040": 156670125.76,
+          "2046": null,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "1060d80bd113ac4c8e2c5500ecdd60e37de2c6c23099d183b2398dca43db8889",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 13923,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "fdd79b31eb754d8ad20cab6b70f67802f56b12d17e81d34e11582f6a20d5a3d6",
+      "status": "pass",
+      "stderr_tail": ""
+    },
+    "synthetic_reference": {
+      "bundle_input_count": 270,
+      "data_bundle_mode": "synthetic_reference_fixture",
+      "data_bundle_sha256": "40806ae1ad1fb392a11d0a3aad3ab0262785a3f20fb48c17f45f6435076a8bce",
+      "generated_files_retained": false,
+      "headline_metrics": [
+        {
+          "2025": 947652.15,
+          "2030": 937499.19,
+          "2040": 918987.36,
+          "2046": null,
+          "metric": "Population at risk"
+        },
+        {
+          "2025": 52292.98,
+          "2030": 62018.52,
+          "2040": 74566.06,
+          "2046": null,
+          "metric": "Asthma prevalence state"
+        },
+        {
+          "2025": 4744.87,
+          "2030": 4692.73,
+          "2040": 4601.83,
+          "2046": null,
+          "metric": "Asthma incidence flow"
+        },
+        {
+          "2025": 4.89,
+          "2030": 5.89,
+          "2040": 7.2,
+          "2046": null,
+          "metric": "Asthma mortality flow"
+        },
+        {
+          "2025": 996857.38,
+          "2030": 995876.27,
+          "2040": 989955.1,
+          "2046": null,
+          "metric": "Healthy years lived"
+        }
+      ],
+      "materialized_model_sha256": "6ad1375476d6a9dc7eb1c838ee7323b51411a5e0085979d09c9b2dbdaa1f7ce6",
+      "result_columns": [
+        "value",
+        "event_number",
+        "timestamp",
+        "event_type",
+        "element_label",
+        "element_type"
+      ],
+      "result_rows": 13923,
+      "rust_exit_code": 0,
+      "rust_results_sha256": "4cc907eb14aa69f02e66f3379b8083b417ffe1236960001496bc4e8dc11157f6",
+      "status": "pass",
+      "stderr_tail": ""
+    }
+  },
+  "scenario_registry_id": "scenario-registry:ncd-asthma:reference-synthetic-v1",
+  "schema": "reference-parameter-validation-run.v1",
+  "signature_sha256": "965d039827a37fd9ca17c3ff0bf072812e70390395a606b3ce8ae102b413c0f0"
+}

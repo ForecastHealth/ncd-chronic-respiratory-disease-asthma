@@ -1,0 +1,235 @@
+{
+  "component_id": "demographic-substrate",
+  "contract": {
+    "desired_external_owner": "botech-demographic-model",
+    "inputs": [
+      {
+        "current_lowering": "DsFreeSus.generate_array",
+        "id": "population_opening",
+        "shape": "2x101"
+      },
+      {
+        "current_lowering": "fhdb.fertility links",
+        "id": "fertility_rate",
+        "shape": "2x101"
+      },
+      {
+        "current_lowering": "fhdb.sex_ratio links",
+        "id": "sex_ratio",
+        "shape": "2x101"
+      },
+      {
+        "current_lowering": "fhdb.mortality link",
+        "id": "background_mortality_rate",
+        "shape": "2x101"
+      },
+      {
+        "current_lowering": "fhdb.migration link",
+        "id": "net_migration_rate",
+        "shape": "2x101"
+      }
+    ],
+    "outputs": [
+      {
+        "current_binding": "DsFreeSus",
+        "id": "population_at_risk",
+        "shape": "2x101"
+      },
+      {
+        "current_binding": "Births",
+        "id": "births",
+        "shape": "2x101"
+      },
+      {
+        "current_binding": "Deceased",
+        "id": "deaths_background_susceptible",
+        "shape": "2x101"
+      }
+    ]
+  },
+  "description": "Current asthma-local lowering of the demographic substrate. Desired external owner is the existing botech demographic model.",
+  "kind": "compiled_together",
+  "label": "Demographic substrate",
+  "links": [
+    {
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "avvOYu19",
+      "label": "DsFreeSus -> DsFreeSus",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "DsFreeSus",
+      "target": "DsFreeSus",
+      "value_to_target_operator": "add"
+    },
+    {
+      "description": "Project the number of births using the population and ASFR",
+      "edge_type": "projection",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "fertility",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "MCWFcR4e",
+      "label": "DsFreeSus -> Births",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "DsFreeSus",
+      "target": "Births",
+      "value_to_target_operator": "add"
+    },
+    {
+      "description": "Male births into the population",
+      "edge_type": "modifier",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "sex_ratio",
+        "parameters": {
+          "country": "AFG",
+          "sex": "m"
+        }
+      },
+      "id": "EXGS1xV6",
+      "label": "Births -> DsFreeSus",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "Births",
+      "target": "DsFreeSus",
+      "value_to_target_operator": "add",
+      "weighted_balance_postprocessing": {
+        "into": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "description": "Female births into the population",
+      "edge_type": "modifier",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "sex_ratio",
+        "parameters": {
+          "country": "AFG",
+          "sex": "f"
+        }
+      },
+      "id": "Yfenedx0",
+      "label": "Births -> DsFreeSus",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "Births",
+      "target": "DsFreeSus",
+      "value_to_target_operator": "add",
+      "weighted_balance_postprocessing": {
+        "into": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "description": "Transition people into the mortality state",
+      "edge_type": "transition",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "09Q1rhSn",
+      "label": "DsFreeSus -> Deceased",
+      "remove_value_from_source": true,
+      "requires_source_balance": true,
+      "source": "DsFreeSus",
+      "target": "Deceased",
+      "value_to_target_operator": "add"
+    },
+    {
+      "description": "Project the number of births using the population and ASFR",
+      "edge_type": "projection",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "fertility",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "tGFmOvlz",
+      "label": "AsthmaEpsd -> Births",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "AsthmaEpsd",
+      "target": "Births",
+      "value_to_target_operator": "add"
+    }
+  ],
+  "nodes": [
+    {
+      "ageing": true,
+      "balance_type": "array",
+      "color": "#3CD009",
+      "description": "State holding the balance of the healthy population",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "fetch_once": true,
+        "method": "population",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "DsFreeSus",
+      "label": "DsFreeSus",
+      "node_type": "STATE",
+      "x": 48.83,
+      "y": -27.25
+    },
+    {
+      "balance_type": "array",
+      "color": "#EB7FEF",
+      "description": "Store of the number of births in the population",
+      "flush": true,
+      "id": "Births",
+      "label": "Births",
+      "node_type": "FUNCTION",
+      "x": 9.63,
+      "y": -27.14
+    },
+    {
+      "balance_type": "array",
+      "color": "#FB6375",
+      "description": "The state of being dead",
+      "flush": true,
+      "id": "Deceased",
+      "label": "Deceased-DsFreeSus",
+      "node_type": "STATE",
+      "order": 3,
+      "x": 149.31,
+      "y": 1.28
+    }
+  ],
+  "owned_link_ids": [
+    "avvOYu19",
+    "MCWFcR4e",
+    "EXGS1xV6",
+    "Yfenedx0",
+    "09Q1rhSn",
+    "tGFmOvlz"
+  ],
+  "owned_node_ids": [
+    "DsFreeSus",
+    "Births",
+    "Deceased"
+  ],
+  "schema": "asthma-component.v1"
+}

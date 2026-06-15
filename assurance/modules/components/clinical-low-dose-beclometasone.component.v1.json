@@ -1,0 +1,299 @@
+{
+  "component_id": "clinical-low-dose-beclometasone",
+  "component_signature_sha256": "a2eaa946719280a2588f53bde238e29b39f2ef81485ce4fc606727f9b10ab8b0",
+  "contract_summary": "Intervention-specific graph and scenario boundary. The current executable graph applies any changed scenario parameters by materialising them into the monolithic model.",
+  "execution_mode": "compiled_together_current_graph_boundary",
+  "independently_executable_now": false,
+  "label": "Clinical Low Dose Beclometasone",
+  "limitations": [
+    "This is not yet a separately executable module. It is a component record for a boundary inside the current graph."
+  ],
+  "matched_links": {
+    "count": 0,
+    "sample": []
+  },
+  "matched_nodes": {
+    "count": 0,
+    "sample": []
+  },
+  "matched_scenario_parameters": [
+    {
+      "changed_parameter_count": 1,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Low Dose Beclometasone Target Coverage",
+          "scenario_value": 0
+        }
+      ],
+      "label": "Appendix 3 - Asthma Null Scenario",
+      "scenario_id": "asthma-null"
+    },
+    {
+      "changed_parameter_count": 1,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Low Dose Beclometasone Target Coverage",
+          "scenario_value": 0.95
+        }
+      ],
+      "label": "Appendix 3 - CR3 Scenario",
+      "scenario_id": "asthma-cr3"
+    }
+  ],
+  "matching_rule": "Case-insensitive match against node id, node label, node tags, link id, link label, link endpoints, generated data fetcher blocks, and scenario parameter names.",
+  "model_id": "01K2RQX87G091TTBH00ANN38VP",
+  "model_slug": "ncd-asthma",
+  "outputs_or_handoffs": [
+    "Has scenario parameter changes relative to the baseline scenario in the client bundle."
+  ],
+  "patterns": [
+    "low dose beclom",
+    "low-dose beclom",
+    "Low Dose Beclometasone",
+    "low dose beclometasone"
+  ],
+  "role": "Clinical intervention",
+  "scenario_parameter_changes_relative_to_baseline": [
+    {
+      "changed_parameter_count": 1,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Low Dose Beclometasone Target Coverage",
+          "scenario_value": 0
+        }
+      ],
+      "label": "Appendix 3 - Asthma Null Scenario",
+      "scenario_id": "asthma-null"
+    },
+    {
+      "changed_parameter_count": 1,
+      "changed_parameters_sample": [
+        {
+          "baseline_value": 0.05,
+          "parameter": "Low Dose Beclometasone Target Coverage",
+          "scenario_value": 0.95
+        }
+      ],
+      "label": "Appendix 3 - CR3 Scenario",
+      "scenario_id": "asthma-cr3"
+    }
+  ],
+  "scenario_parameter_presence": [
+    {
+      "label": "Appendix 3 - Asthma Null Scenario",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "asthma-null"
+    },
+    {
+      "label": "Baseline Scenario",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "01K2RQXPRHJEXZ1GRQACC2375S"
+    },
+    {
+      "label": "Appendix 3 - CR1 Scenario",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "asthma-cr1"
+    },
+    {
+      "label": "Appendix 3 - CR3 Scenario",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "asthma-cr3"
+    },
+    {
+      "label": "Clinical Intervention - High Dose Beclometasone",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "asthma-high-dose-beclom"
+    },
+    {
+      "label": "Clinical Intervention - Inhaled Short Acting Beta Agonist",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "asthma-inhaled-beta-agonist"
+    },
+    {
+      "label": "Clinical Intervention - Low Dose Beclometasone",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "asthma-low-dose-beclom"
+    },
+    {
+      "label": "Clinical Intervention - Oral Prednisolone",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "asthma-oral-prednisolone"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 1 - Increase excise taxes and prices",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "01K2RQX93DWCPGW3P6FAY7PBVY"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 2 - Warning labels and standardized packaging",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "01K2RQXD7HAH2445KWHVNQ7X0Q"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 3 - Advertising and promotion bans",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "01K2RQXDZT3139X2B11QTDQDKR"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 4 - Smoke-free environments",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "01K2RQXJWK1HQBHNG6BMT3KCXR"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 5 - Mass media campaigns",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "01K2RQXQCZ80YXPX4QZ39BM820"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 6 - Cessation support services",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "01K2RQXHNH8XVABYPZKX9BNRF1"
+    },
+    {
+      "label": "Appendix 3 - Tobacco 7 - Pharmacological cessation aids",
+      "matched_parameter_count": 7,
+      "matched_parameters_sample": [
+        "Low Dose Beclometasone Baseline Coverage",
+        "Low Dose Beclometasone Target Coverage",
+        "Low Dose Beclometasone Scale-Up Start Year",
+        "Low Dose Beclometasone Scale-Up Final Year",
+        "Low Dose Beclometasone Population In Need",
+        "Low Dose Beclometasone Disability Impact",
+        "Low Dose Beclometasone Mortality Impact"
+      ],
+      "scenario_id": "asthma-tobacco-t7"
+    }
+  ],
+  "schema": "ncd-module-component.v1",
+  "source_model": "public/models/ncd-asthma/model.json",
+  "source_model_sha256": "94c67579de12811738fb01527657a2c35190a9f300d6c55a0d8498828b9ee8ae"
+}

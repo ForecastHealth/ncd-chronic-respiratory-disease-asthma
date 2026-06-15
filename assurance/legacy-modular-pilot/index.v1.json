@@ -1,0 +1,87 @@
+{
+  "components": [
+    {
+      "component_id": "demographic-substrate",
+      "kind": "compiled_together",
+      "links": 6,
+      "nodes": 3,
+      "path": "components/demographic-substrate.component.v1.json"
+    },
+    {
+      "component_id": "asthma-epidemiology-core",
+      "kind": "compiled_together",
+      "links": 12,
+      "nodes": 6,
+      "path": "components/asthma-epidemiology-core.component.v1.json"
+    },
+    {
+      "component_id": "tobacco-risk-factor",
+      "kind": "link_then_inject_bundle",
+      "links": 41,
+      "nodes": 38,
+      "path": "components/tobacco-risk-factor.component.v1.json"
+    },
+    {
+      "component_id": "clinical-low-dose-beclom",
+      "kind": "compiled_together",
+      "links": 8,
+      "nodes": 8,
+      "path": "components/clinical-low-dose-beclom.component.v1.json"
+    },
+    {
+      "component_id": "clinical-high-dose-beclom",
+      "kind": "compiled_together",
+      "links": 5,
+      "nodes": 6,
+      "path": "components/clinical-high-dose-beclom.component.v1.json"
+    },
+    {
+      "component_id": "clinical-oral-prednisolone",
+      "kind": "compiled_together",
+      "links": 5,
+      "nodes": 6,
+      "path": "components/clinical-oral-prednisolone.component.v1.json"
+    },
+    {
+      "component_id": "clinical-inhaled-short-acting-beta-agonist",
+      "kind": "compiled_together",
+      "links": 5,
+      "nodes": 6,
+      "path": "components/clinical-inhaled-short-acting-beta-agonist.component.v1.json"
+    },
+    {
+      "component_id": "burden-metrics",
+      "kind": "downstream_handoff",
+      "links": 28,
+      "nodes": 17,
+      "path": "components/burden-metrics.component.v1.json"
+    },
+    {
+      "component_id": "economic-metrics",
+      "kind": "downstream_handoff",
+      "links": 3,
+      "nodes": 3,
+      "path": "components/economic-metrics.component.v1.json"
+    },
+    {
+      "component_id": "resource-handoffs",
+      "kind": "downstream_handoff",
+      "links": 24,
+      "nodes": 8,
+      "path": "components/resource-handoffs.component.v1.json"
+    }
+  ],
+  "composition_manifest": "composition.manifest.v1.json",
+  "created_at": "2026-06-02T12:55:47+00:00",
+  "schema": "asthma-modular-index.v1",
+  "status": "parity pilot",
+  "validation": {
+    "certificate": "validation/asthma-cr1.modular-parity.validation-certificate.v1.json",
+    "comparison": "match",
+    "composed_result_sha256": "401c20690cfa2d93e91c6df78664f6d8297261386d8e1cba7e520f4ed7f80970",
+    "original_result_sha256": "401c20690cfa2d93e91c6df78664f6d8297261386d8e1cba7e520f4ed7f80970",
+    "pdf": "validation/pdf/asthma-cr1.modular-parity.validation-certificate.pdf",
+    "status": "pass",
+    "validation_signature_sha256": "43f870e255f440cc24b262f1c411985c7cb114d786e3b3d00cef0de7f81df7aa"
+  }
+}

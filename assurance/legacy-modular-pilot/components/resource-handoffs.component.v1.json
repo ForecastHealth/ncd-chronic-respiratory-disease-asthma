@@ -1,0 +1,458 @@
+{
+  "component_id": "resource-handoffs",
+  "contract": {
+    "inputs": [
+      {
+        "from_component": "asthma-epidemiology-core",
+        "id": "asthma_state_occupancy"
+      },
+      {
+        "from_components": [
+          "clinical-low-dose-beclom",
+          "clinical-high-dose-beclom",
+          "clinical-oral-prednisolone",
+          "clinical-inhaled-short-acting-beta-agonist"
+        ],
+        "id": "clinical_coverage_settings"
+      }
+    ],
+    "outputs": [
+      {
+        "handoff_kind": "downstream_handoff",
+        "id": "resource_population_reached"
+      }
+    ]
+  },
+  "description": "",
+  "kind": "downstream_handoff",
+  "label": "Resource handoffs",
+  "links": [
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "Bqivj1vn",
+      "remove_value_from_source": false,
+      "source": "LowDoseBeclom_PIN",
+      "target": "Th8rib7e",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "N9rFWbuG",
+      "remove_value_from_source": false,
+      "source": "AsthmaEpsd",
+      "target": "Th8rib7e",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "CzSwMFFu",
+      "remove_value_from_source": false,
+      "source": "LowDoseBeclom_Calculated_Coverage",
+      "target": "Th8rib7e",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "lGRctzuP",
+      "remove_value_from_source": false,
+      "source": "HighDoseBeclom_PIN",
+      "target": "7jR6zfXt",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "8kfRNFLI",
+      "remove_value_from_source": false,
+      "source": "AsthmaEpsd",
+      "target": "7jR6zfXt",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "6Lq5Ydns",
+      "remove_value_from_source": false,
+      "source": "HighDoseBeclom_Calculated_Coverage",
+      "target": "7jR6zfXt",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "W4sc2PrG",
+      "remove_value_from_source": false,
+      "source": "AsthmaOralPrednisolone_PIN",
+      "target": "8N5hy7kA",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "t7xlBFu5",
+      "remove_value_from_source": false,
+      "source": "AsthmaEpsd",
+      "target": "8N5hy7kA",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "P0CzNGjt",
+      "remove_value_from_source": false,
+      "source": "AsthmaOralPrednisolone_Calculated_Coverage",
+      "target": "8N5hy7kA",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "wQ4kyvLO",
+      "remove_value_from_source": false,
+      "source": "InhaledShortActingBeta_Calculated_Coverage",
+      "target": "iMcmFjlP",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "M7XAks2c",
+      "remove_value_from_source": false,
+      "source": "AsthmaEpsd",
+      "target": "iMcmFjlP",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "osbUZCyk",
+      "remove_value_from_source": false,
+      "source": "LowDoseBeclom_Calculated_Coverage",
+      "target": "iMcmFjlP",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_AsthmaOralPrednisolone_Base_1",
+      "label": "AsthmaEpsd -> ResourcePopulationReached-AsthmaOralPrednisolone",
+      "remove_value_from_source": false,
+      "source": "AsthmaEpsd",
+      "target": "ResourcePopulationReached_AsthmaOralPrednisolone",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_AsthmaOralPrednisolone_PIN",
+      "label": "AsthmaOralPrednisolone_PIN -> ResourcePopulationReached-AsthmaOralPrednisolone",
+      "remove_value_from_source": false,
+      "source": "AsthmaOralPrednisolone_PIN",
+      "target": "ResourcePopulationReached_AsthmaOralPrednisolone",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_AsthmaOralPrednisolone_Coverage",
+      "label": "AsthmaOralPrednisolone_Coverage -> ResourcePopulationReached-AsthmaOralPrednisolone",
+      "remove_value_from_source": false,
+      "source": "AsthmaOralPrednisolone_Coverage",
+      "target": "ResourcePopulationReached_AsthmaOralPrednisolone",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_HighDoseBeclom_Base_1",
+      "label": "AsthmaEpsd -> ResourcePopulationReached-HighDoseBeclom",
+      "remove_value_from_source": false,
+      "source": "AsthmaEpsd",
+      "target": "ResourcePopulationReached_HighDoseBeclom",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_HighDoseBeclom_PIN",
+      "label": "HighDoseBeclom_PIN -> ResourcePopulationReached-HighDoseBeclom",
+      "remove_value_from_source": false,
+      "source": "HighDoseBeclom_PIN",
+      "target": "ResourcePopulationReached_HighDoseBeclom",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_HighDoseBeclom_Coverage",
+      "label": "HighDoseBeclom_Coverage -> ResourcePopulationReached-HighDoseBeclom",
+      "remove_value_from_source": false,
+      "source": "HighDoseBeclom_Coverage",
+      "target": "ResourcePopulationReached_HighDoseBeclom",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_InhaledShortActingBeta_Base_1",
+      "label": "AsthmaEpsd -> ResourcePopulationReached-InhaledShortActingBeta",
+      "remove_value_from_source": false,
+      "source": "AsthmaEpsd",
+      "target": "ResourcePopulationReached_InhaledShortActingBeta",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_InhaledShortActingBeta_PIN",
+      "label": "InhaledShortActingBeta_PIN -> ResourcePopulationReached-InhaledShortActingBeta",
+      "remove_value_from_source": false,
+      "source": "InhaledShortActingBeta_PIN",
+      "target": "ResourcePopulationReached_InhaledShortActingBeta",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_InhaledShortActingBeta_Coverage",
+      "label": "InhaledShortActingBeta_Coverage -> ResourcePopulationReached-InhaledShortActingBeta",
+      "remove_value_from_source": false,
+      "source": "InhaledShortActingBeta_Coverage",
+      "target": "ResourcePopulationReached_InhaledShortActingBeta",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_LowDoseBeclom_Base_1",
+      "label": "AsthmaEpsd -> ResourcePopulationReached-LowDoseBeclom",
+      "remove_value_from_source": false,
+      "source": "AsthmaEpsd",
+      "target": "ResourcePopulationReached_LowDoseBeclom",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_LowDoseBeclom_PIN",
+      "label": "LowDoseBeclom_PIN -> ResourcePopulationReached-LowDoseBeclom",
+      "remove_value_from_source": false,
+      "source": "LowDoseBeclom_PIN",
+      "target": "ResourcePopulationReached_LowDoseBeclom",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "ResourceAbs_LowDoseBeclom_Coverage",
+      "label": "LowDoseBeclom_Coverage -> ResourcePopulationReached-LowDoseBeclom",
+      "remove_value_from_source": false,
+      "source": "LowDoseBeclom_Coverage",
+      "target": "ResourcePopulationReached_LowDoseBeclom",
+      "value_to_target_operator": "multiply"
+    }
+  ],
+  "nodes": [
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "id": "Th8rib7e",
+      "label": "PopulationReached-LowDoseBeclom",
+      "x": 1.97,
+      "y": 110.16
+    },
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "id": "7jR6zfXt",
+      "label": "PopulationReached-HighDoseBeclom",
+      "x": 13.79,
+      "y": 117.64
+    },
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "id": "8N5hy7kA",
+      "label": "PopulationReached-AsthmaOralPrednisolone",
+      "x": 18.3,
+      "y": 125.84
+    },
+    {
+      "color": "#FFB255",
+      "flush": true,
+      "id": "iMcmFjlP",
+      "label": "PopulationReached-InhaledShortActingBeta",
+      "x": 24.53,
+      "y": 132.82
+    },
+    {
+      "color": "#6EE7B7",
+      "flush": true,
+      "id": "ResourcePopulationReached_AsthmaOralPrednisolone",
+      "label": "ResourcePopulationReached-AsthmaOralPrednisolone",
+      "x": 46.3,
+      "y": 153.84
+    },
+    {
+      "color": "#6EE7B7",
+      "flush": true,
+      "id": "ResourcePopulationReached_LowDoseBeclom",
+      "label": "ResourcePopulationReached-LowDoseBeclom",
+      "x": 29.97,
+      "y": 138.16
+    },
+    {
+      "color": "#6EE7B7",
+      "flush": true,
+      "id": "ResourcePopulationReached_HighDoseBeclom",
+      "label": "ResourcePopulationReached-HighDoseBeclom",
+      "x": 41.79,
+      "y": 145.64
+    },
+    {
+      "color": "#6EE7B7",
+      "flush": true,
+      "id": "ResourcePopulationReached_InhaledShortActingBeta",
+      "label": "ResourcePopulationReached-InhaledShortActingBeta",
+      "x": 52.53,
+      "y": 160.82
+    }
+  ],
+  "owned_link_ids": [
+    "Bqivj1vn",
+    "N9rFWbuG",
+    "CzSwMFFu",
+    "lGRctzuP",
+    "8kfRNFLI",
+    "6Lq5Ydns",
+    "W4sc2PrG",
+    "t7xlBFu5",
+    "P0CzNGjt",
+    "wQ4kyvLO",
+    "M7XAks2c",
+    "osbUZCyk",
+    "ResourceAbs_AsthmaOralPrednisolone_Base_1",
+    "ResourceAbs_AsthmaOralPrednisolone_PIN",
+    "ResourceAbs_AsthmaOralPrednisolone_Coverage",
+    "ResourceAbs_HighDoseBeclom_Base_1",
+    "ResourceAbs_HighDoseBeclom_PIN",
+    "ResourceAbs_HighDoseBeclom_Coverage",
+    "ResourceAbs_InhaledShortActingBeta_Base_1",
+    "ResourceAbs_InhaledShortActingBeta_PIN",
+    "ResourceAbs_InhaledShortActingBeta_Coverage",
+    "ResourceAbs_LowDoseBeclom_Base_1",
+    "ResourceAbs_LowDoseBeclom_PIN",
+    "ResourceAbs_LowDoseBeclom_Coverage"
+  ],
+  "owned_node_ids": [
+    "Th8rib7e",
+    "7jR6zfXt",
+    "8N5hy7kA",
+    "iMcmFjlP",
+    "ResourcePopulationReached_AsthmaOralPrednisolone",
+    "ResourcePopulationReached_LowDoseBeclom",
+    "ResourcePopulationReached_HighDoseBeclom",
+    "ResourcePopulationReached_InhaledShortActingBeta"
+  ],
+  "schema": "asthma-component.v1"
+}

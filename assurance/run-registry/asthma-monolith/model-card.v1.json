@@ -1,0 +1,21 @@
+{
+  "components": [
+    {
+      "component_id": "ncd-asthma-monolith",
+      "contract_summary": "Demographic, epidemiology, tobacco, clinical intervention, burden, economic, and resource logic are held in one model JSON.",
+      "label": "Asthma monolith",
+      "role": "Single executable model",
+      "source": "public/models/ncd-asthma/model.json"
+    }
+  ],
+  "composition_record_id": "composition:ncd-asthma:monolith:asthma-cr1:v1",
+  "intended_use": "The asthma model runs asthma epidemiology, selected clinical interventions, tobacco risk-factor effects, and downstream burden, resource, and economic event streams.",
+  "limits": "The modular composition is currently rejoined into one executable model for the Rust runtime. The run certificate records what was run; it does not encode future comparison intent.",
+  "model_card_id": "model-card:ncd-asthma:monolith:v1",
+  "model_card_signature_sha256": "84602acbc52af6dd7297a569faf9d3444322834f7bed7c936b91894b0af16fbf",
+  "runtime_summary": "2025-2046; synchronous iterations 10",
+  "schema": "model-card.v1",
+  "subject_id": "ncd-asthma:monolith",
+  "summary": "This card describes the current asthma model structure used for the CR1 run.",
+  "title": "Asthma Monolith"
+}

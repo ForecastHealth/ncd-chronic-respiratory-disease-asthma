@@ -1,0 +1,1156 @@
+{
+  "components": [
+    {
+      "component_id": "demographic-substrate",
+      "kind": "compiled_together",
+      "links": 6,
+      "nodes": 3,
+      "path": "components/demographic-substrate.component.v1.json"
+    },
+    {
+      "component_id": "asthma-epidemiology-core",
+      "kind": "compiled_together",
+      "links": 12,
+      "nodes": 6,
+      "path": "components/asthma-epidemiology-core.component.v1.json"
+    },
+    {
+      "component_id": "tobacco-risk-factor",
+      "kind": "link_then_inject_bundle",
+      "links": 41,
+      "nodes": 38,
+      "path": "components/tobacco-risk-factor.component.v1.json"
+    },
+    {
+      "component_id": "clinical-low-dose-beclom",
+      "kind": "compiled_together",
+      "links": 8,
+      "nodes": 8,
+      "path": "components/clinical-low-dose-beclom.component.v1.json"
+    },
+    {
+      "component_id": "clinical-high-dose-beclom",
+      "kind": "compiled_together",
+      "links": 5,
+      "nodes": 6,
+      "path": "components/clinical-high-dose-beclom.component.v1.json"
+    },
+    {
+      "component_id": "clinical-oral-prednisolone",
+      "kind": "compiled_together",
+      "links": 5,
+      "nodes": 6,
+      "path": "components/clinical-oral-prednisolone.component.v1.json"
+    },
+    {
+      "component_id": "clinical-inhaled-short-acting-beta-agonist",
+      "kind": "compiled_together",
+      "links": 5,
+      "nodes": 6,
+      "path": "components/clinical-inhaled-short-acting-beta-agonist.component.v1.json"
+    },
+    {
+      "component_id": "burden-metrics",
+      "kind": "downstream_handoff",
+      "links": 28,
+      "nodes": 17,
+      "path": "components/burden-metrics.component.v1.json"
+    },
+    {
+      "component_id": "economic-metrics",
+      "kind": "downstream_handoff",
+      "links": 3,
+      "nodes": 3,
+      "path": "components/economic-metrics.component.v1.json"
+    },
+    {
+      "component_id": "resource-handoffs",
+      "kind": "downstream_handoff",
+      "links": 24,
+      "nodes": 8,
+      "path": "components/resource-handoffs.component.v1.json"
+    }
+  ],
+  "composition_mode": "parity_lowering_to_current_monolithic_runtime",
+  "contracts": {
+    "compiled_together": [
+      "demographic-substrate",
+      "asthma-epidemiology-core",
+      "clinical-low-dose-beclom",
+      "clinical-high-dose-beclom",
+      "clinical-oral-prednisolone",
+      "clinical-inhaled-short-acting-beta-agonist"
+    ],
+    "downstream_handoff": [
+      "burden-metrics",
+      "economic-metrics",
+      "resource-handoffs"
+    ],
+    "link_then_inject_bundle": [
+      "tobacco-risk-factor"
+    ]
+  },
+  "created_at": "2026-06-02T12:55:47+00:00",
+  "scenario": "public/models/ncd-asthma/scenarios/asthma_cr1.json",
+  "schema": "asthma-modular-composition.v1",
+  "source_model": "public/models/ncd-asthma/model.json",
+  "subroutine_bindings": [
+    {
+      "index": 0,
+      "link_components": [],
+      "method": "flush",
+      "narration": "Flush unneeded values",
+      "node_components": [],
+      "subroutine": {
+        "method": "flush",
+        "narration": "Flush unneeded values"
+      }
+    },
+    {
+      "index": 1,
+      "link_components": [],
+      "method": "generate_balance",
+      "narration": "All Constants and Functions are initialised",
+      "node_components": [
+        "tobacco-risk-factor"
+      ],
+      "subroutine": {
+        "batch": false,
+        "included_source_nodes": [
+          "BXOLckIN",
+          "oGP2Nze1",
+          "PjHF9FHh",
+          "PHkSXNg6",
+          "j8mr17a2",
+          "zxPMOyBk",
+          "o1hbxc1R",
+          "h6Dd182n",
+          "xFQ7WDDN",
+          "HvEhBiqV",
+          "UJon4r9l",
+          "OujFYFdY",
+          "DsMKQaMl",
+          "yeUjLivi",
+          "Rw3STfqr",
+          "f2zVbmFC",
+          "kmOgayPc",
+          "dhCjk23F",
+          "c6rmN2fs",
+          "iSPWJd93",
+          "Go1VxQNw",
+          "UW8uObpi",
+          "b1QqmB9J",
+          "ACrnBpRW",
+          "exp5DafX",
+          "c7kD60U5",
+          "CpV9O9hQ",
+          "Sr0tR2ig",
+          "jVgKAsq8",
+          "RFyZaSPm",
+          "z8dEXLS9",
+          "lFeWKUSt",
+          "kH5YhKYM",
+          "cahejWW9",
+          "llX00Ofj",
+          "a6OhDhjp",
+          "zUseZJKK",
+          "wdoGuxrz",
+          "lFMuQmak",
+          "BTDc3bch",
+          "bdg7vh5J"
+        ],
+        "method": "generate_balance",
+        "narration": "All Constants and Functions are initialised"
+      }
+    },
+    {
+      "index": 2,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Delta Coverage is calculated",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "8vm5DN48",
+          "sfUqyJiI",
+          "n0e8cmtI",
+          "UpyGDPag",
+          "GY83b36l",
+          "ICENsZHr",
+          "R0QJqcit",
+          "IDkgCCq4",
+          "BFgDGIss",
+          "HmxMmSk1",
+          "HPw674eJ",
+          "HAbOnqlv",
+          "ajhix9j7",
+          "4yI2SQu2"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Delta Coverage is calculated"
+      }
+    },
+    {
+      "index": 3,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Delta coverage is multiplied against effect size",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "FOy73wMX",
+          "CE7HqE5I",
+          "J1UpQ4mi",
+          "oILgH0K1",
+          "Zl1XRwPC",
+          "XSpFtCWr",
+          "HkaIwqsX"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Delta coverage is multiplied against effect size"
+      }
+    },
+    {
+      "index": 4,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Total Prevalence reductions are subtracted from 1",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "gNNBkOu1",
+          "OySggrWE",
+          "YwrdiLXR",
+          "fIqGSdKp",
+          "w3nbNhKx",
+          "fuZURPtp",
+          "WVqHHFyt"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Total Prevalence reductions are subtracted from 1"
+      }
+    },
+    {
+      "index": 5,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Copy baseline prevalence to current prevalence",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "l2Gk9zma"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Copy baseline prevalence to current prevalence"
+      }
+    },
+    {
+      "index": 6,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "modify prevalence t by interventions",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "oFSikFS6"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "modify prevalence t by interventions"
+      }
+    },
+    {
+      "index": 7,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Subtract 1 from relative risks for excess risk",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "G84Cajwc",
+          "6XHzDDLY"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Subtract 1 from relative risks for excess risk"
+      }
+    },
+    {
+      "index": 8,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Scale excess risk by prevalence",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "Q1gCzdNO",
+          "X06Yy1Pa"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Scale excess risk by prevalence"
+      }
+    },
+    {
+      "index": 9,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Add excess risk to denominators",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "6INl2rfV",
+          "pq2EZeBd"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Add excess risk to denominators"
+      }
+    },
+    {
+      "index": 10,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate PAFs",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "H5vdfbZj",
+          "gCkoE4hy",
+          "gq8NL4JU",
+          "3Th9TeK5"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate PAFs"
+      }
+    },
+    {
+      "index": 11,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate delta PAFs",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "0Oy5FSrS",
+          "Zy8OfkVr"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate delta PAFs"
+      }
+    },
+    {
+      "index": 12,
+      "link_components": [
+        "tobacco-risk-factor"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Modify RF_All by Paf deltas and consumption impacts",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "OEiYTDSl"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Modify RF_All by Paf deltas and consumption impacts"
+      }
+    },
+    {
+      "index": 13,
+      "link_components": [],
+      "method": "generate_balance",
+      "narration": "Generate the population",
+      "node_components": [
+        "demographic-substrate"
+      ],
+      "subroutine": {
+        "included_source_nodes": [
+          "DsFreeSus"
+        ],
+        "method": "generate_balance",
+        "narration": "Generate the population"
+      }
+    },
+    {
+      "index": 14,
+      "link_components": [
+        "asthma-epidemiology-core"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Allocate prevalence",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "z2MaEXxg"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Allocate prevalence"
+      }
+    },
+    {
+      "index": 15,
+      "link_components": [],
+      "method": "generate_balance",
+      "narration": "Generate the base values of the surrogate nodes",
+      "node_components": [
+        "asthma-epidemiology-core",
+        "burden-metrics"
+      ],
+      "subroutine": {
+        "included_source_nodes": [
+          "AsthmaEpsd Mortality",
+          "nKC8vwhN",
+          "6fCgpoYB",
+          "4iPxzqKo"
+        ],
+        "method": "generate_balance",
+        "narration": "Generate the base values of the surrogate nodes"
+      }
+    },
+    {
+      "index": 16,
+      "link_components": [
+        "asthma-epidemiology-core"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Modify surrogate",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "8g0Xnawu"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Modify surrogate"
+      }
+    },
+    {
+      "index": 17,
+      "link_components": [],
+      "method": "generate_balance",
+      "narration": "Generate the base values of the function nodes for constants",
+      "node_components": [
+        "burden-metrics",
+        "clinical-high-dose-beclom",
+        "clinical-inhaled-short-acting-beta-agonist",
+        "clinical-low-dose-beclom",
+        "clinical-oral-prednisolone",
+        "economic-metrics"
+      ],
+      "subroutine": {
+        "included_source_nodes": [
+          "LowDoseBeclom_Calculated_Coverage",
+          "HighDoseBeclom_Calculated_Coverage",
+          "AsthmaOralPrednisolone_Calculated_Coverage",
+          "InhaledShortActingBeta_Calculated_Coverage",
+          "LowDoseBeclom_Disability_Effect",
+          "HighDoseBeclom_Disability_Effect",
+          "AsthmaOralPrednisolone_Disability_Effect",
+          "InhaledShortActingBeta_Disability_Effect",
+          "LowDoseBeclom_Mortality_Effect",
+          "Asthma_Blended_Disability",
+          "Disability_Effect_Transform",
+          "Blended_Disability_Transform",
+          "Fow1hNl6",
+          "sBeYN0kb",
+          "W7MB6GWT",
+          "DXhAVyOP"
+        ],
+        "method": "generate_balance",
+        "narration": "Generate the base values of the function nodes for constants"
+      }
+    },
+    {
+      "index": 18,
+      "link_components": [],
+      "method": "generate_balance",
+      "narration": "Generate the values of the constants",
+      "node_components": [
+        "asthma-epidemiology-core",
+        "burden-metrics",
+        "clinical-high-dose-beclom",
+        "clinical-inhaled-short-acting-beta-agonist",
+        "clinical-low-dose-beclom",
+        "clinical-oral-prednisolone",
+        "economic-metrics"
+      ],
+      "subroutine": {
+        "included_source_nodes": [
+          "LowDoseBeclom_Disability_Impact",
+          "HighDoseBeclom_Disability_Impact",
+          "AsthmaOralPrednisolone_Disability_Impact",
+          "InhaledShortActingBeta_Disability_Impact",
+          "LowDoseBeclom_PIN",
+          "HighDoseBeclom_PIN",
+          "AsthmaOralPrednisolone_PIN",
+          "InhaledShortActingBeta_PIN",
+          "LowDoseBeclom_Coverage",
+          "HighDoseBeclom_Coverage",
+          "AsthmaOralPrednisolone_Coverage",
+          "InhaledShortActingBeta_Coverage",
+          "LowDoseBeclom_StartingCoverage",
+          "HighDoseBeclom_StartingCoverage",
+          "AsthmaOralPrednisolone_StartingCoverage",
+          "InhaledShortActingBeta_StartingCoverage",
+          "LowDoseBeclom_Mortality_Impact",
+          "Healthy_Disability",
+          "Asthma_Disability",
+          "AsthmaEpsd_CFR",
+          "rXFK8r54",
+          "HaYRxeQQ",
+          "mrGezI4c"
+        ],
+        "method": "generate_balance",
+        "narration": "Generate the values of the constants"
+      }
+    },
+    {
+      "index": 19,
+      "link_components": [
+        "asthma-epidemiology-core"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate the Incidence Surrogate",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "oOJgYZ0V"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate the Incidence Surrogate"
+      }
+    },
+    {
+      "index": 20,
+      "link_components": [
+        "clinical-high-dose-beclom",
+        "clinical-inhaled-short-acting-beta-agonist",
+        "clinical-low-dose-beclom",
+        "clinical-oral-prednisolone"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Coverage",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "dGHbpFrO",
+          "Qvk38i4c",
+          "H28Yx5J8",
+          "khBYZ9Un",
+          "8vUFIddy",
+          "TSPTW7Pk",
+          "RsDLpQaf",
+          "8psyRF8D"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate Coverage"
+      }
+    },
+    {
+      "index": 21,
+      "link_components": [
+        "clinical-high-dose-beclom",
+        "clinical-inhaled-short-acting-beta-agonist",
+        "clinical-low-dose-beclom",
+        "clinical-oral-prednisolone"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Disability Effects",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "vVnXHSTC",
+          "i6JrzObg",
+          "uOXAd2DT",
+          "Fgwmnfc4",
+          "MPtalvKc",
+          "d4cqdGQK",
+          "UCXitHFE",
+          "yHEbF3n6",
+          "DlS7ViKA",
+          "LG7Pvku6",
+          "lZHA9uFx",
+          "3fOHeEP3"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate Disability Effects"
+      }
+    },
+    {
+      "index": 22,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Remove Disability Effects from 1.0",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "wPKJBZiQ",
+          "HxXZJWFz",
+          "qiQ7YmdW",
+          "qWuAOIFi"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Remove Disability Effects from 1.0"
+      }
+    },
+    {
+      "index": 23,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Modify disease disability weight with intervention effects",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "srfoaH6g"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Modify disease disability weight with intervention effects"
+      }
+    },
+    {
+      "index": 24,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Healthy and Asthma HYL",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "xzIbLyfh",
+          "DjwxypZ1"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate Healthy and Asthma HYL"
+      }
+    },
+    {
+      "index": 25,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculated Combined HYL",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "NWhCzdIp",
+          "8oQTfjGg"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculated Combined HYL"
+      }
+    },
+    {
+      "index": 26,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Combined DW",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "q68b5NmN"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate Combined DW"
+      }
+    },
+    {
+      "index": 27,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculated Modified HYL",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "0suML9Qe"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculated Modified HYL"
+      }
+    },
+    {
+      "index": 28,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate DsFreeSus Disability Surrogate",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "KGnQzUiU"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate DsFreeSus Disability Surrogate"
+      }
+    },
+    {
+      "index": 29,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculated Asthma HYL Surrogate",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "qYdyg8Y5"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculated Asthma HYL Surrogate"
+      }
+    },
+    {
+      "index": 30,
+      "link_components": [
+        "clinical-low-dose-beclom"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Mortality Effects",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "qtFQB5yd",
+          "XQpD4ZiQ",
+          "CYfVlunt"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate Mortality Effects"
+      }
+    },
+    {
+      "index": 31,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Transform Mortality Effect",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "rjNQuHBi"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Transform Mortality Effect"
+      }
+    },
+    {
+      "index": 32,
+      "link_components": [
+        "asthma-epidemiology-core"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Mortality Surrogate (Add CFR to Surrogate)",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "NXoCjigb"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate Mortality Surrogate (Add CFR to Surrogate)"
+      }
+    },
+    {
+      "index": 33,
+      "link_components": [
+        "asthma-epidemiology-core"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Calculate Mortality Surrogate (Transform Effect)",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "qIdKl1m3"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Calculate Mortality Surrogate (Transform Effect)"
+      }
+    },
+    {
+      "index": 34,
+      "link_components": [
+        "demographic-substrate"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Record Births to Birth Node",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "MCWFcR4e",
+          "tGFmOvlz"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Record Births to Birth Node"
+      }
+    },
+    {
+      "index": 35,
+      "link_components": [
+        "asthma-epidemiology-core"
+      ],
+      "method": "synchronous_transfer",
+      "narration": "Main Routine",
+      "node_components": [],
+      "subroutine": {
+        "batch": true,
+        "included_edges": [
+          "Z6UVoLxv",
+          "dgLZdA4x",
+          "HGzwp14L"
+        ],
+        "method": "synchronous_transfer",
+        "narration": "Main Routine"
+      }
+    },
+    {
+      "index": 36,
+      "link_components": [
+        "asthma-epidemiology-core",
+        "demographic-substrate"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Background Mortality",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "09Q1rhSn",
+          "kdE7JaZO"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Background Mortality"
+      }
+    },
+    {
+      "index": 37,
+      "link_components": [
+        "resource-handoffs"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Push AsthmaEpsd to populations reached",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "N9rFWbuG",
+          "8kfRNFLI",
+          "t7xlBFu5",
+          "M7XAks2c"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Push AsthmaEpsd to populations reached"
+      }
+    },
+    {
+      "index": 38,
+      "link_components": [
+        "resource-handoffs"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Modify Population Reached by PIN and Coverage",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "Bqivj1vn",
+          "CzSwMFFu",
+          "lGRctzuP",
+          "6Lq5Ydns",
+          "W4sc2PrG",
+          "P0CzNGjt",
+          "wQ4kyvLO",
+          "osbUZCyk"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Modify Population Reached by PIN and Coverage"
+      }
+    },
+    {
+      "index": 39,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Record HYL",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "giAFe9qp",
+          "F2a0bWMZ"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Record HYL"
+      }
+    },
+    {
+      "index": 40,
+      "link_components": [
+        "economic-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Initialise Economic Value with HYL",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "DbLhgNYh"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Initialise Economic Value with HYL"
+      }
+    },
+    {
+      "index": 41,
+      "link_components": [
+        "economic-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Scale Economic Value by GDP per capita and LFP rate",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "pfDEgvPv",
+          "B48YPJzw"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Scale Economic Value by GDP per capita and LFP rate"
+      }
+    },
+    {
+      "index": 42,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Add prevalence to YLD nodes",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "65f8gAJV",
+          "thJ1j7QJ"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Add prevalence to YLD nodes"
+      }
+    },
+    {
+      "index": 43,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Multiply YLDs by Disability Weights",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "65f8gAJV",
+          "thJ1j7QJ"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Multiply YLDs by Disability Weights"
+      }
+    },
+    {
+      "index": 44,
+      "link_components": [
+        "asthma-epidemiology-core",
+        "demographic-substrate"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Migration of Populations",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "avvOYu19",
+          "yCtPKnQ5"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Migration of Populations"
+      }
+    },
+    {
+      "index": 45,
+      "link_components": [],
+      "method": "age",
+      "narration": "Age the populations",
+      "node_components": [
+        "asthma-epidemiology-core",
+        "demographic-substrate"
+      ],
+      "subroutine": {
+        "included_source_nodes": [
+          "DsFreeSus",
+          "AsthmaEpsd"
+        ],
+        "method": "age",
+        "narration": "Age the populations"
+      }
+    },
+    {
+      "index": 46,
+      "link_components": [
+        "demographic-substrate"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Women give birth",
+      "node_components": [],
+      "subroutine": {
+        "included_edges": [
+          "EXGS1xV6",
+          "Yfenedx0"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Women give birth"
+      }
+    },
+    {
+      "index": 47,
+      "link_components": [
+        "burden-metrics"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Add values to DALYs",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "aUcpDiiY",
+          "4irXyNFb",
+          "pfdr4vDi",
+          "spLLHc6B"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Add values to DALYs"
+      }
+    },
+    {
+      "index": 48,
+      "link_components": [
+        "resource-handoffs"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Push disease populations to absolute resource population reached",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "ResourceAbs_AsthmaOralPrednisolone_Base_1",
+          "ResourceAbs_LowDoseBeclom_Base_1",
+          "ResourceAbs_HighDoseBeclom_Base_1",
+          "ResourceAbs_InhaledShortActingBeta_Base_1"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Push disease populations to absolute resource population reached"
+      }
+    },
+    {
+      "index": 49,
+      "link_components": [
+        "resource-handoffs"
+      ],
+      "method": "push_balance_to_edges",
+      "narration": "Modify absolute resource population reached by PIN and coverage",
+      "node_components": [],
+      "subroutine": {
+        "batch": false,
+        "included_edges": [
+          "ResourceAbs_AsthmaOralPrednisolone_PIN",
+          "ResourceAbs_AsthmaOralPrednisolone_Coverage",
+          "ResourceAbs_LowDoseBeclom_PIN",
+          "ResourceAbs_LowDoseBeclom_Coverage",
+          "ResourceAbs_HighDoseBeclom_PIN",
+          "ResourceAbs_HighDoseBeclom_Coverage",
+          "ResourceAbs_InhaledShortActingBeta_PIN",
+          "ResourceAbs_InhaledShortActingBeta_Coverage"
+        ],
+        "method": "push_balance_to_edges",
+        "narration": "Modify absolute resource population reached by PIN and coverage"
+      }
+    },
+    {
+      "index": 50,
+      "link_components": [],
+      "method": "echo",
+      "narration": "Record Metrics",
+      "node_components": [
+        "asthma-epidemiology-core",
+        "burden-metrics",
+        "demographic-substrate",
+        "economic-metrics",
+        "resource-handoffs"
+      ],
+      "subroutine": {
+        "batch": false,
+        "included_source_nodes": [
+          "DsFreeSus",
+          "yRNlzW3v",
+          "Deceased",
+          "AsthmaEpsd",
+          "b736zFQf",
+          "dycEX5CW",
+          "a98IyNnU",
+          "MCxDBlE3",
+          "6CymLJWw",
+          "Th8rib7e",
+          "7jR6zfXt",
+          "8N5hy7kA",
+          "iMcmFjlP",
+          "tUQMkCEv",
+          "N4Cpf6le",
+          "DXhAVyOP",
+          "ResourcePopulationReached_AsthmaOralPrednisolone",
+          "ResourcePopulationReached_LowDoseBeclom",
+          "ResourcePopulationReached_HighDoseBeclom",
+          "ResourcePopulationReached_InhaledShortActingBeta"
+        ],
+        "method": "echo",
+        "narration": "Record Metrics"
+      }
+    }
+  ]
+}

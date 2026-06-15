@@ -1,0 +1,44 @@
+{
+  "composition_record_id": "composition:ncd-asthma:modular:asthma-cr1:v1",
+  "parameter_count": 53,
+  "parameter_groups": [
+    {
+      "count": 22,
+      "description": "High Dose Beclometasone Scale-Up Start Year, High Dose Beclometasone Scale-Up Final Year, Inhaled Short Acting Beta Agonist Scale-Up Start Year, Low Dose Beclometasone Scale-Up Start Year",
+      "group": "Country and runtime"
+    },
+    {
+      "count": 25,
+      "description": "Baseline Coverage Tobacco Ban, Target Coverage Tobacco Ban, Scale-Up Start Year Tobacco Ban, Scale-Up Final Year Tobacco Ban",
+      "group": "Tobacco policy"
+    },
+    {
+      "count": 7,
+      "description": "Low Dose Beclometasone Baseline Coverage, Low Dose Beclometasone Target Coverage, Low Dose Beclometasone Scale-Up Start Year, Low Dose Beclometasone Scale-Up Final Year",
+      "group": "Low-dose beclometasone"
+    },
+    {
+      "count": 6,
+      "description": "High Dose Beclometasone Baseline Coverage, High Dose Beclometasone Target Coverage, High Dose Beclometasone Scale-Up Start Year, High Dose Beclometasone Scale-Up Final Year",
+      "group": "High-dose beclometasone"
+    },
+    {
+      "count": 6,
+      "description": "Oral Prednisolone Baseline Coverage, Oral Prednisolone Target Coverage, Oral Prednisolone Scale-Up Start Year, Oral Prednisolone Scale-Up Final Year",
+      "group": "Oral prednisolone"
+    },
+    {
+      "count": 6,
+      "description": "Inhaled Short Acting Beta Agonist Baseline Coverage, Inhaled Short Acting Beta Agonist Target Coverage, Inhaled Short Acting Beta Agonist Scale-Up Start Year, Inhaled Short Acting Beta Agonist Scale-Up Final year",
+      "group": "Inhaled short-acting beta agonist"
+    }
+  ],
+  "scenario_card_id": "scenario-card:ncd-asthma:asthma-cr1:modular:v1",
+  "scenario_card_signature_sha256": "262a0f906583947646f933e8712959018abdc4fa5d7cb003ff7029e24700a9a6",
+  "scenario_id": "asthma_cr1",
+  "scenario_sha256": "f8078fbed5d3a02a77c42d24262c53a7f2fff68de904700ef34e32f29f696158",
+  "scenario_source": "public/models/ncd-asthma/scenarios/asthma_cr1.json",
+  "schema": "scenario-card.v1",
+  "summary": "This scenario applies the asthma CR1 settings to the asthma composition.",
+  "title": "Asthma CR1 Scenario"
+}

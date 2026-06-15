@@ -1,0 +1,349 @@
+{
+  "component_id": "asthma-epidemiology-core",
+  "contract": {
+    "inputs": [
+      {
+        "from_component": "demographic-substrate",
+        "id": "population_at_risk"
+      },
+      {
+        "id": "asthma_prevalence",
+        "source": "fhdb.epidemiology measure=prevalence"
+      },
+      {
+        "id": "asthma_incidence",
+        "source": "fhdb.epidemiology measure=incidence"
+      },
+      {
+        "id": "asthma_deaths",
+        "source": "fhdb.epidemiology measure=deaths"
+      },
+      {
+        "id": "asthma_remission",
+        "source": "asthma.get_observation AsthmaEpsd -> DsFreeSus"
+      },
+      {
+        "from_component": "tobacco-risk-factor",
+        "id": "incidence_modifier"
+      }
+    ],
+    "outputs": [
+      {
+        "current_binding": "AsthmaEpsd",
+        "id": "asthma_state_occupancy"
+      },
+      {
+        "current_binding": "AsthmaEpsd Incidence",
+        "id": "asthma_incidence_flow"
+      },
+      {
+        "current_binding": "AsthmaEpsd Mortality",
+        "id": "asthma_death_flow"
+      }
+    ]
+  },
+  "description": "Asthma state machine, disease incidence, prevalence allocation, remission, asthma mortality, and risk-modified incidence surrogate.",
+  "kind": "compiled_together",
+  "label": "Asthma epidemiology core",
+  "links": [
+    {
+      "description": "Remission of Asthma to DsFreeSus",
+      "edge_type": "transition",
+      "generate_array": {
+        "data_fetcher_label": "asthma",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "AsthmaEpsd -> DsFreeSus"
+        }
+      },
+      "id": "Z6UVoLxv",
+      "label": "AsthmaEpsd -> DsFreeSus",
+      "remove_value_from_source": true,
+      "requires_source_balance": true,
+      "source": "AsthmaEpsd",
+      "target": "DsFreeSus",
+      "value_to_target_operator": "add"
+    },
+    {
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "migration",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "yCtPKnQ5",
+      "label": "AsthmaEpsd -> AsthmaEpsd",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "AsthmaEpsd",
+      "target": "AsthmaEpsd",
+      "value_to_target_operator": "add"
+    },
+    {
+      "description": "Progression of asthma episode",
+      "edge_type": "transition",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "fetch_once": true,
+        "method": "epidemiology",
+        "parameters": {
+          "country": "AFG",
+          "disease": "Asthma",
+          "measure": "prevalence"
+        }
+      },
+      "id": "z2MaEXxg",
+      "label": "Prevalence DsFreeSus -> AsthmaEpsd",
+      "remove_value_from_source": true,
+      "requires_source_balance": true,
+      "source": "DsFreeSus",
+      "target": "AsthmaEpsd",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "NXoCjigb",
+      "label": "AsthmaEpsd_CFR -> AsthmaEpsd Mortality",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "AsthmaEpsd_CFR",
+      "target": "AsthmaEpsd Mortality",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "qIdKl1m3",
+      "label": "Mortality_Effect_Transform -> AsthmaEpsd Mortality",
+      "postprocessing": {
+        "inverse": true
+      },
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "Mortality_Effect_Transform",
+      "target": "AsthmaEpsd Mortality",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "edge_type": "transition",
+      "id": "dgLZdA4x",
+      "label": "AsthmaEpsd -> AsthmaEpsd Mortality",
+      "set_by_surrogate": true,
+      "source": "AsthmaEpsd",
+      "target": "AsthmaEpsd Mortality"
+    },
+    {
+      "edge_type": "projection",
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "oOJgYZ0V",
+      "label": "AsthmaEpsd_Incidence_Rate -> AsthmaEpsd Incidence",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "rXFK8r54",
+      "target": "4iPxzqKo",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "edge_type": "transition",
+      "id": "HGzwp14L",
+      "label": "DsFreeSus -> AsthmaEpsd Incidence",
+      "set_by_surrogate": true,
+      "source": "DsFreeSus",
+      "target": "4iPxzqKo"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "wAhdgLwg",
+      "label": "AsthmaEpsd Incidence -> AsthmaEpsd",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "4iPxzqKo",
+      "target": "AsthmaEpsd",
+      "value_to_target_operator": "add"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "8g0Xnawu",
+      "label": "rf-all -> surrogate",
+      "remove_value_from_source": false,
+      "source": "PjHF9FHh",
+      "target": "4iPxzqKo",
+      "value_to_target_operator": "multiply"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "PovmQQCi",
+      "label": "AsthmaEpsd Mortality -> Deceased",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "AsthmaEpsd Mortality",
+      "target": "N4Cpf6le",
+      "value_to_target_operator": "add"
+    },
+    {
+      "description": "Transition people into the mortality state",
+      "edge_type": "transition",
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "mortality",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "id": "kdE7JaZO",
+      "label": "Background Mortality AsthmaEpsd",
+      "remove_value_from_source": true,
+      "requires_source_balance": true,
+      "source": "AsthmaEpsd",
+      "target": "N4Cpf6le",
+      "value_to_target_operator": "add"
+    }
+  ],
+  "nodes": [
+    {
+      "ageing": true,
+      "color": "#E5EF73",
+      "id": "AsthmaEpsd",
+      "label": "AsthmaEpsd",
+      "node_type": "STATE",
+      "x": 37.34,
+      "y": 2.06
+    },
+    {
+      "color": "#7038E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 0
+        }
+      },
+      "id": "AsthmaEpsd Mortality",
+      "label": "AsthmaEpsd Mortality",
+      "node_type": "SURROGATE",
+      "x": 133.75,
+      "y": -18.93
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
+        "parameters": {
+          "country": "AFG",
+          "disease": "Asthma",
+          "measure": "deaths"
+        }
+      },
+      "id": "AsthmaEpsd_CFR",
+      "label": "AsthmaEpsd_CFR",
+      "node_type": "CONSTANT",
+      "x": 194.08,
+      "y": -17.28
+    },
+    {
+      "color": "#06B4E1",
+      "flush": true,
+      "generate_array": {
+        "data_fetcher_label": "fhdb",
+        "method": "epidemiology",
+        "parameters": {
+          "country": "AFG",
+          "disease": "Asthma",
+          "measure": "incidence"
+        }
+      },
+      "id": "rXFK8r54",
+      "label": "AsthmaEpsd_Incidence_Rate",
+      "node_type": "CONSTANT",
+      "x": 189.19,
+      "y": -31.91
+    },
+    {
+      "color": "#7038E1",
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "4iPxzqKo",
+      "label": "AsthmaEpsd Incidence",
+      "node_type": "SURROGATE",
+      "x": 133.55,
+      "y": -32.01
+    },
+    {
+      "balance_type": "array",
+      "color": "#FB6375",
+      "description": "The state of being dead",
+      "flush": true,
+      "id": "N4Cpf6le",
+      "label": "Deceased-AsthmaEpsd",
+      "node_type": "STATE",
+      "order": 3,
+      "x": 118.27,
+      "y": 17.44
+    }
+  ],
+  "owned_link_ids": [
+    "Z6UVoLxv",
+    "yCtPKnQ5",
+    "z2MaEXxg",
+    "NXoCjigb",
+    "qIdKl1m3",
+    "dgLZdA4x",
+    "oOJgYZ0V",
+    "HGzwp14L",
+    "wAhdgLwg",
+    "8g0Xnawu",
+    "PovmQQCi",
+    "kdE7JaZO"
+  ],
+  "owned_node_ids": [
+    "AsthmaEpsd",
+    "AsthmaEpsd Mortality",
+    "AsthmaEpsd_CFR",
+    "rXFK8r54",
+    "4iPxzqKo",
+    "N4Cpf6le"
+  ],
+  "schema": "asthma-component.v1"
+}
