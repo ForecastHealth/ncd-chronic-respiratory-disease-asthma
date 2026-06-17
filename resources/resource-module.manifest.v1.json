@@ -1,0 +1,26 @@
+{
+  "client_runtime_paths": {
+    "graphs": [
+      "/models/ncd-asthma/resources/graphs/cr1_acute_asthma.json",
+      "/models/ncd-asthma/resources/graphs/cr3_high_dose_beclometasone_saba.json",
+      "/models/ncd-asthma/resources/graphs/cr3_inhaled_short_acting_beta.json",
+      "/models/ncd-asthma/resources/graphs/cr3_low_dose_beclometasone_saba.json"
+    ],
+    "package": "/models/ncd-asthma/resources/package.json"
+  },
+  "created_from_client_cache": {
+    "created_at": "2026-06-17T01:13:55+00:00",
+    "source": "/Users/rory/Documents/ncd-client/public/models/ncd-asthma/resources"
+  },
+  "graph_count": 4,
+  "graph_directory": "graphs",
+  "label": "Asthma clinical resource module",
+  "model_id": "ncd-asthma",
+  "module_id": "ncd-asthma-clinical-resources",
+  "module_type": "clinical_resource_module",
+  "package_path": "package.json",
+  "projection_model_path": "/models/ncd-asthma/model.json",
+  "resource_block_count": 4,
+  "runtime_boundary": "Consumes projection events from the disease model and produces service, workforce, supply and resource-cost outputs.",
+  "schema": "forecast-health.resource-module.v1"
+}

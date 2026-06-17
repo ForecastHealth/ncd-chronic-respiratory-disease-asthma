@@ -1,0 +1,413 @@
+{
+  "metadata": {
+    "name": "CR3. High-dose beclometasone plus SABA resource graph",
+    "source_workbook": "Spec5/ModData/IC/ICModData.xlsx",
+    "source_sheet": "Treatment Inputs rows for intervention 334; Drug and Supply Prices rows 592 and 593",
+    "conversion": "scripts/build_clinical_resource_sidecars.py",
+    "notes": "CR3 intervention-level resource package from Spec5 ICModData asthma intervention 334. CR3 scenario totals aggregate this block with the other CR3 asthma intervention packages."
+  },
+  "nodes": [
+    {
+      "id": "ResourcePopulationReached_HighDoseBeclom",
+      "label": "ResourcePopulationReached-HighDoseBeclom",
+      "type": "pin",
+      "node_type": "pin",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080",
+      "is_projection_entry": true
+    },
+    {
+      "id": "visit-outpatient-visit",
+      "label": "Outpatient visit",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+    },
+    {
+      "id": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+    },
+    {
+      "id": "workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+    },
+    {
+      "id": "workforce-nurse",
+      "label": "Nurse Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-workforce-nurse",
+      "label": "Nurse Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+    },
+    {
+      "id": "pin-supply-salbutamol-inhaler-100-mcg",
+      "label": "Receiving Salbutamol inhaler, 100 mcg",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-salbutamol-inhaler-100-mcg",
+      "label": "Units of Salbutamol inhaler, 100 mcg",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-salbutamol-inhaler-100-mcg",
+      "label": "Salbutamol inhaler, 100 mcg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    },
+    {
+      "id": "pin-supply-beclometasone-inhaler-100-mcg",
+      "label": "Receiving Beclometasone inhaler, 100 mcg",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+    },
+    {
+      "id": "units-supply-beclometasone-inhaler-100-mcg",
+      "label": "Units of Beclometasone inhaler, 100 mcg",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+    },
+    {
+      "id": "cost-supply-beclometasone-inhaler-100-mcg",
+      "label": "Beclometasone inhaler, 100 mcg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+    }
+  ],
+  "links": [
+    {
+      "id": "to-visit-outpatient-visit",
+      "source": "ResourcePopulationReached_HighDoseBeclom",
+      "target": "visit-outpatient-visit",
+      "label": "ResourcePopulationReached-HighDoseBeclom -> Outpatient visit",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0,
+          "number-of-visits": 3.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-visit-outpatient-visit",
+      "source": "visit-outpatient-visit",
+      "target": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit -> Outpatient visit Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "cost-per-day": 52.160000000000004
+        }
+      }
+    },
+    {
+      "id": "to-workforce-generalist-primary-care-doctor",
+      "source": "ResourcePopulationReached_HighDoseBeclom",
+      "target": "workforce-generalist-primary-care-doctor",
+      "label": "ResourcePopulationReached-HighDoseBeclom -> Generalist/Primary care doctor Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0,
+          "number-of-minutes": 20.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-workforce-generalist-primary-care-doctor",
+      "source": "workforce-generalist-primary-care-doctor",
+      "target": "cost-workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes -> Generalist/Primary care doctor Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "salary-per-minute": 1.0773833333333334
+        }
+      }
+    },
+    {
+      "id": "to-workforce-nurse",
+      "source": "ResourcePopulationReached_HighDoseBeclom",
+      "target": "workforce-nurse",
+      "label": "ResourcePopulationReached-HighDoseBeclom -> Nurse Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0,
+          "number-of-minutes": 20.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-workforce-nurse",
+      "source": "workforce-nurse",
+      "target": "cost-workforce-nurse",
+      "label": "Nurse Minutes -> Nurse Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "salary-per-minute": 0.8778666666666666
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-salbutamol-inhaler-100-mcg",
+      "source": "ResourcePopulationReached_HighDoseBeclom",
+      "target": "pin-supply-salbutamol-inhaler-100-mcg",
+      "label": "ResourcePopulationReached-HighDoseBeclom -> Receiving Salbutamol inhaler, 100 mcg",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-salbutamol-inhaler-100-mcg",
+      "source": "pin-supply-salbutamol-inhaler-100-mcg",
+      "target": "units-supply-salbutamol-inhaler-100-mcg",
+      "label": "Receiving Salbutamol inhaler, 100 mcg -> Units of Salbutamol inhaler, 100 mcg",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 5.0,
+          "number-of-days": 365.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-salbutamol-inhaler-100-mcg",
+      "source": "units-supply-salbutamol-inhaler-100-mcg",
+      "target": "cost-supply-salbutamol-inhaler-100-mcg",
+      "label": "Units of Salbutamol inhaler, 100 mcg -> Salbutamol inhaler, 100 mcg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 0.0099
+        }
+      }
+    },
+    {
+      "id": "to-pin-supply-beclometasone-inhaler-100-mcg",
+      "source": "ResourcePopulationReached_HighDoseBeclom",
+      "target": "pin-supply-beclometasone-inhaler-100-mcg",
+      "label": "ResourcePopulationReached-HighDoseBeclom -> Receiving Beclometasone inhaler, 100 mcg",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "pin": 1.0
+        }
+      }
+    },
+    {
+      "id": "to-units-supply-beclometasone-inhaler-100-mcg",
+      "source": "pin-supply-beclometasone-inhaler-100-mcg",
+      "target": "units-supply-beclometasone-inhaler-100-mcg",
+      "label": "Receiving Beclometasone inhaler, 100 mcg -> Units of Beclometasone inhaler, 100 mcg",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "units-per-day": 4.0,
+          "number-of-days": 365.0
+        }
+      }
+    },
+    {
+      "id": "to-cost-supply-beclometasone-inhaler-100-mcg",
+      "source": "units-supply-beclometasone-inhaler-100-mcg",
+      "target": "cost-supply-beclometasone-inhaler-100-mcg",
+      "label": "Units of Beclometasone inhaler, 100 mcg -> Beclometasone inhaler, 100 mcg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+        "method": "inflow",
+        "parameters": {
+          "value_to_use": "inflow"
+        }
+      },
+      "generate_array": {
+        "method": "n_kwargs",
+        "parameters": {
+          "unit_cost": 0.0423
+        }
+      }
+    }
+  ]
+}
