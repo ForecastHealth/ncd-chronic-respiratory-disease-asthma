@@ -1,6 +1,6 @@
 {
   "acts_on_module": "tobacco-risk-factor",
-  "boundary_note": "Executable cessation intervention module for the current platform path. This module owns the component identity, scenario parameters, source rows, costing tag, and downstream workflow binding. Non-lung disease models use a component-specific tobacco health-impact path; lung cancer uses the current incidence-modifier proxy boundary.",
+  "boundary_note": "Executable cessation intervention module for the current platform path. This module owns the component identity, scenario parameters, source rows, costing tag, and downstream workflow binding. Disease modules consume the changed tobacco exposure state through explicit module handoff contracts.",
   "component_id": "intervention-tobacco-cessation-quitline",
   "costing": {
     "appendix3_tag": "T6",
@@ -31,9 +31,9 @@
   },
   "health_effect_path": "tobacco_cessation_quitline",
   "internal_link_ids": [
-    "tcCessQuitlineBaseDelta",
-    "tcCessQuitlineTargetDelta",
-    "tcCessQuitlineDeltaEffect"
+    "intervention-tobacco-cessation-quitline--baseline-to-changed",
+    "intervention-tobacco-cessation-quitline--coverage-to-changed",
+    "intervention-tobacco-cessation-quitline--effect-to-changed"
   ],
   "intervention_component_id": "tobacco_cessation.quitline",
   "label": "Tobacco cessation - National toll-free quitline services",
@@ -46,12 +46,12 @@
           "value": 1
         }
       },
-      "id": "tcCessQuitlineBaseDelta",
-      "label": "baseline-coverage-tobacco_cessation_quitline -> delta-coverage-tobacco_cessation_quitline",
+      "id": "intervention-tobacco-cessation-quitline--baseline-to-changed",
+      "label": "baseline tobacco state -> changed tobacco state",
       "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "tcCessQuitlineBase",
-      "target": "tcCessQuitlineDelta",
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-quitline--baseline-tobacco-state",
+      "target": "intervention-tobacco-cessation-quitline--changed-tobacco-state",
       "value_to_target_operator": "add"
     },
     {
@@ -62,26 +62,28 @@
           "value": 1
         }
       },
-      "id": "tcCessQuitlineTargetDelta",
-      "label": "target-coverage-tobacco_cessation_quitline -> delta-coverage-tobacco_cessation_quitline",
+      "id": "intervention-tobacco-cessation-quitline--coverage-to-changed",
+      "label": "coverage -> changed tobacco state",
       "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "tcCessQuitlineTarget",
-      "target": "tcCessQuitlineDelta",
-      "value_to_target_operator": "add"
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-quitline--coverage",
+      "target": "intervention-tobacco-cessation-quitline--changed-tobacco-state",
+      "value_to_target_operator": "multiply"
     },
     {
+      "edge_type": "projection",
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 1
+          "value": -1
         }
       },
-      "id": "tcCessQuitlineDeltaEffect",
-      "label": "delta-coverage-tobacco_cessation_quitline -> effect-size-tobacco_cessation_quitline",
+      "id": "intervention-tobacco-cessation-quitline--effect-to-changed",
+      "label": "effect size -> changed tobacco state",
       "remove_value_from_source": false,
-      "source": "tcCessQuitlineDelta",
-      "target": "tcCessQuitlineEffect",
+      "requires_source_balance": false,
+      "source": "intervention-tobacco-cessation-quitline--effect-size",
+      "target": "intervention-tobacco-cessation-quitline--changed-tobacco-state",
       "value_to_target_operator": "multiply"
     }
   ],
@@ -99,79 +101,56 @@
   "module_type": "tobacco_cessation_intervention",
   "nodes": [
     {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0.05
-        },
-        "postprocessing": {
-          "negative": true
+          "value": 1
         }
       },
-      "id": "tcCessQuitlineBase",
-      "label": "baseline-coverage-tobacco_cessation_quitline",
-      "node_type": "CONSTANT",
-      "x": -41.11,
-      "y": -116.95
+      "id": "intervention-tobacco-cessation-quitline--baseline-tobacco-state",
+      "label": "Tobacco cessation - National toll-free quitline services baseline tobacco state",
+      "node_type": "CONSTANT"
     },
     {
-      "color": "#06B4E1",
-      "flush": true,
-      "generate_array": {
-        "method": "linear_with_arbitrary_length",
-        "parameters": {
-          "end_index": 2,
-          "end_value": 0.05,
-          "fill_after": 0.05,
-          "fill_before": 0.05,
-          "start_index": 1,
-          "start_value": 0.05
-        }
-      },
-      "id": "tcCessQuitlineTarget",
-      "label": "target-coverage-tobacco_cessation_quitline",
-      "node_type": "CONSTANT",
-      "x": -41.68,
-      "y": -111.28
-    },
-    {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
-          "value": 0
+          "value": 0.95
         }
       },
-      "id": "tcCessQuitlineDelta",
-      "label": "delta-coverage-tobacco_cessation_quitline",
-      "node_type": "FUNCTION",
-      "x": -43.41,
-      "y": -86.44
+      "id": "intervention-tobacco-cessation-quitline--coverage",
+      "label": "Tobacco cessation - National toll-free quitline services coverage",
+      "node_type": "CONSTANT"
     },
     {
-      "color": "#06B4E1",
-      "flush": true,
       "generate_array": {
         "method": "single_value",
         "parameters": {
           "value": 0.05
         }
       },
-      "id": "tcCessQuitlineEffect",
-      "label": "effect-size-tobacco_cessation_quitline",
-      "node_type": "CONSTANT",
-      "x": -49.07,
-      "y": -68.46
+      "id": "intervention-tobacco-cessation-quitline--effect-size",
+      "label": "Tobacco cessation - National toll-free quitline services effect size",
+      "node_type": "CONSTANT"
+    },
+    {
+      "flush": true,
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "intervention-tobacco-cessation-quitline--changed-tobacco-state",
+      "label": "Tobacco cessation - National toll-free quitline services changed tobacco state",
+      "node_type": "FUNCTION"
     }
   ],
   "owned_node_ids": [
-    "tcCessQuitlineBase",
-    "tcCessQuitlineTarget",
-    "tcCessQuitlineDelta",
-    "tcCessQuitlineEffect"
+    "intervention-tobacco-cessation-quitline--baseline-tobacco-state",
+    "intervention-tobacco-cessation-quitline--coverage",
+    "intervention-tobacco-cessation-quitline--effect-size",
+    "intervention-tobacco-cessation-quitline--changed-tobacco-state"
   ],
   "parameters": {
     "Baseline Coverage Tobacco Ban": {
@@ -708,7 +687,7 @@
   "scenario_id": "asthma-tobacco-cessation-quitline",
   "scenario_path": "/models/ncd-asthma/scenarios/tobacco_cessation_quitline.json",
   "schema": "forecast-health.tobacco-cessation-intervention-module.v1",
-  "signature_sha256": "9a5ded9f718715d7003bd862050c427cc14dc1200d4f1834d5d1d2e82e47a2d0",
+  "signature_sha256": "b7836813d5fe4065d04a1db842a1089d06b31dd91bb8769e8bf405794a147fdc",
   "source_registry": "state/undp-tobacco-cessation-registry.v1.json",
   "source_row_counts": {
     "resource_mapping_rows": 0,
