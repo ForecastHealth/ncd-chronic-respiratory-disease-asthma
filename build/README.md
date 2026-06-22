@@ -12,7 +12,7 @@ build/
 │   ├── high_dose_beclom.json
 │   ├── oral_prednisolone.json
 │   ├── inhaled_beta_agonist.json
-│   └── tobacco_interventions.json
+│   └── inhaled_beta_agonist.json
 ├── configs/             # YAML configuration files for scenarios
 │   ├── asthma_baseline.yml
 │   ├── asthma_cr1.yml
@@ -63,7 +63,6 @@ components:
   - high_dose_beclom.json
   - oral_prednisolone.json
   - inhaled_beta_agonist.json
-  - tobacco_interventions.json
 
 # Override specific values for CR1 scenario
 overrides:

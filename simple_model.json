@@ -122,18 +122,6 @@
       "node_type": "FUNCTION"
     },
     {
-      "id": "Deceased",
-      "x": 144.31,
-      "y": -25.01,
-      "label": "Deceased-DsFreeSus",
-      "description": "The state of being dead",
-      "node_type": "STATE",
-      "balance_type": "array",
-      "color": "#FB6375",
-      "order": 3,
-      "flush": true
-    },
-    {
       "id": "AsthmaEpsd",
       "x": 32.34,
       "y": -24.23,
@@ -187,25 +175,6 @@
       "flush": true,
       "color": "#EB7FEF",
       "node_type": "FUNCTION"
-    },
-    {
-      "id": "DsFreeSus",
-      "x": 43.83,
-      "y": -53.54,
-      "label": "DsFreeSus",
-      "description": "State holding the balance of the healthy population",
-      "node_type": "STATE",
-      "balance_type": "array",
-      "ageing": true,
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "population",
-        "parameters": {
-          "country": "AFG"
-        },
-        "fetch_once": true
-      },
-      "color": "#3CD009"
     },
     {
       "id": "AsthmaOralPrednisolone_Disability_Effect",
@@ -503,186 +472,6 @@
   ],
   "links": [
     {
-      "id": "avvOYu19",
-      "source": "DsFreeSus",
-      "target": "DsFreeSus",
-      "description": "Adjust the state by the net migration rate",
-      "edge_type": "modifier",
-      "value_to_target_operator": "add",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "migration",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "DsFreeSus -> DsFreeSus"
-    },
-    {
-      "id": "MCWFcR4e",
-      "source": "DsFreeSus",
-      "target": "Births",
-      "description": "Project the number of births using the population and ASFR",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "fertility",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "DsFreeSus -> Births"
-    },
-    {
-      "id": "EXGS1xV6",
-      "source": "Births",
-      "target": "DsFreeSus",
-      "description": "Male births into the population",
-      "edge_type": "modifier",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "sex_ratio",
-        "parameters": {
-          "country": "AFG",
-          "sex": "m"
-        }
-      },
-      "weighted_balance_postprocessing": {
-        "into": [
-          0,
-          0
-        ]
-      },
-      "label": "Births -> DsFreeSus"
-    },
-    {
-      "id": "Yfenedx0",
-      "source": "Births",
-      "target": "DsFreeSus",
-      "description": "Female births into the population",
-      "edge_type": "modifier",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "sex_ratio",
-        "parameters": {
-          "country": "AFG",
-          "sex": "f"
-        }
-      },
-      "weighted_balance_postprocessing": {
-        "into": [
-          1,
-          0
-        ]
-      },
-      "label": "Births -> DsFreeSus"
-    },
-    {
-      "id": "09Q1rhSn",
-      "source": "DsFreeSus",
-      "target": "Deceased",
-      "description": "Transition people into the mortality state",
-      "edge_type": "transition",
-      "requires_source_balance": true,
-      "remove_value_from_source": true,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "mortality",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "DsFreeSus -> Deceased"
-    },
-    {
-      "id": "Z6UVoLxv",
-      "source": "AsthmaEpsd",
-      "target": "DsFreeSus",
-      "description": "Remission of Asthma to DsFreeSus",
-      "edge_type": "transition",
-      "requires_source_balance": true,
-      "remove_value_from_source": true,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "asthma",
-        "method": "get_observation",
-        "parameters": {
-          "country": "AFG",
-          "observation": "AsthmaEpsd -> DsFreeSus"
-        }
-      },
-      "label": "AsthmaEpsd -> DsFreeSus"
-    },
-    {
-      "id": "tGFmOvlz",
-      "source": "AsthmaEpsd",
-      "target": "Births",
-      "description": "Project the number of births using the population and ASFR",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "fertility",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "AsthmaEpsd -> Births"
-    },
-    {
-      "id": "yCtPKnQ5",
-      "source": "AsthmaEpsd",
-      "target": "AsthmaEpsd",
-      "description": "Adjust the state by the net migration rate",
-      "edge_type": "modifier",
-      "value_to_target_operator": "add",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "migration",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "AsthmaEpsd -> AsthmaEpsd"
-    },
-    {
-      "id": "z2MaEXxg",
-      "source": "DsFreeSus",
-      "target": "AsthmaEpsd",
-      "description": "Progression of asthma episode",
-      "edge_type": "transition",
-      "requires_source_balance": true,
-      "remove_value_from_source": true,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "fetch_once": true,
-        "data_fetcher_label": "fhdb",
-        "method": "epidemiology",
-        "parameters": {
-          "country": "AFG",
-          "disease": "Asthma",
-          "measure": "prevalence"
-        }
-      },
-      "label": "Prevalence DsFreeSus -> AsthmaEpsd"
-    },
-    {
       "id": "xzIbLyfh",
       "source": "Asthma_Disability",
       "target": "Asthma_Blended_Disability",
@@ -908,15 +697,6 @@
       "label": "Healthy_HYL -> DsFreeSus_HYL"
     },
     {
-      "id": "giAFe9qp",
-      "source": "DsFreeSus",
-      "target": "nKC8vwhN",
-      "edge_type": "transition",
-      "set_by_surrogate": true,
-      "remove_value_from_source": false,
-      "label": "DsFreeSus -> DsFreeSus HYL"
-    },
-    {
       "id": "ZTeJZRMo",
       "source": "nKC8vwhN",
       "target": "yRNlzW3v",
@@ -1077,14 +857,6 @@
       "label": "AsthmaEpsd_Incidence_Rate -> AsthmaEpsd Incidence"
     },
     {
-      "id": "HGzwp14L",
-      "source": "DsFreeSus",
-      "target": "4iPxzqKo",
-      "edge_type": "transition",
-      "set_by_surrogate": true,
-      "label": "DsFreeSus -> AsthmaEpsd Incidence"
-    },
-    {
       "id": "wAhdgLwg",
       "source": "4iPxzqKo",
       "target": "AsthmaEpsd",
@@ -1167,24 +939,6 @@
       "label": "AsthmaEpsd Mortality -> Deceased"
     },
     {
-      "id": "SX1OAMyE",
-      "source": "Deceased",
-      "target": "a98IyNnU",
-      "value_to_target_operator": "add",
-      "remove_value_from_source": false,
-      "trigger": {
-        "method": "inflow",
-        "parameters": {
-          "value_to_use": "inflow"
-        }
-      },
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "yll_weights",
-        "parameters": {}
-      }
-    },
-    {
       "id": "XHQWmcx1",
       "source": "N4Cpf6le",
       "target": "MCxDBlE3",
@@ -1214,19 +968,6 @@
       },
       "remove_value_from_source": false,
       "value_to_target_operator": "add"
-    },
-    {
-      "id": "thJ1j7QJ",
-      "source": "DsFreeSus",
-      "target": "b736zFQf",
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
     },
     {
       "id": "qZzim17x",
@@ -1316,21 +1057,6 @@
     {
       "method": "flush",
       "narration": "Flush unneeded values"
-    },
-    {
-      "method": "generate_balance",
-      "narration": "Generate the population",
-      "included_source_nodes": [
-        "DsFreeSus"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
-      "batch": false,
-      "narration": "Allocate prevalence",
-      "included_edges": [
-        "z2MaEXxg"
-      ]
     },
     {
       "method": "generate_balance",
@@ -1490,20 +1216,10 @@
       ]
     },
     {
-      "method": "push_balance_to_edges",
-      "narration": "Record Births to Birth Node",
-      "included_edges": [
-        "MCWFcR4e",
-        "tGFmOvlz"
-      ]
-    },
-    {
       "method": "synchronous_transfer",
       "narration": "Main Routine",
       "included_edges": [
-        "Z6UVoLxv",
-        "dgLZdA4x",
-        "HGzwp14L"
+        "dgLZdA4x"
       ],
       "batch": true
     },
@@ -1511,7 +1227,6 @@
       "method": "push_balance_to_edges",
       "narration": "Background Mortality",
       "included_edges": [
-        "09Q1rhSn",
         "kdE7JaZO"
       ],
       "batch": false
@@ -1537,7 +1252,6 @@
       "method": "push_balance_to_edges",
       "narration": "Record HYL",
       "included_edges": [
-        "giAFe9qp",
         "F2a0bWMZ"
       ]
     },
@@ -1546,8 +1260,7 @@
       "batch": false,
       "narration": "Add prevalence to YLD nodes",
       "included_edges": [
-        "65f8gAJV",
-        "thJ1j7QJ"
+        "65f8gAJV"
       ]
     },
     {
@@ -1555,32 +1268,7 @@
       "batch": false,
       "narration": "Multiply YLDs by Disability Weights",
       "included_edges": [
-        "65f8gAJV",
-        "thJ1j7QJ"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
-      "narration": "Migration of Populations",
-      "included_edges": [
-        "avvOYu19",
-        "yCtPKnQ5"
-      ]
-    },
-    {
-      "method": "age",
-      "narration": "Age the populations",
-      "included_source_nodes": [
-        "DsFreeSus",
-        "AsthmaEpsd"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
-      "narration": "Women give birth",
-      "included_edges": [
-        "EXGS1xV6",
-        "Yfenedx0"
+        "65f8gAJV"
       ]
     },
     {
@@ -1599,9 +1287,7 @@
       "batch": false,
       "narration": "Record Metrics",
       "included_source_nodes": [
-        "DsFreeSus",
         "yRNlzW3v",
-        "Deceased",
         "AsthmaEpsd",
         "b736zFQf",
         "dycEX5CW",

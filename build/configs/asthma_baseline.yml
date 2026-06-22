@@ -1,29 +1,17 @@
-# Configuration for Asthma Baseline Scenario
 metadata:
-  label: "Baseline Scenario"
-  description: | 
-    A scenario where there is no change in the coverage of any intervention.
-    This baseline scenario is useful when you're interested in varying multiple interventions at the same time.
+  label: Baseline Scenario
+  description: 'A scenario where there is no change in the coverage of any intervention.
+
+    This baseline scenario is useful when you''re interested in varying multiple interventions
+    at the same time.
+
+    '
   authors: []
-
-# Components to include (from build/components/)
 components:
-  - base.json
-  - asthma_low_dose_beclom.json
-  - asthma_high_dose_beclom.json
-  - asthma_oral_prednisolone.json
-  - asthma_inhaled_beta_agonist.json
-  - tobacco_ban.json
-  - tobacco_massmedia.json
-  - tobacco_protect.json
-  - tobacco_quitbrief.json
-  - tobacco_quitcessation.json
-  - tobacco_tax.json
-  - tobacco_warnlabel.json
-
-# Optional: Override specific parameter values
-# These will be applied after merging components
+- base.json
+- asthma_low_dose_beclom.json
+- asthma_high_dose_beclom.json
+- asthma_oral_prednisolone.json
+- asthma_inhaled_beta_agonist.json
 overrides: {}
-
-# Output file path (relative to build directory)
 output: ../scenarios/asthma_baseline.json

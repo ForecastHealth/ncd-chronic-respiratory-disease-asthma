@@ -3,7 +3,6 @@
   "component_id": "epidemiology-core",
   "declared_inputs": [],
   "internal_link_ids": [
-    "yCtPKnQ5",
     "NXoCjigb",
     "qIdKl1m3",
     "dgLZdA4x",
@@ -13,24 +12,6 @@
     "kdE7JaZO"
   ],
   "links": [
-    {
-      "description": "Adjust the state by the net migration rate",
-      "edge_type": "modifier",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "migration",
-        "parameters": {
-          "country": "ETH"
-        }
-      },
-      "id": "yCtPKnQ5",
-      "label": "AsthmaEpsd -> AsthmaEpsd",
-      "remove_value_from_source": false,
-      "requires_source_balance": true,
-      "source": "AsthmaEpsd",
-      "target": "AsthmaEpsd",
-      "value_to_target_operator": "add"
-    },
     {
       "edge_type": "projection",
       "generate_array": {

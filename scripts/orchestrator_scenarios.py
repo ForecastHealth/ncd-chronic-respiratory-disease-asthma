@@ -20,20 +20,6 @@ TEMPLATE_ALIASES = {
     "oral_prednisolone": "asthma_cr1",
     "cr1": "asthma_cr1",
     "cr3": "asthma_cr3",
-    "tobacco1": "tobacco_t1",
-    "tobacco_1": "tobacco_t1",
-    "tobacco2": "tobacco_t2",
-    "tobacco_2": "tobacco_t2",
-    "tobacco3": "tobacco_t3",
-    "tobacco_3": "tobacco_t3",
-    "tobacco4": "tobacco_t4",
-    "tobacco_4": "tobacco_t4",
-    "tobacco5": "tobacco_t5",
-    "tobacco_5": "tobacco_t5",
-    "tobacco6": "tobacco_t6",
-    "tobacco_6": "tobacco_t6",
-    "tobacco7": "tobacco_t7",
-    "tobacco_7": "tobacco_t7",
 }
 TEMPLATE_KIND_OVERRIDES = {
     "asthma_baseline": "baseline",
@@ -44,13 +30,6 @@ TEMPLATE_KIND_OVERRIDES = {
     "asthma_low_dose_beclom": "parameter_surface",
     "asthma_high_dose_beclom": "parameter_surface",
     "asthma_inhaled_beta_agonist": "parameter_surface",
-    "tobacco_t1": "preset",
-    "tobacco_t2": "preset",
-    "tobacco_t3": "preset",
-    "tobacco_t4": "preset",
-    "tobacco_t5": "preset",
-    "tobacco_t6": "preset",
-    "tobacco_t7": "preset",
 }
 
 if str(REPO_ROOT) not in sys.path:
@@ -359,7 +338,7 @@ def main() -> None:
     templates_parser.add_argument("--output", help="Optional output JSON path.")
 
     materialize_parser = subparsers.add_parser("materialize", help="Materialize one named template into a runnable model.")
-    materialize_parser.add_argument("--template-id", required=True, help="Template id from build/configs, for example asthma_baseline or tobacco_t1.")
+    materialize_parser.add_argument("--template-id", required=True, help="Template id from build/configs, for example asthma_baseline or asthma_cr1.")
     materialize_parser.add_argument("--scenario-id", default=None, help="Scenario id to record in the materialized artifact.")
     materialize_parser.add_argument("--country", default="AFG")
     materialize_parser.add_argument("--start-year", type=int, default=2025)

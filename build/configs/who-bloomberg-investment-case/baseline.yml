@@ -19,6 +19,5 @@ overrides:
   "End Year": 
     value: 2051
 
-
 # Output file path (relative to build directory)
 output: ../scenarios/who-bloomberg-investment-case/asthma_baseline.json
