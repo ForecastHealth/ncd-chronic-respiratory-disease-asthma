@@ -1,10 +1,17 @@
 {
   "component_counts": {
+    "boundary_links": 22,
     "burden_metrics": 1,
     "clinical_intervention": 4,
+    "compiled_internal_links": 61,
+    "components": 8,
     "economic_metrics": 1,
     "epidemiology_core": 1,
-    "model_helpers": 1
+    "internal_links": 61,
+    "model_helpers": 1,
+    "nodes": 64,
+    "subroutines": 35,
+    "upstream_intervention_internal_links": 0
   },
   "components": [
     {
@@ -25,7 +32,7 @@
     },
     {
       "component_id": "epidemiology-core",
-      "internal_links": 8,
+      "internal_links": 7,
       "module_type": "epidemiology_core",
       "nodes": 7,
       "path": "components/epidemiology-core.component.v1.json",

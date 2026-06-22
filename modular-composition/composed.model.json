@@ -816,24 +816,6 @@
         "method": "yll_weights",
         "parameters": {}
       },
-      "id": "SX1OAMyE",
-      "remove_value_from_source": false,
-      "source": "Deceased",
-      "target": "a98IyNnU",
-      "trigger": {
-        "method": "inflow",
-        "parameters": {
-          "value_to_use": "inflow"
-        }
-      },
-      "value_to_target_operator": "add"
-    },
-    {
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "yll_weights",
-        "parameters": {}
-      },
       "id": "XHQWmcx1",
       "remove_value_from_source": false,
       "source": "N4Cpf6le",
@@ -1388,18 +1370,6 @@
       "node_type": "FUNCTION",
       "x": -50.22,
       "y": -41.44
-    },
-    {
-      "balance_type": "array",
-      "color": "#FB6375",
-      "description": "The state of being dead",
-      "flush": true,
-      "id": "Deceased",
-      "label": "Deceased-DsFreeSus",
-      "node_type": "STATE",
-      "order": 3,
-      "x": 149.31,
-      "y": 1.28
     },
     {
       "ageing": true,
@@ -2198,84 +2168,10 @@
       "included_source_nodes": [
         "BXOLckIN",
         "oGP2Nze1",
-        "PjHF9FHh",
-        "PHkSXNg6",
-        "lFMuQmak",
-        "BTDc3bch"
+        "PjHF9FHh"
       ],
       "method": "generate_balance",
       "narration": "All Constants and Functions are initialised"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Delta coverage is multiplied against effect size"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Total Prevalence reductions are subtracted from 1"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Copy baseline prevalence to current prevalence"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "modify prevalence t by interventions"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Subtract 1 from relative risks for excess risk"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Scale excess risk by prevalence"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Add excess risk to denominators"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Calculate PAFs"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Calculate delta PAFs"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Modify RF_All by Paf deltas and consumption impacts"
-    },
-    {
-      "included_source_nodes": [],
-      "method": "generate_balance",
-      "narration": "Generate the population"
-    },
-    {
-      "batch": false,
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Allocate prevalence"
     },
     {
       "included_source_nodes": [
@@ -2484,11 +2380,6 @@
       "narration": "Calculate Mortality Surrogate (Transform Effect)"
     },
     {
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Record Births to Birth Node"
-    },
-    {
       "batch": true,
       "included_edges": [
         "dgLZdA4x"
@@ -2569,21 +2460,11 @@
       "narration": "Multiply YLDs by Disability Weights"
     },
     {
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Migration of Populations"
-    },
-    {
       "included_source_nodes": [
         "AsthmaEpsd"
       ],
       "method": "age",
       "narration": "Age the populations"
-    },
-    {
-      "included_edges": [],
-      "method": "push_balance_to_edges",
-      "narration": "Women give birth"
     },
     {
       "batch": false,
@@ -2626,7 +2507,6 @@
       "batch": false,
       "included_source_nodes": [
         "yRNlzW3v",
-        "Deceased",
         "AsthmaEpsd",
         "b736zFQf",
         "dycEX5CW",
@@ -2637,7 +2517,6 @@
         "7jR6zfXt",
         "8N5hy7kA",
         "iMcmFjlP",
-        "tUQMkCEv",
         "N4Cpf6le",
         "DXhAVyOP",
         "ResourcePopulationReached_AsthmaOralPrednisolone",

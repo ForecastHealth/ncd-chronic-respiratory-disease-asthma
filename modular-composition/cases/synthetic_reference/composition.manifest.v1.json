@@ -1,9 +1,19 @@
 {
-  "component_counts": {},
+  "component_counts": {
+    "boundary_links": 22,
+    "compiled_internal_links": 61,
+    "components": 8,
+    "generated_first_pass_boundary": 8,
+    "internal_links": 61,
+    "nodes": 64,
+    "subroutines": 34,
+    "upstream_intervention_internal_links": 0
+  },
   "components": [
     {
       "component_id": "burden-metrics",
       "internal_links": 14,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 15,
       "path": "components/burden-metrics.component.v1.json",
       "runtime_role": "downstream_handoff"
@@ -11,13 +21,15 @@
     {
       "component_id": "economic-metrics",
       "internal_links": 2,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 3,
       "path": "components/economic-metrics.component.v1.json",
       "runtime_role": "downstream_handoff"
     },
     {
       "component_id": "epidemiology-core",
-      "internal_links": 8,
+      "internal_links": 7,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 7,
       "path": "components/epidemiology-core.component.v1.json",
       "runtime_role": "compiled_together"
@@ -25,6 +37,7 @@
     {
       "component_id": "intervention-asthmaoralprednisolone",
       "internal_links": 9,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 8,
       "path": "components/intervention-asthmaoralprednisolone.component.v1.json",
       "runtime_role": "compiled_together"
@@ -32,6 +45,7 @@
     {
       "component_id": "intervention-highdosebeclom",
       "internal_links": 9,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 8,
       "path": "components/intervention-highdosebeclom.component.v1.json",
       "runtime_role": "compiled_together"
@@ -39,6 +53,7 @@
     {
       "component_id": "intervention-inhaledshortactingbeta",
       "internal_links": 8,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 8,
       "path": "components/intervention-inhaledshortactingbeta.component.v1.json",
       "runtime_role": "compiled_together"
@@ -46,6 +61,7 @@
     {
       "component_id": "intervention-lowdosebeclom",
       "internal_links": 12,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 10,
       "path": "components/intervention-lowdosebeclom.component.v1.json",
       "runtime_role": "compiled_together"
@@ -53,6 +69,7 @@
     {
       "component_id": "metrics-and-helpers",
       "internal_links": 0,
+      "module_type": "generated_first_pass_boundary",
       "nodes": 5,
       "path": "components/metrics-and-helpers.component.v1.json",
       "runtime_role": "compiled_together"

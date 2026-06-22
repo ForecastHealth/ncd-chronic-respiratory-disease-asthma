@@ -816,24 +816,6 @@
         "method": "yll_weights",
         "parameters": {}
       },
-      "id": "SX1OAMyE",
-      "remove_value_from_source": false,
-      "source": "Deceased",
-      "target": "a98IyNnU",
-      "trigger": {
-        "method": "inflow",
-        "parameters": {
-          "value_to_use": "inflow"
-        }
-      },
-      "value_to_target_operator": "add"
-    },
-    {
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "yll_weights",
-        "parameters": {}
-      },
       "id": "XHQWmcx1",
       "remove_value_from_source": false,
       "source": "N4Cpf6le",
@@ -1388,18 +1370,6 @@
       "node_type": "FUNCTION",
       "x": -50.22,
       "y": -41.44
-    },
-    {
-      "balance_type": "array",
-      "color": "#FB6375",
-      "description": "The state of being dead",
-      "flush": true,
-      "id": "Deceased",
-      "label": "Deceased-DsFreeSus",
-      "node_type": "STATE",
-      "order": 3,
-      "x": 149.31,
-      "y": 1.28
     },
     {
       "ageing": true,
@@ -2530,7 +2500,6 @@
       "batch": false,
       "included_source_nodes": [
         "yRNlzW3v",
-        "Deceased",
         "AsthmaEpsd",
         "b736zFQf",
         "dycEX5CW",
