@@ -13,6 +13,21 @@
   },
   "nodes": [
     {
+      "ageing": true,
+      "balance_type": "array",
+      "color": "#3CD009",
+      "description": "Asthma-local disease-free susceptible state. The compiler seeds this from the demographic substrate; asthma owns the disease-state partition, not the upstream population source.",
+      "id": "DsFreeSus",
+      "label": "DsFreeSus",
+      "node_type": "STATE",
+      "x": 48.83,
+      "y": -27.25,
+      "tags": [
+        "asthma_owned",
+        "requires_compiler_seed"
+      ]
+    },
+    {
       "id": "AsthmaEpsd Mortality",
       "x": 133.75,
       "y": -18.93,
@@ -164,17 +179,6 @@
       },
       "node_type": "CONSTANT",
       "flush": true
-    },
-    {
-      "id": "Births",
-      "x": 9.63,
-      "y": -27.14,
-      "label": "Births",
-      "description": "Store of the number of births in the population",
-      "balance_type": "array",
-      "flush": true,
-      "color": "#EB7FEF",
-      "node_type": "FUNCTION"
     },
     {
       "id": "InhaledShortActingBeta_Disability_Effect",
@@ -702,45 +706,6 @@
         }
       },
       "flush": true
-    },
-    {
-      "id": "BXOLckIN",
-      "x": 268.04,
-      "y": -69.76,
-      "label": "paf-denom-t",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "flush": true
-    },
-    {
-      "id": "oGP2Nze1",
-      "x": 340.29,
-      "y": -5.45,
-      "label": "paf-denom-0",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "flush": true
-    },
-    {
-      "id": "PjHF9FHh",
-      "x": 185.9,
-      "y": -43.12,
-      "label": "rf-all",
-      "flush": true,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
     },
     {
       "id": "b736zFQf",
@@ -1634,20 +1599,6 @@
       "label": "AsthmaEpsd Incidence -> AsthmaEpsd"
     },
     {
-      "id": "8g0Xnawu",
-      "source": "PjHF9FHh",
-      "target": "4iPxzqKo",
-      "value_to_target_operator": "multiply",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "label": "rf-all -> surrogate"
-    },
-    {
       "id": "aUcpDiiY",
       "source": "b736zFQf",
       "target": "6CymLJWw",
@@ -1936,14 +1887,11 @@
       "requires_source_balance": true,
       "remove_value_from_source": true,
       "value_to_target_operator": "add",
-      "generate_array": {
-        "data_fetcher_label": "fhdb",
-        "method": "mortality",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "label": "Background Mortality AsthmaEpsd"
+      "label": "Background Mortality AsthmaEpsd",
+      "compiler_binding": {
+        "kind": "declared_input",
+        "note": "Compiler lowers demographic background_mortality_rate onto the asthma episode state."
+      }
     },
     {
       "id": "pfDEgvPv",
@@ -2151,6 +2099,85 @@
       },
       "remove_value_from_source": false,
       "value_to_target_operator": "multiply"
+    },
+    {
+      "description": "Remission of Asthma to DsFreeSus",
+      "edge_type": "transition",
+      "generate_array": {
+        "data_fetcher_label": "asthma",
+        "method": "get_observation",
+        "parameters": {
+          "country": "AFG",
+          "observation": "AsthmaEpsd -> DsFreeSus"
+        }
+      },
+      "id": "Z6UVoLxv",
+      "label": "AsthmaEpsd -> DsFreeSus",
+      "remove_value_from_source": true,
+      "requires_source_balance": true,
+      "source": "AsthmaEpsd",
+      "target": "DsFreeSus",
+      "value_to_target_operator": "add"
+    },
+    {
+      "edge_type": "transition",
+      "id": "HGzwp14L",
+      "label": "DsFreeSus -> AsthmaEpsd Incidence",
+      "set_by_surrogate": true,
+      "source": "DsFreeSus",
+      "target": "4iPxzqKo"
+    },
+    {
+      "edge_type": "transition",
+      "id": "giAFe9qp",
+      "label": "DsFreeSus -> DsFreeSus HYL",
+      "remove_value_from_source": false,
+      "set_by_surrogate": true,
+      "source": "DsFreeSus",
+      "target": "nKC8vwhN"
+    },
+    {
+      "generate_array": {
+        "method": "single_value",
+        "parameters": {
+          "value": 1
+        }
+      },
+      "id": "thJ1j7QJ",
+      "remove_value_from_source": false,
+      "source": "DsFreeSus",
+      "target": "b736zFQf",
+      "value_to_target_operator": "add"
+    },
+    {
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "id": "yCtPKnQ5",
+      "label": "AsthmaEpsd -> AsthmaEpsd",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "AsthmaEpsd",
+      "target": "AsthmaEpsd",
+      "value_to_target_operator": "add",
+      "compiler_binding": {
+        "kind": "declared_input",
+        "note": "Compiler lowers demographic net_migration_rate onto the asthma episode state."
+      }
+    },
+    {
+      "description": "Adjust the state by the net migration rate",
+      "edge_type": "modifier",
+      "id": "avvOYu19",
+      "label": "DsFreeSus -> DsFreeSus",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "source": "DsFreeSus",
+      "target": "DsFreeSus",
+      "value_to_target_operator": "add",
+      "compiler_binding": {
+        "kind": "declared_input",
+        "note": "Compiler lowers demographic net_migration_rate onto the asthma-local disease-free state."
+      }
     }
   ],
   "subroutines": [
@@ -2160,30 +2187,12 @@
     },
     {
       "method": "generate_balance",
-      "batch": false,
-      "narration": "All Constants and Functions are initialised",
-      "included_source_nodes": [
-        "BXOLckIN",
-        "oGP2Nze1",
-        "PjHF9FHh"
-      ]
-    },
-    {
-      "method": "generate_balance",
       "narration": "Generate the base values of the surrogate nodes",
       "included_source_nodes": [
         "AsthmaEpsd Mortality",
         "nKC8vwhN",
         "6fCgpoYB",
         "4iPxzqKo"
-      ]
-    },
-    {
-      "method": "push_balance_to_edges",
-      "batch": false,
-      "narration": "Modify surrogate",
-      "included_edges": [
-        "8g0Xnawu"
       ]
     },
     {
@@ -2378,7 +2387,9 @@
       "method": "transition_system",
       "narration": "Main Routine",
       "included_edges": [
-        "dgLZdA4x"
+        "dgLZdA4x",
+        "Z6UVoLxv",
+        "HGzwp14L"
       ],
       "batch": true
     },
@@ -2420,7 +2431,8 @@
       "method": "push_balance_to_edges",
       "narration": "Record HYL",
       "included_edges": [
-        "F2a0bWMZ"
+        "F2a0bWMZ",
+        "giAFe9qp"
       ]
     },
     {
@@ -2443,7 +2455,8 @@
       "batch": false,
       "narration": "Add prevalence to YLD nodes",
       "included_edges": [
-        "65f8gAJV"
+        "65f8gAJV",
+        "thJ1j7QJ"
       ]
     },
     {
@@ -2451,7 +2464,16 @@
       "batch": false,
       "narration": "Multiply YLDs by Disability Weights",
       "included_edges": [
-        "65f8gAJV"
+        "65f8gAJV",
+        "thJ1j7QJ"
+      ]
+    },
+    {
+      "method": "push_balance_to_edges",
+      "narration": "Migration of Asthma States",
+      "included_edges": [
+        "avvOYu19",
+        "yCtPKnQ5"
       ]
     },
     {

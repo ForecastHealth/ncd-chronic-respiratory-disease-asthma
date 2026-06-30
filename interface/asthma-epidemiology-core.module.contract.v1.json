@@ -1,0 +1,441 @@
+{
+  "schema": "botech.module-contract.v1",
+  "module_id": "asthma_epidemiology_core",
+  "module_type": "disease_epidemiology",
+  "owner": {
+    "repo_id": "ncd-asthma",
+    "repo_ref": "/Users/rory/Models/ncd-asthma"
+  },
+  "version": "v1",
+  "runtime_role": "compiled_together",
+  "owned_parameters": [
+    {
+      "parameter_id": "oral_prednisolone_baseline_coverage",
+      "meaning": "Baseline coverage for acute asthma exacerbation treatment with oral prednisolone.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='AsthmaOralPrednisolone_StartingCoverage')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.fill_before"
+      ]
+    },
+    {
+      "parameter_id": "oral_prednisolone_target_coverage",
+      "meaning": "Target comparison coverage for acute asthma exacerbation treatment with oral prednisolone.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.fill_after"
+      ]
+    },
+    {
+      "parameter_id": "oral_prednisolone_scale_up_start_index",
+      "meaning": "Runtime index where oral prednisolone coverage scale-up starts.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.start_index"
+      ]
+    },
+    {
+      "parameter_id": "oral_prednisolone_scale_up_end_index",
+      "meaning": "Runtime index where oral prednisolone coverage scale-up reaches target.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='AsthmaOralPrednisolone_Coverage')].generate_array.parameters.end_index"
+      ]
+    },
+    {
+      "parameter_id": "oral_prednisolone_population_in_need",
+      "meaning": "Share of people with asthma episodes eligible for oral prednisolone.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='AsthmaOralPrednisolone_PIN')].generate_array.parameters.value"
+      ]
+    },
+    {
+      "parameter_id": "oral_prednisolone_disability_impact",
+      "meaning": "Proportional disability-weight reduction from oral prednisolone treatment.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='AsthmaOralPrednisolone_Disability_Impact')].generate_array.parameters.value"
+      ]
+    },
+    {
+      "parameter_id": "low_dose_beclometasone_baseline_coverage",
+      "meaning": "Baseline coverage for low-dose beclometasone plus SABA.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='LowDoseBeclom_StartingCoverage')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.fill_before"
+      ]
+    },
+    {
+      "parameter_id": "low_dose_beclometasone_target_coverage",
+      "meaning": "Target comparison coverage for low-dose beclometasone plus SABA.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.fill_after"
+      ]
+    },
+    {
+      "parameter_id": "low_dose_beclometasone_scale_up_start_index",
+      "meaning": "Runtime index where low-dose beclometasone scale-up starts.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.start_index"
+      ]
+    },
+    {
+      "parameter_id": "low_dose_beclometasone_scale_up_end_index",
+      "meaning": "Runtime index where low-dose beclometasone scale-up reaches target.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='LowDoseBeclom_Coverage')].generate_array.parameters.end_index"
+      ]
+    },
+    {
+      "parameter_id": "low_dose_beclometasone_population_in_need",
+      "meaning": "Share of people with asthma episodes eligible for low-dose beclometasone plus SABA.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='LowDoseBeclom_PIN')].generate_array.parameters.value"
+      ]
+    },
+    {
+      "parameter_id": "low_dose_beclometasone_disability_impact",
+      "meaning": "Proportional disability-weight reduction from low-dose beclometasone plus SABA.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='LowDoseBeclom_Disability_Impact')].generate_array.parameters.value"
+      ]
+    },
+    {
+      "parameter_id": "low_dose_beclometasone_mortality_impact",
+      "meaning": "Proportional asthma case fatality reduction from low-dose beclometasone plus SABA.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='LowDoseBeclom_Mortality_Impact')].generate_array.parameters.value"
+      ]
+    },
+    {
+      "parameter_id": "high_dose_beclometasone_baseline_coverage",
+      "meaning": "Baseline coverage for high-dose beclometasone plus SABA.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='HighDoseBeclom_StartingCoverage')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='HighDoseBeclom_Coverage')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='HighDoseBeclom_Coverage')].generate_array.parameters.fill_before"
+      ]
+    },
+    {
+      "parameter_id": "high_dose_beclometasone_target_coverage",
+      "meaning": "Target comparison coverage for high-dose beclometasone plus SABA.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='HighDoseBeclom_Coverage')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='HighDoseBeclom_Coverage')].generate_array.parameters.fill_after"
+      ]
+    },
+    {
+      "parameter_id": "high_dose_beclometasone_scale_up_start_index",
+      "meaning": "Runtime index where high-dose beclometasone scale-up starts.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='HighDoseBeclom_Coverage')].generate_array.parameters.start_index"
+      ]
+    },
+    {
+      "parameter_id": "high_dose_beclometasone_scale_up_end_index",
+      "meaning": "Runtime index where high-dose beclometasone scale-up reaches target.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='HighDoseBeclom_Coverage')].generate_array.parameters.end_index"
+      ]
+    },
+    {
+      "parameter_id": "high_dose_beclometasone_population_in_need",
+      "meaning": "Share of people with asthma episodes eligible for high-dose beclometasone plus SABA.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='HighDoseBeclom_PIN')].generate_array.parameters.value"
+      ]
+    },
+    {
+      "parameter_id": "high_dose_beclometasone_disability_impact",
+      "meaning": "Proportional disability-weight reduction from high-dose beclometasone plus SABA.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='HighDoseBeclom_Disability_Impact')].generate_array.parameters.value"
+      ]
+    },
+    {
+      "parameter_id": "inhaled_short_acting_beta_agonist_baseline_coverage",
+      "meaning": "Baseline coverage for inhaled short acting beta agonist.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='InhaledShortActingBeta_StartingCoverage')].generate_array.parameters.value",
+        "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.start_value",
+        "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.fill_before"
+      ]
+    },
+    {
+      "parameter_id": "inhaled_short_acting_beta_agonist_target_coverage",
+      "meaning": "Target comparison coverage for inhaled short acting beta agonist.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.end_value",
+        "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.fill_after"
+      ]
+    },
+    {
+      "parameter_id": "inhaled_short_acting_beta_agonist_scale_up_start_index",
+      "meaning": "Runtime index where inhaled short acting beta agonist scale-up starts.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.start_index"
+      ]
+    },
+    {
+      "parameter_id": "inhaled_short_acting_beta_agonist_scale_up_end_index",
+      "meaning": "Runtime index where inhaled short acting beta agonist scale-up reaches target.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='InhaledShortActingBeta_Coverage')].generate_array.parameters.end_index"
+      ]
+    },
+    {
+      "parameter_id": "inhaled_short_acting_beta_agonist_population_in_need",
+      "meaning": "Share of people with asthma episodes eligible for inhaled short acting beta agonist.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='InhaledShortActingBeta_PIN')].generate_array.parameters.value"
+      ]
+    },
+    {
+      "parameter_id": "inhaled_short_acting_beta_agonist_disability_impact",
+      "meaning": "Proportional disability-weight reduction from inhaled short acting beta agonist.",
+      "scope": "module_owned",
+      "shape": "scalar",
+      "json_paths": [
+        "$.nodes[?(@.id=='InhaledShortActingBeta_Disability_Impact')].generate_array.parameters.value"
+      ]
+    }
+  ],
+  "declared_inputs": [
+    {
+      "channel_id": "population_at_risk_opening",
+      "meaning": "Opening asthma-local population at risk, seeded from the demographic substrate.",
+      "shape": "2x101",
+      "units": "people",
+      "required": true,
+      "owner_module_id": "demographic_substrate"
+    },
+    {
+      "channel_id": "births",
+      "meaning": "Birth inflow supplied by the demographic substrate when asthma is compiled with demography.",
+      "shape": "2x101",
+      "units": "people",
+      "required": false,
+      "owner_module_id": "demographic_substrate"
+    },
+    {
+      "channel_id": "background_mortality_rate",
+      "meaning": "All-cause background mortality rate supplied by the demographic substrate.",
+      "shape": "2x101",
+      "units": "rate",
+      "required": true,
+      "owner_module_id": "demographic_substrate",
+      "binding": {
+        "legacy_lowering_ref": "$.links[?(@.id=='kdE7JaZO')].generate_array"
+      }
+    },
+    {
+      "channel_id": "net_migration_rate",
+      "meaning": "Age-sex-specific projected net migration rate supplied by the demographic substrate and applied proportionally to asthma-local living states.",
+      "shape": "2x101",
+      "units": "rate",
+      "required": false,
+      "owner_module_id": "demographic_substrate",
+      "binding": {
+        "legacy_lowering_ref": "compiler lowerer supplies migration_projection_rate to asthma living-state self-links"
+      }
+    },
+    {
+      "channel_id": "incidence_modifier",
+      "meaning": "Optional source-owned risk-factor modifier applied to asthma incidence.",
+      "shape": "yearly_2x101_or_scalar",
+      "units": "multiplier",
+      "required": false
+    }
+  ],
+  "published_outputs": [
+    {
+      "channel_id": "asthma_episode_population",
+      "meaning": "People currently in the asthma episode state.",
+      "shape": "2x101",
+      "units": "people",
+      "required": true
+    },
+    {
+      "channel_id": "asthma_incidence_flow",
+      "meaning": "New asthma episode flow.",
+      "shape": "2x101",
+      "units": "people",
+      "required": true
+    },
+    {
+      "channel_id": "asthma_mortality_flow",
+      "meaning": "Asthma-specific mortality flow.",
+      "shape": "2x101",
+      "units": "people",
+      "required": true
+    },
+    {
+      "channel_id": "healthy_years_lived",
+      "meaning": "Healthy years lived metric emitted by the asthma model.",
+      "shape": "yearly_scalar_or_2x101",
+      "units": "years",
+      "required": false
+    },
+    {
+      "channel_id": "asthma_dalys",
+      "meaning": "Asthma disability-adjusted life years metric.",
+      "shape": "yearly_scalar_or_2x101",
+      "units": "years",
+      "required": false
+    },
+    {
+      "channel_id": "asthma_population_reached",
+      "meaning": "Population reached by asthma clinical interventions.",
+      "shape": "yearly_scalar_or_2x101",
+      "units": "people",
+      "required": false
+    }
+  ],
+  "state_initialization": {
+    "mode": "solver_required",
+    "recipe_ref": "data/asthma-opening-balance-seed.recipe.v1.json",
+    "targets": [
+      "AsthmaEpsd",
+      "asthma-local disease-free susceptible state"
+    ]
+  },
+  "runtime_data_requirements": [
+    {
+      "data_type": "epidemiology",
+      "parameters": {
+        "country": "ISO3",
+        "disease": "Asthma",
+        "measure": "prevalence"
+      },
+      "required_for": [
+        "state_initialization"
+      ]
+    },
+    {
+      "data_type": "epidemiology",
+      "parameters": {
+        "country": "ISO3",
+        "disease": "Asthma",
+        "measure": "incidence"
+      },
+      "required_for": [
+        "asthma_incidence_flow"
+      ]
+    },
+    {
+      "data_type": "epidemiology",
+      "parameters": {
+        "country": "ISO3",
+        "disease": "Asthma",
+        "measure": "deaths"
+      },
+      "required_for": [
+        "asthma_mortality_flow"
+      ]
+    },
+    {
+      "data_type": "asthma.get_observation",
+      "parameters": {
+        "country": "ISO3",
+        "observation": "AsthmaEpsd -> Disability"
+      },
+      "required_for": [
+        "asthma_disability_weight"
+      ]
+    },
+    {
+      "data_type": "healthy_disability",
+      "parameters": {
+        "country": "ISO3"
+      },
+      "required_for": [
+        "healthy_years_lived"
+      ]
+    },
+    {
+      "data_type": "yll_weights",
+      "parameters": {},
+      "required_for": [
+        "years_of_life_lost"
+      ]
+    }
+  ],
+  "cards": {
+    "reference_run_card_ref": "/Users/rory/Documents/ncd-client/state/method-fixes/ncd-asthma/run-card.v1.json",
+    "demography_asthma_proof_ref": "/Users/rory/Documents/botech-modular-structure/proofs/demography-asthma/ethiopia-current-reference.proof.v1.json"
+  },
+  "provenance": {
+    "default_sources": [
+      {
+        "source_id": "spectrum_onehealth_asthma",
+        "use": "asthma epidemiology and intervention defaults"
+      },
+      {
+        "source_id": "current_method_fix_reference",
+        "use": "current reference behavior target"
+      }
+    ],
+    "unresolved": [
+      {
+        "item": "economic value helper nodes in current runnable graph",
+        "reason": "The current model.json still contains GDP, labour-force participation, and economic value helper nodes from the old all-in-one model. They are not part of this asthma module contract and should move when resources, costs, and benefits are separated."
+      }
+    ]
+  },
+  "validation": {
+    "internal_validity_tests": [
+      "python scripts/validate_module_contract.py"
+    ],
+    "face_validity_checks": [
+      "/Users/rory/Documents/ncd-client/state/method-fixes/ncd-asthma/run-card.v1.json",
+      "/Users/rory/Documents/botech-modular-structure/proofs/demography-asthma/ethiopia-current-reference.proof.v1.json"
+    ]
+  }
+}

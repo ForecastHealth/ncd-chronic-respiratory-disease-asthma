@@ -1,0 +1,26 @@
+{
+  "schema": "botech.scenario-template.v1",
+  "module_id": "asthma_epidemiology_core",
+  "owner": {
+    "repo_id": "ncd-asthma",
+    "repo_ref": "/Users/rory/Models/ncd-asthma",
+    "module_contract_ref": "interface/asthma-epidemiology-core.module.contract.v1.json"
+  },
+  "version": "v1",
+  "parameter_registry_ref": "parameters/registry.v1.json",
+  "provenance": {
+    "source_refs": [
+      "parameters/registry.v1.json"
+    ],
+    "assumption_refs": []
+  },
+  "validation_rules": [
+    "all_parameter_ids_must_resolve_in_parameter_registry_ref",
+    "template_must_not_set_country_runtime_or_upstream_risk_factor_parameters"
+  ],
+  "template_id": "asthma_baseline",
+  "label": "Asthma baseline",
+  "description": "Baseline asthma template. It applies no overrides; baseline values come from the asthma parameter registry and current module graph.",
+  "template_role": "baseline",
+  "parameter_values": []
+}

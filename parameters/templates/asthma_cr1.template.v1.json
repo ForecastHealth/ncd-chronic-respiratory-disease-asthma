@@ -1,0 +1,32 @@
+{
+  "schema": "botech.scenario-template.v1",
+  "module_id": "asthma_epidemiology_core",
+  "owner": {
+    "repo_id": "ncd-asthma",
+    "repo_ref": "/Users/rory/Models/ncd-asthma",
+    "module_contract_ref": "interface/asthma-epidemiology-core.module.contract.v1.json"
+  },
+  "version": "v1",
+  "parameter_registry_ref": "parameters/registry.v1.json",
+  "provenance": {
+    "source_refs": [
+      "parameters/registry.v1.json"
+    ],
+    "assumption_refs": []
+  },
+  "validation_rules": [
+    "all_parameter_ids_must_resolve_in_parameter_registry_ref",
+    "template_must_not_set_country_runtime_or_upstream_risk_factor_parameters"
+  ],
+  "template_id": "asthma_cr1",
+  "label": "Asthma CR1",
+  "description": "Comparison preset for acute asthma exacerbation treatment with oral prednisolone. It raises oral prednisolone target coverage to 95 percent.",
+  "template_role": "comparison",
+  "parameter_values": [
+    {
+      "parameter_id": "oral_prednisolone_target_coverage",
+      "value": 0.95,
+      "meaning": "Raise oral prednisolone target coverage for the comparison run."
+    }
+  ]
+}

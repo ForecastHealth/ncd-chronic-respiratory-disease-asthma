@@ -1,101 +1,43 @@
 # ncd-asthma
 
-## Project Overview
+This repository is the asthma module for the modular botech NCD work. Treat the current source of truth as the module contract plus the module model, not the old monolithic scenario tooling.
 
-This is the NCD (Non-Communicable Disease) Asthma Model repository - a health economics modeling system that simulates asthma interventions across different countries and scenarios. The model is built on the Spectrum framework and calculates disability-adjusted life years (DALYs), deaths averted, and economic outcomes for asthma treatment interventions.
+## Current Source Of Truth
 
-## Common Development Commands
+- `model.json` contains the asthma-owned botech graph. It owns asthma states and asthma intervention mechanics, including the asthma-local `DsFreeSus` state needed by the asthma calculation.
+- `interface/asthma-epidemiology-core.module.contract.v1.json` declares what the module needs from the wider compiled model and what it publishes.
+- `parameters/registry.v1.json` is the asthma parameter registry. Every editable asthma scenario parameter should be declared there and should point to the current model placement it controls.
+- `parameters/templates/*.template.v1.json` are the asthma scenario templates. Templates should only set parameters from this module registry.
+- `data/asthma-opening-balance-seed.recipe.v1.json` records the asthma opening-balance seeding contract used by the demography plus asthma proof compiler.
 
-This is a python3-based project with no package.json. Common operations:
+## Current Commands
 
-### Running Scripts
+Validate the module contract with:
+
 ```bash
-# Apply scenario to model
-python3 scripts/apply_scenario.py --model model.json --scenario scenarios/asthma_cr1_scenario.json --output tmp/output.json
-
-# Run validation suite
-python3 -m validation_suite.cli --countries AFG --scenarios asthma_cr1_scenario
-
-# Create country-specific scenarios
-python3 scripts/create_country_scenarios.py
-
-# Upload project to API
-python3 scripts/upload_project.py
-
-# Run economic analyses
-python3 scripts/run_economic_analyses.py
+python scripts/validate_module_contract.py
 ```
 
-### Dependencies
-The project uses standard python3 libraries plus:
-- `jsonpath-ng` for JSON manipulation
-- SQLite for validation result storage
-- Standard scientific python3 stack (likely numpy, pandas for data processing)
+List the parameter registry with:
 
-Install dependencies with: `pip install jsonpath-ng`
+```bash
+python scripts/orchestrator_scenarios.py catalog
+```
 
-## Architecture Overview
+List scenario templates with:
 
-### Core Components
+```bash
+python scripts/orchestrator_scenarios.py templates
+```
 
-1. **Model Definition** (`model.json`): Central JSON file defining the Asthma model structure with nodes, transitions, and parameters. Contains population states (DsFreeSus, AsthmaEpsd, Deceased) and calculation components.
+Materialize a template-applied asthma module model with:
 
-2. **Scenario System** (`scenarios/`): JSON files defining intervention parameters:
-   - `asthma_null_scenario.json`: Baseline with no interventions
-   - `asthma_cr1_scenario.json`: CR1 intervention (acute treatment)
-   - `asthma_cr3_scenario.json`: CR3 intervention (long-term management)
+```bash
+python scripts/orchestrator_scenarios.py materialize --template-id asthma_cr1 --country ETH --start-year 2025 --end-year 2046 --output-dir /tmp/ncd-asthma-materialized
+```
 
-3. **Country Data** (`countries/`): JSON files listing countries and economic analysis configurations
+That materialized model is still a module model. The demography plus asthma proof compiler must lower demographic substrate inputs and asthma opening balances before it is a complete runnable proof model.
 
-4. **Validation Suite** (`validation_suite/`): Comprehensive testing framework with:
-   - Database integration for tracking results
-   - Multi-country validation orchestration
-   - API client for external validation services
-   - Analytics components for result processing
+## Removed Legacy Shape
 
-### Key Architecture Patterns
-
-**JSONPath-based Parameter Application**: The `apply_scenario.py` script uses JSONPath expressions to dynamically modify model parameters, allowing flexible scenario configuration without hardcoded parameter locations.
-
-**State-based Health Model**: The core model follows a state transition approach:
-- `DsFreeSus` (Disease-free, susceptible population)
-- `AsthmaEpsd` (Asthma episode state)
-- `Deceased` (Death state)
-- Surrogate nodes for calculations (disability, mortality effects)
-
-**Validation Database**: SQLite database (`validation_results.db`) tracks validation runs, enabling incremental execution and result analysis across country/scenario combinations.
-
-**Modular Validation Components**:
-- `runner.py`: Orchestrates validation workflows
-- `multi_country.py`: Handles batch country processing
-- `api_client.py`: Interfaces with external validation APIs
-- `analytics/`: Post-processing and analysis tools
-
-### Data Flow
-
-1. Base model (`model.json`) defines structure
-2. Scenarios apply parameter modifications via JSONPath
-3. Country-specific data populates epidemiological parameters
-4. Validation suite tests model outputs across combinations
-5. Results stored in database for tracking and analysis
-
-### Treatment Interventions
-
-The model simulates four asthma treatments:
-- LowDoseBeclom (Low dose inhaled beclometasone + SABA)
-- HighDoseBeclom (High dose inhaled beclometasone + SABA)
-- InhaledShortActingBeta (Inhaled short acting beta agonist)
-- AsthmaOralPrednisolone (Oral prednisolone + inhaled medications)
-
-Each treatment has defined disability and mortality impacts, with coverage rates varying by scenario.
-
-## Key File Locations
-
-- `model.json`: Core model definition
-- `scenarios/`: Intervention scenario definitions
-- `scripts/apply_scenario.py`: Scenario application logic
-- `validation_suite/cli.py`: Main validation entry point
-- `validation_suite/runner.py`: Validation orchestration
-- `countries/list_of_countries.json`: Country configurations
-- `data/`: Epidemiological data files (CSV, Excel)
-- `DOCUMENTATION.md`: Detailed model methodology and assumptions
+Do not recreate `scenarios/`, `build/`, `validation_suite/`, country-list folders, upload scripts, or JSONPath scenario application scripts unless Rory explicitly asks for a historical restore. Scenario ownership now belongs in `parameters/registry.v1.json` and `parameters/templates/`.

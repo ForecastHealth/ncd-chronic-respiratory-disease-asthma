@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
+from __future__ import annotations
 
 import argparse
 import copy
 import json
-import sys
+import re
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
-import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-BUILD_ROOT = REPO_ROOT / "build"
-CONFIGS_ROOT = BUILD_ROOT / "configs"
-COMPONENTS_ROOT = BUILD_ROOT / "components"
 MODEL_PATH = REPO_ROOT / "model.json"
+PARAMETER_REGISTRY_PATH = REPO_ROOT / "parameters" / "registry.v1.json"
+TEMPLATES_ROOT = REPO_ROOT / "parameters" / "templates"
 DEFAULT_TEMPLATE_ID = "asthma_baseline"
 TEMPLATE_ALIASES = {
     "baseline": "asthma_baseline",
@@ -21,112 +21,111 @@ TEMPLATE_ALIASES = {
     "cr1": "asthma_cr1",
     "cr3": "asthma_cr3",
 }
-TEMPLATE_KIND_OVERRIDES = {
-    "asthma_baseline": "baseline",
-    "asthma_cr1": "preset",
-    "asthma_cr3": "preset",
-    "asthma_null": "preset",
-    "asthma_oral_prednisolone": "parameter_surface",
-    "asthma_low_dose_beclom": "parameter_surface",
-    "asthma_high_dose_beclom": "parameter_surface",
-    "asthma_inhaled_beta_agonist": "parameter_surface",
-}
-
-if str(REPO_ROOT) not in sys.path:
-    sys.path.insert(0, str(REPO_ROOT))
-
-from scripts.apply_scenario import apply_scenario_to_model
+JSON_PATH_RE = re.compile(r"^\$\.(nodes|links)\[\?\(@\.id=='([^']+)'\)\]\.(.+)$")
 
 
-def load_json(path: Path) -> dict:
-    return json.loads(path.read_text())
+def load_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
-def write_json(path: Path, payload: dict) -> None:
+def write_json(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, indent=2) + "\n")
+    path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
-def load_yaml(path: Path) -> dict:
-    return yaml.safe_load(path.read_text())
+def load_registry() -> dict[str, Any]:
+    if not PARAMETER_REGISTRY_PATH.exists():
+        raise FileNotFoundError(f"Missing parameter registry: {PARAMETER_REGISTRY_PATH}")
+    return load_json(PARAMETER_REGISTRY_PATH)
 
 
-def merge_parameters(base_params: dict, new_params: dict) -> dict:
-    result = copy.deepcopy(base_params)
-    for key, value in new_params.items():
-        if key in result and isinstance(result[key], dict) and isinstance(value, dict):
-            result[key] = {**result[key], **value}
-        else:
-            result[key] = copy.deepcopy(value)
-    return result
+def iter_template_files() -> list[Path]:
+    if not TEMPLATES_ROOT.exists():
+        return []
+    return sorted(TEMPLATES_ROOT.glob("*.template.v1.json"))
 
 
-def iter_template_configs() -> list[Path]:
-    return sorted(CONFIGS_ROOT.rglob("*.yml"))
-
-
-def template_id_for_config(path: Path) -> str:
-    return path.relative_to(CONFIGS_ROOT).with_suffix("").as_posix()
-
-
-def template_index() -> dict[str, Path]:
-    return {template_id_for_config(path): path for path in iter_template_configs()}
+def load_templates() -> dict[str, dict[str, Any]]:
+    templates: dict[str, dict[str, Any]] = {}
+    for path in iter_template_files():
+        template = load_json(path)
+        template_id = template.get("template_id")
+        if not template_id:
+            raise ValueError(f"Template is missing template_id: {path}")
+        if template_id in templates:
+            raise ValueError(f"Duplicate template_id: {template_id}")
+        template["_template_ref"] = str(path.relative_to(REPO_ROOT))
+        templates[template_id] = template
+    return templates
 
 
 def resolve_template_id(template_id: str) -> str:
-    return TEMPLATE_ALIASES.get(template_id, template_id)
+    resolved = TEMPLATE_ALIASES.get(template_id, template_id)
+    templates = load_templates()
+    if resolved not in templates:
+        available = ", ".join(sorted(templates)) or "none"
+        raise KeyError(f"Unknown template_id `{template_id}`. Available templates: {available}")
+    return resolved
 
 
-def template_kind(template_id: str) -> str:
-    if template_id in TEMPLATE_KIND_OVERRIDES:
-        return TEMPLATE_KIND_OVERRIDES[template_id]
-    if template_id.startswith("who-bloomberg-investment-case/"):
+def template_kind(template: dict[str, Any]) -> str:
+    role = template.get("template_role")
+    if role == "baseline":
+        return "baseline"
+    if role == "comparison":
         return "preset"
-    return "custom"
+    return role or "custom"
 
 
-def load_component_parameters(component_file: str) -> dict:
-    component_path = COMPONENTS_ROOT / component_file
-    if not component_path.exists():
-        raise FileNotFoundError(f"Component file not found: {component_path}")
-    return load_json(component_path)
+def parameter_index(registry: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    return {item["parameter_id"]: item for item in registry.get("parameters", [])}
 
 
-def build_scenario_from_config_path(config_path: Path) -> tuple[dict, dict]:
-    config = load_yaml(config_path)
-    parameters = {}
-
-    for component_file in config.get("components", []):
-        parameters = merge_parameters(parameters, load_component_parameters(component_file))
-
-    overrides = config.get("overrides", {})
-    for param_name, override_value in overrides.items():
-        if param_name not in parameters:
-            parameters[param_name] = copy.deepcopy(override_value)
-            continue
-        if isinstance(override_value, dict):
-            parameters[param_name] = {**parameters[param_name], **override_value}
-        else:
-            parameters[param_name]["value"] = override_value
-
-    metadata = copy.deepcopy(config.get("metadata", {}))
-    metadata.setdefault("date_created", datetime.now().strftime("%Y-%m-%d %H:%M"))
-    return {"metadata": metadata, "parameters": parameters}, config
+def template_value_index(template: dict[str, Any]) -> dict[str, Any]:
+    return {item["parameter_id"]: item.get("value") for item in template.get("parameter_values", [])}
 
 
-def ensure_runtime_parameters(scenario: dict) -> None:
-    runtime_defaults = load_component_parameters("runtime.json")
-    for param_name, param_value in runtime_defaults.items():
-        scenario["parameters"].setdefault(param_name, copy.deepcopy(param_value))
+def build_catalog_payload() -> dict[str, Any]:
+    return load_registry()
 
 
-def set_parameter_value(scenario: dict, param_name: str, value) -> None:
-    if param_name not in scenario["parameters"]:
-        raise KeyError(f"Unknown scenario parameter `{param_name}`")
-    scenario["parameters"][param_name]["value"] = value
+def build_templates_payload() -> dict[str, Any]:
+    registry = load_registry()
+    templates = load_templates()
+    baseline_values = template_value_index(templates[DEFAULT_TEMPLATE_ID]) if DEFAULT_TEMPLATE_ID in templates else {}
+    payload_templates = []
+
+    for template_id in sorted(templates):
+        template = templates[template_id]
+        values = template_value_index(template)
+        changed = [name for name, value in values.items() if baseline_values.get(name) != value]
+        payload_templates.append(
+            {
+                "template_id": template_id,
+                "kind": template_kind(template),
+                "template_role": template.get("template_role"),
+                "label": template.get("label", template_id),
+                "description": template.get("description", ""),
+                "parameter_registry_ref": template.get("parameter_registry_ref", "parameters/registry.v1.json"),
+                "parameter_count": len(template.get("parameter_values", [])),
+                "changed_from_baseline_parameter_names": sorted(changed),
+                "template_ref": template.get("_template_ref"),
+            }
+        )
+
+    return {
+        "schema": "botech.module-template-registry.v1",
+        "schema_version": "v1",
+        "model_id": "ncd-asthma",
+        "module_id": registry.get("module_id"),
+        "owner": registry.get("owner"),
+        "parameter_registry_ref": "parameters/registry.v1.json",
+        "template_count": len(payload_templates),
+        "templates": payload_templates,
+    }
 
 
-def parse_override(raw: str) -> tuple[str, object]:
+def parse_override(raw: str) -> tuple[str, Any]:
     if "=" not in raw:
         raise ValueError(f"Override must use NAME=VALUE form: {raw}")
     name, raw_value = raw.split("=", 1)
@@ -139,104 +138,75 @@ def parse_override(raw: str) -> tuple[str, object]:
     return name, value
 
 
-def visible_parameter_count(parameters: dict) -> int:
-    return sum(1 for value in parameters.values() if not value.get("hidden"))
+def resolve_parameter_name(raw_name: str, registry_by_id: dict[str, dict[str, Any]]) -> str:
+    if raw_name in registry_by_id:
+        return raw_name
+    matches = [
+        parameter_id
+        for parameter_id, item in registry_by_id.items()
+        if item.get("label") == raw_name
+    ]
+    if len(matches) == 1:
+        return matches[0]
+    raise KeyError(f"Unknown parameter `{raw_name}`")
 
 
-def build_catalog_payload() -> dict:
-    templates = []
-    config_lookup = template_index()
-    default_config_path = config_lookup[DEFAULT_TEMPLATE_ID]
-    default_scenario, _ = build_scenario_from_config_path(default_config_path)
-    ensure_runtime_parameters(default_scenario)
-    default_values = {
-        name: payload.get("value")
-        for name, payload in default_scenario["parameters"].items()
-    }
+def apply_value_at_json_path(model: dict[str, Any], ref: str, value: Any) -> None:
+    match = JSON_PATH_RE.match(ref)
+    if not match:
+        raise ValueError(f"Unsupported placement ref: {ref}")
+    section, entry_id, tail = match.groups()
+    entries = model.get(section, [])
+    target_entry = next((entry for entry in entries if entry.get("id") == entry_id), None)
+    if target_entry is None:
+        raise KeyError(f"Placement ref points to missing {section[:-1]} `{entry_id}`")
 
-    catalog_by_name: dict[str, dict] = {}
-    for component_path in sorted(COMPONENTS_ROOT.glob("*.json")):
-        component_name = component_path.name
-        is_runtime_component = component_name == "runtime.json"
-        component_payload = load_json(component_path)
-        for param_name, param_payload in component_payload.items():
-            entry = catalog_by_name.setdefault(
-                param_name,
-                {
-                    "parameter_id": param_name,
-                    "label": param_name,
-                    "description": param_payload.get("description", ""),
-                    "category": param_payload.get("category", "Other"),
-                    "hidden": bool(param_payload.get("hidden")),
-                    "paths": set(),
-                    "default_value": default_values.get(param_name),
-                    "source_components": set(),
-                    "runtime_only": is_runtime_component,
-                },
-            )
-            entry["paths"].update(param_payload.get("paths", []))
-            entry["source_components"].add(component_name)
-            entry["runtime_only"] = entry["runtime_only"] and is_runtime_component
-            if not entry["description"] and param_payload.get("description"):
-                entry["description"] = param_payload["description"]
-            if entry["category"] == "Other" and param_payload.get("category"):
-                entry["category"] = param_payload["category"]
-            if param_name in default_values:
-                entry["default_value"] = default_values[param_name]
+    target: Any = target_entry
+    parts = tail.split(".")
+    for part in parts[:-1]:
+        if not isinstance(target, dict) or part not in target:
+            raise KeyError(f"Placement ref cannot resolve `{part}` in {ref}")
+        target = target[part]
+    leaf = parts[-1]
+    if not isinstance(target, dict) or leaf not in target:
+        raise KeyError(f"Placement ref cannot resolve `{leaf}` in {ref}")
+    target[leaf] = copy.deepcopy(value)
 
-    parameters = []
-    for name in sorted(catalog_by_name):
-        entry = catalog_by_name[name]
-        parameters.append(
+
+def apply_parameter_values(model: dict[str, Any], registry: dict[str, Any], values: dict[str, Any]) -> list[dict[str, Any]]:
+    registry_by_id = parameter_index(registry)
+    applied: list[dict[str, Any]] = []
+    for parameter_id, value in values.items():
+        if parameter_id not in registry_by_id:
+            raise KeyError(f"Template references unknown parameter `{parameter_id}`")
+        placements = registry_by_id[parameter_id].get("placement_refs", [])
+        if not placements:
+            raise ValueError(f"Parameter `{parameter_id}` has no placement_refs")
+        for placement in placements:
+            if placement.get("kind") != "json_path":
+                raise ValueError(f"Parameter `{parameter_id}` has unsupported placement kind `{placement.get('kind')}`")
+            apply_value_at_json_path(model, placement.get("ref", ""), value)
+        applied.append(
             {
-                "parameter_id": entry["parameter_id"],
-                "label": entry["label"],
-                "description": entry["description"],
-                "category": entry["category"],
-                "hidden": entry["hidden"],
-                "default_value": entry["default_value"],
-                "paths": sorted(entry["paths"]),
-                "source_components": sorted(entry["source_components"]),
-                "runtime_only": entry["runtime_only"],
+                "parameter_id": parameter_id,
+                "label": registry_by_id[parameter_id].get("label"),
+                "value": value,
+                "placement_count": len(placements),
             }
         )
-
-    return {
-        "schema_version": "v1",
-        "model_id": "ncd-asthma",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "parameters": parameters,
-    }
+    return applied
 
 
-def build_templates_payload() -> dict:
-    templates = []
-    for config_path in iter_template_configs():
-        template_id = template_id_for_config(config_path)
-        scenario, config = build_scenario_from_config_path(config_path)
-        ensure_runtime_parameters(scenario)
-        aliases = sorted(alias for alias, target in TEMPLATE_ALIASES.items() if target == template_id)
-        templates.append(
-            {
-                "template_id": template_id,
-                "template_kind": template_kind(template_id),
-                "aliases": aliases,
-                "label": config.get("metadata", {}).get("label", template_id),
-                "description": config.get("metadata", {}).get("description", ""),
-                "component_files": config.get("components", []),
-                "override_parameter_names": sorted(config.get("overrides", {}).keys()),
-                "parameter_count": len(scenario["parameters"]),
-                "visible_parameter_count": visible_parameter_count(scenario["parameters"]),
-                "config_ref": str(config_path),
-            }
-        )
+def apply_runtime_context(model: dict[str, Any], *, country: str, start_year: int, end_year: int) -> None:
+    runtime = model.setdefault("runtime", {})
+    runtime["startYear"] = start_year
+    runtime["endYear"] = end_year
 
-    return {
-        "schema_version": "v1",
-        "model_id": "ncd-asthma",
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "templates": templates,
-    }
+    for section in ("nodes", "links"):
+        for item in model.get(section, []):
+            params = (item.get("generate_array") or {}).get("parameters")
+            if isinstance(params, dict) and "country" in params:
+                params["country"] = country
 
 
 def materialize_template(
@@ -248,34 +218,54 @@ def materialize_template(
     end_year: int,
     output_dir: Path,
     overrides: list[str],
-) -> dict:
-    configs = template_index()
+) -> dict[str, Any]:
+    registry = load_registry()
+    registry_by_id = parameter_index(registry)
+    templates = load_templates()
     resolved_template_id = resolve_template_id(template_id)
-    if resolved_template_id not in configs:
-        raise KeyError(f"Unknown template_id `{template_id}`")
+    template = copy.deepcopy(templates[resolved_template_id])
+    template.pop("_template_ref", None)
 
-    config_path = configs[resolved_template_id]
-    scenario, config = build_scenario_from_config_path(config_path)
-    ensure_runtime_parameters(scenario)
-
-    set_parameter_value(scenario, "Country", country)
-    set_parameter_value(scenario, "Start Year", start_year)
-    set_parameter_value(scenario, "End Year", end_year)
-
-    applied_overrides = {}
+    values = template_value_index(template)
+    applied_overrides: dict[str, Any] = {}
     for raw_override in overrides:
         name, value = parse_override(raw_override)
-        set_parameter_value(scenario, name, value)
-        applied_overrides[name] = value
+        parameter_id = resolve_parameter_name(name, registry_by_id)
+        values[parameter_id] = value
+        applied_overrides[parameter_id] = value
 
     model = load_json(MODEL_PATH)
-    materialized_model = apply_scenario_to_model(copy.deepcopy(model), scenario)
+    materialized_model = copy.deepcopy(model)
+    apply_runtime_context(materialized_model, country=country, start_year=start_year, end_year=end_year)
+    applied_parameters = apply_parameter_values(materialized_model, registry, values)
 
     output_dir.mkdir(parents=True, exist_ok=True)
     scenario_path = output_dir / "scenario.json"
     model_path = output_dir / "model.json"
     bundle_path = output_dir / "data_bundle.json"
     run_input_path = output_dir / "materialized.model-input.v1.json"
+    module_contract_path = REPO_ROOT / "interface" / "asthma-epidemiology-core.module.contract.v1.json"
+    module_contract = load_json(module_contract_path) if module_contract_path.exists() else {}
+
+    scenario = {
+        "schema": "botech.materialized-scenario.v1",
+        "model_id": "ncd-asthma",
+        "module_id": registry.get("module_id"),
+        "scenario_id": scenario_id or resolved_template_id,
+        "template_id": resolved_template_id,
+        "requested_template_id": template_id,
+        "parameter_registry_ref": "parameters/registry.v1.json",
+        "template_ref": f"parameters/templates/{resolved_template_id}.template.v1.json",
+        "parameter_values": [
+            {"parameter_id": parameter_id, "value": value}
+            for parameter_id, value in sorted(values.items())
+        ],
+        "run_context": {
+            "country": country,
+            "start_year": start_year,
+            "end_year": end_year,
+        },
+    }
 
     write_json(scenario_path, scenario)
     write_json(model_path, materialized_model)
@@ -283,34 +273,49 @@ def materialize_template(
     materialized = {
         "metadata": {
             "artifact_version": "v1",
-            "artifact_type": "standalone_botech_model",
-            "name": f"ncd-asthma materialized run input: {scenario_id or template_id}",
+            "artifact_type": "template_applied_module_model",
+            "name": f"ncd-asthma materialized run input: {scenario_id or resolved_template_id}",
+            "created_at": datetime.now(timezone.utc).isoformat(),
         },
         "model_id": "ncd-asthma",
+        "module_id": registry.get("module_id"),
         "scenario_id": scenario_id or resolved_template_id,
         "template_id": resolved_template_id,
         "requested_template_id": template_id,
-        "template_kind": template_kind(resolved_template_id),
+        "template_kind": template_kind(template),
         "materializer": {
             "repo_root": str(REPO_ROOT),
             "script": str(Path(__file__).resolve()),
+            "source": "parameters/registry.v1.json plus parameters/templates",
         },
         "materialized_input": {
-            "kind": "standalone_botech_model",
+            "kind": "template_applied_module_model_requires_compiler_lowering",
             "model_ref": str(model_path),
             "scenario_ref": str(scenario_path),
             "data_bundle_ref": str(bundle_path),
+            "data_bundle_status": "declared_path_pending_fetch",
+        },
+        "data_requirements": {
+            "mode": "unified_api_bundle_required_before_runtime",
+            "source_ref": str(module_contract_path) if module_contract else None,
+            "requirements": module_contract.get("runtime_data_requirements", []),
+        },
+        "runtime_status": {
+            "standalone_runtime_proof": False,
+            "requires_compiler_lowering": ["demographic_substrate"],
+            "reason": "Asthma declares demographic substrate inputs. This materialized model has the asthma template applied, but it is not a complete proof run until the compiler lowers demographic inputs and asthma opening balances.",
         },
         "resolved_values": {
             "country": country,
             "start_year": start_year,
             "end_year": end_year,
             "overrides": applied_overrides,
+            "applied_parameters": applied_parameters,
         },
         "provenance": {
             "source_model_ref": str(MODEL_PATH),
-            "source_config_ref": str(config_path),
-            "component_files": config.get("components", []),
+            "parameter_registry_ref": str(PARAMETER_REGISTRY_PATH),
+            "template_ref": str(TEMPLATES_ROOT / f"{resolved_template_id}.template.v1.json"),
         },
     }
     write_json(run_input_path, materialized)
@@ -323,22 +328,24 @@ def materialize_template(
         "model": str(model_path),
         "scenario": str(scenario_path),
         "data_bundle": str(bundle_path),
+        "data_bundle_status": "declared_path_pending_fetch",
+        "runtime_status": "requires_demographic_substrate_compiler_lowering",
         "output_dir": str(output_dir),
     }
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Expose orchestrator-facing template, catalog, and materialization helpers for ncd-asthma.")
+    parser = argparse.ArgumentParser(description="Expose ncd-asthma parameter registry, templates, and template materialisation helpers.")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    catalog_parser = subparsers.add_parser("catalog", help="Emit the parameter catalog.")
+    catalog_parser = subparsers.add_parser("catalog", help="Emit the parameter registry.")
     catalog_parser.add_argument("--output", help="Optional output JSON path.")
 
     templates_parser = subparsers.add_parser("templates", help="Emit the template list.")
     templates_parser.add_argument("--output", help="Optional output JSON path.")
 
-    materialize_parser = subparsers.add_parser("materialize", help="Materialize one named template into a runnable model.")
-    materialize_parser.add_argument("--template-id", required=True, help="Template id from build/configs, for example asthma_baseline or asthma_cr1.")
+    materialize_parser = subparsers.add_parser("materialize", help="Materialize one named template into a template-applied asthma module model.")
+    materialize_parser.add_argument("--template-id", required=True, help="Template id from parameters/templates, for example asthma_baseline or asthma_cr1.")
     materialize_parser.add_argument("--scenario-id", default=None, help="Scenario id to record in the materialized artifact.")
     materialize_parser.add_argument("--country", default="AFG")
     materialize_parser.add_argument("--start-year", type=int, default=2025)
@@ -349,7 +356,7 @@ def main() -> None:
         dest="overrides",
         action="append",
         default=[],
-        help="Optional parameter override in NAME=JSON_VALUE form. Can be repeated.",
+        help="Optional parameter override in parameter_id=JSON_VALUE or label=JSON_VALUE form. Can be repeated.",
     )
 
     args = parser.parse_args()
