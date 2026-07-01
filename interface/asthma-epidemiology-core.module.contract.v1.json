@@ -291,7 +291,16 @@
       "meaning": "Optional source-owned risk-factor modifier applied to asthma incidence.",
       "shape": "yearly_2x101_or_scalar",
       "units": "multiplier",
-      "required": false
+      "required": false,
+      "accepted_source_module_type": "risk_factor",
+      "input_semantics": "multiplicative_incidence_modifier",
+      "binding": {
+        "legacy_lowering_ref": "$.nodes[?(@.id=='4iPxzqKo')].compiler_binding",
+        "target_node_id": "4iPxzqKo",
+        "target_node_label": "AsthmaEpsd Incidence",
+        "target_path": "asthma_incidence_surrogate",
+        "target_operator": "multiply"
+      }
     }
   ],
   "published_outputs": [

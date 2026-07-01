@@ -705,7 +705,15 @@
           "value": 1
         }
       },
-      "flush": true
+      "flush": true,
+      "compiler_binding": {
+        "kind": "declared_input",
+        "channel_id": "incidence_modifier",
+        "source_module_type": "risk_factor",
+        "input_semantics": "multiplicative_incidence_modifier",
+        "target_operator": "multiply",
+        "note": "Compiler lowers source-owned risk-factor incidence modifiers onto the asthma incidence surrogate before the disease-free-to-asthma incidence transition."
+      }
     },
     {
       "id": "b736zFQf",

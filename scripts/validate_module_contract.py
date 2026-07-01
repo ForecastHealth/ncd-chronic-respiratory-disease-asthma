@@ -155,10 +155,39 @@ def validate() -> list[str]:
         stale_tobacco_nodes = {"BXOLckIN", "oGP2Nze1", "PjHF9FHh"} & node_ids
         if stale_tobacco_nodes:
             fail(errors, f"Asthma model.json still contains stale no-op tobacco/PIF nodes: {sorted(stale_tobacco_nodes)}")
+        node_by_id = {node.get("id"): node for node in model.get("nodes", [])}
         link_by_id = {link.get("id"): link for link in model.get("links", [])}
         background_link = link_by_id.get("kdE7JaZO", {})
         if background_link.get("generate_array"):
             fail(errors, "Asthma background mortality link still fetches demographic mortality directly instead of relying on compiler lowering")
+
+        declared_inputs = {item.get("channel_id"): item for item in module.get("declared_inputs", [])}
+        incidence_modifier = declared_inputs.get("incidence_modifier", {})
+        incidence_binding = incidence_modifier.get("binding", {})
+        if incidence_modifier.get("accepted_source_module_type") != "risk_factor":
+            fail(errors, "Asthma incidence_modifier is not declared as a source-neutral risk-factor input")
+        if incidence_modifier.get("input_semantics") != "multiplicative_incidence_modifier":
+            fail(errors, "Asthma incidence_modifier does not declare multiplicative incidence modifier semantics")
+        if incidence_binding.get("target_operator") != "multiply":
+            fail(errors, "Asthma incidence_modifier binding does not declare target_operator=multiply")
+        target_node_id = incidence_binding.get("target_node_id")
+        if not target_node_id or target_node_id not in node_by_id:
+            fail(errors, f"Asthma incidence_modifier binding points to missing target node {target_node_id}")
+        else:
+            compiler_binding = node_by_id[target_node_id].get("compiler_binding", {})
+            if compiler_binding.get("channel_id") != "incidence_modifier":
+                fail(errors, f"Asthma incidence_modifier target node {target_node_id} does not bind incidence_modifier")
+            if compiler_binding.get("source_module_type") != "risk_factor":
+                fail(errors, f"Asthma incidence_modifier target node {target_node_id} does not declare source_module_type=risk_factor")
+            if compiler_binding.get("input_semantics") != "multiplicative_incidence_modifier":
+                fail(errors, f"Asthma incidence_modifier target node {target_node_id} does not declare multiplicative input semantics")
+            if compiler_binding.get("target_operator") != "multiply":
+                fail(errors, f"Asthma incidence_modifier target node {target_node_id} does not declare target_operator=multiply")
+        for kind, value in ids_in_path(incidence_binding.get("legacy_lowering_ref", "")):
+            if kind == "nodes" and value not in node_ids:
+                fail(errors, f"Asthma incidence_modifier legacy lowering ref points to missing node {value}")
+            if kind == "links" and value not in link_ids:
+                fail(errors, f"Asthma incidence_modifier legacy lowering ref points to missing link {value}")
 
     if not CONTRACT_ROOT.exists():
         fail(errors, "Cannot find botech-modular-structure contract root")
