@@ -1,0 +1,152 @@
+{
+  "adversarial_completion_check": {
+    "is_monolithic_botech_model_with_runtime_nodes_links_subroutines": true,
+    "model_assurance_evidence_not_overstated": "The assurance evidence is described as a hash match to the monolith composition record plus CR1 parity evidence, with the source path caveat preserved.",
+    "provenance_supports_choice": true,
+    "repo_output_limited_to_two_requested_files": true,
+    "result_stitching_evidence_not_overstated": "The upload evidence is described as model-family and output-pipeline linkage, not as proof of the exact selected commit producing the committed CSVs."
+  },
+  "chosen_legacy_source": {
+    "branch_or_ref": "reachable from investment-case history; no branch decoration on the selected commit in current local refs",
+    "commit_date": "2026-05-14T12:51:52+08:00",
+    "commit_hash": "3ab13cd35ae646fd55c41509f3584ae269c2290c",
+    "commit_subject": "Update absolute resource bridge",
+    "recovered_model_sha256": "94c67579de12811738fb01527657a2c35190a9f300d6c55a0d8498828b9ee8ae",
+    "repo_path": "/Users/rory/Models/ncd-asthma",
+    "source_path": "model.json"
+  },
+  "disease_slug": "ncd-asthma",
+  "model_assurance_evidence": [
+    {
+      "commit_hash": "6507670f17d548d1c75e8dc666ab474b3b336646",
+      "evidence": "Records composition:ncd-asthma:monolith:asthma-cr1:v1 with model_source public/models/ncd-asthma/model.json, runtime 2025-2046 with synchronous_iterations 10, and model_sha256 equal to the recovered model hash.",
+      "path": "run-registry/asthma-monolith/composition-record.v1.json",
+      "repo_path": "/Users/rory/Documents/model-assurance"
+    },
+    {
+      "commit_hash": "6507670f17d548d1c75e8dc666ab474b3b336646",
+      "evidence": "Records a pass certificate for one Rust runtime execution of the asthma monolith under the asthma CR1 scenario; result_rows is 66803 and rust_results_sha256 is 401c20690cfa2d93e91c6df78664f6d8297261386d8e1cba7e520f4ed7f80970.",
+      "path": "run-registry/asthma-monolith/run-certificate.v1.json",
+      "repo_path": "/Users/rory/Documents/model-assurance"
+    },
+    {
+      "commit_hash": "6507670f17d548d1c75e8dc666ab474b3b336646",
+      "evidence": "Records the June 2026 asthma CR1 modular parity validation as pass, with original_sha256 and composed_sha256 both 401c20690cfa2d93e91c6df78664f6d8297261386d8e1cba7e520f4ed7f80970 and mismatched_rows 0.",
+      "path": "asthma-modular/validation/asthma-cr1.modular-parity.validation-certificate.v1.json",
+      "repo_path": "/Users/rory/Documents/model-assurance"
+    },
+    {
+      "commit_hash": "6507670f17d548d1c75e8dc666ab474b3b336646",
+      "evidence": "States that the asthma monolith and asthma modular CR1 runs were executed through the Rust runtime with the same scenario-materialised unified API data bundle and produced the same result hash.",
+      "path": "README.md",
+      "repo_path": "/Users/rory/Documents/model-assurance"
+    }
+  ],
+  "recovered_model_summary": {
+    "embedded_legacy_behaviour_signals": [
+      "single graph contains runtime, nodes, links, and subroutines",
+      "data fetcher labels include asthma, fhdb, and risk_factors",
+      "method names include population, fertility, migration, mortality, relative_risk_631, tax, wb_gdp_per_capita, ilo_labour_force_participation_rate, and asthma get_observation",
+      "text search over the JSON finds tobacco, population, mortality, resource-population-reached, and economic-value related wiring in the same model file"
+    ],
+    "link_count": 137,
+    "metadata": {
+      "description": "The rebuild of the Spectrum Asthma Disease Model",
+      "intervention": "asthma",
+      "name": "Asthma",
+      "scenario": "baseline",
+      "user": "appendix_3"
+    },
+    "node_count": 101,
+    "runtime": {
+      "endYear": 2046,
+      "startYear": 2025,
+      "synchronous_iterations": 10
+    },
+    "subroutine_count": 51,
+    "top_level_keys": [
+      "links",
+      "metadata",
+      "nodes",
+      "runtime",
+      "subroutines"
+    ]
+  },
+  "reference_warning": "This is a legacy monolithic botech reference specimen for audit and parity work only. It is not an active module surface, not an architectural pattern to preserve, and not evidence that demography, tobacco risk-factor logic, resources, or economic metrics should live inside the asthma module now.",
+  "rejected_alternatives_and_uncertainty": [
+    {
+      "candidate": "27052a4bb333250f585466cf8b1d6d0384b00485:model.json",
+      "reason_rejected": "Valid older monolith, but its 2020-2040 runtime and hash do not match the June 2026 assurance monolith composition record."
+    },
+    {
+      "candidate": "9708f686677c21123ac0690fa7ca634d450832bd:model.json",
+      "reason_rejected": "Still monolithic, but it post-dates the model hash recorded in the June 2026 assurance monolith record and has a different SHA-256 after the transition-system method change."
+    },
+    {
+      "candidate": "ddb6455d96bd372fe83f6d6f4cc91fd1180ef8e4:model.json and later",
+      "reason_rejected": "These are cleanup-era module-owned surfaces with risk-factor and demographic ownership removed from the asthma model, so they are not the legacy monolith Rory asked to preserve as a reference specimen."
+    },
+    {
+      "uncertainty": "The upload repository links stitched outputs to asthma analytics result file paths and scenario names, but it does not record the exact asthma model commit that produced those CSVs. The assurance repository provides the exact hash match for the chosen file."
+    },
+    {
+      "uncertainty": "The checked upload repository text uses WHO Global NCD Investment Case and summary-sheet language rather than the exact title Saving Lives, Spending Less. The linkage is therefore to the result-stitching workflow used for that workstream, not to a separately titled file."
+    }
+  ],
+  "target_repo_path": "/Users/rory/Models/ncd-asthma",
+  "who_global_ncd_investment_case_uploads_evidence": [
+    {
+      "commit_date": "2025-09-17T13:06:50-04:00",
+      "commit_hash": "63073d7b46fa25f1a7e078d37406eb97dd5a3c67",
+      "evidence": "Current upload repo text describes the workflow as collecting CVD, diabetes, asthma, and COPD model results from SOURCE_FILES, processing them through process_csv_files.py, and incorporating them into the WHO Global NCD Investment Case summary-sheet workflow. The exact phrase Saving Lives, Spending Less was not present in the checked repo text, so this is treated as evidence for the underlying result-stitching workflow rather than title-level proof.",
+      "paths": [
+        "INSTRUCTIONS_FOR_TOBACCO_CANCER_CALCULATIONS.md",
+        "LUNG_CANCER_IMPLEMENTATION_SUMMARY.md",
+        "process_csv_files.py",
+        "create_summary_sheet.py",
+        "SOURCE_FILES"
+      ],
+      "repo_path": "/Users/rory/Documents/who-global-ncd-investment-case-uploads"
+    },
+    {
+      "commit_date": "2025-08-21",
+      "commit_hash": "286dd269ab6540193a8d380a08323e7491f15b2b",
+      "evidence": "First stitched-result source list includes /home/rory/Models/ncd-asthma/results/asthma_long_20250821_203245.csv alongside COPD, diabetes, CVD, cancer, and other disease outputs.",
+      "path": "SOURCE_FILES",
+      "repo_path": "/Users/rory/Documents/who-global-ncd-investment-case-uploads"
+    },
+    {
+      "commit_date": "2025-09-02",
+      "commit_hash": "17a817a4d8b17e3790790da00f4059bf39298738",
+      "evidence": "Updated stitched-result source list points to /home/rory/Models/ncd-asthma/results/analytics_results_20250902_120540.csv, the asthma analytics output used with the other disease model outputs.",
+      "path": "SOURCE_FILES",
+      "repo_path": "/Users/rory/Documents/who-global-ncd-investment-case-uploads"
+    },
+    {
+      "commit_date": "2025-08-26",
+      "commit_hash": "89d88e0432211dcff4966f510b9e81eab080bf09",
+      "evidence": "The result-stitching script groups scenarios beginning asthma_cr or copd_cr under Chronic respiratory disease and labels case totals as CVD + Asthma + Diabetes + CRD + Cancer.",
+      "path": "create_summary_sheet.py",
+      "repo_path": "/Users/rory/Documents/who-global-ncd-investment-case-uploads"
+    },
+    {
+      "commit_date": "2025-09-12",
+      "commit_hash": "6db75c1a987f3ca2a3e243ab2d6dced9e3567e38",
+      "evidence": "Committed stitched outputs include asthma rows with source=asthma and scenario=asthma_cr1, and summary-sheet columns that roll asthma into global NCD investment-case totals.",
+      "paths": [
+        "all_results_20250903_160122.csv",
+        "all_results_20250908_152158.csv",
+        "summary_sheet.csv",
+        "summary_sheet_with_population.csv"
+      ],
+      "repo_path": "/Users/rory/Documents/who-global-ncd-investment-case-uploads"
+    }
+  ],
+  "why_defensible_reference_monolith": [
+    "It is the asthma repo model.json whose SHA-256 exactly matches the June 2026 model-assurance asthma monolith composition record.",
+    "It is still a monolithic botech model with runtime, 101 nodes, 137 links, and 51 subroutines in one JSON file.",
+    "Its SHA-256 exactly matches the model_sha256 recorded for the asthma monolith in /Users/rory/Documents/model-assurance/run-registry/asthma-monolith/composition-record.v1.json.",
+    "It has the 2025 to 2046 runtime and synchronous iteration count recorded in that same June 2026 asthma monolith composition record.",
+    "Later repo commits before and during cleanup are useful comparators, but they either differ from the June 2026 assurance model hash or remove/externalise legacy surfaces."
+  ]
+}
