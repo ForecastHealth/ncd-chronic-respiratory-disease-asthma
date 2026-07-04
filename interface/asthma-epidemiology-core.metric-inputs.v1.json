@@ -1,0 +1,323 @@
+{
+  "compiler_context": {
+    "disease_free_population": "DsFreeSus is supplied by compiler demographic lowering where it is no longer owned by the cleaned disease graph.",
+    "runtime_rows": "The compiler/runtime must expose the referenced state, death and weight rows before old metric graph machinery can be removed."
+  },
+  "legacy_machinery_status": "current_graph_still_contains_metric_calculation_nodes_pending_parity_removal",
+  "metric_modules": {
+    "metric-health-burden": {
+      "inputs": {
+        "daly": [
+          {
+            "output_label": "DALYs",
+            "output_node_id": "6CymLJWw",
+            "yld_yll_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "aUcpDiiY",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLD-DsFreeSus",
+                "source_node_id": "b736zFQf",
+                "subroutines": [
+                  {
+                    "index": 28,
+                    "method": "push_balance_to_edges",
+                    "narration": "Add values to DALYs"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "6CymLJWw"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "4irXyNFb",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLL-DsFreeSus",
+                "source_node_id": "a98IyNnU",
+                "subroutines": [
+                  {
+                    "index": 28,
+                    "method": "push_balance_to_edges",
+                    "narration": "Add values to DALYs"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "6CymLJWw"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "pfdr4vDi",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLL-AsthmaEpsd",
+                "source_node_id": "MCxDBlE3",
+                "subroutines": [
+                  {
+                    "index": 28,
+                    "method": "push_balance_to_edges",
+                    "narration": "Add values to DALYs"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "6CymLJWw"
+              },
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "spLLHc6B",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "YLD-AsthmaEpsd",
+                "source_node_id": "dycEX5CW",
+                "subroutines": [
+                  {
+                    "index": 28,
+                    "method": "push_balance_to_edges",
+                    "narration": "Add values to DALYs"
+                  }
+                ],
+                "target_label": "DALYs",
+                "target_node_id": "6CymLJWw"
+              }
+            ]
+          }
+        ],
+        "yld": [
+          {
+            "disability_weight_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "AK0cEUsh",
+                "operator": "multiply",
+                "postprocessing": null,
+                "source_label": "Healthy_Disability_Weight",
+                "source_node_id": "Healthy_Disability",
+                "subroutines": [],
+                "target_label": "YLD-DsFreeSus",
+                "target_node_id": "b736zFQf"
+              }
+            ],
+            "output_label": "YLD-DsFreeSus",
+            "output_node_id": "b736zFQf",
+            "state_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "thJ1j7QJ",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "DsFreeSus",
+                "source_node_id": "DsFreeSus",
+                "subroutines": [
+                  {
+                    "index": 25,
+                    "method": "push_balance_to_edges",
+                    "narration": "Add prevalence to YLD nodes"
+                  },
+                  {
+                    "index": 26,
+                    "method": "push_balance_to_edges",
+                    "narration": "Multiply YLDs by Disability Weights"
+                  }
+                ],
+                "target_label": "YLD-DsFreeSus",
+                "target_node_id": "b736zFQf"
+              }
+            ]
+          },
+          {
+            "disability_weight_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "qZzim17x",
+                "operator": "multiply",
+                "postprocessing": null,
+                "source_label": "Combined_DW",
+                "source_node_id": "sBeYN0kb",
+                "subroutines": [],
+                "target_label": "YLD-AsthmaEpsd",
+                "target_node_id": "dycEX5CW"
+              }
+            ],
+            "output_label": "YLD-AsthmaEpsd",
+            "output_node_id": "dycEX5CW",
+            "state_inputs": [
+              {
+                "generator_kind": "generator:single_value",
+                "label": null,
+                "link_id": "65f8gAJV",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "AsthmaEpsd",
+                "source_node_id": "AsthmaEpsd",
+                "subroutines": [
+                  {
+                    "index": 25,
+                    "method": "push_balance_to_edges",
+                    "narration": "Add prevalence to YLD nodes"
+                  },
+                  {
+                    "index": 26,
+                    "method": "push_balance_to_edges",
+                    "narration": "Multiply YLDs by Disability Weights"
+                  }
+                ],
+                "target_label": "YLD-AsthmaEpsd",
+                "target_node_id": "dycEX5CW"
+              }
+            ]
+          }
+        ],
+        "yll": [
+          {
+            "death_inputs": [],
+            "life_lost_weight_rule": [],
+            "output_label": "YLL-DsFreeSus",
+            "output_node_id": "a98IyNnU"
+          },
+          {
+            "death_inputs": [
+              {
+                "generator_kind": "data_fetcher:fhdb.yll_weights",
+                "label": null,
+                "link_id": "XHQWmcx1",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "Deceased-AsthmaEpsd",
+                "source_node_id": "N4Cpf6le",
+                "subroutines": [],
+                "target_label": "YLL-AsthmaEpsd",
+                "target_node_id": "MCxDBlE3"
+              }
+            ],
+            "life_lost_weight_rule": [
+              {
+                "generator": {
+                  "data_fetcher_label": "fhdb",
+                  "method": "yll_weights",
+                  "parameters": {}
+                },
+                "generator_kind": "data_fetcher:fhdb.yll_weights",
+                "link_id": "XHQWmcx1"
+              }
+            ],
+            "output_label": "YLL-AsthmaEpsd",
+            "output_node_id": "MCxDBlE3"
+          }
+        ]
+      },
+      "method_boundary": "The metric module calculates YLD, YLL and DALY from raw state, death and weight inputs rather than consuming existing DALY graph nodes as final truth.",
+      "method_id": "health_burden_yll_yld_daly"
+    },
+    "metric-healthy-years-lived": {
+      "inputs": [
+        {
+          "contribution_label": "DsFreeSus HYL",
+          "contribution_node_id": "nKC8vwhN",
+          "current_graph_output": "state-level HYL contribution row",
+          "health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Healthy_HYL -> DsFreeSus_HYL",
+              "link_id": "KGnQzUiU",
+              "operator": "add",
+              "postprocessing": null,
+              "source_label": "Healthy_HYL",
+              "source_node_id": "Fow1hNl6",
+              "subroutines": [
+                {
+                  "index": 13,
+                  "method": "push_balance_to_edges",
+                  "narration": "Calculate DsFreeSus Disability Surrogate"
+                }
+              ],
+              "target_label": "DsFreeSus HYL",
+              "target_node_id": "nKC8vwhN"
+            }
+          ],
+          "method": "avenir_blended_health_weight",
+          "state_inputs": [
+            {
+              "generator_kind": "runtime_pending_weight_or_unweighted_transfer",
+              "label": "DsFreeSus -> DsFreeSus HYL",
+              "link_id": "giAFe9qp",
+              "operator": null,
+              "postprocessing": null,
+              "source_label": "DsFreeSus",
+              "source_node_id": "DsFreeSus",
+              "subroutines": [
+                {
+                  "index": 23,
+                  "method": "push_balance_to_edges",
+                  "narration": "Record HYL"
+                }
+              ],
+              "target_label": "DsFreeSus HYL",
+              "target_node_id": "nKC8vwhN"
+            }
+          ]
+        },
+        {
+          "contribution_label": "AsthmaEpsd HYL",
+          "contribution_node_id": "6fCgpoYB",
+          "current_graph_output": "state-level HYL contribution row",
+          "health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Modified_HYL -> AsthmaEpsd HYL",
+              "link_id": "qYdyg8Y5",
+              "operator": "add",
+              "postprocessing": null,
+              "source_label": "Modified_HYL",
+              "source_node_id": "W7MB6GWT",
+              "subroutines": [
+                {
+                  "index": 14,
+                  "method": "push_balance_to_edges",
+                  "narration": "Calculated Asthma HYL Surrogate"
+                }
+              ],
+              "target_label": "AsthmaEpsd HYL",
+              "target_node_id": "6fCgpoYB"
+            }
+          ],
+          "method": "avenir_blended_health_weight",
+          "state_inputs": [
+            {
+              "generator_kind": "runtime_pending_weight_or_unweighted_transfer",
+              "label": "AsthmaEpsd -> AsthmaEpsd HYL",
+              "link_id": "F2a0bWMZ",
+              "operator": null,
+              "postprocessing": null,
+              "source_label": "AsthmaEpsd",
+              "source_node_id": "AsthmaEpsd",
+              "subroutines": [
+                {
+                  "index": 23,
+                  "method": "push_balance_to_edges",
+                  "narration": "Record HYL"
+                }
+              ],
+              "target_label": "AsthmaEpsd HYL",
+              "target_node_id": "6fCgpoYB"
+            }
+          ]
+        }
+      ],
+      "method_boundary": "The metric module calculates HYL from state population and health-weight inputs. Disease graphs still contain legacy contribution machinery until parity-driven removal is complete.",
+      "method_id": "healthy_years_lived"
+    }
+  },
+  "module_id": "asthma_epidemiology_core",
+  "purpose": "Declare the disease-run outputs and weights consumed by downstream metric modules after one botech scenario run.",
+  "scenario_agnostic": true,
+  "schema": "forecast-health.disease-metric-inputs.v1",
+  "source_model_slug": "ncd-asthma"
+}
