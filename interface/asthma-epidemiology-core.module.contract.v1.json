@@ -326,13 +326,6 @@
       "required": true
     },
     {
-      "channel_id": "healthy_years_lived",
-      "meaning": "Healthy years lived metric emitted by the asthma model.",
-      "shape": "yearly_scalar_or_2x101",
-      "units": "years",
-      "required": false
-    },
-    {
       "channel_id": "asthma_dalys",
       "meaning": "Asthma disability-adjusted life years metric.",
       "shape": "yearly_scalar_or_2x101",
