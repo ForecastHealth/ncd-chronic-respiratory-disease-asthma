@@ -262,6 +262,14 @@
               "target_label": "DsFreeSus HYL",
               "target_node_id": "nKC8vwhN"
             }
+          ],
+          "simple_health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Healthy_HYL",
+              "source_label": "Healthy_HYL",
+              "source_node_id": "Fow1hNl6"
+            }
           ]
         },
         {
@@ -307,6 +315,20 @@
               ],
               "target_label": "AsthmaEpsd HYL",
               "target_node_id": "6fCgpoYB"
+            }
+          ],
+          "simple_health_weight_inputs": [
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Healthy_HYL",
+              "source_label": "Healthy_HYL",
+              "source_node_id": "Fow1hNl6"
+            },
+            {
+              "generator_kind": "generator:single_value",
+              "label": "Asthma_HYL",
+              "source_label": "Asthma_HYL",
+              "source_node_id": "Asthma_Blended_Disability"
             }
           ]
         }
