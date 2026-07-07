@@ -105,7 +105,7 @@ def validate() -> list[str]:
 
     template_root = REPO_ROOT / "parameters" / "templates"
     template_files = sorted(template_root.glob("*.template.v1.json"))
-    required_templates = {"asthma_baseline", "asthma_cr1", "asthma_cr3"}
+    required_templates = {"asthma_baseline", "asthma_cr1"}
     if not template_files:
         fail(errors, "Missing parameters/templates/*.template.v1.json")
     template_ids = set()
@@ -155,6 +155,16 @@ def validate() -> list[str]:
         stale_tobacco_nodes = {"BXOLckIN", "oGP2Nze1", "PjHF9FHh"} & node_ids
         if stale_tobacco_nodes:
             fail(errors, f"Asthma model.json still contains stale no-op tobacco/PIF nodes: {sorted(stale_tobacco_nodes)}")
+
+        cr3_node_prefixes = ("LowDoseBeclom", "HighDoseBeclom", "InhaledShortActingBeta")
+        cr3_node_ids = {node_id for node_id in node_ids if any(str(node_id).startswith(prefix) for prefix in cr3_node_prefixes)}
+        cr3_node_ids |= {"Th8rib7e", "7jR6zfXt", "iMcmFjlP", "ResourcePopulationReached_LowDoseBeclom", "ResourcePopulationReached_HighDoseBeclom", "ResourcePopulationReached_InhaledShortActingBeta"} & node_ids
+        if cr3_node_ids:
+            fail(errors, f"Asthma disease model still owns CR3 intervention nodes that should live in intervention modules: {sorted(cr3_node_ids)}")
+        cr3_parameter_tokens = ("low_dose_beclometasone", "high_dose_beclometasone", "inhaled_short_acting_beta")
+        cr3_parameters = [parameter_id for parameter_id in registry_ids if any(token in str(parameter_id) for token in cr3_parameter_tokens)]
+        if cr3_parameters:
+            fail(errors, f"Asthma registry still owns CR3 intervention parameters: {sorted(cr3_parameters)}")
         node_by_id = {node.get("id"): node for node in model.get("nodes", [])}
         link_by_id = {link.get("id"): link for link in model.get("links", [])}
         background_link = link_by_id.get("kdE7JaZO", {})
