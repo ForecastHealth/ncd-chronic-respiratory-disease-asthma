@@ -33,7 +33,7 @@ python scripts/orchestrator_scenarios.py templates
 Materialize a template-applied asthma module model with:
 
 ```bash
-python scripts/orchestrator_scenarios.py materialize --template-id asthma_cr1 --country ETH --start-year 2025 --end-year 2046 --output-dir /tmp/ncd-asthma-materialized
+python scripts/orchestrator_scenarios.py materialize --template-id asthma_baseline --country ETH --start-year 2025 --end-year 2046 --output-dir /tmp/ncd-asthma-materialized
 ```
 
 That materialized model is still a module model. The demography plus asthma proof compiler must lower demographic substrate inputs and asthma opening balances before it is a complete runnable proof model.
@@ -41,6 +41,6 @@ That materialized model is still a module model. The demography plus asthma proo
 ## Removed Legacy Shape
 
 Do not recreate `scenarios/`, `build/`, `validation_suite/`, country-list folders, upload scripts, or JSONPath scenario application scripts unless Rory explicitly asks for a historical restore. Scenario ownership now belongs in `parameters/registry.v1.json` and `parameters/templates/`.
-## CR3 intervention ownership
+## Clinical intervention ownership
 
-Appendix 3 CR3 intervention mechanics are not owned by this asthma disease module. The executable Botech graph slices for low-dose beclometasone, high-dose beclometasone, and inhaled short-acting beta agonist live in their own intervention repos under `/Users/rory/Models/`. This repo keeps the asthma disease states and shared transform landing nodes that those components connect to during compiler composition.
+Appendix 3 CR1 and CR3 intervention mechanics are not owned by this asthma disease module. The executable Botech graph slices for oral prednisolone, low-dose beclometasone, high-dose beclometasone, and inhaled short-acting beta agonist live in their own intervention repos under `/Users/rory/Models/`. This repo keeps the asthma disease states and shared transform landing nodes that those components connect to during compiler composition.

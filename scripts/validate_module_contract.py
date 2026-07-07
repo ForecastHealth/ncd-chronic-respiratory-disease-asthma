@@ -105,7 +105,7 @@ def validate() -> list[str]:
 
     template_root = REPO_ROOT / "parameters" / "templates"
     template_files = sorted(template_root.glob("*.template.v1.json"))
-    required_templates = {"asthma_baseline", "asthma_cr1"}
+    required_templates = {"asthma_baseline"}
     if not template_files:
         fail(errors, "Missing parameters/templates/*.template.v1.json")
     template_ids = set()
@@ -165,6 +165,18 @@ def validate() -> list[str]:
         cr3_parameters = [parameter_id for parameter_id in registry_ids if any(token in str(parameter_id) for token in cr3_parameter_tokens)]
         if cr3_parameters:
             fail(errors, f"Asthma registry still owns CR3 intervention parameters: {sorted(cr3_parameters)}")
+        oral_node_ids = {node_id for node_id in node_ids if str(node_id).startswith("AsthmaOralPrednisolone")}
+        oral_node_ids |= {"8N5hy7kA", "ResourcePopulationReached_AsthmaOralPrednisolone"} & node_ids
+        if oral_node_ids:
+            fail(errors, f"Asthma disease model still owns CR1 oral prednisolone intervention nodes that should live in the intervention module: {sorted(oral_node_ids)}")
+        oral_parameters = [parameter_id for parameter_id in registry_ids if "oral_prednisolone" in str(parameter_id)]
+        if oral_parameters:
+            fail(errors, f"Asthma registry still owns CR1 oral prednisolone intervention parameters: {sorted(oral_parameters)}")
+        if (REPO_ROOT / "parameters" / "templates" / "asthma_cr1.template.v1.json").exists():
+            fail(errors, "Asthma disease module still owns asthma_cr1.template.v1.json; CR1 should be selected through the oral prednisolone intervention contract")
+        intervention_resource_graphs = sorted((REPO_ROOT / "resources" / "graphs").glob("cr*.json"))
+        if intervention_resource_graphs:
+            fail(errors, f"Asthma disease module still owns intervention resource graph sidecars: {[str(path.relative_to(REPO_ROOT)) for path in intervention_resource_graphs]}")
         node_by_id = {node.get("id"): node for node in model.get("nodes", [])}
         link_by_id = {link.get("id"): link for link in model.get("links", [])}
         background_link = link_by_id.get("kdE7JaZO", {})

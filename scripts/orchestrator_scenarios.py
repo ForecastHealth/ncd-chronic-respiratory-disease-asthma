@@ -17,9 +17,6 @@ TEMPLATES_ROOT = REPO_ROOT / "parameters" / "templates"
 DEFAULT_TEMPLATE_ID = "asthma_baseline"
 TEMPLATE_ALIASES = {
     "baseline": "asthma_baseline",
-    "oral_prednisolone": "asthma_cr1",
-    "cr1": "asthma_cr1",
-    "cr3": "asthma_cr3",
 }
 JSON_PATH_RE = re.compile(r"^\$\.(nodes|links)\[\?\(@\.id=='([^']+)'\)\]\.(.+)$")
 

@@ -151,104 +151,6 @@
       "flush": true
     },
     {
-      "id": "AsthmaOralPrednisolone_Disability_Effect",
-      "x": -146.27,
-      "y": 51.37,
-      "color": "#06B4E1",
-      "flush": true,
-      "label": "AsthmaOralPrednisolone_Disability_Effect",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "node_type": "FUNCTION"
-    },
-    {
-      "id": "AsthmaOralPrednisolone_Calculated_Coverage",
-      "x": -147.89,
-      "y": 122.39,
-      "label": "AsthmaOralPrednisolone_Calculated_Coverage",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 0
-        }
-      },
-      "color": "#06B4E1",
-      "flush": true,
-      "node_type": "FUNCTION"
-    },
-    {
-      "id": "AsthmaOralPrednisolone_Disability_Impact",
-      "x": -146.65,
-      "y": -3.95,
-      "color": "#06B4E1",
-      "label": "AsthmaOralPrednisolone_Disability_Impact",
-      "generate_array": {
-        "fetch_once": true,
-        "method": "single_value",
-        "parameters": {
-          "value": 0.3373407
-        }
-      },
-      "node_type": "CONSTANT"
-    },
-    {
-      "id": "AsthmaOralPrednisolone_Coverage",
-      "x": -168.68,
-      "y": 177.46,
-      "label": "AsthmaOralPrednisolone_Coverage",
-      "generate_array": {
-        "method": "linear_with_arbitrary_length",
-        "parameters": {
-          "start_value": 0.05,
-          "end_value": 0.05,
-          "start_index": 1,
-          "end_index": 2,
-          "fill_before": 0.05,
-          "fill_after": 0.05
-        }
-      },
-      "color": "#06B4E1",
-      "flush": true,
-      "node_type": "CONSTANT"
-    },
-    {
-      "id": "AsthmaOralPrednisolone_StartingCoverage",
-      "x": -166.33,
-      "y": 181.54,
-      "label": "AsthmaOralPrednisolone_StartingCoverage",
-      "generate_array": {
-        "fetch_once": true,
-        "method": "single_value",
-        "postprocessing": {
-          "negative": true
-        },
-        "parameters": {
-          "value": 0.05
-        }
-      },
-      "color": "#06B4E1",
-      "node_type": "CONSTANT"
-    },
-    {
-      "id": "AsthmaOralPrednisolone_PIN",
-      "x": -228.38,
-      "y": 81.52,
-      "label": "AsthmaOralPrednisolone_PIN",
-      "generate_array": {
-        "fetch_once": true,
-        "method": "single_value",
-        "parameters": {
-          "value": 0.3
-        }
-      },
-      "color": "#06B4E1",
-      "node_type": "CONSTANT"
-    },
-    {
       "id": "Mortality_Effect_Transform",
       "x": -14.63,
       "y": 45.51,
@@ -433,14 +335,6 @@
       "flush": true
     },
     {
-      "id": "8N5hy7kA",
-      "x": 18.3,
-      "y": 125.84,
-      "color": "#FFB255",
-      "label": "PopulationReached-AsthmaOralPrednisolone",
-      "flush": true
-    },
-    {
       "id": "DXhAVyOP",
       "x": -59.83,
       "y": 33.36,
@@ -483,14 +377,6 @@
         },
         "fetch_once": true
       }
-    },
-    {
-      "id": "ResourcePopulationReached_AsthmaOralPrednisolone",
-      "x": 46.3,
-      "y": 153.84,
-      "color": "#6EE7B7",
-      "label": "ResourcePopulationReached-AsthmaOralPrednisolone",
-      "flush": true
     }
   ],
   "links": [
@@ -512,86 +398,6 @@
         }
       },
       "label": "Asthma_Disability_Weight -> Asthma_HYL"
-    },
-    {
-      "id": "TSPTW7Pk",
-      "source": "AsthmaOralPrednisolone_StartingCoverage",
-      "target": "AsthmaOralPrednisolone_Calculated_Coverage",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "AsthmaOralPrednisolone_StartingCoverage -> AsthmaOralPrednisolone_Calculated_Coverage"
-    },
-    {
-      "id": "8vUFIddy",
-      "source": "AsthmaOralPrednisolone_Coverage",
-      "target": "AsthmaOralPrednisolone_Calculated_Coverage",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "AsthmaOralPrednisolone_Coverage -> AsthmaOralPrednisolone_Calculated_Coverage"
-    },
-    {
-      "id": "uOXAd2DT",
-      "source": "AsthmaOralPrednisolone_PIN",
-      "target": "AsthmaOralPrednisolone_Disability_Effect",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "AsthmaOralPrednisolone_PIN -> AsthmaOralPrednisolone_Disability_Effect"
-    },
-    {
-      "id": "lZHA9uFx",
-      "source": "AsthmaOralPrednisolone_Calculated_Coverage",
-      "target": "AsthmaOralPrednisolone_Disability_Effect",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "AsthmaOralPrednisolone_Calculated_Coverage -> AsthmaOralPrednisolone_Disability_Effect"
-    },
-    {
-      "id": "UCXitHFE",
-      "source": "AsthmaOralPrednisolone_Disability_Impact",
-      "target": "AsthmaOralPrednisolone_Disability_Effect",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "AsthmaOralPrednisolone_Disability_Impact -> AsthmaOralPrednisolone_Disability_Effect"
     },
     {
       "id": "NXoCjigb",
@@ -624,25 +430,6 @@
         }
       },
       "label": "Asthma_HYL -> Combined_HYL"
-    },
-    {
-      "id": "qiQ7YmdW",
-      "source": "AsthmaOralPrednisolone_Disability_Effect",
-      "target": "Disability_Effect_Transform",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "AsthmaOralPrednisolone_Disability_Effect -> Disability_Effect_Transform",
-      "postprocessing": {
-        "negative": true
-      }
     },
     {
       "id": "qIdKl1m3",
@@ -957,45 +744,6 @@
       "value_to_target_operator": "multiply"
     },
     {
-      "id": "W4sc2PrG",
-      "source": "AsthmaOralPrednisolone_PIN",
-      "target": "8N5hy7kA",
-      "value_to_target_operator": "multiply",
-      "remove_value_from_source": false,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
-      "id": "t7xlBFu5",
-      "source": "AsthmaEpsd",
-      "target": "8N5hy7kA",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add"
-    },
-    {
-      "id": "P0CzNGjt",
-      "source": "AsthmaOralPrednisolone_Calculated_Coverage",
-      "target": "8N5hy7kA",
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      }
-    },
-    {
       "id": "kdE7JaZO",
       "source": "AsthmaEpsd",
       "target": "N4Cpf6le",
@@ -1035,48 +783,6 @@
           "value": 1
         }
       }
-    },
-    {
-      "id": "ResourceAbs_AsthmaOralPrednisolone_Base_1",
-      "source": "AsthmaEpsd",
-      "target": "ResourcePopulationReached_AsthmaOralPrednisolone",
-      "label": "AsthmaEpsd -> ResourcePopulationReached-AsthmaOralPrednisolone",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "value_to_target_operator": "add"
-    },
-    {
-      "id": "ResourceAbs_AsthmaOralPrednisolone_PIN",
-      "source": "AsthmaOralPrednisolone_PIN",
-      "target": "ResourcePopulationReached_AsthmaOralPrednisolone",
-      "label": "AsthmaOralPrednisolone_PIN -> ResourcePopulationReached-AsthmaOralPrednisolone",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply"
-    },
-    {
-      "id": "ResourceAbs_AsthmaOralPrednisolone_Coverage",
-      "source": "AsthmaOralPrednisolone_Coverage",
-      "target": "ResourcePopulationReached_AsthmaOralPrednisolone",
-      "label": "AsthmaOralPrednisolone_Coverage -> ResourcePopulationReached-AsthmaOralPrednisolone",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply"
     },
     {
       "description": "Remission of Asthma to DsFreeSus",
@@ -1177,8 +883,6 @@
       "method": "generate_balance",
       "narration": "Generate the base values of the function nodes for constants",
       "included_source_nodes": [
-        "AsthmaOralPrednisolone_Calculated_Coverage",
-        "AsthmaOralPrednisolone_Disability_Effect",
         "Asthma_Blended_Disability",
         "Disability_Effect_Transform",
         "Blended_Disability_Transform",
@@ -1192,10 +896,6 @@
       "method": "generate_balance",
       "narration": "Generate the values of the constants",
       "included_source_nodes": [
-        "AsthmaOralPrednisolone_Disability_Impact",
-        "AsthmaOralPrednisolone_PIN",
-        "AsthmaOralPrednisolone_Coverage",
-        "AsthmaOralPrednisolone_StartingCoverage",
         "Healthy_Disability",
         "Asthma_Disability",
         "AsthmaEpsd_CFR",
@@ -1215,26 +915,17 @@
     {
       "method": "push_balance_to_edges",
       "narration": "Calculate Coverage",
-      "included_edges": [
-        "8vUFIddy",
-        "TSPTW7Pk"
-      ]
+      "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
       "narration": "Calculate Disability Effects",
-      "included_edges": [
-        "uOXAd2DT",
-        "UCXitHFE",
-        "lZHA9uFx"
-      ]
+      "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
       "narration": "Remove Disability Effects from 1.0",
-      "included_edges": [
-        "qiQ7YmdW"
-      ]
+      "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
@@ -1339,18 +1030,13 @@
       "method": "push_balance_to_edges",
       "batch": false,
       "narration": "Push AsthmaEpsd to populations reached",
-      "included_edges": [
-        "t7xlBFu5"
-      ]
+      "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
       "batch": false,
       "narration": "Modify Population Reached by PIN and Coverage",
-      "included_edges": [
-        "W4sc2PrG",
-        "P0CzNGjt"
-      ]
+      "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
@@ -1409,18 +1095,13 @@
       "method": "push_balance_to_edges",
       "batch": false,
       "narration": "Push disease populations to absolute resource population reached",
-      "included_edges": [
-        "ResourceAbs_AsthmaOralPrednisolone_Base_1"
-      ]
+      "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
       "batch": false,
       "narration": "Modify absolute resource population reached by PIN and coverage",
-      "included_edges": [
-        "ResourceAbs_AsthmaOralPrednisolone_PIN",
-        "ResourceAbs_AsthmaOralPrednisolone_Coverage"
-      ]
+      "included_edges": []
     },
     {
       "method": "echo",
@@ -1433,10 +1114,8 @@
         "a98IyNnU",
         "MCxDBlE3",
         "6CymLJWw",
-        "8N5hy7kA",
         "N4Cpf6le",
-        "DXhAVyOP",
-        "ResourcePopulationReached_AsthmaOralPrednisolone"
+        "DXhAVyOP"
       ]
     }
   ]
