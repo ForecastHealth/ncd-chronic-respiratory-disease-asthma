@@ -177,8 +177,31 @@
         ],
         "yll": [
           {
-            "death_inputs": [],
-            "life_lost_weight_rule": [],
+            "death_inputs": [
+              {
+                "generator_kind": "data_fetcher:fhdb.yll_weights",
+                "label": null,
+                "link_id": "SX1OAMyE",
+                "operator": "add",
+                "postprocessing": null,
+                "source_label": "Deceased-DsFreeSus",
+                "source_node_id": "Deceased",
+                "subroutines": [],
+                "target_label": "YLL-DsFreeSus",
+                "target_node_id": "a98IyNnU"
+              }
+            ],
+            "life_lost_weight_rule": [
+              {
+                "generator": {
+                  "data_fetcher_label": "fhdb",
+                  "method": "yll_weights",
+                  "parameters": {}
+                },
+                "generator_kind": "data_fetcher:fhdb.yll_weights",
+                "link_id": "SX1OAMyE"
+              }
+            ],
             "output_label": "YLL-DsFreeSus",
             "output_node_id": "a98IyNnU"
           },
