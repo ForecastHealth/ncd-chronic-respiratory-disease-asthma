@@ -121,13 +121,6 @@
       "shape": "2x101",
       "units": "people",
       "required": true
-    },
-    {
-      "channel_id": "asthma_dalys",
-      "meaning": "Asthma disability-adjusted life years metric.",
-      "shape": "yearly_scalar_or_2x101",
-      "units": "years",
-      "required": false
     }
   ],
   "state_initialization": {
@@ -231,6 +224,7 @@
     ]
   },
   "implementation_notes": [
-    "Appendix 3 CR1 and CR3 intervention graph slices are source-owned by ncd-asthma-asthmaoralprednisolone, ncd-asthma-lowdosebeclom, ncd-asthma-highdosebeclom, and ncd-asthma-inhaledshortactingbeta. The asthma module keeps the shared disease states and transform landing nodes."
+    "Appendix 3 CR1 and CR3 intervention graph slices are source-owned by ncd-asthma-asthmaoralprednisolone, ncd-asthma-lowdosebeclom, ncd-asthma-highdosebeclom, and ncd-asthma-inhaledshortactingbeta. The asthma module keeps the shared disease states and transform landing nodes.",
+    "HYL, YLL, YLD and DALY calculations are owned by metric modules, not by this disease graph. This disease module publishes raw disease rows needed by those metric modules."
   ]
 }
