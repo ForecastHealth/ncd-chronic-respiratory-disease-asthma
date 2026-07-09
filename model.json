@@ -203,6 +203,23 @@
       "color": "#FB6375",
       "order": 3,
       "flush": true
+    },
+    {
+      "id": "YLL_Weight",
+      "x": 31.0,
+      "y": -43.27,
+      "label": "YLL_Weight",
+      "color": "#06B4E1",
+      "generate_array": {
+        "generate_once": true,
+        "data_fetcher_label": "fhdb",
+        "method": "yll_weights",
+        "parameters": {
+          "country": "AFG"
+        }
+      },
+      "flush": true,
+      "node_type": "CONSTANT"
     }
   ],
   "links": [
