@@ -79,7 +79,7 @@
     },
     "metric-hyl": {
       "method_id": "healthy_years_lived",
-      "method_boundary": "The metric module calculates HYL from raw state population and disability-weight rows. The disease graph no longer contains HYL contribution or final HYL calculation nodes.",
+      "method_boundary": "The metric module calculates HYL from raw state population and disease disability-weight rows. Disease-free states use disability weight zero.",
       "inputs": [
         {
           "output_label": "DsFreeSus",
@@ -91,18 +91,7 @@
               "source_node_id": "DsFreeSus"
             }
           ],
-          "simple_health_weight_inputs": [
-            {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "Healthy_Disability"
-            },
-            {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "Healthy_Disability"
-            }
-          ]
+          "simple_health_weight_inputs": []
         },
         {
           "output_label": "AsthmaEpsd",
@@ -115,11 +104,6 @@
             }
           ],
           "simple_health_weight_inputs": [
-            {
-              "source_label": "Healthy_Disability_Weight",
-              "generator_kind": "runtime_output",
-              "source_node_id": "Healthy_Disability"
-            },
             {
               "source_label": "Asthma_Disability_Weight",
               "generator_kind": "runtime_output",
