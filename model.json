@@ -61,22 +61,6 @@
       "node_type": "CONSTANT"
     },
     {
-      "id": "Disability_Effect_Transform",
-      "x": -86.45,
-      "y": -17.21,
-      "label": "Disability_Effect_Transform",
-      "description": "Removing each effect from 1",
-      "color": "#06B4E1",
-      "flush": true,
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "node_type": "FUNCTION"
-    },
-    {
       "id": "AsthmaEpsd",
       "x": 37.34,
       "y": 2.06,
@@ -84,41 +68,6 @@
       "ageing": true,
       "color": "#E5EF73",
       "node_type": "STATE"
-    },
-    {
-      "id": "Healthy_Disability",
-      "x": 29,
-      "y": -45.27,
-      "label": "Healthy_Disability_Weight",
-      "color": "#06B4E1",
-      "generate_array": {
-        "generate_once": true,
-        "data_fetcher_label": "fhdb",
-        "method": "healthy_disability",
-        "parameters": {
-          "country": "AFG"
-        }
-      },
-      "flush": true,
-      "node_type": "CONSTANT"
-    },
-    {
-      "id": "Asthma_Disability",
-      "x": -92.05,
-      "y": -46.45,
-      "label": "Asthma_Disability_Weight",
-      "color": "#06B4E1",
-      "generate_array": {
-        "generate_once": true,
-        "data_fetcher_label": "asthma",
-        "method": "get_observation",
-        "parameters": {
-          "country": "AFG",
-          "observation": "AsthmaEpsd -> Disability"
-        }
-      },
-      "node_type": "CONSTANT",
-      "flush": true
     },
     {
       "id": "Mortality_Effect_Transform",
@@ -134,21 +83,6 @@
           "value": 1
         }
       },
-      "node_type": "FUNCTION"
-    },
-    {
-      "id": "sBeYN0kb",
-      "x": -42.09,
-      "y": -21.57,
-      "label": "Combined_DW",
-      "color": "#06B4E1",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "flush": true,
       "node_type": "FUNCTION"
     },
     {
@@ -248,22 +182,6 @@
       "edge_type": "transition",
       "set_by_surrogate": true,
       "label": "AsthmaEpsd -> AsthmaEpsd Mortality"
-    },
-    {
-      "id": "srfoaH6g",
-      "source": "Disability_Effect_Transform",
-      "target": "Asthma_Disability",
-      "edge_type": "projection",
-      "requires_source_balance": true,
-      "remove_value_from_source": false,
-      "value_to_target_operator": "multiply",
-      "generate_array": {
-        "method": "single_value",
-        "parameters": {
-          "value": 1
-        }
-      },
-      "label": "Disability_Effect_Transform -> Combined_DW"
     },
     {
       "id": "oOJgYZ0V",
@@ -400,17 +318,12 @@
     {
       "method": "generate_balance",
       "narration": "Generate the base values of the function nodes for constants",
-      "included_source_nodes": [
-        "Disability_Effect_Transform",
-        "sBeYN0kb"
-      ]
+      "included_source_nodes": []
     },
     {
       "method": "generate_balance",
       "narration": "Generate the values of the constants",
       "included_source_nodes": [
-        "Healthy_Disability",
-        "Asthma_Disability",
         "AsthmaEpsd_CFR",
         "rXFK8r54"
       ]
@@ -442,9 +355,7 @@
       "method": "push_balance_to_edges",
       "batch": false,
       "narration": "Modify disease disability weight with intervention effects",
-      "included_edges": [
-        "srfoaH6g"
-      ]
+      "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
