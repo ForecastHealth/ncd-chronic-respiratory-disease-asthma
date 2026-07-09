@@ -65,6 +65,25 @@
       }
     },
     {
+      "channel_id": "asthma_disability_effect_transform",
+      "accepted_source_module_type": "clinical_intervention",
+      "input_semantics": "additive_disability_effect_reduction",
+      "meaning": "Optional component-owned asthma clinical intervention disability reductions. Intervention components add their effect into this shared transform before asthma disability weight is recalculated.",
+      "required": false,
+      "shape": "yearly_2x101_or_scalar",
+      "units": "proportion",
+      "binding": {
+        "legacy_lowering_ref": "$.nodes[?(@.id=='Disability_Effect_Transform')]",
+        "target_node_id": "Disability_Effect_Transform",
+        "target_node_label": "Disability_Effect_Transform",
+        "target_operator": "add",
+        "target_path": "asthma_disability_effect_transform",
+        "postprocessing": {
+          "negative": true
+        }
+      }
+    },
+    {
       "channel_id": "asthma_mortality_effect_transform",
       "accepted_source_module_type": "clinical_intervention",
       "input_semantics": "additive_mortality_effect_reduction",
@@ -144,6 +163,32 @@
       },
       "required_for": [
         "asthma_mortality_flow"
+      ]
+    },
+    {
+      "data_type": "asthma.get_observation",
+      "parameters": {
+        "country": "ISO3",
+        "observation": "AsthmaEpsd -> Disability"
+      },
+      "required_for": [
+        "asthma_disability_weight"
+      ]
+    },
+    {
+      "data_type": "healthy_disability",
+      "parameters": {
+        "country": "ISO3"
+      },
+      "required_for": [
+        "healthy_years_lived"
+      ]
+    },
+    {
+      "data_type": "yll_weights",
+      "parameters": {},
+      "required_for": [
+        "years_of_life_lost"
       ]
     }
   ],
