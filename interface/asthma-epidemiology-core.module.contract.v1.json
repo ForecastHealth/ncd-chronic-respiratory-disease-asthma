@@ -241,6 +241,7 @@
   },
   "compiler_composition": {
     "schema": "forecast-health.botech-disease-composition.v1",
+    "target_key": "asthma",
     "model_slug": "ncd-asthma",
     "label": "Asthma",
     "baseline_template_id": "asthma_baseline",
