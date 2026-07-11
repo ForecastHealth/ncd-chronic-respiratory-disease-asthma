@@ -138,10 +138,11 @@
     "main_population_owner_module_id": "demographic_substrate",
     "cause_specific_mortality": {
       "excludes_demographic_background_mortality": true,
-      "output_node_ids": [
-        "AsthmaEpsd Mortality"
+      "units": "deaths",
+      "output_link_ids": [
+        "dgLZdA4x"
       ],
-      "units": "deaths"
+      "output_semantics": "Values emitted by the Botech EDGE_VALUES_CALCULATED events for these links are actual cause-specific death flows. Case-fatality helper nodes are not mortality outputs."
     },
     "morbidity": {
       "metric_input_contract_ref": "interface/asthma-epidemiology-core.metric-inputs.v1.json",
