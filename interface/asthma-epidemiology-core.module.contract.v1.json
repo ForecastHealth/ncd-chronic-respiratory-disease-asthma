@@ -253,6 +253,37 @@
       }
     ]
   },
+  "runtime_transition_semantics": {
+    "schema": "forecast-health.botech-runtime-transition-semantics.v1",
+    "default_remove_value_from_source": true,
+    "phases": [
+      {
+        "phase_id": "main_disease_transitions",
+        "subroutine_narration": "Main Routine",
+        "allocation_basis": "phase_opening_balance",
+        "method": "continuous_hazard_transition_system",
+        "source_removing_link_ids": [
+          "dgLZdA4x",
+          "Z6UVoLxv",
+          "HGzwp14L"
+        ]
+      },
+      {
+        "phase_id": "background_mortality",
+        "subroutine_narration": "Background Mortality",
+        "allocation_basis": "current_balance_after_prior_phases",
+        "method": "sequential_transfer",
+        "source_removing_link_ids": [
+          "kdE7JaZO"
+        ]
+      }
+    ],
+    "semantic_rules": [
+      "The disease transition system calculates competing disease flows from one phase-opening balance.",
+      "Background mortality is applied after the disease transition system to the balance left in each living state.",
+      "File order and link order do not change competing disease-transition results."
+    ]
+  },
   "compiler_composition": {
     "schema": "forecast-health.botech-disease-composition.v1",
     "target_key": "asthma",
