@@ -270,7 +270,50 @@
       "command_ref": "scripts/orchestrator_scenarios.py",
       "model_output_ref": "model.json"
     },
-    "lowering_profile": "asthma_demographic_v1"
+    "lowering_profile": "partitioned_disease_v1",
+    "lowering": {
+      "data_fetcher_label": "asthma",
+      "prevalence_inputs": {
+        "asthma_prevalence": {
+          "data_fetcher_label": "fhdb",
+          "method": "epidemiology",
+          "parameters": {
+            "disease": "Asthma",
+            "measure": "prevalence"
+          }
+        }
+      },
+      "incidence_edges": [
+        {
+          "id": "compiler::asthma::incidence_from_disease_free_population",
+          "label": "Asthma incidence from disease-free population",
+          "target_surrogate": "4iPxzqKo",
+          "target_state": "AsthmaEpsd",
+          "target_transition_edge_id": "wAhdgLwg"
+        }
+      ],
+      "disable_subroutine_edges": [
+        "HGzwp14L"
+      ],
+      "background_mortality_edges": [
+        "kdE7JaZO"
+      ],
+      "age_states": [
+        "AsthmaEpsd"
+      ],
+      "birth_sources": [
+        "DsFreeSus",
+        "AsthmaEpsd"
+      ],
+      "living_state_nodes": [
+        "DsFreeSus",
+        "AsthmaEpsd"
+      ],
+      "headline_nodes": {
+        "Disease-free population": "DsFreeSus",
+        "Asthma episode population": "AsthmaEpsd"
+      }
+    }
   },
   "validation": {
     "internal_validity_tests": [
