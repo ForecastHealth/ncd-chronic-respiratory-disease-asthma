@@ -9,7 +9,6 @@ from typing import Any
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-CONTRACT_ROOT = Path("/Users/rory/Documents/botech-modular-structure/contracts")
 STALE_TOKENS = ("build/", "scenarios/", "scenario-components")
 JSON_PATH_RE = re.compile(r"\$\.(nodes|links)\[\?\(@\.id=='([^']+)'\)\]")
 
@@ -210,9 +209,6 @@ def validate() -> list[str]:
                 fail(errors, f"Asthma incidence_modifier legacy lowering ref points to missing node {value}")
             if kind == "links" and value not in link_ids:
                 fail(errors, f"Asthma incidence_modifier legacy lowering ref points to missing link {value}")
-
-    if not CONTRACT_ROOT.exists():
-        fail(errors, "Cannot find botech-modular-structure contract root")
 
     return errors
 

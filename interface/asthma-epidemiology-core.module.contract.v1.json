@@ -235,10 +235,6 @@
       ]
     }
   ],
-  "cards": {
-    "reference_run_card_ref": "/Users/rory/Documents/ncd-client/state/method-fixes/ncd-asthma/run-card.v1.json",
-    "demography_asthma_proof_ref": "/Users/rory/Documents/botech-modular-structure/proofs/demography-asthma/ethiopia-current-reference.proof.v1.json"
-  },
   "provenance": {
     "default_sources": [
       {
@@ -319,10 +315,7 @@
     "internal_validity_tests": [
       "python scripts/validate_module_contract.py"
     ],
-    "face_validity_checks": [
-      "/Users/rory/Documents/ncd-client/state/method-fixes/ncd-asthma/run-card.v1.json",
-      "/Users/rory/Documents/botech-modular-structure/proofs/demography-asthma/ethiopia-current-reference.proof.v1.json"
-    ]
+    "face_validity_checks": []
   },
   "implementation_notes": [
     "Appendix 3 CR1 and CR3 intervention graph slices are source-owned by ncd-asthma-asthmaoralprednisolone, ncd-asthma-lowdosebeclom, ncd-asthma-highdosebeclom, and ncd-asthma-inhaledshortactingbeta. The asthma module keeps the shared disease states and transform landing nodes.",
