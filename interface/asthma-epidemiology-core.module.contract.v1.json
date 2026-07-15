@@ -4,7 +4,7 @@
   "module_type": "disease_epidemiology",
   "owner": {
     "repo_id": "ncd-asthma",
-    "repo_ref": "/Users/rory/Models/ncd-asthma"
+    "repo_ref": "ncd-asthma"
   },
   "version": "v1",
   "runtime_role": "compiled_together",

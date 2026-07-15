@@ -3,7 +3,7 @@
   "module_id": "asthma_epidemiology_core",
   "owner": {
     "repo_id": "ncd-asthma",
-    "repo_ref": "/Users/rory/Models/ncd-asthma",
+    "repo_ref": "ncd-asthma",
     "module_contract_ref": "interface/asthma-epidemiology-core.module.contract.v1.json"
   },
   "version": "v1",
