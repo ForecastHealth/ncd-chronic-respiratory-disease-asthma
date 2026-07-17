@@ -63,6 +63,20 @@ def validate() -> list[str]:
     tests = module.get("validation", {}).get("internal_validity_tests", [])
     if "python scripts/validate_module_contract.py" not in tests:
         fail(errors, "Module contract validation command does not point at scripts/validate_module_contract.py")
+    published_outputs = {
+        item.get("channel_id"): item
+        for item in module.get("published_outputs", [])
+    }
+    incidence_output = published_outputs.get("asthma_incidence_flow", {})
+    if incidence_output.get("units") != "people":
+        fail(errors, "asthma_incidence_flow must be published in people")
+    if incidence_output.get("binding") != {
+        "edge_id": "compiler::asthma::incidence_from_disease_free_population"
+    }:
+        fail(
+            errors,
+            "asthma_incidence_flow must bind the compiler-generated disease-free-population-to-incidence edge",
+        )
 
     registry_path = REPO_ROOT / "parameters" / "registry.v1.json"
     if not registry_path.exists():

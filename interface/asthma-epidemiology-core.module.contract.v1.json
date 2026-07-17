@@ -118,7 +118,7 @@
       "units": "people",
       "required": true,
       "binding": {
-        "node_id": "4iPxzqKo"
+        "edge_id": "compiler::asthma::incidence_from_disease_free_population"
       }
     },
     {
