@@ -128,7 +128,7 @@
       "units": "people",
       "required": true,
       "binding": {
-        "node_id": "AsthmaEpsd Mortality"
+        "edge_id": "dgLZdA4x"
       }
     }
   ],

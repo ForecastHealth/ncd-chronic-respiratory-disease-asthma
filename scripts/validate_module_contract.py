@@ -77,6 +77,11 @@ def validate() -> list[str]:
             errors,
             "asthma_incidence_flow must bind the compiler-generated disease-free-population-to-incidence edge",
         )
+    mortality_output = published_outputs.get("asthma_mortality_flow", {})
+    if mortality_output.get("units") != "people":
+        fail(errors, "asthma_mortality_flow must be published in people")
+    if mortality_output.get("binding") != {"edge_id": "dgLZdA4x"}:
+        fail(errors, "asthma_mortality_flow must bind the asthma episode-to-mortality transition edge")
 
     registry_path = REPO_ROOT / "parameters" / "registry.v1.json"
     if not registry_path.exists():
