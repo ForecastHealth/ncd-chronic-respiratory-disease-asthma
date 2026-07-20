@@ -12,7 +12,7 @@
     "commit_hash": "3ab13cd35ae646fd55c41509f3584ae269c2290c",
     "commit_subject": "Update absolute resource bridge",
     "recovered_model_sha256": "94c67579de12811738fb01527657a2c35190a9f300d6c55a0d8498828b9ee8ae",
-    "repo_path": "/Users/rory/Models/ncd-asthma",
+    "repo_path": "/Users/rory/Botech/library/ncd-asthma",
     "source_path": "model.json"
   },
   "disease_slug": "ncd-asthma",
@@ -93,7 +93,7 @@
       "uncertainty": "The checked upload repository text uses WHO Global NCD Investment Case and summary-sheet language rather than the exact title Saving Lives, Spending Less. The linkage is therefore to the result-stitching workflow used for that workstream, not to a separately titled file."
     }
   ],
-  "target_repo_path": "/Users/rory/Models/ncd-asthma",
+  "target_repo_path": "/Users/rory/Botech/library/ncd-asthma",
   "who_global_ncd_investment_case_uploads_evidence": [
     {
       "commit_date": "2025-09-17T13:06:50-04:00",
