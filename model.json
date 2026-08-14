@@ -38,6 +38,11 @@
         "method": "single_value",
         "parameters": {
           "value": 0
+        },
+        "display": {
+          "label": "Asthma episode mortality",
+          "units": "annual probability",
+          "source": "Module calculation"
         }
       },
       "flush": true
@@ -55,6 +60,11 @@
           "country": "AFG",
           "disease": "Asthma",
           "measure": "deaths"
+        },
+        "display": {
+          "label": "Asthma episode case-fatality probability",
+          "units": "annual probability",
+          "source": "Global Burden of Disease via Spectrum/OneHealth NCD defaults"
         }
       },
       "flush": true,
@@ -72,6 +82,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Disability Effect adjustment",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "node_type": "FUNCTION"
@@ -97,6 +112,11 @@
         "method": "healthy_disability",
         "parameters": {
           "country": "AFG"
+        },
+        "display": {
+          "label": "Background disability weight",
+          "units": "disability weight",
+          "source": "Spectrum/GBD disability-weight defaults"
         }
       },
       "flush": true,
@@ -115,6 +135,11 @@
         "parameters": {
           "country": "AFG",
           "observation": "AsthmaEpsd -> Disability"
+        },
+        "display": {
+          "label": "Asthma disability weight",
+          "units": "disability weight",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "node_type": "CONSTANT",
@@ -132,6 +157,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Mortality Effect adjustment",
+          "units": "annual probability",
+          "source": "Module calculation"
         }
       },
       "node_type": "FUNCTION"
@@ -146,6 +176,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Combined disability weight",
+          "units": "disability weight",
+          "source": "Module calculation"
         }
       },
       "flush": true,
@@ -165,6 +200,11 @@
           "country": "AFG",
           "disease": "Asthma",
           "measure": "incidence"
+        },
+        "display": {
+          "label": "Asthma episode incidence rate",
+          "units": "cases per person per year",
+          "source": "Global Burden of Disease via Spectrum/OneHealth NCD defaults"
         }
       },
       "flush": true
@@ -180,6 +220,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Asthma episode incidence",
+          "units": "people per year",
+          "source": "Module calculation"
         }
       },
       "flush": true,
@@ -206,7 +251,7 @@
     },
     {
       "id": "YLL_Weight",
-      "x": 31.0,
+      "x": 31,
       "y": -43.27,
       "label": "YLL_Weight",
       "color": "#06B4E1",
@@ -216,6 +261,11 @@
         "method": "yll_weights",
         "parameters": {
           "country": "AFG"
+        },
+        "display": {
+          "label": "Years of life lost by age",
+          "units": "years",
+          "source": "Platform calculation using an 80-year life-expectancy limit"
         }
       },
       "flush": true,
@@ -235,6 +285,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Asthma episode case-fatality probability to Asthma episode mortality",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "AsthmaEpsd_CFR -> AsthmaEpsd Mortality"
@@ -251,6 +306,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Mortality Effect adjustment to Asthma episode mortality",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "Mortality_Effect_Transform -> AsthmaEpsd Mortality",
@@ -278,6 +338,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Disability Effect adjustment to Combined disability weight",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "Disability_Effect_Transform -> Combined_DW"
@@ -294,6 +359,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Asthma episode incidence rate to Asthma episode incidence",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "AsthmaEpsd_Incidence_Rate -> AsthmaEpsd Incidence"
@@ -309,6 +379,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Asthma episode incidence to Asthma episode",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "AsthmaEpsd Incidence -> AsthmaEpsd"
@@ -324,6 +399,11 @@
         "method": "single_value",
         "parameters": {
           "value": 1
+        },
+        "display": {
+          "label": "Asthma episode mortality to Deceased",
+          "units": "multiplier",
+          "source": "Module calculation"
         }
       },
       "label": "AsthmaEpsd Mortality -> Deceased"
@@ -352,6 +432,11 @@
         "parameters": {
           "country": "AFG",
           "observation": "AsthmaEpsd -> DsFreeSus"
+        },
+        "display": {
+          "label": "Asthma episode to population without the disease",
+          "units": "annual probability",
+          "source": "Spectrum/OneHealth disease association file"
         }
       },
       "id": "Z6UVoLxv",
