@@ -1,0 +1,29 @@
+{
+  "schema": "forecast-health.impact-view.v1",
+  "module_id": "ncd-asthma",
+  "scope": "disease",
+  "scope_id": "ncd-asthma",
+  "label": "Asthma",
+  "show_headline": true,
+  "charts": [
+    {
+      "id": "asthma-population",
+      "series_id": "ncd-health-states-over-time",
+      "title": "People living with asthma",
+      "description": "People living with asthma episodes in each year.",
+      "element_ids": ["AsthmaEpsd"]
+    },
+    {
+      "id": "asthma-deaths",
+      "series_id": "ncd-mortality-over-time",
+      "title": "Deaths from asthma",
+      "description": "Asthma-specific deaths in each year."
+    },
+    {
+      "id": "asthma-healthy-years",
+      "series_id": "ncd-result-query-hyl-simple-over-time",
+      "title": "Healthy years lived after accounting for asthma disability",
+      "description": "Healthy years lived after accounting for disability from asthma in each year."
+    }
+  ]
+}
