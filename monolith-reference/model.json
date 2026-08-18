@@ -4,7 +4,10 @@
     "intervention": "asthma",
     "scenario": "baseline",
     "name": "Asthma",
-    "description": "The rebuild of the Spectrum Asthma Disease Model"
+    "description": "The rebuild of the Spectrum Asthma Disease Model",
+    "module_id": "ncd-asthma-monolith-reference",
+    "artifact_type": "monolith_reference_snapshot",
+    "superseded_by": "ncd-asthma"
   },
   "runtime": {
     "startYear": 2025,

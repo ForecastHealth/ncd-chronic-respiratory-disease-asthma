@@ -4,7 +4,8 @@
     "intervention": "asthma",
     "scenario": "baseline",
     "name": "Asthma",
-    "description": "The rebuild of the Spectrum Asthma Disease Model"
+    "description": "The rebuild of the Spectrum Asthma Disease Model",
+    "module_id": "ncd-asthma"
   },
   "runtime": {
     "startYear": 2025,
@@ -489,10 +490,12 @@
   "subroutines": [
     {
       "method": "flush",
+      "subroutine_id": "flush-unneeded-values",
       "narration": "Flush unneeded values"
     },
     {
       "method": "generate_balance",
+      "subroutine_id": "generate-the-base-values-of-the-surrogate-nodes",
       "narration": "Generate the base values of the surrogate nodes",
       "included_source_nodes": [
         "AsthmaEpsd Mortality",
@@ -501,6 +504,7 @@
     },
     {
       "method": "generate_balance",
+      "subroutine_id": "generate-the-base-values-of-the-function-nodes-for-constants",
       "narration": "Generate the base values of the function nodes for constants",
       "included_source_nodes": [
         "Disability_Effect_Transform",
@@ -509,6 +513,7 @@
     },
     {
       "method": "generate_balance",
+      "subroutine_id": "generate-the-values-of-the-constants",
       "narration": "Generate the values of the constants",
       "included_source_nodes": [
         "Healthy_Disability",
@@ -520,6 +525,7 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "calculate-the-incidence-surrogate",
       "narration": "Calculate the Incidence Surrogate",
       "included_edges": [
         "oOJgYZ0V"
@@ -527,22 +533,26 @@
     },
     {
       "method": "push_balance_to_edges",
+      "subroutine_id": "calculate-coverage",
       "narration": "Calculate Coverage",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
+      "subroutine_id": "calculate-disability-effects",
       "narration": "Calculate Disability Effects",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
+      "subroutine_id": "remove-disability-effects-from-1-0",
       "narration": "Remove Disability Effects from 1.0",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "modify-disease-disability-weight-with-intervention-effects",
       "narration": "Modify disease disability weight with intervention effects",
       "included_edges": [
         "srfoaH6g"
@@ -551,28 +561,33 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "calculate-combined-dw",
       "narration": "Calculate Combined DW",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
+      "subroutine_id": "calculate-dsfreesus-disability-surrogate",
       "narration": "Calculate DsFreeSus Disability Surrogate",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
+      "subroutine_id": "calculate-mortality-effects",
       "narration": "Calculate Mortality Effects",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "transform-mortality-effect",
       "narration": "Transform Mortality Effect",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "calculate-mortality-surrogate-add-cfr-to-surrogate",
       "narration": "Calculate Mortality Surrogate (Add CFR to Surrogate)",
       "included_edges": [
         "NXoCjigb"
@@ -580,6 +595,7 @@
     },
     {
       "method": "push_balance_to_edges",
+      "subroutine_id": "calculate-mortality-surrogate-transform-effect",
       "narration": "Calculate Mortality Surrogate (Transform Effect)",
       "included_edges": [
         "qIdKl1m3"
@@ -587,6 +603,7 @@
     },
     {
       "method": "transition_system",
+      "subroutine_id": "main-routine",
       "narration": "Main Routine",
       "included_edges": [
         "dgLZdA4x",
@@ -597,6 +614,7 @@
     },
     {
       "method": "push_balance_to_edges",
+      "subroutine_id": "background-mortality",
       "narration": "Background Mortality",
       "included_edges": [
         "kdE7JaZO"
@@ -606,17 +624,20 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "push-asthmaepsd-to-populations-reached",
       "narration": "Push AsthmaEpsd to populations reached",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "modify-population-reached-by-pin-and-coverage",
       "narration": "Modify Population Reached by PIN and Coverage",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
+      "subroutine_id": "migration-of-asthma-states",
       "narration": "Migration of Asthma States",
       "included_edges": [
         "avvOYu19",
@@ -626,18 +647,21 @@
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "push-disease-populations-to-absolute-resource-population-reached",
       "narration": "Push disease populations to absolute resource population reached",
       "included_edges": []
     },
     {
       "method": "push_balance_to_edges",
       "batch": false,
+      "subroutine_id": "modify-absolute-resource-population-reached-by-pin-and-coverage",
       "narration": "Modify absolute resource population reached by PIN and coverage",
       "included_edges": []
     },
     {
       "method": "echo",
       "batch": false,
+      "subroutine_id": "record-metrics",
       "narration": "Record Metrics",
       "included_source_nodes": [
         "AsthmaEpsd",
