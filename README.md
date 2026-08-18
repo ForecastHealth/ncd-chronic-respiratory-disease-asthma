@@ -25,13 +25,13 @@ This module models asthma incidence, prevalence, disability, and cause-specific 
 
 ## Method
 
-Asthma is a marginal disease process with two living states: an asthma episode state and a derived disease-free residual. At initialization, observed asthma prevalence sets the episode population and the disease-free state receives the remaining demographic population. During each model year, incidence moves people from the disease-free state to the asthma episode state. Disease transitions use a continuous-hazard competing-transition calculation based on the phase-opening balance. Background mortality is then applied sequentially to the remaining living population.
+Asthma is a marginal disease process with two living states: an asthma episode state and a derived disease-free residual. At each model-year opening, the coordinator sets the residual to the canonical population minus the asthma episode population, by age and sex. During the year, incidence moves people from the residual to the asthma episode state. Disease transitions use a continuous-hazard competing-transition calculation based on the phase-opening balance. Background mortality then applies to the asthma episode state.
 
 Clinical intervention components can reduce the asthma disability weight and case fatality through declared shared transforms. A risk-factor module can modify asthma incidence. The asthma graph publishes raw state and death results; metric modules calculate healthy years, years lived with disability, years of life lost, and disability-adjusted life years.
 
 ## Inputs and outputs
 
-Required inputs are the reconciled opening population at risk and background mortality rates. Optional inputs are births, net migration rates, an incidence modifier, clinical disability effects, and clinical mortality effects. The module publishes the asthma episode population, asthma incidence flow, and asthma-specific mortality flow as age-sex arrays.
+Required inputs are the canonical opening population, reconciled asthma opening prevalence and background mortality rates. Optional inputs are net migration rates, an incidence modifier, clinical disability effects and clinical mortality effects. The module publishes the asthma episode population, asthma incidence flow and asthma-specific mortality flow as age-sex arrays.
 
 ## Parameters and templates
 
@@ -43,7 +43,7 @@ The source module exposes only `asthma_baseline`. The disease parameter registry
 
 ## Relationships
 
-The demographic module supplies population, births, background mortality, and migration. `opening-state-reconciliation` creates one baseline opening state for both scenarios. Separate oral prednisolone, beclometasone, and short-acting beta agonist repositories own the clinical intervention graph slices.
+The demographic module supplies the canonical population, background mortality and migration. The annual coordinator derives the asthma population at risk from the canonical population and the current asthma state. `opening-state-reconciliation` creates one baseline opening state for both scenarios. Separate oral prednisolone, beclometasone and short-acting beta agonist repositories own the clinical intervention graph slices.
 
 ## Assumptions and limitations
 
