@@ -1,0 +1,2866 @@
+{
+ "schema": "forecast-health.intervention-resource-requirements.v1",
+ "intervention_id": "ncd-asthma-routine-care",
+ "owner_module": "ncd-asthma",
+ "resource_blocks": [
+  {
+   "id": "cr3-inhaled-short-acting-beta",
+   "label": "Asthma care: inhaled short-acting beta agonist for intermittent asthma",
+   "projection_source": {
+    "nodeId": "AsthmaEpsd",
+    "label": "AsthmaEpsd",
+    "eventType": "ECHO"
+   },
+   "entry_node_id": "ResourcePopulationReached_InhaledShortActingBeta",
+   "default_costing_method": "visit_based",
+   "service_accounting": {
+    "method": "disease_population_times_eligible_share_times_coverage",
+    "service_role": "ordinary_care_and_scale_up",
+    "supported_model_slugs": [
+     "ncd-asthma"
+    ],
+    "population_in_need": {
+     "parameter_id": "inhaled_short_acting_beta_agonist_population_in_need",
+     "default": 0.3
+    },
+    "coverage": {
+     "baseline_parameter_id": "cr3_inhaled_short_acting_beta_routine_care_baseline_coverage",
+     "baseline_default": 0.05,
+     "target_parameter_id": "cr3_inhaled_short_acting_beta_routine_care_target_coverage",
+     "target_default": 0.05,
+     "scale_up_start_index_parameter_id": "cr3_inhaled_short_acting_beta_routine_care_scale_up_start_index",
+     "scale_up_start_index_default": 1,
+     "scale_up_end_index_parameter_id": "cr3_inhaled_short_acting_beta_routine_care_scale_up_end_index",
+     "scale_up_end_index_default": 2
+    }
+   },
+   "parameter_bindings": [
+    {
+     "key": "Outpatient visit: Share",
+     "category": "Visits",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-visit-outpatient-visit",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Outpatient visit: Visits per person",
+     "category": "Visits",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-visit-outpatient-visit",
+      "parameter": "number-of-visits"
+     }
+    },
+    {
+     "key": "Outpatient visit: Visit cost per day",
+     "category": "Visit Cost",
+     "cost_item": {
+      "id": "cost-item.visit-outpatient-visit.cost-per-day",
+      "label": "Outpatient visit cost per day"
+     },
+     "country_cost_lookup": {
+      "category": "facilities",
+      "setting": "outpatient",
+      "facility_level": "health_centre_no_beds"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-visit-outpatient-visit",
+      "parameter": "cost-per-day"
+     }
+    },
+    {
+     "key": "Generalist/Primary care doctor: Share",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-generalist-primary-care-doctor",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Generalist/Primary care doctor: Minutes per person",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-generalist-primary-care-doctor",
+      "parameter": "number-of-minutes"
+     }
+    },
+    {
+     "key": "Generalist/Primary care doctor: Salary per minute",
+     "category": "Workforce Cost",
+     "cost_item": {
+      "id": "cost-item.workforce-generalist-primary-care-doctor.salary-per-minute",
+      "label": "Generalist/Primary care doctor salary per minute"
+     },
+     "country_cost_lookup": {
+      "category": "workforce",
+      "cadre": 4
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-workforce-generalist-primary-care-doctor",
+      "parameter": "salary-per-minute"
+     }
+    },
+    {
+     "key": "Nurse: Share",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-nurse",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Nurse: Minutes per person",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-nurse",
+      "parameter": "number-of-minutes"
+     }
+    },
+    {
+     "key": "Nurse: Salary per minute",
+     "category": "Workforce Cost",
+     "cost_item": {
+      "id": "cost-item.workforce-nurse.salary-per-minute",
+      "label": "Nurse salary per minute"
+     },
+     "country_cost_lookup": {
+      "category": "workforce",
+      "cadre": 3
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-workforce-nurse",
+      "parameter": "salary-per-minute"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Share",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-pin-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Units per day",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "units-per-day"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Days per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "number-of-days"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Unit cost",
+     "category": "Unit Cost",
+     "cost_item": {
+      "id": "cost-item.salbutamol-inhaler-100-mcg.unit-cost",
+      "label": "Salbutamol inhaler, 100 mcg"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "unit_cost"
+     }
+    }
+   ],
+   "graph": {
+    "metadata": {
+     "name": "CR3. Inhaled short-acting beta agonist for intermittent asthma resource graph",
+     "source_workbook": "Model_Costing_V3-CRD.xlsx",
+     "source_sheet": "CR3, SETUP-DS, SETUP-HR and SETUP-VISITS",
+     "conversion": "scripts/build_clinical_resource_sidecars.py",
+     "notes": "CR3 inhaled short-acting beta agonist component. Unit prices remain supplied by the platform."
+    },
+    "nodes": [
+     {
+      "id": "ResourcePopulationReached_InhaledShortActingBeta",
+      "label": "ResourcePopulationReached-InhaledShortActingBeta",
+      "type": "pin",
+      "node_type": "pin",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080",
+      "is_projection_entry": true
+     },
+     {
+      "id": "visit-outpatient-visit",
+      "label": "Outpatient visit",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+     },
+     {
+      "id": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+     },
+     {
+      "id": "workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+     },
+     {
+      "id": "workforce-nurse",
+      "label": "Nurse Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-workforce-nurse",
+      "label": "Nurse Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+     },
+     {
+      "id": "pin-supply-salbutamol-inhaler-100-mcg",
+      "label": "Receiving Salbutamol inhaler, 100 mcg",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+     },
+     {
+      "id": "units-supply-salbutamol-inhaler-100-mcg",
+      "label": "Units of Salbutamol inhaler, 100 mcg",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-supply-salbutamol-inhaler-100-mcg",
+      "label": "Salbutamol inhaler, 100 mcg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+     }
+    ],
+    "links": [
+     {
+      "id": "to-visit-outpatient-visit",
+      "source": "ResourcePopulationReached_InhaledShortActingBeta",
+      "target": "visit-outpatient-visit",
+      "label": "ResourcePopulationReached-InhaledShortActingBeta -> Outpatient visit",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0,
+        "number-of-visits": 2.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-visit-outpatient-visit",
+      "source": "visit-outpatient-visit",
+      "target": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit -> Outpatient visit Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "cost-per-day": 52.160000000000004
+       }
+      }
+     },
+     {
+      "id": "to-workforce-generalist-primary-care-doctor",
+      "source": "ResourcePopulationReached_InhaledShortActingBeta",
+      "target": "workforce-generalist-primary-care-doctor",
+      "label": "ResourcePopulationReached-InhaledShortActingBeta -> Generalist/Primary care doctor Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0,
+        "number-of-minutes": 20.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-workforce-generalist-primary-care-doctor",
+      "source": "workforce-generalist-primary-care-doctor",
+      "target": "cost-workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes -> Generalist/Primary care doctor Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "salary-per-minute": 1.0773833333333334
+       }
+      }
+     },
+     {
+      "id": "to-workforce-nurse",
+      "source": "ResourcePopulationReached_InhaledShortActingBeta",
+      "target": "workforce-nurse",
+      "label": "ResourcePopulationReached-InhaledShortActingBeta -> Nurse Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0,
+        "number-of-minutes": 10.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-workforce-nurse",
+      "source": "workforce-nurse",
+      "target": "cost-workforce-nurse",
+      "label": "Nurse Minutes -> Nurse Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "salary-per-minute": 0.8778666666666666
+       }
+      }
+     },
+     {
+      "id": "to-pin-supply-salbutamol-inhaler-100-mcg",
+      "source": "ResourcePopulationReached_InhaledShortActingBeta",
+      "target": "pin-supply-salbutamol-inhaler-100-mcg",
+      "label": "ResourcePopulationReached-InhaledShortActingBeta -> Receiving Salbutamol inhaler, 100 mcg",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0
+       }
+      }
+     },
+     {
+      "id": "to-units-supply-salbutamol-inhaler-100-mcg",
+      "source": "pin-supply-salbutamol-inhaler-100-mcg",
+      "target": "units-supply-salbutamol-inhaler-100-mcg",
+      "label": "Receiving Salbutamol inhaler, 100 mcg -> Units of Salbutamol inhaler, 100 mcg",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "units-per-day": 1.0,
+        "number-of-days": 365.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-supply-salbutamol-inhaler-100-mcg",
+      "source": "units-supply-salbutamol-inhaler-100-mcg",
+      "target": "cost-supply-salbutamol-inhaler-100-mcg",
+      "label": "Units of Salbutamol inhaler, 100 mcg -> Salbutamol inhaler, 100 mcg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "unit_cost": 0.0099
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "cr3-low-dose-beclometasone-saba",
+   "label": "Asthma care: low-dose beclometasone plus SABA",
+   "projection_source": {
+    "nodeId": "AsthmaEpsd",
+    "label": "AsthmaEpsd",
+    "eventType": "ECHO"
+   },
+   "entry_node_id": "ResourcePopulationReached_LowDoseBeclom",
+   "default_costing_method": "visit_based",
+   "service_accounting": {
+    "method": "disease_population_times_eligible_share_times_coverage",
+    "service_role": "ordinary_care_and_scale_up",
+    "supported_model_slugs": [
+     "ncd-asthma"
+    ],
+    "population_in_need": {
+     "parameter_id": "low_dose_beclometasone_population_in_need",
+     "default": 0.4
+    },
+    "coverage": {
+     "baseline_parameter_id": "cr3_low_dose_beclometasone_saba_routine_care_baseline_coverage",
+     "baseline_default": 0.05,
+     "target_parameter_id": "cr3_low_dose_beclometasone_saba_routine_care_target_coverage",
+     "target_default": 0.05,
+     "scale_up_start_index_parameter_id": "cr3_low_dose_beclometasone_saba_routine_care_scale_up_start_index",
+     "scale_up_start_index_default": 1,
+     "scale_up_end_index_parameter_id": "cr3_low_dose_beclometasone_saba_routine_care_scale_up_end_index",
+     "scale_up_end_index_default": 2
+    }
+   },
+   "parameter_bindings": [
+    {
+     "key": "Outpatient visit: Share",
+     "category": "Visits",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-visit-outpatient-visit",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Outpatient visit: Visits per person",
+     "category": "Visits",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-visit-outpatient-visit",
+      "parameter": "number-of-visits"
+     }
+    },
+    {
+     "key": "Outpatient visit: Visit cost per day",
+     "category": "Visit Cost",
+     "cost_item": {
+      "id": "cost-item.visit-outpatient-visit.cost-per-day",
+      "label": "Outpatient visit cost per day"
+     },
+     "country_cost_lookup": {
+      "category": "facilities",
+      "setting": "outpatient",
+      "facility_level": "health_centre_no_beds"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-visit-outpatient-visit",
+      "parameter": "cost-per-day"
+     }
+    },
+    {
+     "key": "Generalist/Primary care doctor: Share",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-generalist-primary-care-doctor",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Generalist/Primary care doctor: Minutes per person",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-generalist-primary-care-doctor",
+      "parameter": "number-of-minutes"
+     }
+    },
+    {
+     "key": "Generalist/Primary care doctor: Salary per minute",
+     "category": "Workforce Cost",
+     "cost_item": {
+      "id": "cost-item.workforce-generalist-primary-care-doctor.salary-per-minute",
+      "label": "Generalist/Primary care doctor salary per minute"
+     },
+     "country_cost_lookup": {
+      "category": "workforce",
+      "cadre": 4
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-workforce-generalist-primary-care-doctor",
+      "parameter": "salary-per-minute"
+     }
+    },
+    {
+     "key": "Nurse: Share",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-nurse",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Nurse: Minutes per person",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-nurse",
+      "parameter": "number-of-minutes"
+     }
+    },
+    {
+     "key": "Nurse: Salary per minute",
+     "category": "Workforce Cost",
+     "cost_item": {
+      "id": "cost-item.workforce-nurse.salary-per-minute",
+      "label": "Nurse salary per minute"
+     },
+     "country_cost_lookup": {
+      "category": "workforce",
+      "cadre": 3
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-workforce-nurse",
+      "parameter": "salary-per-minute"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Share",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-pin-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Units per day",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "units-per-day"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Days per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "number-of-days"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Unit cost",
+     "category": "Unit Cost",
+     "cost_item": {
+      "id": "cost-item.salbutamol-inhaler-100-mcg.unit-cost",
+      "label": "Salbutamol inhaler, 100 mcg"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "unit_cost"
+     }
+    },
+    {
+     "key": "Beclometasone inhaler, 100 mcg: Share",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-pin-supply-beclometasone-inhaler-100-mcg",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Beclometasone inhaler, 100 mcg: Units per day",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-supply-beclometasone-inhaler-100-mcg",
+      "parameter": "units-per-day"
+     }
+    },
+    {
+     "key": "Beclometasone inhaler, 100 mcg: Days per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-supply-beclometasone-inhaler-100-mcg",
+      "parameter": "number-of-days"
+     }
+    },
+    {
+     "key": "Beclometasone inhaler, 100 mcg: Unit cost",
+     "category": "Unit Cost",
+     "cost_item": {
+      "id": "cost-item.beclometasone-inhaler-100-mcg.unit-cost",
+      "label": "Beclometasone inhaler, 100 mcg"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-supply-beclometasone-inhaler-100-mcg",
+      "parameter": "unit_cost"
+     }
+    }
+   ],
+   "graph": {
+    "metadata": {
+     "name": "CR3. Low-dose beclometasone plus SABA resource graph",
+     "source_workbook": "Model_Costing_V3-CRD.xlsx",
+     "source_sheet": "CR3, SETUP-DS, SETUP-HR and SETUP-VISITS",
+     "conversion": "scripts/build_clinical_resource_sidecars.py",
+     "notes": "CR3 low-dose beclometasone component. Unit prices remain supplied by the platform."
+    },
+    "nodes": [
+     {
+      "id": "ResourcePopulationReached_LowDoseBeclom",
+      "label": "ResourcePopulationReached-LowDoseBeclom",
+      "type": "pin",
+      "node_type": "pin",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080",
+      "is_projection_entry": true
+     },
+     {
+      "id": "visit-outpatient-visit",
+      "label": "Outpatient visit",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+     },
+     {
+      "id": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+     },
+     {
+      "id": "workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+     },
+     {
+      "id": "workforce-nurse",
+      "label": "Nurse Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-workforce-nurse",
+      "label": "Nurse Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+     },
+     {
+      "id": "pin-supply-salbutamol-inhaler-100-mcg",
+      "label": "Receiving Salbutamol inhaler, 100 mcg",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+     },
+     {
+      "id": "units-supply-salbutamol-inhaler-100-mcg",
+      "label": "Units of Salbutamol inhaler, 100 mcg",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-supply-salbutamol-inhaler-100-mcg",
+      "label": "Salbutamol inhaler, 100 mcg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+     },
+     {
+      "id": "pin-supply-beclometasone-inhaler-100-mcg",
+      "label": "Receiving Beclometasone inhaler, 100 mcg",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+     },
+     {
+      "id": "units-supply-beclometasone-inhaler-100-mcg",
+      "label": "Units of Beclometasone inhaler, 100 mcg",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-supply-beclometasone-inhaler-100-mcg",
+      "label": "Beclometasone inhaler, 100 mcg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+     }
+    ],
+    "links": [
+     {
+      "id": "to-visit-outpatient-visit",
+      "source": "ResourcePopulationReached_LowDoseBeclom",
+      "target": "visit-outpatient-visit",
+      "label": "ResourcePopulationReached-LowDoseBeclom -> Outpatient visit",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0,
+        "number-of-visits": 2.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-visit-outpatient-visit",
+      "source": "visit-outpatient-visit",
+      "target": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit -> Outpatient visit Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "cost-per-day": 52.160000000000004
+       }
+      }
+     },
+     {
+      "id": "to-workforce-generalist-primary-care-doctor",
+      "source": "ResourcePopulationReached_LowDoseBeclom",
+      "target": "workforce-generalist-primary-care-doctor",
+      "label": "ResourcePopulationReached-LowDoseBeclom -> Generalist/Primary care doctor Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0,
+        "number-of-minutes": 20.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-workforce-generalist-primary-care-doctor",
+      "source": "workforce-generalist-primary-care-doctor",
+      "target": "cost-workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes -> Generalist/Primary care doctor Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "salary-per-minute": 1.0773833333333334
+       }
+      }
+     },
+     {
+      "id": "to-workforce-nurse",
+      "source": "ResourcePopulationReached_LowDoseBeclom",
+      "target": "workforce-nurse",
+      "label": "ResourcePopulationReached-LowDoseBeclom -> Nurse Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0,
+        "number-of-minutes": 10.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-workforce-nurse",
+      "source": "workforce-nurse",
+      "target": "cost-workforce-nurse",
+      "label": "Nurse Minutes -> Nurse Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "salary-per-minute": 0.8778666666666666
+       }
+      }
+     },
+     {
+      "id": "to-pin-supply-salbutamol-inhaler-100-mcg",
+      "source": "ResourcePopulationReached_LowDoseBeclom",
+      "target": "pin-supply-salbutamol-inhaler-100-mcg",
+      "label": "ResourcePopulationReached-LowDoseBeclom -> Receiving Salbutamol inhaler, 100 mcg",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0
+       }
+      }
+     },
+     {
+      "id": "to-units-supply-salbutamol-inhaler-100-mcg",
+      "source": "pin-supply-salbutamol-inhaler-100-mcg",
+      "target": "units-supply-salbutamol-inhaler-100-mcg",
+      "label": "Receiving Salbutamol inhaler, 100 mcg -> Units of Salbutamol inhaler, 100 mcg",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "units-per-day": 1.0,
+        "number-of-days": 365.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-supply-salbutamol-inhaler-100-mcg",
+      "source": "units-supply-salbutamol-inhaler-100-mcg",
+      "target": "cost-supply-salbutamol-inhaler-100-mcg",
+      "label": "Units of Salbutamol inhaler, 100 mcg -> Salbutamol inhaler, 100 mcg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "unit_cost": 0.0099
+       }
+      }
+     },
+     {
+      "id": "to-pin-supply-beclometasone-inhaler-100-mcg",
+      "source": "ResourcePopulationReached_LowDoseBeclom",
+      "target": "pin-supply-beclometasone-inhaler-100-mcg",
+      "label": "ResourcePopulationReached-LowDoseBeclom -> Receiving Beclometasone inhaler, 100 mcg",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0
+       }
+      }
+     },
+     {
+      "id": "to-units-supply-beclometasone-inhaler-100-mcg",
+      "source": "pin-supply-beclometasone-inhaler-100-mcg",
+      "target": "units-supply-beclometasone-inhaler-100-mcg",
+      "label": "Receiving Beclometasone inhaler, 100 mcg -> Units of Beclometasone inhaler, 100 mcg",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "units-per-day": 2.0,
+        "number-of-days": 365.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-supply-beclometasone-inhaler-100-mcg",
+      "source": "units-supply-beclometasone-inhaler-100-mcg",
+      "target": "cost-supply-beclometasone-inhaler-100-mcg",
+      "label": "Units of Beclometasone inhaler, 100 mcg -> Beclometasone inhaler, 100 mcg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "unit_cost": 0.0423
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "cr3-high-dose-beclometasone-saba",
+   "label": "Asthma care: high-dose beclometasone plus SABA",
+   "projection_source": {
+    "nodeId": "AsthmaEpsd",
+    "label": "AsthmaEpsd",
+    "eventType": "ECHO"
+   },
+   "entry_node_id": "ResourcePopulationReached_HighDoseBeclom",
+   "default_costing_method": "visit_based",
+   "service_accounting": {
+    "method": "disease_population_times_eligible_share_times_coverage",
+    "service_role": "ordinary_care_and_scale_up",
+    "supported_model_slugs": [
+     "ncd-asthma"
+    ],
+    "population_in_need": {
+     "parameter_id": "high_dose_beclometasone_population_in_need",
+     "default": 0.3
+    },
+    "coverage": {
+     "baseline_parameter_id": "cr3_high_dose_beclometasone_saba_routine_care_baseline_coverage",
+     "baseline_default": 0.05,
+     "target_parameter_id": "cr3_high_dose_beclometasone_saba_routine_care_target_coverage",
+     "target_default": 0.05,
+     "scale_up_start_index_parameter_id": "cr3_high_dose_beclometasone_saba_routine_care_scale_up_start_index",
+     "scale_up_start_index_default": 1,
+     "scale_up_end_index_parameter_id": "cr3_high_dose_beclometasone_saba_routine_care_scale_up_end_index",
+     "scale_up_end_index_default": 2
+    }
+   },
+   "parameter_bindings": [
+    {
+     "key": "Outpatient visit: Share",
+     "category": "Visits",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-visit-outpatient-visit",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Outpatient visit: Visits per person",
+     "category": "Visits",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-visit-outpatient-visit",
+      "parameter": "number-of-visits"
+     }
+    },
+    {
+     "key": "Outpatient visit: Visit cost per day",
+     "category": "Visit Cost",
+     "cost_item": {
+      "id": "cost-item.visit-outpatient-visit.cost-per-day",
+      "label": "Outpatient visit cost per day"
+     },
+     "country_cost_lookup": {
+      "category": "facilities",
+      "setting": "outpatient",
+      "facility_level": "health_centre_no_beds"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-visit-outpatient-visit",
+      "parameter": "cost-per-day"
+     }
+    },
+    {
+     "key": "Generalist/Primary care doctor: Share",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-generalist-primary-care-doctor",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Generalist/Primary care doctor: Minutes per person",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-generalist-primary-care-doctor",
+      "parameter": "number-of-minutes"
+     }
+    },
+    {
+     "key": "Generalist/Primary care doctor: Salary per minute",
+     "category": "Workforce Cost",
+     "cost_item": {
+      "id": "cost-item.workforce-generalist-primary-care-doctor.salary-per-minute",
+      "label": "Generalist/Primary care doctor salary per minute"
+     },
+     "country_cost_lookup": {
+      "category": "workforce",
+      "cadre": 4
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-workforce-generalist-primary-care-doctor",
+      "parameter": "salary-per-minute"
+     }
+    },
+    {
+     "key": "Nurse: Share",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-nurse",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Nurse: Minutes per person",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-workforce-nurse",
+      "parameter": "number-of-minutes"
+     }
+    },
+    {
+     "key": "Nurse: Salary per minute",
+     "category": "Workforce Cost",
+     "cost_item": {
+      "id": "cost-item.workforce-nurse.salary-per-minute",
+      "label": "Nurse salary per minute"
+     },
+     "country_cost_lookup": {
+      "category": "workforce",
+      "cadre": 3
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-workforce-nurse",
+      "parameter": "salary-per-minute"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Share",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-pin-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Units per day",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "units-per-day"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Days per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "number-of-days"
+     }
+    },
+    {
+     "key": "Salbutamol inhaler, 100 mcg: Unit cost",
+     "category": "Unit Cost",
+     "cost_item": {
+      "id": "cost-item.salbutamol-inhaler-100-mcg.unit-cost",
+      "label": "Salbutamol inhaler, 100 mcg"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-supply-salbutamol-inhaler-100-mcg",
+      "parameter": "unit_cost"
+     }
+    },
+    {
+     "key": "Beclometasone inhaler, 100 mcg: Share",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-pin-supply-beclometasone-inhaler-100-mcg",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Beclometasone inhaler, 100 mcg: Units per day",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-supply-beclometasone-inhaler-100-mcg",
+      "parameter": "units-per-day"
+     }
+    },
+    {
+     "key": "Beclometasone inhaler, 100 mcg: Days per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-supply-beclometasone-inhaler-100-mcg",
+      "parameter": "number-of-days"
+     }
+    },
+    {
+     "key": "Beclometasone inhaler, 100 mcg: Unit cost",
+     "category": "Unit Cost",
+     "cost_item": {
+      "id": "cost-item.beclometasone-inhaler-100-mcg.unit-cost",
+      "label": "Beclometasone inhaler, 100 mcg"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-supply-beclometasone-inhaler-100-mcg",
+      "parameter": "unit_cost"
+     }
+    }
+   ],
+   "graph": {
+    "metadata": {
+     "name": "CR3. High-dose beclometasone plus SABA resource graph",
+     "source_workbook": "Model_Costing_V3-CRD.xlsx",
+     "source_sheet": "CR3, SETUP-DS, SETUP-HR and SETUP-VISITS",
+     "conversion": "scripts/build_clinical_resource_sidecars.py",
+     "notes": "CR3 high-dose beclometasone component. Unit prices remain supplied by the platform."
+    },
+    "nodes": [
+     {
+      "id": "ResourcePopulationReached_HighDoseBeclom",
+      "label": "ResourcePopulationReached-HighDoseBeclom",
+      "type": "pin",
+      "node_type": "pin",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080",
+      "is_projection_entry": true
+     },
+     {
+      "id": "visit-outpatient-visit",
+      "label": "Outpatient visit",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+     },
+     {
+      "id": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+     },
+     {
+      "id": "workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+     },
+     {
+      "id": "workforce-nurse",
+      "label": "Nurse Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-workforce-nurse",
+      "label": "Nurse Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+     },
+     {
+      "id": "pin-supply-salbutamol-inhaler-100-mcg",
+      "label": "Receiving Salbutamol inhaler, 100 mcg",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+     },
+     {
+      "id": "units-supply-salbutamol-inhaler-100-mcg",
+      "label": "Units of Salbutamol inhaler, 100 mcg",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-supply-salbutamol-inhaler-100-mcg",
+      "label": "Salbutamol inhaler, 100 mcg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+     },
+     {
+      "id": "pin-supply-beclometasone-inhaler-100-mcg",
+      "label": "Receiving Beclometasone inhaler, 100 mcg",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+     },
+     {
+      "id": "units-supply-beclometasone-inhaler-100-mcg",
+      "label": "Units of Beclometasone inhaler, 100 mcg",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-supply-beclometasone-inhaler-100-mcg",
+      "label": "Beclometasone inhaler, 100 mcg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+     }
+    ],
+    "links": [
+     {
+      "id": "to-visit-outpatient-visit",
+      "source": "ResourcePopulationReached_HighDoseBeclom",
+      "target": "visit-outpatient-visit",
+      "label": "ResourcePopulationReached-HighDoseBeclom -> Outpatient visit",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0,
+        "number-of-visits": 2.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-visit-outpatient-visit",
+      "source": "visit-outpatient-visit",
+      "target": "cost-visit-outpatient-visit",
+      "label": "Outpatient visit -> Outpatient visit Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "cost-per-day": 52.160000000000004
+       }
+      }
+     },
+     {
+      "id": "to-workforce-generalist-primary-care-doctor",
+      "source": "ResourcePopulationReached_HighDoseBeclom",
+      "target": "workforce-generalist-primary-care-doctor",
+      "label": "ResourcePopulationReached-HighDoseBeclom -> Generalist/Primary care doctor Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0,
+        "number-of-minutes": 20.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-workforce-generalist-primary-care-doctor",
+      "source": "workforce-generalist-primary-care-doctor",
+      "target": "cost-workforce-generalist-primary-care-doctor",
+      "label": "Generalist/Primary care doctor Minutes -> Generalist/Primary care doctor Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "salary-per-minute": 1.0773833333333334
+       }
+      }
+     },
+     {
+      "id": "to-workforce-nurse",
+      "source": "ResourcePopulationReached_HighDoseBeclom",
+      "target": "workforce-nurse",
+      "label": "ResourcePopulationReached-HighDoseBeclom -> Nurse Minutes",
+      "edge_type": "pin -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0,
+        "number-of-minutes": 10.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-workforce-nurse",
+      "source": "workforce-nurse",
+      "target": "cost-workforce-nurse",
+      "label": "Nurse Minutes -> Nurse Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "salary-per-minute": 0.8778666666666666
+       }
+      }
+     },
+     {
+      "id": "to-pin-supply-salbutamol-inhaler-100-mcg",
+      "source": "ResourcePopulationReached_HighDoseBeclom",
+      "target": "pin-supply-salbutamol-inhaler-100-mcg",
+      "label": "ResourcePopulationReached-HighDoseBeclom -> Receiving Salbutamol inhaler, 100 mcg",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0
+       }
+      }
+     },
+     {
+      "id": "to-units-supply-salbutamol-inhaler-100-mcg",
+      "source": "pin-supply-salbutamol-inhaler-100-mcg",
+      "target": "units-supply-salbutamol-inhaler-100-mcg",
+      "label": "Receiving Salbutamol inhaler, 100 mcg -> Units of Salbutamol inhaler, 100 mcg",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "units-per-day": 1.0,
+        "number-of-days": 365.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-supply-salbutamol-inhaler-100-mcg",
+      "source": "units-supply-salbutamol-inhaler-100-mcg",
+      "target": "cost-supply-salbutamol-inhaler-100-mcg",
+      "label": "Units of Salbutamol inhaler, 100 mcg -> Salbutamol inhaler, 100 mcg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "unit_cost": 0.0099
+       }
+      }
+     },
+     {
+      "id": "to-pin-supply-beclometasone-inhaler-100-mcg",
+      "source": "ResourcePopulationReached_HighDoseBeclom",
+      "target": "pin-supply-beclometasone-inhaler-100-mcg",
+      "label": "ResourcePopulationReached-HighDoseBeclom -> Receiving Beclometasone inhaler, 100 mcg",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1.0
+       }
+      }
+     },
+     {
+      "id": "to-units-supply-beclometasone-inhaler-100-mcg",
+      "source": "pin-supply-beclometasone-inhaler-100-mcg",
+      "target": "units-supply-beclometasone-inhaler-100-mcg",
+      "label": "Receiving Beclometasone inhaler, 100 mcg -> Units of Beclometasone inhaler, 100 mcg",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "units-per-day": 4.0,
+        "number-of-days": 365.0
+       }
+      }
+     },
+     {
+      "id": "to-cost-supply-beclometasone-inhaler-100-mcg",
+      "source": "units-supply-beclometasone-inhaler-100-mcg",
+      "target": "cost-supply-beclometasone-inhaler-100-mcg",
+      "label": "Units of Beclometasone inhaler, 100 mcg -> Beclometasone inhaler, 100 mcg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "unit_cost": 0.0423
+       }
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "cr1-acute-asthma",
+   "label": "CR1. Acute treatment of asthma exacerbations with inhaled bronchodilators and oral steroids",
+   "source_package_ref": "resource_requirements.json",
+   "source_graph_ref": "resource_requirements.json#/resource_blocks/0/graph",
+   "projection_source": {
+    "nodeId": "ResourcePopulationReached_AsthmaOralPrednisolone",
+    "label": "ResourcePopulationReached-AsthmaOralPrednisolone",
+    "eventType": "ECHO"
+   },
+   "entry_node_id": "8N5hy7kA",
+   "parameter_bindings": [
+    {
+     "key": "Outpatient visit: Share",
+     "category": "Visits",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-visit-outpatient",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Outpatient visit: Days per patient",
+     "category": "Visits",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-visit-outpatient",
+      "parameter": "number-of-visits"
+     }
+    },
+    {
+     "key": "Inpatient visit: Share",
+     "category": "Visits",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-visit-inpatient",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Inpatient visit: Days per patient",
+     "category": "Visits",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-visit-inpatient",
+      "parameter": "number-of-visits"
+     }
+    },
+    {
+     "key": "Doctor minutes per outpatient visit",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-doctor-minutes",
+      "parameter": "number-of-minutes"
+     }
+    },
+    {
+     "key": "Nurse minutes per outpatient visit",
+     "category": "Workforce",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-nurse-minutes",
+      "parameter": "number-of-minutes"
+     }
+    },
+    {
+     "key": "Doctor salary per minute",
+     "category": "Workforce Cost",
+     "cost_item": {
+      "id": "cost-item.workforce-generalist-primary-care-doctor.salary-per-minute",
+      "label": "Generalist/Primary care doctor salary per minute"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-doctor",
+      "parameter": "salary-per-minute"
+     }
+    },
+    {
+     "key": "Nurse salary per minute",
+     "category": "Workforce Cost",
+     "cost_item": {
+      "id": "cost-item.workforce-nurse.salary-per-minute",
+      "label": "Nurse salary per minute"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-nurse",
+      "parameter": "salary-per-minute"
+     }
+    },
+    {
+     "key": "Outpatient visit cost per day",
+     "category": "Visit Cost",
+     "cost_item": {
+      "id": "cost-item.visit-outpatient-visit.cost-per-day",
+      "label": "Outpatient visit cost per day"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-visit-outpatient",
+      "parameter": "cost-per-day"
+     }
+    },
+    {
+     "key": "Inpatient visit cost per day",
+     "category": "Visit Cost",
+     "cost_item": {
+      "id": "cost-item.visit-inpatient-visit.cost-per-day",
+      "label": "Inpatient visit cost per day"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-visit-inpatient",
+      "parameter": "cost-per-day"
+     }
+    },
+    {
+     "key": "Salbutamol course A: Share",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-pin-salbutamol-course-a",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Salbutamol course A: Units per day",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-salbutamol-course-a",
+      "parameter": "units-per-day"
+     }
+    },
+    {
+     "key": "Salbutamol course A: Days per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-salbutamol-course-a",
+      "parameter": "number-of-days"
+     }
+    },
+    {
+     "key": "Salbutamol course A: Unit cost",
+     "category": "Unit Cost",
+     "cost_item": {
+      "id": "cost-item.salbutamol-inhaler-100-mcg.unit-cost",
+      "label": "Salbutamol inhaler, 100 mcg"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-salbutamol-course-a",
+      "parameter": "unit_cost"
+     }
+    },
+    {
+     "key": "Ipratropium: Share",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-pin-ipratropium",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Ipratropium: Units per day",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-ipratropium",
+      "parameter": "units-per-day"
+     }
+    },
+    {
+     "key": "Ipratropium: Days per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-ipratropium",
+      "parameter": "number-of-days"
+     }
+    },
+    {
+     "key": "Ipratropium: Unit cost",
+     "category": "Unit Cost",
+     "cost_item": {
+      "id": "cost-item.ipratropium-bromide-inhaler-20-mcg.unit-cost",
+      "label": "Ipratropium bromide inhaler, 20 mcg"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-ipratropium",
+      "parameter": "unit_cost"
+     }
+    },
+    {
+     "key": "Salbutamol course B: Share",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-pin-salbutamol-course-b",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Salbutamol course B: Units per day",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-salbutamol-course-b",
+      "parameter": "units-per-day"
+     }
+    },
+    {
+     "key": "Salbutamol course B: Days per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-salbutamol-course-b",
+      "parameter": "number-of-days"
+     }
+    },
+    {
+     "key": "Salbutamol course B: Unit cost",
+     "category": "Unit Cost",
+     "cost_item": {
+      "id": "cost-item.salbutamol-inhaler-100-mcg.unit-cost",
+      "label": "Salbutamol inhaler, 100 mcg"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-salbutamol-course-b",
+      "parameter": "unit_cost"
+     }
+    },
+    {
+     "key": "Prednisolone: Share",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-pin-prednisolone",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Prednisolone: Units per day",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-prednisolone",
+      "parameter": "units-per-day"
+     }
+    },
+    {
+     "key": "Prednisolone: Days per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-prednisolone",
+      "parameter": "number-of-days"
+     }
+    },
+    {
+     "key": "Prednisolone: Unit cost",
+     "category": "Unit Cost",
+     "cost_item": {
+      "id": "cost-item.prednisolone-tablet-50-mg.unit-cost",
+      "label": "Prednisolone, tablet, 50 mg"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-prednisolone",
+      "parameter": "unit_cost"
+     }
+    },
+    {
+     "key": "Spacer: Share",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-pin-spacer",
+      "parameter": "pin"
+     }
+    },
+    {
+     "key": "Spacer: Units per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-spacer",
+      "parameter": "units-per-day"
+     }
+    },
+    {
+     "key": "Spacer: Days per case",
+     "category": "Drugs and Supplies",
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-units-spacer",
+      "parameter": "number-of-days"
+     }
+    },
+    {
+     "key": "Spacer: Unit cost",
+     "category": "Unit Cost",
+     "cost_item": {
+      "id": "cost-item.spacer.unit-cost",
+      "label": "Spacer"
+     },
+     "target": {
+      "type": "edge_parameter",
+      "edgeId": "to-cost-spacer",
+      "parameter": "unit_cost"
+     }
+    }
+   ],
+   "graph": {
+    "metadata": {
+     "name": "Asthma CR1 acute treatment resource graph",
+     "source_workbook": "Model_Costing_V3-CRD.xlsx",
+     "source_sheet": "CR1 / SETUP-DS / SETUP-HR / SETUP-VISITS"
+    },
+    "nodes": [
+     {
+      "id": "8N5hy7kA",
+      "label": "PopulationReached-AsthmaOralPrednisolone",
+      "type": "pin",
+      "node_type": "pin",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080",
+      "is_projection_entry": true
+     },
+     {
+      "id": "visit-outpatient",
+      "label": "Outpatient visit",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+     },
+     {
+      "id": "visit-inpatient",
+      "label": "Inpatient visit",
+      "type": "visit",
+      "node_type": "visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#EB7FEF"
+     },
+     {
+      "id": "doctor-minutes",
+      "label": "Doctor Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "nurse-minutes",
+      "label": "Nurse Minutes",
+      "type": "workforce",
+      "node_type": "workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "pin-salbutamol-course-a",
+      "label": "Receiving Salbutamol 100mcg/puff (Course A)",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+     },
+     {
+      "id": "pin-ipratropium",
+      "label": "Receiving Ipratropium 20mcg/puff",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+     },
+     {
+      "id": "pin-salbutamol-course-b",
+      "label": "Receiving Salbutamol 100mcg/puff (Course B)",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+     },
+     {
+      "id": "pin-prednisolone",
+      "label": "Receiving Prednisolone 50mg",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+     },
+     {
+      "id": "pin-spacer",
+      "label": "Receiving Spacer",
+      "type": "pin-medicine",
+      "node_type": "pin-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#64FBEB"
+     },
+     {
+      "id": "units-salbutamol-course-a",
+      "label": "Units of Salbutamol 100mcg/puff (Course A)",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "units-ipratropium",
+      "label": "Units of Ipratropium 20mcg/puff",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "units-salbutamol-course-b",
+      "label": "Units of Salbutamol 100mcg/puff (Course B)",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "units-prednisolone",
+      "label": "Units of Prednisolone 50mg",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "units-spacer",
+      "label": "Units of Spacer",
+      "type": "units-medicine",
+      "node_type": "units-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#98FF98"
+     },
+     {
+      "id": "cost-doctor",
+      "label": "Doctor Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+     },
+     {
+      "id": "cost-nurse",
+      "label": "Nurse Minutes Cost",
+      "type": "cost-workforce",
+      "node_type": "cost-workforce",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#D2B48C"
+     },
+     {
+      "id": "cost-visit-outpatient",
+      "label": "Outpatient visit Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+     },
+     {
+      "id": "cost-visit-inpatient",
+      "label": "Inpatient visit Cost",
+      "type": "cost-visit",
+      "node_type": "cost-visit",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#808080"
+     },
+     {
+      "id": "cost-salbutamol-course-a",
+      "label": "Salbutamol inhaler, 100 mcg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+     },
+     {
+      "id": "cost-ipratropium",
+      "label": "Ipratropium 20mcg/puff Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+     },
+     {
+      "id": "cost-salbutamol-course-b",
+      "label": "Salbutamol inhaler, 100 mcg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+     },
+     {
+      "id": "cost-prednisolone",
+      "label": "Prednisolone 50mg Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+     },
+     {
+      "id": "cost-spacer",
+      "label": "Spacer Unit Cost",
+      "type": "cost-medicine",
+      "node_type": "cost-medicine",
+      "balance_type": "array",
+      "flush": true,
+      "ageing": false,
+      "color": "#FFC0CB"
+     }
+    ],
+    "links": [
+     {
+      "id": "to-visit-outpatient",
+      "source": "8N5hy7kA",
+      "target": "visit-outpatient",
+      "label": "PopulationReached-AsthmaOralPrednisolone -> Outpatient visit",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1,
+        "number-of-visits": 1
+       }
+      }
+     },
+     {
+      "id": "to-visit-inpatient",
+      "source": "8N5hy7kA",
+      "target": "visit-inpatient",
+      "label": "PopulationReached-AsthmaOralPrednisolone -> Inpatient visit",
+      "edge_type": "pin -> visit",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 0.25,
+        "number-of-visits": 3
+       }
+      }
+     },
+     {
+      "id": "to-doctor-minutes",
+      "source": "visit-outpatient",
+      "target": "doctor-minutes",
+      "label": "Outpatient visit -> Doctor Minutes",
+      "edge_type": "visit -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1,
+        "number-of-minutes": 20
+       }
+      }
+     },
+     {
+      "id": "to-nurse-minutes",
+      "source": "visit-outpatient",
+      "target": "nurse-minutes",
+      "label": "Outpatient visit -> Nurse Minutes",
+      "edge_type": "visit -> workforce",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1,
+        "number-of-minutes": 10
+       }
+      }
+     },
+     {
+      "id": "to-pin-salbutamol-course-a",
+      "source": "8N5hy7kA",
+      "target": "pin-salbutamol-course-a",
+      "label": "PopulationReached-AsthmaOralPrednisolone -> Receiving Salbutamol 100mcg/puff (Course A)",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 0.5
+       }
+      }
+     },
+     {
+      "id": "to-pin-ipratropium",
+      "source": "8N5hy7kA",
+      "target": "pin-ipratropium",
+      "label": "PopulationReached-AsthmaOralPrednisolone -> Receiving Ipratropium 20mcg/puff",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 0.5
+       }
+      }
+     },
+     {
+      "id": "to-pin-salbutamol-course-b",
+      "source": "8N5hy7kA",
+      "target": "pin-salbutamol-course-b",
+      "label": "PopulationReached-AsthmaOralPrednisolone -> Receiving Salbutamol 100mcg/puff (Course B)",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 0.5
+       }
+      }
+     },
+     {
+      "id": "to-pin-prednisolone",
+      "source": "8N5hy7kA",
+      "target": "pin-prednisolone",
+      "label": "PopulationReached-AsthmaOralPrednisolone -> Receiving Prednisolone 50mg",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1
+       }
+      }
+     },
+     {
+      "id": "to-pin-spacer",
+      "source": "8N5hy7kA",
+      "target": "pin-spacer",
+      "label": "PopulationReached-AsthmaOralPrednisolone -> Receiving Spacer",
+      "edge_type": "pin -> pin-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "pin": 1
+       }
+      }
+     },
+     {
+      "id": "to-units-salbutamol-course-a",
+      "source": "pin-salbutamol-course-a",
+      "target": "units-salbutamol-course-a",
+      "label": "Receiving Salbutamol 100mcg/puff (Course A) -> Units of Salbutamol 100mcg/puff (Course A)",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "units-per-day": 50,
+        "number-of-days": 3
+       }
+      }
+     },
+     {
+      "id": "to-units-ipratropium",
+      "source": "pin-ipratropium",
+      "target": "units-ipratropium",
+      "label": "Receiving Ipratropium 20mcg/puff -> Units of Ipratropium 20mcg/puff",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "units-per-day": 24,
+        "number-of-days": 1
+       }
+      }
+     },
+     {
+      "id": "to-units-salbutamol-course-b",
+      "source": "pin-salbutamol-course-b",
+      "target": "units-salbutamol-course-b",
+      "label": "Receiving Salbutamol 100mcg/puff (Course B) -> Units of Salbutamol 100mcg/puff (Course B)",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "units-per-day": 20,
+        "number-of-days": 3
+       }
+      }
+     },
+     {
+      "id": "to-units-prednisolone",
+      "source": "pin-prednisolone",
+      "target": "units-prednisolone",
+      "label": "Receiving Prednisolone 50mg -> Units of Prednisolone 50mg",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "units-per-day": 1,
+        "number-of-days": 5
+       }
+      }
+     },
+     {
+      "id": "to-units-spacer",
+      "source": "pin-spacer",
+      "target": "units-spacer",
+      "label": "Receiving Spacer -> Units of Spacer",
+      "edge_type": "pin-medicine -> units-medicine",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "units-per-day": 1,
+        "number-of-days": 1
+       }
+      }
+     },
+     {
+      "id": "to-cost-doctor",
+      "source": "doctor-minutes",
+      "target": "cost-doctor",
+      "label": "Doctor Minutes -> Doctor Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "salary-per-minute": 1.0773833333333334
+       }
+      }
+     },
+     {
+      "id": "to-cost-nurse",
+      "source": "nurse-minutes",
+      "target": "cost-nurse",
+      "label": "Nurse Minutes -> Nurse Minutes Cost",
+      "edge_type": "workforce -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "salary-per-minute": 0.8778666666666666
+       }
+      }
+     },
+     {
+      "id": "to-cost-visit-outpatient",
+      "source": "visit-outpatient",
+      "target": "cost-visit-outpatient",
+      "label": "Outpatient visit -> Outpatient visit Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "cost-per-day": 52.16
+       }
+      }
+     },
+     {
+      "id": "to-cost-visit-inpatient",
+      "source": "visit-inpatient",
+      "target": "cost-visit-inpatient",
+      "label": "Inpatient visit -> Inpatient visit Cost",
+      "edge_type": "visit -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "cost-per-day": 386.59688
+       }
+      }
+     },
+     {
+      "id": "to-cost-salbutamol-course-a",
+      "source": "units-salbutamol-course-a",
+      "target": "cost-salbutamol-course-a",
+      "label": "Units of Salbutamol 100mcg/puff (Course A) -> Salbutamol inhaler, 100 mcg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "unit_cost": 0.0099
+       }
+      }
+     },
+     {
+      "id": "to-cost-ipratropium",
+      "source": "units-ipratropium",
+      "target": "cost-ipratropium",
+      "label": "Units of Ipratropium 20mcg/puff -> Ipratropium 20mcg/puff Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "unit_cost": 0.09
+       }
+      }
+     },
+     {
+      "id": "to-cost-salbutamol-course-b",
+      "source": "units-salbutamol-course-b",
+      "target": "cost-salbutamol-course-b",
+      "label": "Units of Salbutamol 100mcg/puff (Course B) -> Salbutamol inhaler, 100 mcg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "unit_cost": 0.0099
+       }
+      }
+     },
+     {
+      "id": "to-cost-prednisolone",
+      "source": "units-prednisolone",
+      "target": "cost-prednisolone",
+      "label": "Units of Prednisolone 50mg -> Prednisolone 50mg Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "unit_cost": 1.13
+       }
+      }
+     },
+     {
+      "id": "to-cost-spacer",
+      "source": "units-spacer",
+      "target": "cost-spacer",
+      "label": "Units of Spacer -> Spacer Unit Cost",
+      "edge_type": "units-medicine -> cost",
+      "remove_value_from_source": false,
+      "requires_source_balance": true,
+      "value_to_target_operator": "add",
+      "trigger": {
+       "method": "inflow",
+       "parameters": {
+        "value_to_use": "inflow"
+       }
+      },
+      "generate_array": {
+       "method": "n_kwargs",
+       "parameters": {
+        "unit_cost": 0.5
+       }
+      }
+     }
+    ]
+   },
+   "source_repo_id": "ncd-asthma-asthmaoralprednisolone"
+  }
+ ],
+ "provenance": {
+  "note": "Routine-care aggregation of the four asthma treatment declarations, mirroring the ncd-copd routine-care pattern: identical quantities and prices, coverage held flat at the baseline level in both scenarios.",
+  "source_modules": [
+   "ncd-asthma-inhaledshortactingbeta",
+   "ncd-asthma-lowdosebeclom",
+   "ncd-asthma-highdosebeclom",
+   "ncd-asthma-asthmaoralprednisolone"
+  ]
+ }
+}
