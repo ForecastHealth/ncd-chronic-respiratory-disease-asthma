@@ -2,7 +2,7 @@
 title: Asthma epidemiology
 module_identifier: ncd-asthma
 owner: Forecast Health
-last_updated: 2026-07-19
+last_updated: 2026-09-29
 status: Executable source module
 ---
 
@@ -40,6 +40,8 @@ The source module exposes only `asthma_baseline`. The disease parameter registry
 ## Data and evidence
 
 [`model.json`](model.json) is the executable disease graph. The [module contract](interface/asthma-epidemiology-core.module.contract.v1.json) defines composition and runtime semantics. The [opening-state recipe](data/asthma-opening-balance-seed.recipe.v1.json) defines baseline initialization. The contract identifies Spectrum/OneHealth asthma material and the current method-fix reference as default provenance.
+
+The CR1 resource block in [`resource_requirements.json`](resource_requirements.json) uses the same US dollar unit prices as `ncd-asthma-asthmaoralprednisolone`: ipratropium 20 mcg is 0.022 per puff and prednisolone is 0.2628 per tablet, from the OneHealth Tool drug and supply price list. The earlier values, 0.09 and 1.13, were Malaysian ringgit prices from the UNDP costing workbook.
 
 ## Relationships
 

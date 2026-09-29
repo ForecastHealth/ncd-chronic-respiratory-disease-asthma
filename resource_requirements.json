@@ -2779,7 +2779,7 @@
       "generate_array": {
        "method": "n_kwargs",
        "parameters": {
-        "unit_cost": 0.09
+        "unit_cost": 0.022
        }
       }
      },
@@ -2823,7 +2823,7 @@
       "generate_array": {
        "method": "n_kwargs",
        "parameters": {
-        "unit_cost": 1.13
+        "unit_cost": 0.2628
        }
       }
      },
