@@ -43,6 +43,8 @@ The source module exposes only `asthma_baseline`. The disease parameter registry
 
 The CR1 resource block in [`resource_requirements.json`](resource_requirements.json) uses the same US dollar unit prices as `ncd-asthma-asthmaoralprednisolone`: ipratropium 20 mcg is 0.022 per puff and prednisolone is 0.2628 per tablet, from the OneHealth Tool drug and supply price list. The earlier values, 0.09 and 1.13, were Malaysian ringgit prices from the UNDP costing workbook.
 
+Staff time is priced from one shared salary item per skill level, `cost-item.workforce-salary.skill-level-<n>`. Doctors and specialists are skill level 4, nurses and therapists are skill level 3, and counsellors are skill level 2. The item is the country's WHO-CHOICE annual salary from the data service. A staff minute costs that salary divided by 126,720 working minutes a year (8 hours, 22 days a month, 12 months). The data service uses this convention for its WHO-CHOICE cost per minute, and every clinical staff cost has used it. The per-minute values in the resource graphs are defaults for use without a country. Tobacco policy programme lines price staff from the same item, so one salary edit changes both.
+
 ## Relationships
 
 The demographic module supplies the canonical population, background mortality and migration. The annual coordinator derives the asthma population at risk from the canonical population and the current asthma state. `opening-state-reconciliation` creates one baseline opening state for both scenarios. Separate oral prednisolone, beclometasone and short-acting beta agonist repositories own the clinical intervention graph slices.
