@@ -2,7 +2,7 @@
 title: Asthma epidemiology
 module_identifier: ncd-asthma
 owner: Forecast Health
-last_updated: 2026-09-29
+last_updated: 2026-09-30
 status: Executable source module
 ---
 
@@ -41,7 +41,7 @@ The source module exposes only `asthma_baseline`. The disease parameter registry
 
 [`model.json`](model.json) is the executable disease graph. The [module contract](interface/asthma-epidemiology-core.module.contract.v1.json) defines composition and runtime semantics. The [opening-state recipe](data/asthma-opening-balance-seed.recipe.v1.json) defines baseline initialization. The contract identifies Spectrum/OneHealth asthma material and the current method-fix reference as default provenance.
 
-The CR1 resource block in [`resource_requirements.json`](resource_requirements.json) uses the same US dollar unit prices as `ncd-asthma-asthmaoralprednisolone`: ipratropium 20 mcg is 0.022 per puff and prednisolone is 0.2628 per tablet, from the OneHealth Tool drug and supply price list. The earlier values, 0.09 and 1.13, were Malaysian ringgit prices from the UNDP costing workbook.
+Routine care is declared in [`resource_requirements.json`](resource_requirements.json) as `routine_care_services`: each entry names a service by the module and block that declare it, `ncd-asthma-inhaledshortactingbeta` (`cr3-inhaled-short-acting-beta`), `ncd-asthma-lowdosebeclom` (`cr3-low-dose-beclometasone-saba`) and `ncd-asthma-highdosebeclom` (`cr3-high-dose-beclometasone-saba`), with the disease states it is delivered to. This module does not copy the services' resources. The compiler takes the quantities, cost items, population in need and baseline coverage from each service's own declaration and costs the service at its baseline coverage in both scenarios. When the owning intervention is selected, its block also costs the service for the population the intervention reaches, at baseline coverage in the baseline scenario and at the target coverage in the comparison; routine care of the disease states continues beside it from the same declaration. The CR1 acute-treatment service is declared only by `ncd-asthma-asthmaoralprednisolone`; this module's former copy of it was not costed and has been removed.
 
 Staff time is priced from one shared salary item per staff type, `cost-item.workforce-salary.<type>`: `nurse`, `generalist-primary-care-doctor`, `specialist`, `therapist` and `counsellor`. A type is the same item in every module that uses it, so a generalist minute costs the same everywhere, and each type can be edited on its own: a specialist can be paid differently from a generalist doctor. The item is an annual salary. Its default is the country's WHO-CHOICE annual salary from the data service for the type's cadre (skill level 4 for doctors and specialists, 3 for nurses and therapists, 2 for counsellors); the cadre is the default source, not the item. A staff minute costs that salary divided by 126,720 working minutes a year (8 hours, 22 days a month, 12 months). The data service uses this convention for its WHO-CHOICE cost per minute, and every clinical staff cost has used it. The per-minute values in the resource graphs are defaults for use without a country. Tobacco policy programme roles are separate staff types, since none is the same job as a clinical one.
 
