@@ -93,8 +93,8 @@
      "key": "Generalist/Primary care doctor: Salary per minute",
      "category": "Workforce Cost",
      "cost_item": {
-      "id": "cost-item.workforce-salary.skill-level-4",
-      "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+      "id": "cost-item.workforce-salary.generalist-primary-care-doctor",
+      "label": "Generalist or primary care doctor",
       "unit": "FTE-year",
       "minutes_per_unit": 126720
      },
@@ -132,8 +132,8 @@
      "key": "Nurse: Salary per minute",
      "category": "Workforce Cost",
      "cost_item": {
-      "id": "cost-item.workforce-salary.skill-level-3",
-      "label": "Skill level 3 staff (technicians and officers, nurses, therapists)",
+      "id": "cost-item.workforce-salary.nurse",
+      "label": "Nurse",
       "unit": "FTE-year",
       "minutes_per_unit": 126720
      },
@@ -597,8 +597,8 @@
      "key": "Generalist/Primary care doctor: Salary per minute",
      "category": "Workforce Cost",
      "cost_item": {
-      "id": "cost-item.workforce-salary.skill-level-4",
-      "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+      "id": "cost-item.workforce-salary.generalist-primary-care-doctor",
+      "label": "Generalist or primary care doctor",
       "unit": "FTE-year",
       "minutes_per_unit": 126720
      },
@@ -636,8 +636,8 @@
      "key": "Nurse: Salary per minute",
      "category": "Workforce Cost",
      "cost_item": {
-      "id": "cost-item.workforce-salary.skill-level-3",
-      "label": "Skill level 3 staff (technicians and officers, nurses, therapists)",
+      "id": "cost-item.workforce-salary.nurse",
+      "label": "Nurse",
       "unit": "FTE-year",
       "minutes_per_unit": 126720
      },
@@ -1238,8 +1238,8 @@
      "key": "Generalist/Primary care doctor: Salary per minute",
      "category": "Workforce Cost",
      "cost_item": {
-      "id": "cost-item.workforce-salary.skill-level-4",
-      "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+      "id": "cost-item.workforce-salary.generalist-primary-care-doctor",
+      "label": "Generalist or primary care doctor",
       "unit": "FTE-year",
       "minutes_per_unit": 126720
      },
@@ -1277,8 +1277,8 @@
      "key": "Nurse: Salary per minute",
      "category": "Workforce Cost",
      "cost_item": {
-      "id": "cost-item.workforce-salary.skill-level-3",
-      "label": "Skill level 3 staff (technicians and officers, nurses, therapists)",
+      "id": "cost-item.workforce-salary.nurse",
+      "label": "Nurse",
       "unit": "FTE-year",
       "minutes_per_unit": 126720
      },
@@ -1859,8 +1859,8 @@
      "key": "Doctor salary per minute",
      "category": "Workforce Cost",
      "cost_item": {
-      "id": "cost-item.workforce-salary.skill-level-4",
-      "label": "Skill level 4 staff (professionals and managers, doctors, specialists)",
+      "id": "cost-item.workforce-salary.generalist-primary-care-doctor",
+      "label": "Generalist or primary care doctor",
       "unit": "FTE-year",
       "minutes_per_unit": 126720
      },
@@ -1880,8 +1880,8 @@
      "key": "Nurse salary per minute",
      "category": "Workforce Cost",
      "cost_item": {
-      "id": "cost-item.workforce-salary.skill-level-3",
-      "label": "Skill level 3 staff (technicians and officers, nurses, therapists)",
+      "id": "cost-item.workforce-salary.nurse",
+      "label": "Nurse",
       "unit": "FTE-year",
       "minutes_per_unit": 126720
      },
