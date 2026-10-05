@@ -17,7 +17,7 @@
       "status": "authorized",
       "recorded_date": "2026-10-05",
       "authority": "Rory Watts and Robert Totanes (WHO) approved disease-model calibration. Rory delegated the method decisions of 5 October 2026 to the team lead, who adopted WHO GHE 2021 cause-specific deaths as the death target, a 28-day per-episode reading of acute case fatality with acute deaths capped at half of target deaths, and cohort-consistent opening complication shares.",
-      "scope": "Opening-year attributed deaths only. Prevalence after the opening year is not a target of this method version."
+      "scope": "Opening-year attributed deaths, and stationary prevalence through declared remission or other-cause relative mortality fits."
     },
     "states": [
       "DsFreeSus",
