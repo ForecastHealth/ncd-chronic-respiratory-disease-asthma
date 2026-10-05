@@ -29,6 +29,10 @@ Asthma is a marginal disease process with two living states: an asthma episode s
 
 Clinical intervention components can reduce the asthma disability weight and case fatality through declared shared transforms. A risk-factor module can modify asthma incidence. The asthma graph publishes raw state and death results; metric modules calculate healthy years, years lived with disability, years of life lost, and disability-adjusted life years.
 
+### Calibration
+
+The [opening-state contract](data/asthma-opening-state.contract.v3.json) declares a rate calibration that the shared `opening-state-reconciliation` preflight applies before the first model year, with one result for baseline and every comparison. The asthma fatality input is scaled by sex and single age so the opening year's asthma deaths equal WHO Global Health Estimates 2021 asthma death rates applied to the opening population, distributed within each GHE age band by the GBD age pattern. Remission is scaled by GBD age band, within 0.5 to 10 times the Spectrum value, so the year carries observed age-specific prevalence forward unchanged. The Spectrum remission was two to nine times lower than GBD incidence and prevalence imply, and prevalence nearly doubled by 2050 without intervention. GBD incidence counts new episodes, so remitted people can have asthma again.
+
 ## Inputs and outputs
 
 Required inputs are the canonical opening population, reconciled asthma opening prevalence and background mortality rates. Optional inputs are net migration rates, an incidence modifier, clinical disability effects and clinical mortality effects. The module publishes the asthma episode population, asthma incidence flow and asthma-specific mortality flow as age-sex arrays.
