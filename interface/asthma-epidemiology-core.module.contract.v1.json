@@ -202,16 +202,6 @@
       ]
     },
     {
-      "data_type": "asthma.get_observation",
-      "parameters": {
-        "country": "ISO3",
-        "observation": "AsthmaEpsd -> Disability"
-      },
-      "required_for": [
-        "asthma_disability_weight"
-      ]
-    },
-    {
       "data_type": "healthy_disability",
       "parameters": {
         "country": "ISO3"

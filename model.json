@@ -131,16 +131,14 @@
       "color": "#06B4E1",
       "generate_array": {
         "generate_once": true,
-        "data_fetcher_label": "asthma",
-        "method": "get_observation",
+        "method": "single_value",
         "parameters": {
-          "country": "AFG",
-          "observation": "AsthmaEpsd -> Disability"
+          "value": 0.039
         },
         "display": {
           "label": "Asthma disability weight",
           "units": "disability weight",
-          "source": "Spectrum/OneHealth disease association file"
+          "source": "GBD 2019 disability weights (IHME); mapping in README"
         }
       },
       "node_type": "CONSTANT",
