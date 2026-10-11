@@ -2,7 +2,7 @@
 title: Asthma epidemiology
 module_identifier: ncd-asthma
 owner: Forecast Health
-last_updated: 2026-10-10
+last_updated: 2026-10-11
 status: Executable source module
 ---
 
@@ -105,7 +105,7 @@ where 0.039 is the GBD asthma disability weight, and $f$ is the calibrated asthm
 
 Routine care is the treatment people with asthma already receive whether or not an intervention is selected. It is declared in `resource_requirements.json` as `routine_care_services`. Each entry names a service by the module and block that declare it and delivers it to `AsthmaEpsd`. The three services are inhaled short-acting beta agonist (SABA) alone (`ncd-asthma-inhaledshortactingbeta`, block `cr3-inhaled-short-acting-beta`), low-dose beclometasone plus SABA (`ncd-asthma-lowdosebeclom`, block `cr3-low-dose-beclometasone-saba`) and high-dose beclometasone plus SABA (`ncd-asthma-highdosebeclom`, block `cr3-high-dose-beclometasone-saba`).
 
-This module does not copy the services' resources. The compiler, the platform service that assembles selected modules into one runnable model, takes the quantities, cost items, population in need and baseline coverage from each service's own declaration. It costs the service at its baseline coverage in both scenarios. When the owning intervention is selected, its block also costs the service for the population the intervention reaches, at baseline coverage in the baseline scenario and at target coverage in the comparison. The CR1 acute-treatment service is declared only by `ncd-asthma-asthmaoralprednisolone` and is not routine care here.
+This module does not copy the services' resources. The compiler, the platform service that assembles selected modules into one runnable model, takes the quantities, cost items, population in need and baseline coverage from each service's own declaration. It costs the service at its baseline coverage in both scenarios. When the owning intervention is selected, its block costs the service for everyone the intervention reaches, at baseline coverage in the baseline scenario and at target coverage in the comparison, including the people routine care would treat. Each entry names `AsthmaEpsd` as the population `asthma_episode_population` (`population_channel_id`), the channel the CR3 components read, so when CR3 is selected the compiler leaves its three services out of routine care and each scenario counts those people once. The CR1 acute-treatment service is declared only by `ncd-asthma-asthmaoralprednisolone` and is not routine care here.
 
 Staff time is priced from one shared salary item per staff type, `cost-item.workforce-salary.<type>`. The asthma services use two types, `nurse` and `generalist-primary-care-doctor`. A type is the same item in every module that uses it, so a nurse minute costs the same everywhere. The item is an annual salary. Its default is the country's annual salary from WHO-CHOICE (WHO CHOosing Interventions that are Cost-Effective), served by the data service for the type's cadre: skill level 4 for doctors and 3 for nurses. A staff minute costs that salary divided by 126,720 working minutes a year (8 hours a day, 22 days a month, 12 months), the convention the data service uses for its WHO-CHOICE cost per minute. The per-minute values in the resource graphs are defaults for use without a country.
 

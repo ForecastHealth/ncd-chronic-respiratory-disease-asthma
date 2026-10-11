@@ -20,7 +20,8 @@
     {
      "nodeId": "AsthmaEpsd",
      "label": "AsthmaEpsd",
-     "eventType": "ECHO"
+     "eventType": "ECHO",
+     "population_channel_id": "asthma_episode_population"
     }
    ]
   },
@@ -31,7 +32,8 @@
     {
      "nodeId": "AsthmaEpsd",
      "label": "AsthmaEpsd",
-     "eventType": "ECHO"
+     "eventType": "ECHO",
+     "population_channel_id": "asthma_episode_population"
     }
    ]
   },
@@ -42,7 +44,8 @@
     {
      "nodeId": "AsthmaEpsd",
      "label": "AsthmaEpsd",
-     "eventType": "ECHO"
+     "eventType": "ECHO",
+     "population_channel_id": "asthma_episode_population"
     }
    ]
   }
